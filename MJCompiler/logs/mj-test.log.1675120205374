@@ -1,0 +1,30 @@
+INFO  00:07:46,833 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  00:07:46,843 - #39 program
+INFO  00:07:46,844 - #46 MJProgram
+INFO  00:07:46,844 - #44 const
+INFO  00:07:46,844 - #46 int
+INFO  00:07:46,845 - #46 milica
+INFO  00:07:46,845 - #20 =
+INFO  00:07:46,845 - #45 5
+INFO  00:07:46,845 - #6 ;
+INFO  00:07:46,846 - #13 {
+INFO  00:07:46,847 - #36 }
+INFO  00:07:46,849 - Program(
+ MJProgram
+  ConstDeclaration(
+    NoDeclaration(
+    ) [NoDeclaration]
+    ConstDecl(
+     int
+      IntegerConstDecl(
+       milica
+       5
+      ) [IntegerConstDecl]
+      EndOfDeclaration(
+      ) [EndOfDeclaration]
+    ) [ConstDecl]
+  ) [ConstDeclaration]
+  NoMethodDeclList(
+  ) [NoMethodDeclList]
+) [Program]
+INFO  00:07:46,855 - ===================================

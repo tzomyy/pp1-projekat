@@ -44,13 +44,57 @@ scan with {:
 :}
 
 terminal COLON, PLUS, RPAREN, COMMA, SEMICOLON, EXTENDS, BOOL, NEW, ELSE, IF, DOT, LCURLY;
-terminal ASSIGN, MINUS, NOT_EQUAL, VOID, IDENT, AND, LPAREN, EQUAL, LESS, LSQUARE;
-terminal IS_EQUAL, BREAK, NUMBER, READ, INCREMENT, ASTERISK, GREATER, WHILE, SLASH;
+terminal ASSIGN, MINUS, NOT_EQUAL, VOID, AND, LPAREN, EQUAL, LESS, LSQUARE;
+terminal IS_EQUAL, BREAK, READ, INCREMENT, ASTERISK, GREATER, WHILE, SLASH;
 terminal GREATER_EQUAL, LESS_EQUAL, CHAR, PRINT, FOREACH, RCURLY, CLASS, DECREMENT, PROG;
-terminal RSQUARE, RETURN, CONTINUE, OR;
+terminal RSQUARE, RETURN, CONTINUE, OR, CONST;
+terminal Integer NUMBER;
+terminal String IDENT;
 
-nonterminal Addop Addop;
+nonterminal Program Program;
+nonterminal Declaration Declaration;
+nonterminal MethodDeclList MethodDeclList;
+nonterminal ConstDecl ConstDecl;
+nonterminal VarDecl VarDecl;
+nonterminal ClassDecl ClassDecl;
+nonterminal Type Type;
+nonterminal SingleConstDecl SingleConstDecl;
+nonterminal MultipleConstDecl MultipleConstDecl;
 
-Addop ::= (Addop) PLUS {: RESULT=new Addop(); :};
+Program ::= (Program) PROG IDENT:I1 Declaration:D2 LCURLY MethodDeclList:M3 RCURLY {: RESULT=new Program(I1, D2, M3); RESULT.setLine(I1left); :};
+
+Declaration ::= (ConstDeclaration) Declaration:D1 ConstDecl:C2 {: RESULT=new ConstDeclaration(D1, C2); RESULT.setLine(D1left); :}
+			|
+			(VarDeclaration) Declaration:D1 VarDecl:V2 {: RESULT=new VarDeclaration(D1, V2); RESULT.setLine(D1left); :}
+			|
+			(ClassDeclaration) Declaration:D1 ClassDecl:C2 {: RESULT=new ClassDeclaration(D1, C2); RESULT.setLine(D1left); :}
+			|
+			(NoDeclaration) {: RESULT=new NoDeclaration(); :} /* epsilon */
+			;
+		
+ConstDecl ::= (ConstDecl) CONST IDENT:I1 SingleConstDecl:S2 MultipleConstDecl:M3 SEMICOLON {: RESULT=new ConstDecl(I1, S2, M3); RESULT.setLine(I1left); :};
+
+SingleConstDecl ::= (BoolConstDecl) IDENT:constName EQUAL BOOL {: RESULT=new BoolConstDecl(constName); RESULT.setLine(constNameleft); :}
+				|
+				(IntegerConstDecl) IDENT:constName EQUAL NUMBER:N1 {: RESULT=new IntegerConstDecl(constName, N1); RESULT.setLine(constNameleft); :}
+				|
+				(CharConstDecl) IDENT:constName EQUAL CHAR {: RESULT=new CharConstDecl(constName); RESULT.setLine(constNameleft); :}
+				;
+				
+MultipleConstDecl ::= (MultipleConstDecls) MultipleConstDecl:M1 COMMA SingleConstDecl:S2 {: RESULT=new MultipleConstDecls(M1, S2); RESULT.setLine(M1left); :}
+					|
+					(EndOfDeclaration) {: RESULT=new EndOfDeclaration(); :} /* epsilon */
+					;
+					
 
 
+VarDecl ::= (VarDecl) MINUS {: RESULT=new VarDecl(); :};
+
+ClassDecl ::= (ClassDecl) AND {: RESULT=new ClassDecl(); :};
+
+MethodDeclList ::= (MethodDeclList) CHAR {: RESULT=new MethodDeclList(); :}
+				|
+				(NoMethodDeclList) {: RESULT=new NoMethodDeclList(); :} /*epsilon*/
+				;
+
+Type ::= (Type) IDENT:I1 {: RESULT=new Type(I1); RESULT.setLine(I1left); :};

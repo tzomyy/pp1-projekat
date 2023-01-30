@@ -7,6 +7,7 @@
 				<exclude name="sym_old.java" />
 				<exclude name="util/Log4JUtils.java" />
 				<exclude name="Yylex.java" />
+				<exclude name="RuleVisitor.java" />
 			</fileset>
 		</delete>
 		<delete>
@@ -15,6 +16,7 @@
 				<exclude name="mjparser.cup" />
 			</fileset>
 		</delete>
+		<delete dir="src/rs/ac/bg/etf/pp1/ast"></delete>
 	</target>
 
 	<target name="lexerGen" depends="delete">
@@ -33,7 +35,6 @@
 			<arg value="src.rs.ac.bg.etf.pp1.ast" />
 			<arg value="-parser" />
 			<arg value="MJParser" />
-			<arg value="-dump_states" />
 			<arg value="-buildtree" />
 			<arg value="spec/mjparser.cup" />
 		</java>

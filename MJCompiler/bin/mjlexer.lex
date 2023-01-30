@@ -38,6 +38,7 @@ import java_cup.runtime.Symbol;
 "break"		{ return new_symbol(sym.BREAK, yytext());}
 "class"		{ return new_symbol(sym.CLASS, yytext());}
 "else"		{ return new_symbol(sym.ELSE, yytext());}
+"const"     { return new_symbol(sym.CONST, yytext());}
 "if"		{ return new_symbol(sym.IF, yytext());}
 "while"		{ return new_symbol(sym.WHILE, yytext());}
 "new"		{ return new_symbol(sym.NEW, yytext());}

@@ -1,0 +1,7 @@
+INFO  23:56:06,740 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  23:56:06,749 - #39 program
+INFO  23:56:06,749 - #46 MJProgram
+INFO  23:56:06,749 - #46 const
+ERROR 23:56:06,749 - 
+Sintaksna greska na liniji 2
+ERROR 23:56:06,749 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 2

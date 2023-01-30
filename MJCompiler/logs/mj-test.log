@@ -1,16 +1,38 @@
-INFO  22:40:24,896 - Compiling source file: C:\Users\Laptop\Desktop\pp1-projekat\workspace\MJCompiler\test\program.mj
-INFO  22:40:24,903 - #1 program
-INFO  22:40:24,904 - #16 MJProgram
-INFO  22:40:24,904 - #16 int
-INFO  22:40:24,904 - #16 x
-INFO  22:40:24,905 - #38 ,
-INFO  22:40:24,905 - #16 y
-INFO  22:40:24,905 - #36 ;
-INFO  22:40:24,906 - #44 {
-INFO  22:40:24,906 - #12 void
-INFO  22:40:24,907 - #16 main
-INFO  22:40:24,907 - #40 (
-INFO  22:40:24,907 - #41 )
-INFO  22:40:24,907 - #44 {
-INFO  22:40:24,907 - #45 }
-INFO  22:40:24,907 - #45 }
+INFO  00:10:58,892 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  00:10:58,902 - #39 program
+INFO  00:10:58,903 - #46 MJProgram
+INFO  00:10:58,903 - #44 const
+INFO  00:10:58,903 - #46 int
+INFO  00:10:58,904 - #46 milica
+INFO  00:10:58,904 - #20 =
+INFO  00:10:58,904 - #8 true
+INFO  00:10:58,904 - #5 ,
+INFO  00:10:58,905 - #46 jovanka
+INFO  00:10:58,905 - #20 =
+INFO  00:10:58,905 - #33 "Joc"
+INFO  00:10:58,905 - #6 ;
+INFO  00:10:58,905 - #13 {
+INFO  00:10:58,906 - #36 }
+INFO  00:10:58,908 - Program(
+ MJProgram
+  ConstDeclaration(
+    NoDeclaration(
+    ) [NoDeclaration]
+    ConstDecl(
+     int
+      BoolConstDecl(
+       milica
+      ) [BoolConstDecl]
+      MultipleConstDecls(
+        EndOfDeclaration(
+        ) [EndOfDeclaration]
+        CharConstDecl(
+         jovanka
+        ) [CharConstDecl]
+      ) [MultipleConstDecls]
+    ) [ConstDecl]
+  ) [ConstDeclaration]
+  NoMethodDeclList(
+  ) [NoMethodDeclList]
+) [Program]
+INFO  00:10:58,914 - ===================================
