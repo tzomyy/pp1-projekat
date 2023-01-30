@@ -4,6 +4,7 @@ package rs.ac.bg.etf.pp1;
 
 import java_cup.runtime.*;
 import org.apache.log4j.*;
+import rs.ac.bg.etf.pp1.ast.*;
 
 parser code {:
 
