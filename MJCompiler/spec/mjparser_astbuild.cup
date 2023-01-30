@@ -60,6 +60,9 @@ nonterminal ClassDecl ClassDecl;
 nonterminal Type Type;
 nonterminal SingleConstDecl SingleConstDecl;
 nonterminal MultipleConstDecl MultipleConstDecl;
+nonterminal SingleVarDecl SingleVarDecl;
+nonterminal Brackets Brackets;
+nonterminal MultipleVarDecl MultipleVarDecl;
 
 Program ::= (Program) PROG IDENT:I1 Declaration:D2 LCURLY MethodDeclList:M3 RCURLY {: RESULT=new Program(I1, D2, M3); RESULT.setLine(I1left); :};
 
@@ -72,24 +75,34 @@ Declaration ::= (ConstDeclaration) Declaration:D1 ConstDecl:C2 {: RESULT=new Con
 			(NoDeclaration) {: RESULT=new NoDeclaration(); :} /* epsilon */
 			;
 		
-ConstDecl ::= (ConstDecl) CONST IDENT:I1 SingleConstDecl:S2 MultipleConstDecl:M3 SEMICOLON {: RESULT=new ConstDecl(I1, S2, M3); RESULT.setLine(I1left); :};
+ConstDecl ::= (ConstDecl) CONST Type:constType SingleConstDecl:S1 MultipleConstDecl:M2 SEMICOLON {: RESULT=new ConstDecl(constType, S1, M2); RESULT.setLine(constTypeleft); :};
 
-SingleConstDecl ::= (BoolConstDecl) IDENT:constName EQUAL BOOL {: RESULT=new BoolConstDecl(constName); RESULT.setLine(constNameleft); :}
+SingleConstDecl ::= (BoolConstDecl) IDENT:constName EQUAL BOOL:booleanConst {: RESULT=new BoolConstDecl(constName); RESULT.setLine(constNameleft); :}
 				|
-				(IntegerConstDecl) IDENT:constName EQUAL NUMBER:N1 {: RESULT=new IntegerConstDecl(constName, N1); RESULT.setLine(constNameleft); :}
+				(IntegerConstDecl) IDENT:constName EQUAL NUMBER:numberConst {: RESULT=new IntegerConstDecl(constName, numberConst); RESULT.setLine(constNameleft); :}
 				|
-				(CharConstDecl) IDENT:constName EQUAL CHAR {: RESULT=new CharConstDecl(constName); RESULT.setLine(constNameleft); :}
+				(CharConstDecl) IDENT:constName EQUAL CHAR:charConst {: RESULT=new CharConstDecl(constName); RESULT.setLine(constNameleft); :}
 				;
 				
 MultipleConstDecl ::= (MultipleConstDecls) MultipleConstDecl:M1 COMMA SingleConstDecl:S2 {: RESULT=new MultipleConstDecls(M1, S2); RESULT.setLine(M1left); :}
 					|
 					(EndOfDeclaration) {: RESULT=new EndOfDeclaration(); :} /* epsilon */
-					;
-					
+					;					
 
+VarDecl ::= (VarDecl) Type:varName SingleVarDecl:S1 MultipleVarDecl:M2 SEMICOLON {: RESULT=new VarDecl(varName, S1, M2); RESULT.setLine(varNameleft); :};
 
-VarDecl ::= (VarDecl) MINUS {: RESULT=new VarDecl(); :};
+SingleVarDecl ::= (SingleVarDecl) IDENT:varName Brackets:B1 {: RESULT=new SingleVarDecl(varName, B1); RESULT.setLine(varNameleft); :};
 
+Brackets ::= (Brackets) LSQUARE RSQUARE {: RESULT=new Brackets(); :}
+			|
+			(NoBrackets) {: RESULT=new NoBrackets(); :} /*epsilon*/
+			;
+			
+MultipleVarDecl ::= (MultipleVarDecls) MultipleVarDecl:M1 COMMA SingleVarDecl:S2 {: RESULT=new MultipleVarDecls(M1, S2); RESULT.setLine(M1left); :}
+				|
+				(EndOfVarDeclaration) {: RESULT=new EndOfVarDeclaration(); :} /* epsilon */
+				;
+				
 ClassDecl ::= (ClassDecl) AND {: RESULT=new ClassDecl(); :};
 
 MethodDeclList ::= (MethodDeclList) CHAR {: RESULT=new MethodDeclList(); :}

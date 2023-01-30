@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 31/0/2023 0:6:15
+// 31/0/2023 0:41:14
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,11 +8,11 @@ package rs.ac.bg.etf.pp1.ast;
 public class IntegerConstDecl extends SingleConstDecl {
 
     private String constName;
-    private Integer N1;
+    private Integer numberConst;
 
-    public IntegerConstDecl (String constName, Integer N1) {
+    public IntegerConstDecl (String constName, Integer numberConst) {
         this.constName=constName;
-        this.N1=N1;
+        this.numberConst=numberConst;
     }
 
     public String getConstName() {
@@ -23,12 +23,12 @@ public class IntegerConstDecl extends SingleConstDecl {
         this.constName=constName;
     }
 
-    public Integer getN1() {
-        return N1;
+    public Integer getNumberConst() {
+        return numberConst;
     }
 
-    public void setN1(Integer N1) {
-        this.N1=N1;
+    public void setNumberConst(Integer numberConst) {
+        this.numberConst=numberConst;
     }
 
     public void accept(Visitor visitor) {
@@ -54,7 +54,7 @@ public class IntegerConstDecl extends SingleConstDecl {
         buffer.append(" "+tab+constName);
         buffer.append("\n");
 
-        buffer.append(" "+tab+N1);
+        buffer.append(" "+tab+numberConst);
         buffer.append("\n");
 
         buffer.append(tab);

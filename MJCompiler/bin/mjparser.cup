@@ -55,6 +55,9 @@ nonterminal Program, Declaration, MethodDeclList, ConstDecl, VarDecl, ClassDecl;
 nonterminal Type;
 nonterminal SingleConstDecl;
 nonterminal MultipleConstDecl;
+nonterminal SingleVarDecl;
+nonterminal Brackets;
+nonterminal MultipleVarDecl;
 
 Program ::= (Program) PROG IDENT Declaration LCURLY MethodDeclList RCURLY;
 
@@ -73,18 +76,28 @@ SingleConstDecl ::= (BoolConstDecl) IDENT:constName EQUAL BOOL:booleanConst
 				|
 				(IntegerConstDecl) IDENT:constName EQUAL NUMBER:numberConst
 				|
-				(CharConstDecl) IDENT:constName EQUAL CHAR:charConst;
+				(CharConstDecl) IDENT:constName EQUAL CHAR:charConst
 				;
 				
 MultipleConstDecl ::= (MultipleConstDecls) MultipleConstDecl COMMA SingleConstDecl
 					|
 					(EndOfDeclaration) /* epsilon */
-					;
-					
+					;					
 
+VarDecl ::= (VarDecl) Type:varName SingleVarDecl MultipleVarDecl SEMICOLON;
 
-VarDecl ::= (VarDecl) MINUS;
+SingleVarDecl ::= (SingleVarDecl) IDENT:varName Brackets;
 
+Brackets ::= (Brackets) LSQUARE RSQUARE
+			|
+			(NoBrackets) /*epsilon*/
+			;
+			
+MultipleVarDecl ::= (MultipleVarDecls) MultipleVarDecl COMMA SingleVarDecl
+				|
+				(EndOfVarDeclaration) /* epsilon */
+				;
+				
 ClassDecl ::= (ClassDecl) AND;
 
 MethodDeclList ::= (MethodDeclList) CHAR

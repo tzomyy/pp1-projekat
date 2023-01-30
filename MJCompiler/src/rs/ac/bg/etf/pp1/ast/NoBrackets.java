@@ -5,9 +5,9 @@
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class NoDeclaration extends Declaration {
+public class NoBrackets extends Brackets {
 
-    public NoDeclaration () {
+    public NoBrackets () {
     }
 
     public void accept(Visitor visitor) {
@@ -28,10 +28,10 @@ public class NoDeclaration extends Declaration {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("NoDeclaration(\n");
+        buffer.append("NoBrackets(\n");
 
         buffer.append(tab);
-        buffer.append(") [NoDeclaration]");
+        buffer.append(") [NoBrackets]");
         return buffer.toString();
     }
 }

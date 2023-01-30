@@ -1,5 +1,6 @@
 program MJProgram
 	const int milica = true, jovanka = "Joc";
+	int zorana[], milic;
 {
 	
 }

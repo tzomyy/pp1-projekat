@@ -5,9 +5,27 @@
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class NoDeclaration extends Declaration {
+public class Brackets implements SyntaxNode {
 
-    public NoDeclaration () {
+    private SyntaxNode parent;
+    private int line;
+    public Brackets () {
+    }
+
+    public SyntaxNode getParent() {
+        return parent;
+    }
+
+    public void setParent(SyntaxNode parent) {
+        this.parent=parent;
+    }
+
+    public int getLine() {
+        return line;
+    }
+
+    public void setLine(int line) {
+        this.line=line;
     }
 
     public void accept(Visitor visitor) {
@@ -28,10 +46,10 @@ public class NoDeclaration extends Declaration {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("NoDeclaration(\n");
+        buffer.append("Brackets(\n");
 
         buffer.append(tab);
-        buffer.append(") [NoDeclaration]");
+        buffer.append(") [Brackets]");
         return buffer.toString();
     }
 }

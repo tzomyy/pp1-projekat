@@ -1,0 +1,59 @@
+INFO  00:37:00,954 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  00:37:00,968 - #39 program
+INFO  00:37:00,968 - #46 MJProgram
+INFO  00:37:00,968 - #44 const
+INFO  00:37:00,969 - #46 int
+INFO  00:37:00,969 - #46 milica
+INFO  00:37:00,969 - #20 =
+INFO  00:37:00,969 - #8 true
+INFO  00:37:00,969 - #5 ,
+INFO  00:37:00,970 - #46 jovanka
+INFO  00:37:00,970 - #20 =
+INFO  00:37:00,971 - #33 "Joc"
+INFO  00:37:00,971 - #6 ;
+INFO  00:37:00,971 - #46 int
+INFO  00:37:00,972 - #46 mi
+INFO  00:37:00,973 - #22 [
+INFO  00:37:00,974 - #40 ]
+INFO  00:37:00,974 - #6 ;
+INFO  00:37:00,976 - #13 {
+INFO  00:37:00,977 - #36 }
+INFO  00:37:00,979 - Program(
+ MJProgram
+  VarDeclaration(
+    ConstDeclaration(
+      NoDeclaration(
+      ) [NoDeclaration]
+      ConstDecl(
+        Type(
+         int
+        ) [Type]
+        BoolConstDecl(
+         milica
+        ) [BoolConstDecl]
+        MultipleConstDecls(
+          EndOfDeclaration(
+          ) [EndOfDeclaration]
+          CharConstDecl(
+           jovanka
+          ) [CharConstDecl]
+        ) [MultipleConstDecls]
+      ) [ConstDecl]
+    ) [ConstDeclaration]
+    VarDecl(
+      Type(
+       int
+      ) [Type]
+      EndOfVarDeclaration(
+      ) [EndOfVarDeclaration]
+      SingleVarDecl(
+       mi
+        Brackets(
+        ) [Brackets]
+      ) [SingleVarDecl]
+    ) [VarDecl]
+  ) [VarDeclaration]
+  NoMethodDeclList(
+  ) [NoMethodDeclList]
+) [Program]
+INFO  00:37:00,986 - ===================================

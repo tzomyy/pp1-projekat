@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 31/0/2023 0:6:15
+// 31/0/2023 0:41:14
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -9,24 +9,25 @@ public class ConstDecl implements SyntaxNode {
 
     private SyntaxNode parent;
     private int line;
-    private String I1;
+    private Type Type;
     private SingleConstDecl SingleConstDecl;
     private MultipleConstDecl MultipleConstDecl;
 
-    public ConstDecl (String I1, SingleConstDecl SingleConstDecl, MultipleConstDecl MultipleConstDecl) {
-        this.I1=I1;
+    public ConstDecl (Type Type, SingleConstDecl SingleConstDecl, MultipleConstDecl MultipleConstDecl) {
+        this.Type=Type;
+        if(Type!=null) Type.setParent(this);
         this.SingleConstDecl=SingleConstDecl;
         if(SingleConstDecl!=null) SingleConstDecl.setParent(this);
         this.MultipleConstDecl=MultipleConstDecl;
         if(MultipleConstDecl!=null) MultipleConstDecl.setParent(this);
     }
 
-    public String getI1() {
-        return I1;
+    public Type getType() {
+        return Type;
     }
 
-    public void setI1(String I1) {
-        this.I1=I1;
+    public void setType(Type Type) {
+        this.Type=Type;
     }
 
     public SingleConstDecl getSingleConstDecl() {
@@ -66,17 +67,20 @@ public class ConstDecl implements SyntaxNode {
     }
 
     public void childrenAccept(Visitor visitor) {
+        if(Type!=null) Type.accept(visitor);
         if(SingleConstDecl!=null) SingleConstDecl.accept(visitor);
         if(MultipleConstDecl!=null) MultipleConstDecl.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
+        if(Type!=null) Type.traverseTopDown(visitor);
         if(SingleConstDecl!=null) SingleConstDecl.traverseTopDown(visitor);
         if(MultipleConstDecl!=null) MultipleConstDecl.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
+        if(Type!=null) Type.traverseBottomUp(visitor);
         if(SingleConstDecl!=null) SingleConstDecl.traverseBottomUp(visitor);
         if(MultipleConstDecl!=null) MultipleConstDecl.traverseBottomUp(visitor);
         accept(visitor);
@@ -87,7 +91,10 @@ public class ConstDecl implements SyntaxNode {
         buffer.append(tab);
         buffer.append("ConstDecl(\n");
 
-        buffer.append(" "+tab+I1);
+        if(Type!=null)
+            buffer.append(Type.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
         buffer.append("\n");
 
         if(SingleConstDecl!=null)

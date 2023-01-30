@@ -1,26 +1,24 @@
-INFO  00:41:46,904 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
-INFO  00:41:46,916 - #39 program
-INFO  00:41:46,916 - #46 MJProgram
-INFO  00:41:46,916 - #44 const
-INFO  00:41:46,917 - #46 int
-INFO  00:41:46,917 - #46 milica
-INFO  00:41:46,918 - #20 =
-INFO  00:41:46,918 - #8 true
-INFO  00:41:46,918 - #5 ,
-INFO  00:41:46,919 - #46 jovanka
-INFO  00:41:46,919 - #20 =
-INFO  00:41:46,919 - #33 "Joc"
-INFO  00:41:46,919 - #6 ;
-INFO  00:41:46,919 - #46 int
-INFO  00:41:46,920 - #46 zorana
-INFO  00:41:46,920 - #22 [
-INFO  00:41:46,920 - #40 ]
-INFO  00:41:46,921 - #5 ,
-INFO  00:41:46,922 - #46 milic
-INFO  00:41:46,922 - #6 ;
-INFO  00:41:46,923 - #13 {
-INFO  00:41:46,924 - #36 }
-INFO  00:41:46,932 - Program(
+INFO  00:41:28,941 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  00:41:28,951 - #39 program
+INFO  00:41:28,951 - #46 MJProgram
+INFO  00:41:28,951 - #44 const
+INFO  00:41:28,952 - #46 int
+INFO  00:41:28,952 - #46 milica
+INFO  00:41:28,952 - #20 =
+INFO  00:41:28,953 - #8 true
+INFO  00:41:28,953 - #5 ,
+INFO  00:41:28,953 - #46 jovanka
+INFO  00:41:28,954 - #20 =
+INFO  00:41:28,954 - #33 "Joc"
+INFO  00:41:28,954 - #6 ;
+INFO  00:41:28,954 - #46 int
+INFO  00:41:28,955 - #46 zorana
+INFO  00:41:28,955 - #5 ,
+INFO  00:41:28,957 - #46 milic
+INFO  00:41:28,957 - #6 ;
+INFO  00:41:28,957 - #13 {
+INFO  00:41:28,958 - #36 }
+INFO  00:41:28,961 - Program(
  MJProgram
   VarDeclaration(
     ConstDeclaration(
@@ -48,8 +46,8 @@ INFO  00:41:46,932 - Program(
       ) [Type]
       SingleVarDecl(
        zorana
-        Brackets(
-        ) [Brackets]
+        NoBrackets(
+        ) [NoBrackets]
       ) [SingleVarDecl]
       MultipleVarDecls(
         EndOfVarDeclaration(
@@ -65,4 +63,4 @@ INFO  00:41:46,932 - Program(
   NoMethodDeclList(
   ) [NoMethodDeclList]
 ) [Program]
-INFO  00:41:46,932 - ===================================
+INFO  00:41:28,961 - ===================================

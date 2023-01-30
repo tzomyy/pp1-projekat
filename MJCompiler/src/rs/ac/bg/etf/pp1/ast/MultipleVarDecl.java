@@ -5,7 +5,7 @@
 
 package rs.ac.bg.etf.pp1.ast;
 
-public abstract class SingleConstDecl implements SyntaxNode {
+public abstract class MultipleVarDecl implements SyntaxNode {
 
     private SyntaxNode parent;
 
