@@ -71,6 +71,7 @@ nonterminal FormPars FormPars;
 nonterminal SingleFormPar SingleFormPar;
 nonterminal MultipleFormPar MultipleFormPar;
 
+nonterminal Addop Addop;
 nonterminal Mulop Mulop;
 
 
@@ -120,7 +121,7 @@ MethodDeclList ::= (MethodDeclLists) SingleMethodDecl:S1 MultipleMethodDecl:M2 {
 				(NoMethodDeclList) {: RESULT=new NoMethodDeclList(); :} /*epsilon*/
 				;
 
-SingleMethodDecl ::= (SingleMethodDecl) Mulop:M1 {: RESULT=new SingleMethodDecl(M1); RESULT.setLine(M1left); :};
+SingleMethodDecl ::= (SingleMethodDecl) Addop:A1 {: RESULT=new SingleMethodDecl(A1); RESULT.setLine(A1left); :};
 
 MultipleMethodDecl ::= (MultipleMethodDecls) MultipleMethodDecl:M1 SingleMethodDecl:S2 {: RESULT=new MultipleMethodDecls(M1, S2); RESULT.setLine(M1left); :}
 					|
@@ -138,10 +139,16 @@ MultipleFormPar ::= (MultipleFormPars) MultipleFormPar:M1 COMMA SingleFormPar:S2
 
 Type ::= (Type) IDENT:I1 {: RESULT=new Type(I1); RESULT.setLine(I1left); :};
 
+Addop ::= (Plus) PLUS {: RESULT=new Plus(); :}
+		|
+		(Minus) MINUS {: RESULT=new Minus(); :}
+		;
+
 Mulop ::= (Asterisk) ASTERISK {: RESULT=new Asterisk(); :}
 		|
 		(Slash) SLASH {: RESULT=new Slash(); :}
 		|
-		(Percent) PERCENT {: RESULT=new Percent(); :};
+		(Percent) PERCENT {: RESULT=new Percent(); :}
+		;
 
 

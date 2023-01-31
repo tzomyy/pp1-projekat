@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 31/0/2023 1:38:29
+// 31/0/2023 1:42:12
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -9,19 +9,19 @@ public class SingleMethodDecl implements SyntaxNode {
 
     private SyntaxNode parent;
     private int line;
-    private Mulop Mulop;
+    private Addop Addop;
 
-    public SingleMethodDecl (Mulop Mulop) {
-        this.Mulop=Mulop;
-        if(Mulop!=null) Mulop.setParent(this);
+    public SingleMethodDecl (Addop Addop) {
+        this.Addop=Addop;
+        if(Addop!=null) Addop.setParent(this);
     }
 
-    public Mulop getMulop() {
-        return Mulop;
+    public Addop getAddop() {
+        return Addop;
     }
 
-    public void setMulop(Mulop Mulop) {
-        this.Mulop=Mulop;
+    public void setAddop(Addop Addop) {
+        this.Addop=Addop;
     }
 
     public SyntaxNode getParent() {
@@ -45,16 +45,16 @@ public class SingleMethodDecl implements SyntaxNode {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(Mulop!=null) Mulop.accept(visitor);
+        if(Addop!=null) Addop.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(Mulop!=null) Mulop.traverseTopDown(visitor);
+        if(Addop!=null) Addop.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(Mulop!=null) Mulop.traverseBottomUp(visitor);
+        if(Addop!=null) Addop.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -63,8 +63,8 @@ public class SingleMethodDecl implements SyntaxNode {
         buffer.append(tab);
         buffer.append("SingleMethodDecl(\n");
 
-        if(Mulop!=null)
-            buffer.append(Mulop.toString("  "+tab));
+        if(Addop!=null)
+            buffer.append(Addop.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

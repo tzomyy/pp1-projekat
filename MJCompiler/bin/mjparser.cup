@@ -67,6 +67,7 @@ nonterminal FormPars;
 nonterminal SingleFormPar;
 nonterminal MultipleFormPar;
 
+nonterminal Addop;
 nonterminal Mulop;
 
 
@@ -116,7 +117,7 @@ MethodDeclList ::= (MethodDeclLists) SingleMethodDecl MultipleMethodDecl
 				(NoMethodDeclList) /*epsilon*/
 				;
 
-SingleMethodDecl ::= (SingleMethodDecl) Mulop;
+SingleMethodDecl ::= (SingleMethodDecl) Addop;
 
 MultipleMethodDecl ::= (MultipleMethodDecls) MultipleMethodDecl SingleMethodDecl
 					|
@@ -134,10 +135,16 @@ MultipleFormPar ::= (MultipleFormPars) MultipleFormPar COMMA SingleFormPar
 
 Type ::= (Type) IDENT;
 
+Addop ::= (Plus) PLUS
+		|
+		(Minus) MINUS
+		;
+
 Mulop ::= (Asterisk) ASTERISK
 		|
 		(Slash) SLASH
 		|
-		(Percent) PERCENT;
+		(Percent) PERCENT
+		;
 
 

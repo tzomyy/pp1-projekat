@@ -5,20 +5,9 @@
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class CharConstDecl extends SingleConstDecl {
+public class Minus extends Addop {
 
-    private String constName;
-
-    public CharConstDecl (String constName) {
-        this.constName=constName;
-    }
-
-    public String getConstName() {
-        return constName;
-    }
-
-    public void setConstName(String constName) {
-        this.constName=constName;
+    public Minus () {
     }
 
     public void accept(Visitor visitor) {
@@ -39,13 +28,10 @@ public class CharConstDecl extends SingleConstDecl {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("CharConstDecl(\n");
-
-        buffer.append(" "+tab+constName);
-        buffer.append("\n");
+        buffer.append("Minus(\n");
 
         buffer.append(tab);
-        buffer.append(") [CharConstDecl]");
+        buffer.append(") [Minus]");
         return buffer.toString();
     }
 }
