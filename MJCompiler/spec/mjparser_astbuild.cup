@@ -71,6 +71,7 @@ nonterminal FormPars FormPars;
 nonterminal SingleFormPar SingleFormPar;
 nonterminal MultipleFormPar MultipleFormPar;
 
+nonterminal Relop Relop;
 nonterminal Addop Addop;
 nonterminal Mulop Mulop;
 
@@ -121,7 +122,7 @@ MethodDeclList ::= (MethodDeclLists) SingleMethodDecl:S1 MultipleMethodDecl:M2 {
 				(NoMethodDeclList) {: RESULT=new NoMethodDeclList(); :} /*epsilon*/
 				;
 
-SingleMethodDecl ::= (SingleMethodDecl) Addop:A1 {: RESULT=new SingleMethodDecl(A1); RESULT.setLine(A1left); :};
+SingleMethodDecl ::= (SingleMethodDecl) Relop:R1 {: RESULT=new SingleMethodDecl(R1); RESULT.setLine(R1left); :};
 
 MultipleMethodDecl ::= (MultipleMethodDecls) MultipleMethodDecl:M1 SingleMethodDecl:S2 {: RESULT=new MultipleMethodDecls(M1, S2); RESULT.setLine(M1left); :}
 					|
@@ -138,6 +139,19 @@ MultipleFormPar ::= (MultipleFormPars) MultipleFormPar:M1 COMMA SingleFormPar:S2
 				;
 
 Type ::= (Type) IDENT:I1 {: RESULT=new Type(I1); RESULT.setLine(I1left); :};
+
+Relop ::= (IsEqual) IS_EQUAL {: RESULT=new IsEqual(); :}
+		|
+		(NotEqual) NOT_EQUAL {: RESULT=new NotEqual(); :}
+		|
+		(Greater) GREATER {: RESULT=new Greater(); :}
+		|
+		(GreaterEqual) GREATER_EQUAL {: RESULT=new GreaterEqual(); :}
+		|
+		(Less) LESS {: RESULT=new Less(); :}
+		|
+		(LessEqual) LESS_EQUAL {: RESULT=new LessEqual(); :}
+		;
 
 Addop ::= (Plus) PLUS {: RESULT=new Plus(); :}
 		|

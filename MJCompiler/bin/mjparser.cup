@@ -67,6 +67,7 @@ nonterminal FormPars;
 nonterminal SingleFormPar;
 nonterminal MultipleFormPar;
 
+nonterminal Relop;
 nonterminal Addop;
 nonterminal Mulop;
 
@@ -117,7 +118,7 @@ MethodDeclList ::= (MethodDeclLists) SingleMethodDecl MultipleMethodDecl
 				(NoMethodDeclList) /*epsilon*/
 				;
 
-SingleMethodDecl ::= (SingleMethodDecl) Addop;
+SingleMethodDecl ::= (SingleMethodDecl) Relop;
 
 MultipleMethodDecl ::= (MultipleMethodDecls) MultipleMethodDecl SingleMethodDecl
 					|
@@ -134,6 +135,19 @@ MultipleFormPar ::= (MultipleFormPars) MultipleFormPar COMMA SingleFormPar
 				;
 
 Type ::= (Type) IDENT;
+
+Relop ::= (IsEqual) IS_EQUAL
+		|
+		(NotEqual) NOT_EQUAL
+		|
+		(Greater) GREATER
+		|
+		(GreaterEqual) GREATER_EQUAL
+		|
+		(Less) LESS
+		|
+		(LessEqual) LESS_EQUAL
+		;
 
 Addop ::= (Plus) PLUS
 		|

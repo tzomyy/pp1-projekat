@@ -5,9 +5,9 @@
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class EndOfMethodDecl extends MultipleMethodDecl {
+public class Greater extends Relop {
 
-    public EndOfMethodDecl () {
+    public Greater () {
     }
 
     public void accept(Visitor visitor) {
@@ -28,10 +28,10 @@ public class EndOfMethodDecl extends MultipleMethodDecl {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("EndOfMethodDecl(\n");
+        buffer.append("Greater(\n");
 
         buffer.append(tab);
-        buffer.append(") [EndOfMethodDecl]");
+        buffer.append(") [Greater]");
         return buffer.toString();
     }
 }

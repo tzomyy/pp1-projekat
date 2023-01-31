@@ -5,7 +5,7 @@
 
 package rs.ac.bg.etf.pp1.ast;
 
-public abstract class MultipleConstDecl implements SyntaxNode {
+public abstract class Relop implements SyntaxNode {
 
     private SyntaxNode parent;
 

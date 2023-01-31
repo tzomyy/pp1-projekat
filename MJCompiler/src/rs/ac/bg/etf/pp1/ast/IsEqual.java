@@ -5,9 +5,9 @@
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class EndOfMethodDecl extends MultipleMethodDecl {
+public class IsEqual extends Relop {
 
-    public EndOfMethodDecl () {
+    public IsEqual () {
     }
 
     public void accept(Visitor visitor) {
@@ -28,10 +28,10 @@ public class EndOfMethodDecl extends MultipleMethodDecl {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("EndOfMethodDecl(\n");
+        buffer.append("IsEqual(\n");
 
         buffer.append(tab);
-        buffer.append(") [EndOfMethodDecl]");
+        buffer.append(") [IsEqual]");
         return buffer.toString();
     }
 }
