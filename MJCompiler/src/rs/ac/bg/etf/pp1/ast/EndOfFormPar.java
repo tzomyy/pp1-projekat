@@ -5,9 +5,9 @@
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class Plus extends Addop {
+public class EndOfFormPar extends MultipleFormPar {
 
-    public Plus () {
+    public EndOfFormPar () {
     }
 
     public void accept(Visitor visitor) {
@@ -28,10 +28,10 @@ public class Plus extends Addop {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("Plus(\n");
+        buffer.append("EndOfFormPar(\n");
 
         buffer.append(tab);
-        buffer.append(") [Plus]");
+        buffer.append(") [EndOfFormPar]");
         return buffer.toString();
     }
 }

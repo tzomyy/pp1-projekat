@@ -71,6 +71,10 @@ nonterminal FormPars FormPars;
 nonterminal SingleFormPar SingleFormPar;
 nonterminal MultipleFormPar MultipleFormPar;
 
+nonterminal Designator Designator;
+nonterminal SingleDesignator SingleDesignator;
+nonterminal MultipleDesignator MultipleDesignator;
+
 nonterminal Label Label;
 nonterminal Assignop Assignop;
 nonterminal Relop Relop;
@@ -137,10 +141,19 @@ SingleFormPar ::= (SingleFormPar) Type:formType IDENT:formName Brackets:B1 {: RE
 
 MultipleFormPar ::= (MultipleFormPars) MultipleFormPar:M1 COMMA SingleFormPar:S2 {: RESULT=new MultipleFormPars(M1, S2); RESULT.setLine(M1left); :}
 				|
-				(EndOfMultipleFormPar) {: RESULT=new EndOfMultipleFormPar(); :} /*epsilon*/
+				(EndOfFormPar) {: RESULT=new EndOfFormPar(); :} /*epsilon*/
 				;
 
 Type ::= (Type) IDENT:I1 {: RESULT=new Type(I1); RESULT.setLine(I1left); :};
+	
+Designator ::= (Designator) SingleDesignator:S1 MultipleDesignator:M2 {: RESULT=new Designator(S1, M2); RESULT.setLine(S1left); :};
+
+SingleDesignator ::= (SingleDesignator) IDENT:I1 {: RESULT=new SingleDesignator(I1); RESULT.setLine(I1left); :};
+
+MultipleDesignator ::= (DesignIdents) MultipleDesignator:M1 DOT SingleDesignator:S2 {: RESULT=new DesignIdents(M1, S2); RESULT.setLine(M1left); :}
+					|
+					(EndOfDesignator) {: RESULT=new EndOfDesignator(); :} /* epsilon */
+					;
 
 Label ::= (Label) IDENT:I1 {: RESULT=new Label(I1); RESULT.setLine(I1left); :};
 

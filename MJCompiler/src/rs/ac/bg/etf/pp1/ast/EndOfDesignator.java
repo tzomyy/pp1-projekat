@@ -1,13 +1,13 @@
 // generated with ast extension for cup
 // version 0.8
-// 31/0/2023 1:55:42
+// 31/0/2023 3:11:29
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class EndOfMultipleFormPar extends MultipleFormPar {
+public class EndOfDesignator extends MultipleDesignator {
 
-    public EndOfMultipleFormPar () {
+    public EndOfDesignator () {
     }
 
     public void accept(Visitor visitor) {
@@ -28,10 +28,10 @@ public class EndOfMultipleFormPar extends MultipleFormPar {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("EndOfMultipleFormPar(\n");
+        buffer.append("EndOfDesignator(\n");
 
         buffer.append(tab);
-        buffer.append(") [EndOfMultipleFormPar]");
+        buffer.append(") [EndOfDesignator]");
         return buffer.toString();
     }
 }

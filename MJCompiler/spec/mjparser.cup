@@ -67,6 +67,10 @@ nonterminal FormPars;
 nonterminal SingleFormPar;
 nonterminal MultipleFormPar;
 
+nonterminal Designator;
+nonterminal SingleDesignator;
+nonterminal MultipleDesignator;
+
 nonterminal Label;
 nonterminal Assignop;
 nonterminal Relop;
@@ -133,10 +137,19 @@ SingleFormPar ::= (SingleFormPar) Type:formType IDENT:formName Brackets;
 
 MultipleFormPar ::= (MultipleFormPars) MultipleFormPar COMMA SingleFormPar
 				|
-				(EndOfMultipleFormPar) /*epsilon*/
+				(EndOfFormPar) /*epsilon*/
 				;
 
 Type ::= (Type) IDENT;
+	
+Designator ::= (Designator) SingleDesignator MultipleDesignator;
+
+SingleDesignator ::= (SingleDesignator) IDENT;
+
+MultipleDesignator ::= (DesignIdents) MultipleDesignator DOT SingleDesignator
+					|
+					(EndOfDesignator) /* epsilon */
+					;
 
 Label ::= (Label) IDENT;
 
