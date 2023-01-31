@@ -1,16 +1,15 @@
 // generated with ast extension for cup
 // version 0.8
-// 31/0/2023 0:41:14
+// 31/0/2023 0:57:12
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class MethodDeclList implements SyntaxNode {
+public abstract class MethodDeclList implements SyntaxNode {
 
     private SyntaxNode parent;
+
     private int line;
-    public MethodDeclList () {
-    }
 
     public SyntaxNode getParent() {
         return parent;
@@ -28,28 +27,11 @@ public class MethodDeclList implements SyntaxNode {
         this.line=line;
     }
 
-    public void accept(Visitor visitor) {
-        visitor.visit(this);
-    }
+    public abstract void accept(Visitor visitor);
+    public abstract void childrenAccept(Visitor visitor);
+    public abstract void traverseTopDown(Visitor visitor);
+    public abstract void traverseBottomUp(Visitor visitor);
 
-    public void childrenAccept(Visitor visitor) {
-    }
-
-    public void traverseTopDown(Visitor visitor) {
-        accept(visitor);
-    }
-
-    public void traverseBottomUp(Visitor visitor) {
-        accept(visitor);
-    }
-
-    public String toString(String tab) {
-        StringBuffer buffer=new StringBuffer();
-        buffer.append(tab);
-        buffer.append("MethodDeclList(\n");
-
-        buffer.append(tab);
-        buffer.append(") [MethodDeclList]");
-        return buffer.toString();
-    }
+    public String toString() { return toString(""); }
+    public abstract String toString(String tab);
 }

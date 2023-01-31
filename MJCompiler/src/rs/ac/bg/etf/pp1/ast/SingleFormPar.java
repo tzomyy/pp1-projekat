@@ -5,25 +5,36 @@
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class SingleVarDecl implements SyntaxNode {
+public class SingleFormPar implements SyntaxNode {
 
     private SyntaxNode parent;
     private int line;
-    private String varName;
+    private Type Type;
+    private String formName;
     private Brackets Brackets;
 
-    public SingleVarDecl (String varName, Brackets Brackets) {
-        this.varName=varName;
+    public SingleFormPar (Type Type, String formName, Brackets Brackets) {
+        this.Type=Type;
+        if(Type!=null) Type.setParent(this);
+        this.formName=formName;
         this.Brackets=Brackets;
         if(Brackets!=null) Brackets.setParent(this);
     }
 
-    public String getVarName() {
-        return varName;
+    public Type getType() {
+        return Type;
     }
 
-    public void setVarName(String varName) {
-        this.varName=varName;
+    public void setType(Type Type) {
+        this.Type=Type;
+    }
+
+    public String getFormName() {
+        return formName;
+    }
+
+    public void setFormName(String formName) {
+        this.formName=formName;
     }
 
     public Brackets getBrackets() {
@@ -55,15 +66,18 @@ public class SingleVarDecl implements SyntaxNode {
     }
 
     public void childrenAccept(Visitor visitor) {
+        if(Type!=null) Type.accept(visitor);
         if(Brackets!=null) Brackets.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
+        if(Type!=null) Type.traverseTopDown(visitor);
         if(Brackets!=null) Brackets.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
+        if(Type!=null) Type.traverseBottomUp(visitor);
         if(Brackets!=null) Brackets.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -71,9 +85,15 @@ public class SingleVarDecl implements SyntaxNode {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("SingleVarDecl(\n");
+        buffer.append("SingleFormPar(\n");
 
-        buffer.append(" "+tab+varName);
+        if(Type!=null)
+            buffer.append(Type.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        buffer.append(" "+tab+formName);
         buffer.append("\n");
 
         if(Brackets!=null)
@@ -83,7 +103,7 @@ public class SingleVarDecl implements SyntaxNode {
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [SingleVarDecl]");
+        buffer.append(") [SingleFormPar]");
         return buffer.toString();
     }
 }

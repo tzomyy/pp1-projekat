@@ -5,27 +5,9 @@
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class ClassDecl implements SyntaxNode {
+public class EndOfMultipleFormPar extends MultipleFormPar {
 
-    private SyntaxNode parent;
-    private int line;
-    public ClassDecl () {
-    }
-
-    public SyntaxNode getParent() {
-        return parent;
-    }
-
-    public void setParent(SyntaxNode parent) {
-        this.parent=parent;
-    }
-
-    public int getLine() {
-        return line;
-    }
-
-    public void setLine(int line) {
-        this.line=line;
+    public EndOfMultipleFormPar () {
     }
 
     public void accept(Visitor visitor) {
@@ -46,10 +28,10 @@ public class ClassDecl implements SyntaxNode {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("ClassDecl(\n");
+        buffer.append("EndOfMultipleFormPar(\n");
 
         buffer.append(tab);
-        buffer.append(") [ClassDecl]");
+        buffer.append(") [EndOfMultipleFormPar]");
         return buffer.toString();
     }
 }

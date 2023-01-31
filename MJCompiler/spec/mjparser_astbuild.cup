@@ -63,6 +63,10 @@ nonterminal MultipleConstDecl MultipleConstDecl;
 nonterminal SingleVarDecl SingleVarDecl;
 nonterminal Brackets Brackets;
 nonterminal MultipleVarDecl MultipleVarDecl;
+nonterminal FormPars FormPars;
+nonterminal SingleFormPar SingleFormPar;
+nonterminal MultipleFormPar MultipleFormPar;
+
 
 Program ::= (Program) PROG IDENT:I1 Declaration:D2 LCURLY MethodDeclList:M3 RCURLY {: RESULT=new Program(I1, D2, M3); RESULT.setLine(I1left); :};
 
@@ -105,9 +109,18 @@ MultipleVarDecl ::= (MultipleVarDecls) MultipleVarDecl:M1 COMMA SingleVarDecl:S2
 				
 ClassDecl ::= (ClassDecl) AND {: RESULT=new ClassDecl(); :};
 
-MethodDeclList ::= (MethodDeclList) CHAR {: RESULT=new MethodDeclList(); :}
+MethodDeclList ::= (MethodDeclLists) FormPars:F1 {: RESULT=new MethodDeclLists(F1); RESULT.setLine(F1left); :}
 				|
 				(NoMethodDeclList) {: RESULT=new NoMethodDeclList(); :} /*epsilon*/
+				;
+
+FormPars ::= (FormPars) SingleFormPar:S1 MultipleFormPar:M2 {: RESULT=new FormPars(S1, M2); RESULT.setLine(S1left); :};
+
+SingleFormPar ::= (SingleFormPar) Type:formType IDENT:formName Brackets:B1 {: RESULT=new SingleFormPar(formType, formName, B1); RESULT.setLine(formTypeleft); :};
+
+MultipleFormPar ::= (MultipleFormPars) MultipleFormPar:M1 COMMA SingleFormPar:S2 {: RESULT=new MultipleFormPars(M1, S2); RESULT.setLine(M1left); :}
+				|
+				(EndOfMultipleFormPar) {: RESULT=new EndOfMultipleFormPar(); :} /*epsilon*/
 				;
 
 Type ::= (Type) IDENT:I1 {: RESULT=new Type(I1); RESULT.setLine(I1left); :};

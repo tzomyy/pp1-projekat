@@ -1,0 +1,68 @@
+INFO  00:53:17,002 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  00:53:17,012 - #39 program
+INFO  00:53:17,012 - #46 MJProgram
+INFO  00:53:17,012 - #44 const
+INFO  00:53:17,013 - #46 int
+INFO  00:53:17,013 - #46 milica
+INFO  00:53:17,013 - #20 =
+INFO  00:53:17,013 - #8 true
+INFO  00:53:17,014 - #5 ,
+INFO  00:53:17,014 - #46 jovanka
+INFO  00:53:17,015 - #20 =
+INFO  00:53:17,015 - #33 "Joc"
+INFO  00:53:17,015 - #6 ;
+INFO  00:53:17,015 - #46 int
+INFO  00:53:17,016 - #46 zorana
+INFO  00:53:17,016 - #22 [
+INFO  00:53:17,016 - #40 ]
+INFO  00:53:17,016 - #5 ,
+INFO  00:53:17,018 - #46 milic
+INFO  00:53:17,018 - #6 ;
+INFO  00:53:17,018 - #13 {
+INFO  00:53:17,020 - #36 }
+INFO  00:53:17,022 - Program(
+ MJProgram
+  VarDeclaration(
+    ConstDeclaration(
+      NoDeclaration(
+      ) [NoDeclaration]
+      ConstDecl(
+        Type(
+         int
+        ) [Type]
+        BoolConstDecl(
+         milica
+        ) [BoolConstDecl]
+        MultipleConstDecls(
+          EndOfDeclaration(
+          ) [EndOfDeclaration]
+          CharConstDecl(
+           jovanka
+          ) [CharConstDecl]
+        ) [MultipleConstDecls]
+      ) [ConstDecl]
+    ) [ConstDeclaration]
+    VarDecl(
+      Type(
+       int
+      ) [Type]
+      SingleVarDecl(
+       zorana
+        Brackets(
+        ) [Brackets]
+      ) [SingleVarDecl]
+      MultipleVarDecls(
+        EndOfVarDeclaration(
+        ) [EndOfVarDeclaration]
+        SingleVarDecl(
+         milic
+          NoBrackets(
+          ) [NoBrackets]
+        ) [SingleVarDecl]
+      ) [MultipleVarDecls]
+    ) [VarDecl]
+  ) [VarDeclaration]
+  NoMethodDeclList(
+  ) [NoMethodDeclList]
+) [Program]
+INFO  00:53:17,023 - ===================================

@@ -58,6 +58,10 @@ nonterminal MultipleConstDecl;
 nonterminal SingleVarDecl;
 nonterminal Brackets;
 nonterminal MultipleVarDecl;
+nonterminal FormPars;
+nonterminal SingleFormPar;
+nonterminal MultipleFormPar;
+
 
 Program ::= (Program) PROG IDENT Declaration LCURLY MethodDeclList RCURLY;
 
@@ -100,9 +104,18 @@ MultipleVarDecl ::= (MultipleVarDecls) MultipleVarDecl COMMA SingleVarDecl
 				
 ClassDecl ::= (ClassDecl) AND;
 
-MethodDeclList ::= (MethodDeclList) CHAR
+MethodDeclList ::= (MethodDeclLists) FormPars
 				|
 				(NoMethodDeclList) /*epsilon*/
+				;
+
+FormPars ::= (FormPars) SingleFormPar MultipleFormPar;
+
+SingleFormPar ::= (SingleFormPar) Type:formType IDENT:formName Brackets;
+
+MultipleFormPar ::= (MultipleFormPars) MultipleFormPar COMMA SingleFormPar
+				|
+				(EndOfMultipleFormPar) /*epsilon*/
 				;
 
 Type ::= (Type) IDENT;
