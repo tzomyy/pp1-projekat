@@ -1,25 +1,36 @@
 // generated with ast extension for cup
 // version 0.8
-// 31/0/2023 0:57:12
+// 31/0/2023 1:38:29
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class MethodDeclLists extends MethodDeclList {
 
-    private FormPars FormPars;
+    private SingleMethodDecl SingleMethodDecl;
+    private MultipleMethodDecl MultipleMethodDecl;
 
-    public MethodDeclLists (FormPars FormPars) {
-        this.FormPars=FormPars;
-        if(FormPars!=null) FormPars.setParent(this);
+    public MethodDeclLists (SingleMethodDecl SingleMethodDecl, MultipleMethodDecl MultipleMethodDecl) {
+        this.SingleMethodDecl=SingleMethodDecl;
+        if(SingleMethodDecl!=null) SingleMethodDecl.setParent(this);
+        this.MultipleMethodDecl=MultipleMethodDecl;
+        if(MultipleMethodDecl!=null) MultipleMethodDecl.setParent(this);
     }
 
-    public FormPars getFormPars() {
-        return FormPars;
+    public SingleMethodDecl getSingleMethodDecl() {
+        return SingleMethodDecl;
     }
 
-    public void setFormPars(FormPars FormPars) {
-        this.FormPars=FormPars;
+    public void setSingleMethodDecl(SingleMethodDecl SingleMethodDecl) {
+        this.SingleMethodDecl=SingleMethodDecl;
+    }
+
+    public MultipleMethodDecl getMultipleMethodDecl() {
+        return MultipleMethodDecl;
+    }
+
+    public void setMultipleMethodDecl(MultipleMethodDecl MultipleMethodDecl) {
+        this.MultipleMethodDecl=MultipleMethodDecl;
     }
 
     public void accept(Visitor visitor) {
@@ -27,16 +38,19 @@ public class MethodDeclLists extends MethodDeclList {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(FormPars!=null) FormPars.accept(visitor);
+        if(SingleMethodDecl!=null) SingleMethodDecl.accept(visitor);
+        if(MultipleMethodDecl!=null) MultipleMethodDecl.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(FormPars!=null) FormPars.traverseTopDown(visitor);
+        if(SingleMethodDecl!=null) SingleMethodDecl.traverseTopDown(visitor);
+        if(MultipleMethodDecl!=null) MultipleMethodDecl.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(FormPars!=null) FormPars.traverseBottomUp(visitor);
+        if(SingleMethodDecl!=null) SingleMethodDecl.traverseBottomUp(visitor);
+        if(MultipleMethodDecl!=null) MultipleMethodDecl.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -45,8 +59,14 @@ public class MethodDeclLists extends MethodDeclList {
         buffer.append(tab);
         buffer.append("MethodDeclLists(\n");
 
-        if(FormPars!=null)
-            buffer.append(FormPars.toString("  "+tab));
+        if(SingleMethodDecl!=null)
+            buffer.append(SingleMethodDecl.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        if(MultipleMethodDecl!=null)
+            buffer.append(MultipleMethodDecl.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

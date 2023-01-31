@@ -47,20 +47,27 @@ terminal COLON, PLUS, RPAREN, COMMA, SEMICOLON, EXTENDS, BOOL, NEW, ELSE, IF, DO
 terminal ASSIGN, MINUS, NOT_EQUAL, VOID, AND, LPAREN, EQUAL, LESS, LSQUARE;
 terminal IS_EQUAL, BREAK, READ, INCREMENT, ASTERISK, GREATER, WHILE, SLASH;
 terminal GREATER_EQUAL, LESS_EQUAL, CHAR, PRINT, FOREACH, RCURLY, CLASS, DECREMENT, PROG;
-terminal RSQUARE, RETURN, CONTINUE, OR, CONST;
+terminal RSQUARE, RETURN, CONTINUE, OR, CONST, PERCENT;
 terminal Integer NUMBER;
 terminal String IDENT;
 
-nonterminal Program, Declaration, MethodDeclList, ConstDecl, VarDecl, ClassDecl;
+nonterminal Program, Declaration, ConstDecl, VarDecl, ClassDecl;
 nonterminal Type;
 nonterminal SingleConstDecl;
 nonterminal MultipleConstDecl;
 nonterminal SingleVarDecl;
 nonterminal Brackets;
 nonterminal MultipleVarDecl;
+
+nonterminal MethodDeclList;
+nonterminal SingleMethodDecl;
+nonterminal MultipleMethodDecl;
+
 nonterminal FormPars;
 nonterminal SingleFormPar;
 nonterminal MultipleFormPar;
+
+nonterminal Mulop;
 
 
 Program ::= (Program) PROG IDENT Declaration LCURLY MethodDeclList RCURLY;
@@ -104,10 +111,17 @@ MultipleVarDecl ::= (MultipleVarDecls) MultipleVarDecl COMMA SingleVarDecl
 				
 ClassDecl ::= (ClassDecl) AND;
 
-MethodDeclList ::= (MethodDeclLists) FormPars
+MethodDeclList ::= (MethodDeclLists) SingleMethodDecl MultipleMethodDecl
 				|
 				(NoMethodDeclList) /*epsilon*/
 				;
+
+SingleMethodDecl ::= (SingleMethodDecl) Mulop;
+
+MultipleMethodDecl ::= (MultipleMethodDecls) MultipleMethodDecl SingleMethodDecl
+					|
+					(EndOfMethodDecl) /* epsilon */
+					;
 
 FormPars ::= (FormPars) SingleFormPar MultipleFormPar;
 
@@ -119,3 +133,11 @@ MultipleFormPar ::= (MultipleFormPars) MultipleFormPar COMMA SingleFormPar
 				;
 
 Type ::= (Type) IDENT;
+
+Mulop ::= (Asterisk) ASTERISK
+		|
+		(Slash) SLASH
+		|
+		(Percent) PERCENT;
+
+

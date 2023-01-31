@@ -47,13 +47,12 @@ terminal COLON, PLUS, RPAREN, COMMA, SEMICOLON, EXTENDS, BOOL, NEW, ELSE, IF, DO
 terminal ASSIGN, MINUS, NOT_EQUAL, VOID, AND, LPAREN, EQUAL, LESS, LSQUARE;
 terminal IS_EQUAL, BREAK, READ, INCREMENT, ASTERISK, GREATER, WHILE, SLASH;
 terminal GREATER_EQUAL, LESS_EQUAL, CHAR, PRINT, FOREACH, RCURLY, CLASS, DECREMENT, PROG;
-terminal RSQUARE, RETURN, CONTINUE, OR, CONST;
+terminal RSQUARE, RETURN, CONTINUE, OR, CONST, PERCENT;
 terminal Integer NUMBER;
 terminal String IDENT;
 
 nonterminal Program Program;
 nonterminal Declaration Declaration;
-nonterminal MethodDeclList MethodDeclList;
 nonterminal ConstDecl ConstDecl;
 nonterminal VarDecl VarDecl;
 nonterminal ClassDecl ClassDecl;
@@ -63,9 +62,16 @@ nonterminal MultipleConstDecl MultipleConstDecl;
 nonterminal SingleVarDecl SingleVarDecl;
 nonterminal Brackets Brackets;
 nonterminal MultipleVarDecl MultipleVarDecl;
+
+nonterminal MethodDeclList MethodDeclList;
+nonterminal SingleMethodDecl SingleMethodDecl;
+nonterminal MultipleMethodDecl MultipleMethodDecl;
+
 nonterminal FormPars FormPars;
 nonterminal SingleFormPar SingleFormPar;
 nonterminal MultipleFormPar MultipleFormPar;
+
+nonterminal Mulop Mulop;
 
 
 Program ::= (Program) PROG IDENT:I1 Declaration:D2 LCURLY MethodDeclList:M3 RCURLY {: RESULT=new Program(I1, D2, M3); RESULT.setLine(I1left); :};
@@ -109,10 +115,17 @@ MultipleVarDecl ::= (MultipleVarDecls) MultipleVarDecl:M1 COMMA SingleVarDecl:S2
 				
 ClassDecl ::= (ClassDecl) AND {: RESULT=new ClassDecl(); :};
 
-MethodDeclList ::= (MethodDeclLists) FormPars:F1 {: RESULT=new MethodDeclLists(F1); RESULT.setLine(F1left); :}
+MethodDeclList ::= (MethodDeclLists) SingleMethodDecl:S1 MultipleMethodDecl:M2 {: RESULT=new MethodDeclLists(S1, M2); RESULT.setLine(S1left); :}
 				|
 				(NoMethodDeclList) {: RESULT=new NoMethodDeclList(); :} /*epsilon*/
 				;
+
+SingleMethodDecl ::= (SingleMethodDecl) Mulop:M1 {: RESULT=new SingleMethodDecl(M1); RESULT.setLine(M1left); :};
+
+MultipleMethodDecl ::= (MultipleMethodDecls) MultipleMethodDecl:M1 SingleMethodDecl:S2 {: RESULT=new MultipleMethodDecls(M1, S2); RESULT.setLine(M1left); :}
+					|
+					(EndOfMethodDecl) {: RESULT=new EndOfMethodDecl(); :} /* epsilon */
+					;
 
 FormPars ::= (FormPars) SingleFormPar:S1 MultipleFormPar:M2 {: RESULT=new FormPars(S1, M2); RESULT.setLine(S1left); :};
 
@@ -124,3 +137,11 @@ MultipleFormPar ::= (MultipleFormPars) MultipleFormPar:M1 COMMA SingleFormPar:S2
 				;
 
 Type ::= (Type) IDENT:I1 {: RESULT=new Type(I1); RESULT.setLine(I1left); :};
+
+Mulop ::= (Asterisk) ASTERISK {: RESULT=new Asterisk(); :}
+		|
+		(Slash) SLASH {: RESULT=new Slash(); :}
+		|
+		(Percent) PERCENT {: RESULT=new Percent(); :};
+
+

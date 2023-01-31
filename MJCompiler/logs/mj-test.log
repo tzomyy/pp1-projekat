@@ -1,35 +1,29 @@
-INFO  01:01:13,730 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
-INFO  01:01:13,742 - #39 program
-INFO  01:01:13,743 - #46 MJProgram
-INFO  01:01:13,743 - #44 const
-INFO  01:01:13,743 - #46 int
-INFO  01:01:13,744 - #46 milica
-INFO  01:01:13,744 - #20 =
-INFO  01:01:13,744 - #8 true
-INFO  01:01:13,744 - #5 ,
-INFO  01:01:13,745 - #46 jovanka
-INFO  01:01:13,745 - #20 =
-INFO  01:01:13,745 - #33 "Joc"
-INFO  01:01:13,746 - #6 ;
-INFO  01:01:13,746 - #46 int
-INFO  01:01:13,747 - #46 zorana
-INFO  01:01:13,747 - #22 [
-INFO  01:01:13,747 - #40 ]
-INFO  01:01:13,747 - #5 ,
-INFO  01:01:13,749 - #46 milic
-INFO  01:01:13,749 - #6 ;
-INFO  01:01:13,750 - #13 {
-INFO  01:01:13,751 - #46 int
-INFO  01:01:13,757 - #46 mi
-INFO  01:01:13,757 - #22 [
-INFO  01:01:13,757 - #40 ]
-INFO  01:01:13,757 - #5 ,
-INFO  01:01:13,758 - #46 int
-INFO  01:01:13,758 - #46 svi
-INFO  01:01:13,758 - #22 [
-INFO  01:01:13,758 - #40 ]
-INFO  01:01:13,758 - #36 }
-INFO  01:01:13,760 - Program(
+INFO  01:38:56,314 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  01:38:56,326 - #39 program
+INFO  01:38:56,326 - #47 MJProgram
+INFO  01:38:56,326 - #44 const
+INFO  01:38:56,327 - #47 int
+INFO  01:38:56,327 - #47 milica
+INFO  01:38:56,328 - #20 =
+INFO  01:38:56,328 - #8 true
+INFO  01:38:56,328 - #5 ,
+INFO  01:38:56,329 - #47 jovanka
+INFO  01:38:56,329 - #20 =
+INFO  01:38:56,329 - #33 "Joc"
+INFO  01:38:56,329 - #6 ;
+INFO  01:38:56,329 - #47 int
+INFO  01:38:56,330 - #47 zorana
+INFO  01:38:56,330 - #22 [
+INFO  01:38:56,330 - #40 ]
+INFO  01:38:56,330 - #5 ,
+INFO  01:38:56,332 - #47 milic
+INFO  01:38:56,332 - #6 ;
+INFO  01:38:56,333 - #13 {
+INFO  01:38:56,334 - #45 %
+INFO  01:38:56,334 - #30 /
+INFO  01:38:56,336 - #27 *
+INFO  01:38:56,337 - #36 }
+INFO  01:38:56,338 - Program(
  MJProgram
   VarDeclaration(
     ConstDeclaration(
@@ -72,28 +66,24 @@ INFO  01:01:13,760 - Program(
     ) [VarDecl]
   ) [VarDeclaration]
   MethodDeclLists(
-    FormPars(
-      SingleFormPar(
-        Type(
-         int
-        ) [Type]
-       mi
-        Brackets(
-        ) [Brackets]
-      ) [SingleFormPar]
-      MultipleFormPars(
-        EndOfMultipleFormPar(
-        ) [EndOfMultipleFormPar]
-        SingleFormPar(
-          Type(
-           int
-          ) [Type]
-         svi
-          Brackets(
-          ) [Brackets]
-        ) [SingleFormPar]
-      ) [MultipleFormPars]
-    ) [FormPars]
+    SingleMethodDecl(
+      Percent(
+      ) [Percent]
+    ) [SingleMethodDecl]
+    MultipleMethodDecls(
+      MultipleMethodDecls(
+        EndOfMethodDecl(
+        ) [EndOfMethodDecl]
+        SingleMethodDecl(
+          Slash(
+          ) [Slash]
+        ) [SingleMethodDecl]
+      ) [MultipleMethodDecls]
+      SingleMethodDecl(
+        Asterisk(
+        ) [Asterisk]
+      ) [SingleMethodDecl]
+    ) [MultipleMethodDecls]
   ) [MethodDeclLists]
 ) [Program]
-INFO  01:01:13,760 - ===================================
+INFO  01:38:56,339 - ===================================

@@ -1,23 +1,31 @@
 // generated with ast extension for cup
 // version 0.8
-// 31/0/2023 0:57:12
+// 31/0/2023 1:38:29
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public abstract class VisitorAdaptor implements Visitor { 
 
+    public void visit(Mulop Mulop) { }
     public void visit(MultipleVarDecl MultipleVarDecl) { }
-    public void visit(MultipleConstDecl MultipleConstDecl) { }
-    public void visit(SingleConstDecl SingleConstDecl) { }
     public void visit(Declaration Declaration) { }
+    public void visit(SingleConstDecl SingleConstDecl) { }
+    public void visit(MultipleMethodDecl MultipleMethodDecl) { }
+    public void visit(MultipleConstDecl MultipleConstDecl) { }
     public void visit(MultipleFormPar MultipleFormPar) { }
     public void visit(MethodDeclList MethodDeclList) { }
+    public void visit(Percent Percent) { visit(); }
+    public void visit(Slash Slash) { visit(); }
+    public void visit(Asterisk Asterisk) { visit(); }
     public void visit(Type Type) { visit(); }
     public void visit(EndOfMultipleFormPar EndOfMultipleFormPar) { visit(); }
     public void visit(MultipleFormPars MultipleFormPars) { visit(); }
     public void visit(SingleFormPar SingleFormPar) { visit(); }
     public void visit(FormPars FormPars) { visit(); }
+    public void visit(EndOfMethodDecl EndOfMethodDecl) { visit(); }
+    public void visit(MultipleMethodDecls MultipleMethodDecls) { visit(); }
+    public void visit(SingleMethodDecl SingleMethodDecl) { visit(); }
     public void visit(NoMethodDeclList NoMethodDeclList) { visit(); }
     public void visit(MethodDeclLists MethodDeclLists) { visit(); }
     public void visit(ClassDecl ClassDecl) { visit(); }

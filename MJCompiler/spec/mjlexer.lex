@@ -63,6 +63,7 @@ import java_cup.runtime.Symbol;
 "-"			{ return new_symbol(sym.MINUS, yytext());}
 "*"			{ return new_symbol(sym.ASTERISK, yytext());}
 "/"			{ return new_symbol(sym.SLASH, yytext());}
+"%"			{ return new_symbol(sym.PERCENT, yytext());}
 "=="		{ return new_symbol(sym.IS_EQUAL, yytext());}
 "!="		{ return new_symbol(sym.NOT_EQUAL, yytext());}
 ">"			{ return new_symbol(sym.GREATER, yytext());}
