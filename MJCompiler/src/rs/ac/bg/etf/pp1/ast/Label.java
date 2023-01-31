@@ -5,20 +5,38 @@
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class CharConstDecl extends SingleConstDecl {
+public class Label implements SyntaxNode {
 
-    private String constName;
+    private SyntaxNode parent;
+    private int line;
+    private String I1;
 
-    public CharConstDecl (String constName) {
-        this.constName=constName;
+    public Label (String I1) {
+        this.I1=I1;
     }
 
-    public String getConstName() {
-        return constName;
+    public String getI1() {
+        return I1;
     }
 
-    public void setConstName(String constName) {
-        this.constName=constName;
+    public void setI1(String I1) {
+        this.I1=I1;
+    }
+
+    public SyntaxNode getParent() {
+        return parent;
+    }
+
+    public void setParent(SyntaxNode parent) {
+        this.parent=parent;
+    }
+
+    public int getLine() {
+        return line;
+    }
+
+    public void setLine(int line) {
+        this.line=line;
     }
 
     public void accept(Visitor visitor) {
@@ -39,13 +57,13 @@ public class CharConstDecl extends SingleConstDecl {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("CharConstDecl(\n");
+        buffer.append("Label(\n");
 
-        buffer.append(" "+tab+constName);
+        buffer.append(" "+tab+I1);
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [CharConstDecl]");
+        buffer.append(") [Label]");
         return buffer.toString();
     }
 }

@@ -5,9 +5,27 @@
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class EndOfMethodDecl extends MultipleMethodDecl {
+public class Assignop implements SyntaxNode {
 
-    public EndOfMethodDecl () {
+    private SyntaxNode parent;
+    private int line;
+    public Assignop () {
+    }
+
+    public SyntaxNode getParent() {
+        return parent;
+    }
+
+    public void setParent(SyntaxNode parent) {
+        this.parent=parent;
+    }
+
+    public int getLine() {
+        return line;
+    }
+
+    public void setLine(int line) {
+        this.line=line;
     }
 
     public void accept(Visitor visitor) {
@@ -28,10 +46,10 @@ public class EndOfMethodDecl extends MultipleMethodDecl {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("EndOfMethodDecl(\n");
+        buffer.append("Assignop(\n");
 
         buffer.append(tab);
-        buffer.append(") [EndOfMethodDecl]");
+        buffer.append(") [Assignop]");
         return buffer.toString();
     }
 }
