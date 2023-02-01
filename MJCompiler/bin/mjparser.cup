@@ -78,6 +78,10 @@ nonterminal Factor;
 nonterminal FactParam;
 nonterminal ActPars;
 
+nonterminal Condition;
+nonterminal CondTerm;
+nonterminal CondFact;
+
 nonterminal Designator;
 
 nonterminal Label;
@@ -159,6 +163,8 @@ MultipleFormPar ::= (MultipleFormPars) MultipleFormPar COMMA SingleFormPar
 				
 Statement ::= (DesignStmt) Designator SEMICOLON
 			|
+			(IfStmt) IF LPAREN Condition RPAREN
+			|
 			(BreakStmt) BREAK SEMICOLON
 			|
 			(ContinueStmt) CONTINUE SEMICOLON
@@ -219,11 +225,27 @@ FactParam ::= (FactFuncParams) ActPars
 				|
 				(NoFactFuncParams) /* epsilon */
 				;
+		
 				
 ActPars ::= (ActParams) ActPars COMMA Expr
 		|
 		(SingleActParam) Expr
 		; 
+		
+Condition ::= (Conditions) CondTerm OR CondTerm
+			|
+			(SingleCondition) CondTerm
+			;
+				
+CondTerm ::= (CondTerms) CondFact AND CondFact
+			|
+			(SingleCondTerm) CondFact
+			;
+				
+CondFact ::= (CondFacts) CondFact Relop Expr
+		|
+		(SingleCondFact) Expr
+		;
 					
 Designator ::= (MultipleDesignIdent) Designator DOT IDENT
 			|

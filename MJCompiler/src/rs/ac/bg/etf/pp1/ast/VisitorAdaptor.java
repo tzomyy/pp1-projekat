@@ -1,34 +1,37 @@
 // generated with ast extension for cup
 // version 0.8
-// 1/1/2023 22:2:22
+// 1/1/2023 22:43:33
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public abstract class VisitorAdaptor implements Visitor { 
 
-    public void visit(Designator Designator) { }
-    public void visit(MethodDecl MethodDecl) { }
-    public void visit(Factor Factor) { }
     public void visit(Mulop Mulop) { }
-    public void visit(MultipleVarDecl MultipleVarDecl) { }
-    public void visit(Declaration Declaration) { }
-    public void visit(Expr Expr) { }
-    public void visit(MethodFormPars MethodFormPars) { }
-    public void visit(StmtConst StmtConst) { }
-    public void visit(SingleConstDecl SingleConstDecl) { }
-    public void visit(FactParam FactParam) { }
+    public void visit(MethodDecl MethodDecl) { }
+    public void visit(Relop Relop) { }
     public void visit(MultipleMethodDecl MultipleMethodDecl) { }
     public void visit(MethodStatement MethodStatement) { }
-    public void visit(MultipleConstDecl MultipleConstDecl) { }
-    public void visit(MultipleFormPar MultipleFormPar) { }
-    public void visit(Addop Addop) { }
-    public void visit(Statement Statement) { }
-    public void visit(Relop Relop) { }
-    public void visit(Term Term) { }
-    public void visit(ActPars ActPars) { }
-    public void visit(SingleFormPar SingleFormPar) { }
     public void visit(StatementList StatementList) { }
+    public void visit(Addop Addop) { }
+    public void visit(StmtConst StmtConst) { }
+    public void visit(Factor Factor) { }
+    public void visit(CondTerm CondTerm) { }
+    public void visit(Designator Designator) { }
+    public void visit(Term Term) { }
+    public void visit(Condition Condition) { }
+    public void visit(FactParam FactParam) { }
+    public void visit(MethodFormPars MethodFormPars) { }
+    public void visit(MultipleVarDecl MultipleVarDecl) { }
+    public void visit(MultipleFormPar MultipleFormPar) { }
+    public void visit(Expr Expr) { }
+    public void visit(ActPars ActPars) { }
+    public void visit(MultipleConstDecl MultipleConstDecl) { }
+    public void visit(Statement Statement) { }
+    public void visit(CondFact CondFact) { }
+    public void visit(Declaration Declaration) { }
+    public void visit(SingleConstDecl SingleConstDecl) { }
+    public void visit(SingleFormPar SingleFormPar) { }
     public void visit(Percent Percent) { visit(); }
     public void visit(Slash Slash) { visit(); }
     public void visit(Asterisk Asterisk) { visit(); }
@@ -46,6 +49,12 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(SingleDesignIdent SingleDesignIdent) { visit(); }
     public void visit(MultipleDesignExpr MultipleDesignExpr) { visit(); }
     public void visit(MultipleDesignIdent MultipleDesignIdent) { visit(); }
+    public void visit(SingleCondFact SingleCondFact) { visit(); }
+    public void visit(CondFacts CondFacts) { visit(); }
+    public void visit(SingleCondTerm SingleCondTerm) { visit(); }
+    public void visit(CondTerms CondTerms) { visit(); }
+    public void visit(SingleCondition SingleCondition) { visit(); }
+    public void visit(Conditions Conditions) { visit(); }
     public void visit(SingleActParam SingleActParam) { visit(); }
     public void visit(ActParams ActParams) { visit(); }
     public void visit(NoFactFuncParams NoFactFuncParams) { visit(); }
@@ -75,6 +84,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(ReturnNoExpr ReturnNoExpr) { visit(); }
     public void visit(ContinueStmt ContinueStmt) { visit(); }
     public void visit(BreakStmt BreakStmt) { visit(); }
+    public void visit(IfStmt IfStmt) { visit(); }
     public void visit(DesignStmt DesignStmt) { visit(); }
     public void visit(EndOfFormPar EndOfFormPar) { visit(); }
     public void visit(MultipleFormPars MultipleFormPars) { visit(); }

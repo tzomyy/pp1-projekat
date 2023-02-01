@@ -1,112 +1,120 @@
-INFO  22:03:32,040 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
-INFO  22:03:32,073 - #39 program
-INFO  22:03:32,073 - #47 MJProgram
-INFO  22:03:32,074 - #44 const
-INFO  22:03:32,074 - #47 int
-INFO  22:03:32,074 - #47 milica
-INFO  22:03:32,075 - #20 =
-INFO  22:03:32,075 - #8 true
-INFO  22:03:32,075 - #5 ,
-INFO  22:03:32,076 - #47 jovanka
-INFO  22:03:32,076 - #20 =
-INFO  22:03:32,076 - #33 "Joc"
-INFO  22:03:32,076 - #6 ;
-INFO  22:03:32,076 - #47 int
-INFO  22:03:32,077 - #47 zorana
-INFO  22:03:32,078 - #22 [
-INFO  22:03:32,078 - #40 ]
-INFO  22:03:32,078 - #5 ,
-INFO  22:03:32,079 - #47 milic
-INFO  22:03:32,080 - #6 ;
-INFO  22:03:32,080 - #13 {
-INFO  22:03:32,081 - #17 void
-INFO  22:03:32,087 - #47 milica
-INFO  22:03:32,087 - #19 (
-INFO  22:03:32,088 - #4 )
-INFO  22:03:32,088 - #47 int
-INFO  22:03:32,088 - #47 x
-INFO  22:03:32,089 - #6 ;
-INFO  22:03:32,089 - #13 {
-INFO  22:03:32,089 - #13 {
-INFO  22:03:32,090 - #24 break
-INFO  22:03:32,090 - #6 ;
-INFO  22:03:32,091 - #42 continue
-INFO  22:03:32,091 - #6 ;
-INFO  22:03:32,091 - #36 }
-INFO  22:03:32,092 - #47 niki
-INFO  22:03:32,092 - #22 [
-INFO  22:03:32,092 - #15 -
-INFO  22:03:32,092 - #46 5
-INFO  22:03:32,092 - #40 ]
-INFO  22:03:32,093 - #12 .
-INFO  22:03:32,093 - #35 foreach
-INFO  22:03:32,093 - #19 (
-INFO  22:03:32,093 - #47 losa
-INFO  22:03:32,093 - #14 =>
-INFO  22:03:32,093 - #42 continue
-INFO  22:03:32,093 - #6 ;
-INFO  22:03:32,093 - #4 )
-INFO  22:03:32,093 - #6 ;
-INFO  22:03:32,093 - #25 read
-INFO  22:03:32,093 - #19 (
-INFO  22:03:32,094 - #47 mi
-INFO  22:03:32,094 - #12 .
-INFO  22:03:32,094 - #47 kalasi
-INFO  22:03:32,094 - #22 [
-INFO  22:03:32,094 - #46 5
-INFO  22:03:32,094 - #40 ]
-INFO  22:03:32,094 - #12 .
-INFO  22:03:32,094 - #47 lepa
-INFO  22:03:32,094 - #4 )
-INFO  22:03:32,094 - #6 ;
-INFO  22:03:32,094 - #34 print
-INFO  22:03:32,095 - #19 (
-INFO  22:03:32,095 - #46 5
-INFO  22:03:32,095 - #3 +
-INFO  22:03:32,095 - #46 6
-INFO  22:03:32,096 - #5 ,
-INFO  22:03:32,096 - #46 5
-INFO  22:03:32,097 - #4 )
-INFO  22:03:32,097 - #6 ;
-INFO  22:03:32,097 - #41 return
-INFO  22:03:32,097 - #6 ;
-INFO  22:03:32,097 - #41 return
-INFO  22:03:32,098 - #19 (
-INFO  22:03:32,098 - #46 5
-INFO  22:03:32,098 - #3 +
-INFO  22:03:32,098 - #46 7
-INFO  22:03:32,098 - #27 *
-INFO  22:03:32,098 - #8 true
-INFO  22:03:32,099 - #4 )
-INFO  22:03:32,099 - #6 ;
-INFO  22:03:32,100 - #41 return
-INFO  22:03:32,100 - #9 new
-INFO  22:03:32,100 - #47 int
-INFO  22:03:32,100 - #22 [
-INFO  22:03:32,100 - #46 5
-INFO  22:03:32,100 - #27 *
-INFO  22:03:32,100 - #46 6
-INFO  22:03:32,100 - #3 +
-INFO  22:03:32,100 - #46 4
-INFO  22:03:32,100 - #40 ]
-INFO  22:03:32,101 - #6 ;
-INFO  22:03:32,101 - #47 petar
-INFO  22:03:32,101 - #22 [
-INFO  22:03:32,101 - #15 -
-INFO  22:03:32,101 - #46 5
-INFO  22:03:32,101 - #3 +
-INFO  22:03:32,101 - #8 true
-INFO  22:03:32,101 - #27 *
-INFO  22:03:32,101 - #46 5
-INFO  22:03:32,101 - #40 ]
-INFO  22:03:32,101 - #6 ;
-INFO  22:03:32,102 - #24 break
-INFO  22:03:32,102 - #6 ;
-INFO  22:03:32,102 - #42 continue
-INFO  22:03:32,102 - #6 ;
-INFO  22:03:32,102 - #36 }
-INFO  22:03:32,102 - #36 }
-INFO  22:03:32,104 - Program(
+INFO  22:45:48,835 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  22:45:48,868 - #39 program
+INFO  22:45:48,868 - #47 MJProgram
+INFO  22:45:48,868 - #44 const
+INFO  22:45:48,869 - #47 int
+INFO  22:45:48,869 - #47 milica
+INFO  22:45:48,870 - #20 =
+INFO  22:45:48,870 - #8 true
+INFO  22:45:48,870 - #5 ,
+INFO  22:45:48,871 - #47 jovanka
+INFO  22:45:48,871 - #20 =
+INFO  22:45:48,871 - #33 "Joc"
+INFO  22:45:48,871 - #6 ;
+INFO  22:45:48,871 - #47 int
+INFO  22:45:48,872 - #47 zorana
+INFO  22:45:48,872 - #22 [
+INFO  22:45:48,873 - #40 ]
+INFO  22:45:48,873 - #5 ,
+INFO  22:45:48,874 - #47 milic
+INFO  22:45:48,875 - #6 ;
+INFO  22:45:48,875 - #13 {
+INFO  22:45:48,876 - #17 void
+INFO  22:45:48,882 - #47 milica
+INFO  22:45:48,882 - #19 (
+INFO  22:45:48,884 - #4 )
+INFO  22:45:48,884 - #47 int
+INFO  22:45:48,885 - #47 x
+INFO  22:45:48,885 - #6 ;
+INFO  22:45:48,885 - #13 {
+INFO  22:45:48,885 - #11 if
+INFO  22:45:48,885 - #19 (
+INFO  22:45:48,885 - #47 milica
+INFO  22:45:48,886 - #18 &&
+INFO  22:45:48,886 - #47 petar
+INFO  22:45:48,886 - #43 ||
+INFO  22:45:48,887 - #47 micko
+INFO  22:45:48,887 - #23 ==
+INFO  22:45:48,887 - #46 1
+INFO  22:45:48,888 - #4 )
+INFO  22:45:48,889 - #13 {
+INFO  22:45:48,889 - #24 break
+INFO  22:45:48,891 - #6 ;
+INFO  22:45:48,891 - #36 }
+INFO  22:45:48,892 - #47 niki
+INFO  22:45:48,892 - #22 [
+INFO  22:45:48,892 - #15 -
+INFO  22:45:48,893 - #46 5
+INFO  22:45:48,893 - #40 ]
+INFO  22:45:48,893 - #12 .
+INFO  22:45:48,893 - #35 foreach
+INFO  22:45:48,894 - #19 (
+INFO  22:45:48,894 - #47 losa
+INFO  22:45:48,894 - #14 =>
+INFO  22:45:48,894 - #42 continue
+INFO  22:45:48,894 - #6 ;
+INFO  22:45:48,895 - #4 )
+INFO  22:45:48,895 - #6 ;
+INFO  22:45:48,895 - #25 read
+INFO  22:45:48,895 - #19 (
+INFO  22:45:48,896 - #47 mi
+INFO  22:45:48,896 - #12 .
+INFO  22:45:48,896 - #47 kalasi
+INFO  22:45:48,896 - #22 [
+INFO  22:45:48,896 - #46 5
+INFO  22:45:48,896 - #40 ]
+INFO  22:45:48,896 - #12 .
+INFO  22:45:48,896 - #47 lepa
+INFO  22:45:48,896 - #4 )
+INFO  22:45:48,896 - #6 ;
+INFO  22:45:48,896 - #34 print
+INFO  22:45:48,897 - #19 (
+INFO  22:45:48,897 - #46 5
+INFO  22:45:48,897 - #3 +
+INFO  22:45:48,897 - #46 6
+INFO  22:45:48,898 - #5 ,
+INFO  22:45:48,898 - #46 5
+INFO  22:45:48,898 - #4 )
+INFO  22:45:48,898 - #6 ;
+INFO  22:45:48,898 - #41 return
+INFO  22:45:48,898 - #6 ;
+INFO  22:45:48,898 - #41 return
+INFO  22:45:48,899 - #19 (
+INFO  22:45:48,899 - #46 5
+INFO  22:45:48,899 - #3 +
+INFO  22:45:48,899 - #46 7
+INFO  22:45:48,899 - #27 *
+INFO  22:45:48,899 - #8 true
+INFO  22:45:48,900 - #4 )
+INFO  22:45:48,901 - #6 ;
+INFO  22:45:48,901 - #41 return
+INFO  22:45:48,901 - #9 new
+INFO  22:45:48,901 - #47 int
+INFO  22:45:48,901 - #22 [
+INFO  22:45:48,901 - #46 5
+INFO  22:45:48,901 - #27 *
+INFO  22:45:48,902 - #46 6
+INFO  22:45:48,902 - #3 +
+INFO  22:45:48,902 - #46 4
+INFO  22:45:48,902 - #40 ]
+INFO  22:45:48,902 - #6 ;
+INFO  22:45:48,902 - #47 petar
+INFO  22:45:48,903 - #22 [
+INFO  22:45:48,904 - #15 -
+INFO  22:45:48,904 - #46 5
+INFO  22:45:48,904 - #3 +
+INFO  22:45:48,904 - #8 true
+INFO  22:45:48,904 - #27 *
+INFO  22:45:48,904 - #46 5
+INFO  22:45:48,904 - #40 ]
+INFO  22:45:48,904 - #6 ;
+INFO  22:45:48,904 - #24 break
+INFO  22:45:48,904 - #6 ;
+INFO  22:45:48,904 - #42 continue
+INFO  22:45:48,904 - #6 ;
+INFO  22:45:48,905 - #36 }
+INFO  22:45:48,905 - #36 }
+INFO  22:45:48,907 - Program(
  MJProgram
   VarDeclaration(
     ConstDeclaration(
@@ -177,18 +185,68 @@ INFO  22:03:32,104 - Program(
                     MethodStmt(
                       MethodStmt(
                         MethodStmt(
-                          NoMethodStmt(
-                          ) [NoMethodStmt]
+                          MethodStmt(
+                            NoMethodStmt(
+                            ) [NoMethodStmt]
+                            IfStmt(
+                              Conditions(
+                                CondTerms(
+                                  SingleCondFact(
+                                    SingleExpr(
+                                      SingleTerm(
+                                        FactVar(
+                                          SingleDesignIdent(
+                                           milica
+                                          ) [SingleDesignIdent]
+                                        ) [FactVar]
+                                      ) [SingleTerm]
+                                    ) [SingleExpr]
+                                  ) [SingleCondFact]
+                                  SingleCondFact(
+                                    SingleExpr(
+                                      SingleTerm(
+                                        FactVar(
+                                          SingleDesignIdent(
+                                           petar
+                                          ) [SingleDesignIdent]
+                                        ) [FactVar]
+                                      ) [SingleTerm]
+                                    ) [SingleExpr]
+                                  ) [SingleCondFact]
+                                ) [CondTerms]
+                                SingleCondTerm(
+                                  CondFacts(
+                                    SingleCondFact(
+                                      SingleExpr(
+                                        SingleTerm(
+                                          FactVar(
+                                            SingleDesignIdent(
+                                             micko
+                                            ) [SingleDesignIdent]
+                                          ) [FactVar]
+                                        ) [SingleTerm]
+                                      ) [SingleExpr]
+                                    ) [SingleCondFact]
+                                    IsEqual(
+                                    ) [IsEqual]
+                                    SingleExpr(
+                                      SingleTerm(
+                                        FactNum(
+                                         1
+                                        ) [FactNum]
+                                      ) [SingleTerm]
+                                    ) [SingleExpr]
+                                  ) [CondFacts]
+                                ) [SingleCondTerm]
+                              ) [Conditions]
+                            ) [IfStmt]
+                          ) [MethodStmt]
                           ListStmts(
                             MoreStatements(
-                              MoreStatements(
-                                EndOfStatements(
-                                ) [EndOfStatements]
-                                BreakStmt(
-                                ) [BreakStmt]
-                              ) [MoreStatements]
-                              ContinueStmt(
-                              ) [ContinueStmt]
+                              EndOfStatements(
+                              ) [EndOfStatements]
+                              BreakStmt(
+                              ) [BreakStmt]
                             ) [MoreStatements]
                           ) [ListStmts]
                         ) [MethodStmt]
@@ -361,4 +419,4 @@ INFO  22:03:32,104 - Program(
     ) [VoidMethodDecl]
   ) [MethodDecls]
 ) [Program]
-INFO  22:03:32,104 - ===================================
+INFO  22:45:48,907 - ===================================

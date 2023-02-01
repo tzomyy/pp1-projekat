@@ -82,6 +82,10 @@ nonterminal Factor Factor;
 nonterminal FactParam FactParam;
 nonterminal ActPars ActPars;
 
+nonterminal Condition Condition;
+nonterminal CondTerm CondTerm;
+nonterminal CondFact CondFact;
+
 nonterminal Designator Designator;
 
 nonterminal Label Label;
@@ -163,6 +167,8 @@ MultipleFormPar ::= (MultipleFormPars) MultipleFormPar:M1 COMMA SingleFormPar:S2
 				
 Statement ::= (DesignStmt) Designator:D1 SEMICOLON {: RESULT=new DesignStmt(D1); RESULT.setLine(D1left); :}
 			|
+			(IfStmt) IF LPAREN Condition:C1 RPAREN {: RESULT=new IfStmt(C1); RESULT.setLine(C1left); :}
+			|
 			(BreakStmt) BREAK SEMICOLON {: RESULT=new BreakStmt(); :}
 			|
 			(ContinueStmt) CONTINUE SEMICOLON {: RESULT=new ContinueStmt(); :}
@@ -223,11 +229,27 @@ FactParam ::= (FactFuncParams) ActPars:A1 {: RESULT=new FactFuncParams(A1); RESU
 				|
 				(NoFactFuncParams) {: RESULT=new NoFactFuncParams(); :} /* epsilon */
 				;
+		
 				
 ActPars ::= (ActParams) ActPars:A1 COMMA Expr:E2 {: RESULT=new ActParams(A1, E2); RESULT.setLine(A1left); :}
 		|
 		(SingleActParam) Expr:E1 {: RESULT=new SingleActParam(E1); RESULT.setLine(E1left); :}
 		; 
+		
+Condition ::= (Conditions) CondTerm:C1 OR CondTerm:C2 {: RESULT=new Conditions(C1, C2); RESULT.setLine(C1left); :}
+			|
+			(SingleCondition) CondTerm:C1 {: RESULT=new SingleCondition(C1); RESULT.setLine(C1left); :}
+			;
+				
+CondTerm ::= (CondTerms) CondFact:C1 AND CondFact:C2 {: RESULT=new CondTerms(C1, C2); RESULT.setLine(C1left); :}
+			|
+			(SingleCondTerm) CondFact:C1 {: RESULT=new SingleCondTerm(C1); RESULT.setLine(C1left); :}
+			;
+				
+CondFact ::= (CondFacts) CondFact:C1 Relop:R2 Expr:E3 {: RESULT=new CondFacts(C1, R2, E3); RESULT.setLine(C1left); :}
+		|
+		(SingleCondFact) Expr:E1 {: RESULT=new SingleCondFact(E1); RESULT.setLine(E1left); :}
+		;
 					
 Designator ::= (MultipleDesignIdent) Designator:D1 DOT IDENT:I2 {: RESULT=new MultipleDesignIdent(D1, I2); RESULT.setLine(D1left); :}
 			|

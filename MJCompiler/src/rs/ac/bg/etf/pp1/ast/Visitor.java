@@ -1,34 +1,37 @@
 // generated with ast extension for cup
 // version 0.8
-// 1/1/2023 22:2:22
+// 1/1/2023 22:43:33
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public interface Visitor { 
 
-    public void visit(Designator Designator);
-    public void visit(MethodDecl MethodDecl);
-    public void visit(Factor Factor);
     public void visit(Mulop Mulop);
-    public void visit(MultipleVarDecl MultipleVarDecl);
-    public void visit(Declaration Declaration);
-    public void visit(Expr Expr);
-    public void visit(MethodFormPars MethodFormPars);
-    public void visit(StmtConst StmtConst);
-    public void visit(SingleConstDecl SingleConstDecl);
-    public void visit(FactParam FactParam);
+    public void visit(MethodDecl MethodDecl);
+    public void visit(Relop Relop);
     public void visit(MultipleMethodDecl MultipleMethodDecl);
     public void visit(MethodStatement MethodStatement);
-    public void visit(MultipleConstDecl MultipleConstDecl);
-    public void visit(MultipleFormPar MultipleFormPar);
-    public void visit(Addop Addop);
-    public void visit(Statement Statement);
-    public void visit(Relop Relop);
-    public void visit(Term Term);
-    public void visit(ActPars ActPars);
-    public void visit(SingleFormPar SingleFormPar);
     public void visit(StatementList StatementList);
+    public void visit(Addop Addop);
+    public void visit(StmtConst StmtConst);
+    public void visit(Factor Factor);
+    public void visit(CondTerm CondTerm);
+    public void visit(Designator Designator);
+    public void visit(Term Term);
+    public void visit(Condition Condition);
+    public void visit(FactParam FactParam);
+    public void visit(MethodFormPars MethodFormPars);
+    public void visit(MultipleVarDecl MultipleVarDecl);
+    public void visit(MultipleFormPar MultipleFormPar);
+    public void visit(Expr Expr);
+    public void visit(ActPars ActPars);
+    public void visit(MultipleConstDecl MultipleConstDecl);
+    public void visit(Statement Statement);
+    public void visit(CondFact CondFact);
+    public void visit(Declaration Declaration);
+    public void visit(SingleConstDecl SingleConstDecl);
+    public void visit(SingleFormPar SingleFormPar);
     public void visit(Percent Percent);
     public void visit(Slash Slash);
     public void visit(Asterisk Asterisk);
@@ -46,6 +49,12 @@ public interface Visitor {
     public void visit(SingleDesignIdent SingleDesignIdent);
     public void visit(MultipleDesignExpr MultipleDesignExpr);
     public void visit(MultipleDesignIdent MultipleDesignIdent);
+    public void visit(SingleCondFact SingleCondFact);
+    public void visit(CondFacts CondFacts);
+    public void visit(SingleCondTerm SingleCondTerm);
+    public void visit(CondTerms CondTerms);
+    public void visit(SingleCondition SingleCondition);
+    public void visit(Conditions Conditions);
     public void visit(SingleActParam SingleActParam);
     public void visit(ActParams ActParams);
     public void visit(NoFactFuncParams NoFactFuncParams);
@@ -75,6 +84,7 @@ public interface Visitor {
     public void visit(ReturnNoExpr ReturnNoExpr);
     public void visit(ContinueStmt ContinueStmt);
     public void visit(BreakStmt BreakStmt);
+    public void visit(IfStmt IfStmt);
     public void visit(DesignStmt DesignStmt);
     public void visit(EndOfFormPar EndOfFormPar);
     public void visit(MultipleFormPars MultipleFormPars);
