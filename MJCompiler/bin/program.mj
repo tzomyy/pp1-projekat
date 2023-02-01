@@ -3,6 +3,7 @@ program MJProgram
 	int zorana[], milic;
 {
 	void milica() int x; { 
+		while (kuzma == "studentijada") return 5;
 		if (milica && andrijana || andjela == 1 ) break; 
 		{ break;}
 		niki[-5].foreach(losa=>continue;);

@@ -167,6 +167,8 @@ Statement ::= (DesignStmt) Designator SEMICOLON
 			|
 			(IfStmt) IF LPAREN Condition RPAREN Statement ElseStatement
 			|
+			(WhileStmt) WHILE LPAREN Condition RPAREN Statement
+			|
 			(BreakStmt) BREAK SEMICOLON
 			|
 			(ContinueStmt) CONTINUE SEMICOLON

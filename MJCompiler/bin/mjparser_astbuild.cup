@@ -171,6 +171,8 @@ Statement ::= (DesignStmt) Designator:D1 SEMICOLON {: RESULT=new DesignStmt(D1);
 			|
 			(IfStmt) IF LPAREN Condition:C1 RPAREN Statement:S2 ElseStatement:E3 {: RESULT=new IfStmt(C1, S2, E3); RESULT.setLine(C1left); :}
 			|
+			(WhileStmt) WHILE LPAREN Condition:C1 RPAREN Statement:S2 {: RESULT=new WhileStmt(C1, S2); RESULT.setLine(C1left); :}
+			|
 			(BreakStmt) BREAK SEMICOLON {: RESULT=new BreakStmt(); :}
 			|
 			(ContinueStmt) CONTINUE SEMICOLON {: RESULT=new ContinueStmt(); :}
