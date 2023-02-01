@@ -1,37 +1,71 @@
 // generated with ast extension for cup
 // version 0.8
-// 31/0/2023 3:11:29
+// 1/1/2023 15:10:16
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public abstract class MultipleDesignator implements SyntaxNode {
+public class MultipleDesignator extends Designator {
 
-    private SyntaxNode parent;
+    private Designator Designator;
+    private String I2;
 
-    private int line;
-
-    public SyntaxNode getParent() {
-        return parent;
+    public MultipleDesignator (Designator Designator, String I2) {
+        this.Designator=Designator;
+        if(Designator!=null) Designator.setParent(this);
+        this.I2=I2;
     }
 
-    public void setParent(SyntaxNode parent) {
-        this.parent=parent;
+    public Designator getDesignator() {
+        return Designator;
     }
 
-    public int getLine() {
-        return line;
+    public void setDesignator(Designator Designator) {
+        this.Designator=Designator;
     }
 
-    public void setLine(int line) {
-        this.line=line;
+    public String getI2() {
+        return I2;
     }
 
-    public abstract void accept(Visitor visitor);
-    public abstract void childrenAccept(Visitor visitor);
-    public abstract void traverseTopDown(Visitor visitor);
-    public abstract void traverseBottomUp(Visitor visitor);
+    public void setI2(String I2) {
+        this.I2=I2;
+    }
 
-    public String toString() { return toString(""); }
-    public abstract String toString(String tab);
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
+
+    public void childrenAccept(Visitor visitor) {
+        if(Designator!=null) Designator.accept(visitor);
+    }
+
+    public void traverseTopDown(Visitor visitor) {
+        accept(visitor);
+        if(Designator!=null) Designator.traverseTopDown(visitor);
+    }
+
+    public void traverseBottomUp(Visitor visitor) {
+        if(Designator!=null) Designator.traverseBottomUp(visitor);
+        accept(visitor);
+    }
+
+    public String toString(String tab) {
+        StringBuffer buffer=new StringBuffer();
+        buffer.append(tab);
+        buffer.append("MultipleDesignator(\n");
+
+        if(Designator!=null)
+            buffer.append(Designator.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        buffer.append(" "+tab+I2);
+        buffer.append("\n");
+
+        buffer.append(tab);
+        buffer.append(") [MultipleDesignator]");
+        return buffer.toString();
+    }
 }

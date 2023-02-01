@@ -36,6 +36,7 @@
 			<arg value="-parser" />
 			<arg value="MJParser" />
 			<arg value="-buildtree" />
+			<arg value="-dump_states"/>
 			<arg value="spec/mjparser.cup" />
 		</java>
 	</target>

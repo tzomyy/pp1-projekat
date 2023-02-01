@@ -59,17 +59,17 @@ nonterminal SingleVarDecl;
 nonterminal Brackets;
 nonterminal MultipleVarDecl;
 
-nonterminal MethodDeclList;
-nonterminal SingleMethodDecl;
+nonterminal MethodDecl;
+nonterminal MethodFormPars;
+nonterminal MethodStatement;
 nonterminal MultipleMethodDecl;
 
 nonterminal FormPars;
 nonterminal SingleFormPar;
 nonterminal MultipleFormPar;
 
+nonterminal Statement;
 nonterminal Designator;
-nonterminal SingleDesignator;
-nonterminal MultipleDesignator;
 
 nonterminal Label;
 nonterminal Assignop;
@@ -78,7 +78,7 @@ nonterminal Addop;
 nonterminal Mulop;
 
 
-Program ::= (Program) PROG IDENT Declaration LCURLY MethodDeclList RCURLY;
+Program ::= (Program) PROG IDENT Declaration LCURLY MethodDecl RCURLY;
 
 Declaration ::= (ConstDeclaration) Declaration ConstDecl
 			|
@@ -119,37 +119,42 @@ MultipleVarDecl ::= (MultipleVarDecls) MultipleVarDecl COMMA SingleVarDecl
 				
 ClassDecl ::= (ClassDecl) AND;
 
-MethodDeclList ::= (MethodDeclLists) SingleMethodDecl MultipleMethodDecl
+MethodDecl ::= (MethodDecls) MethodDecl MultipleMethodDecl
 				|
 				(NoMethodDeclList) /*epsilon*/
 				;
 
-SingleMethodDecl ::= (SingleMethodDecl) Label;
-
-MultipleMethodDecl ::= (MultipleMethodDecls) MultipleMethodDecl SingleMethodDecl
+MultipleMethodDecl ::= (TypeMethodDecl) Type:methodType IDENT:methodName LPAREN MethodFormPars RPAREN VarDecl LCURLY MethodStatement RCURLY
 					|
-					(EndOfMethodDecl) /* epsilon */
-					;
+					(VoidMethodDecl) VOID IDENT:methodName LPAREN MethodFormPars RPAREN VarDecl LCURLY MethodStatement RCURLY;
+					
+MethodFormPars ::= (MethodFormParams) FormPars
+				|
+				(NoMethodFormParams) /* epsilon */
+				;
+				
+MethodStatement ::= (MethodStmt) Statement
+				|
+				(NoMethodStmt) /* epsilon */
+				;
 
 FormPars ::= (FormPars) SingleFormPar MultipleFormPar;
 
-SingleFormPar ::= (SingleFormPar) Type:formType IDENT:formName Brackets;
+SingleFormPar ::= (SingleFormParam) Type:formType IDENT:formName Brackets;
 
 MultipleFormPar ::= (MultipleFormPars) MultipleFormPar COMMA SingleFormPar
 				|
 				(EndOfFormPar) /*epsilon*/
 				;
+				
+Statement ::= (DesignStmt) Designator;
+					
+Designator ::= (MultipleDesignator) Designator DOT IDENT
+			|
+			(SingleDesignator) IDENT
+			;
 
-Type ::= (Type) IDENT;
-	
-Designator ::= (Designator) SingleDesignator MultipleDesignator;
-
-SingleDesignator ::= (SingleDesignator) IDENT;
-
-MultipleDesignator ::= (DesignIdents) MultipleDesignator DOT SingleDesignator
-					|
-					(EndOfDesignator) /* epsilon */
-					;
+Type ::= (Type) IDENT;	
 
 Label ::= (Label) IDENT;
 

@@ -1,23 +1,27 @@
 // generated with ast extension for cup
 // version 0.8
-// 31/0/2023 3:11:29
+// 1/1/2023 15:10:16
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public interface Visitor { 
 
+    public void visit(Designator Designator);
+    public void visit(MethodDecl MethodDecl);
     public void visit(Mulop Mulop);
     public void visit(MultipleVarDecl MultipleVarDecl);
     public void visit(Declaration Declaration);
+    public void visit(MethodFormPars MethodFormPars);
     public void visit(SingleConstDecl SingleConstDecl);
-    public void visit(MultipleDesignator MultipleDesignator);
     public void visit(MultipleMethodDecl MultipleMethodDecl);
+    public void visit(MethodStatement MethodStatement);
     public void visit(MultipleConstDecl MultipleConstDecl);
     public void visit(MultipleFormPar MultipleFormPar);
     public void visit(Addop Addop);
-    public void visit(MethodDeclList MethodDeclList);
+    public void visit(Statement Statement);
     public void visit(Relop Relop);
+    public void visit(SingleFormPar SingleFormPar);
     public void visit(Percent Percent);
     public void visit(Slash Slash);
     public void visit(Asterisk Asterisk);
@@ -31,20 +35,22 @@ public interface Visitor {
     public void visit(IsEqual IsEqual);
     public void visit(Assignop Assignop);
     public void visit(Label Label);
-    public void visit(EndOfDesignator EndOfDesignator);
-    public void visit(DesignIdents DesignIdents);
-    public void visit(SingleDesignator SingleDesignator);
-    public void visit(Designator Designator);
     public void visit(Type Type);
+    public void visit(SingleDesignator SingleDesignator);
+    public void visit(MultipleDesignator MultipleDesignator);
+    public void visit(DesignStmt DesignStmt);
     public void visit(EndOfFormPar EndOfFormPar);
     public void visit(MultipleFormPars MultipleFormPars);
-    public void visit(SingleFormPar SingleFormPar);
+    public void visit(SingleFormParam SingleFormParam);
     public void visit(FormPars FormPars);
-    public void visit(EndOfMethodDecl EndOfMethodDecl);
-    public void visit(MultipleMethodDecls MultipleMethodDecls);
-    public void visit(SingleMethodDecl SingleMethodDecl);
+    public void visit(NoMethodStmt NoMethodStmt);
+    public void visit(MethodStmt MethodStmt);
+    public void visit(NoMethodFormParams NoMethodFormParams);
+    public void visit(MethodFormParams MethodFormParams);
+    public void visit(VoidMethodDecl VoidMethodDecl);
+    public void visit(TypeMethodDecl TypeMethodDecl);
     public void visit(NoMethodDeclList NoMethodDeclList);
-    public void visit(MethodDeclLists MethodDeclLists);
+    public void visit(MethodDecls MethodDecls);
     public void visit(ClassDecl ClassDecl);
     public void visit(EndOfVarDeclaration EndOfVarDeclaration);
     public void visit(MultipleVarDecls MultipleVarDecls);

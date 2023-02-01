@@ -1,14 +1,12 @@
 // generated with ast extension for cup
 // version 0.8
-// 31/0/2023 3:11:29
+// 1/1/2023 15:10:16
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class SingleDesignator implements SyntaxNode {
+public class SingleDesignator extends Designator {
 
-    private SyntaxNode parent;
-    private int line;
     private String I1;
 
     public SingleDesignator (String I1) {
@@ -21,22 +19,6 @@ public class SingleDesignator implements SyntaxNode {
 
     public void setI1(String I1) {
         this.I1=I1;
-    }
-
-    public SyntaxNode getParent() {
-        return parent;
-    }
-
-    public void setParent(SyntaxNode parent) {
-        this.parent=parent;
-    }
-
-    public int getLine() {
-        return line;
-    }
-
-    public void setLine(int line) {
-        this.line=line;
     }
 
     public void accept(Visitor visitor) {
