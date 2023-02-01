@@ -70,6 +70,7 @@ nonterminal MultipleFormPar;
 
 nonterminal Statement;
 nonterminal StmtConst;
+nonterminal StatementList;
 
 nonterminal Expr;
 nonterminal Term;
@@ -171,7 +172,14 @@ Statement ::= (DesignStmt) Designator SEMICOLON
 			(PrintStmt) PRINT LPAREN Expr StmtConst RPAREN SEMICOLON
 			|
 			(ForeachStmt) Designator DOT FOREACH LPAREN IDENT ASSIGN Statement RPAREN SEMICOLON
+			|
+			(ListStmts) LCURLY StatementList RCURLY
 			;
+			
+StatementList ::= (MoreStatements) StatementList Statement
+				|
+				(EndOfStatements) /* epsilon */
+				;
 			
 StmtConst ::= (StmtCnst) COMMA NUMBER
 			|
