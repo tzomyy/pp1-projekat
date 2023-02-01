@@ -73,6 +73,7 @@ nonterminal SingleFormPar SingleFormPar;
 nonterminal MultipleFormPar MultipleFormPar;
 
 nonterminal Statement Statement;
+nonterminal StmtConst StmtConst;
 
 nonterminal Expr Expr;
 nonterminal Term Term;
@@ -168,6 +169,17 @@ Statement ::= (DesignStmt) Designator:D1 SEMICOLON {: RESULT=new DesignStmt(D1);
 			(ReturnNoExpr) RETURN SEMICOLON {: RESULT=new ReturnNoExpr(); :}
 			|
 			(ReturnExpr) RETURN Expr:E1 SEMICOLON {: RESULT=new ReturnExpr(E1); RESULT.setLine(E1left); :}
+			|
+			(ReadStmt) READ LPAREN Designator:D1 RPAREN SEMICOLON {: RESULT=new ReadStmt(D1); RESULT.setLine(D1left); :}
+			|
+			(PrintStmt) PRINT LPAREN Expr:E1 StmtConst:S2 RPAREN SEMICOLON {: RESULT=new PrintStmt(E1, S2); RESULT.setLine(E1left); :}
+			|
+			(ForeachStmt) Designator:D1 DOT FOREACH LPAREN IDENT:I2 ASSIGN Statement:S3 RPAREN SEMICOLON {: RESULT=new ForeachStmt(D1, I2, S3); RESULT.setLine(D1left); :}
+			;
+			
+StmtConst ::= (StmtCnst) COMMA NUMBER:N1 {: RESULT=new StmtCnst(N1); RESULT.setLine(N1left); :}
+			|
+			(NoStmtCnst) {: RESULT=new NoStmtCnst(); :} /* epsilon */
 			;
 
 Expr ::= (NegativeExpr) MINUS Term:T1 {: RESULT=new NegativeExpr(T1); RESULT.setLine(T1left); :}

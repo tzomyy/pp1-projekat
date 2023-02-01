@@ -1,0 +1,245 @@
+INFO  21:16:53,050 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  21:16:53,078 - #39 program
+INFO  21:16:53,078 - #47 MJProgram
+INFO  21:16:53,078 - #44 const
+INFO  21:16:53,078 - #47 int
+INFO  21:16:53,078 - #47 milica
+INFO  21:16:53,079 - #20 =
+INFO  21:16:53,079 - #8 true
+INFO  21:16:53,079 - #5 ,
+INFO  21:16:53,080 - #47 jovanka
+INFO  21:16:53,080 - #20 =
+INFO  21:16:53,080 - #33 "Joc"
+INFO  21:16:53,080 - #6 ;
+INFO  21:16:53,080 - #47 int
+INFO  21:16:53,081 - #47 zorana
+INFO  21:16:53,081 - #22 [
+INFO  21:16:53,081 - #40 ]
+INFO  21:16:53,082 - #5 ,
+INFO  21:16:53,083 - #47 milic
+INFO  21:16:53,083 - #6 ;
+INFO  21:16:53,084 - #13 {
+INFO  21:16:53,084 - #17 void
+INFO  21:16:53,091 - #47 milica
+INFO  21:16:53,091 - #19 (
+INFO  21:16:53,091 - #4 )
+INFO  21:16:53,092 - #47 int
+INFO  21:16:53,092 - #47 x
+INFO  21:16:53,092 - #6 ;
+INFO  21:16:53,092 - #13 {
+INFO  21:16:53,093 - #41 return
+INFO  21:16:53,093 - #6 ;
+INFO  21:16:53,093 - #41 return
+INFO  21:16:53,094 - #19 (
+INFO  21:16:53,094 - #46 5
+INFO  21:16:53,094 - #3 +
+INFO  21:16:53,094 - #46 7
+INFO  21:16:53,095 - #27 *
+INFO  21:16:53,095 - #8 true
+INFO  21:16:53,096 - #4 )
+INFO  21:16:53,097 - #6 ;
+INFO  21:16:53,097 - #41 return
+INFO  21:16:53,097 - #9 new
+INFO  21:16:53,097 - #47 int
+INFO  21:16:53,098 - #22 [
+INFO  21:16:53,098 - #46 5
+INFO  21:16:53,098 - #27 *
+INFO  21:16:53,098 - #46 6
+INFO  21:16:53,098 - #3 +
+INFO  21:16:53,098 - #46 4
+INFO  21:16:53,098 - #40 ]
+INFO  21:16:53,098 - #6 ;
+INFO  21:16:53,098 - #47 petar
+INFO  21:16:53,098 - #22 [
+INFO  21:16:53,098 - #15 -
+INFO  21:16:53,098 - #46 5
+INFO  21:16:53,098 - #3 +
+INFO  21:16:53,098 - #8 true
+INFO  21:16:53,099 - #27 *
+INFO  21:16:53,099 - #46 5
+INFO  21:16:53,099 - #40 ]
+INFO  21:16:53,099 - #6 ;
+INFO  21:16:53,099 - #24 break
+INFO  21:16:53,099 - #6 ;
+INFO  21:16:53,099 - #42 continue
+INFO  21:16:53,100 - #6 ;
+INFO  21:16:53,100 - #36 }
+INFO  21:16:53,100 - #36 }
+INFO  21:16:53,103 - Program(
+ MJProgram
+  VarDeclaration(
+    ConstDeclaration(
+      NoDeclaration(
+      ) [NoDeclaration]
+      ConstDecl(
+        Type(
+         int
+        ) [Type]
+        BoolConstDecl(
+         milica
+        ) [BoolConstDecl]
+        MultipleConstDecls(
+          EndOfDeclaration(
+          ) [EndOfDeclaration]
+          CharConstDecl(
+           jovanka
+          ) [CharConstDecl]
+        ) [MultipleConstDecls]
+      ) [ConstDecl]
+    ) [ConstDeclaration]
+    VarDecl(
+      Type(
+       int
+      ) [Type]
+      SingleVarDecl(
+       zorana
+        Brackets(
+        ) [Brackets]
+      ) [SingleVarDecl]
+      MultipleVarDecls(
+        EndOfVarDeclaration(
+        ) [EndOfVarDeclaration]
+        SingleVarDecl(
+         milic
+          NoBrackets(
+          ) [NoBrackets]
+        ) [SingleVarDecl]
+      ) [MultipleVarDecls]
+    ) [VarDecl]
+  ) [VarDeclaration]
+  MethodDecls(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    VoidMethodDecl(
+     milica
+      NoMethodFormParams(
+      ) [NoMethodFormParams]
+      VarDecl(
+        Type(
+         int
+        ) [Type]
+        SingleVarDecl(
+         x
+          NoBrackets(
+          ) [NoBrackets]
+        ) [SingleVarDecl]
+        EndOfVarDeclaration(
+        ) [EndOfVarDeclaration]
+      ) [VarDecl]
+      MethodStmt(
+        MethodStmt(
+          MethodStmt(
+            MethodStmt(
+              MethodStmt(
+                MethodStmt(
+                  NoMethodStmt(
+                  ) [NoMethodStmt]
+                  ReturnNoExpr(
+                  ) [ReturnNoExpr]
+                ) [MethodStmt]
+                ReturnExpr(
+                  SingleExpr(
+                    SingleTerm(
+                      FactExpr(
+                        MultipleExpr(
+                          SingleExpr(
+                            SingleTerm(
+                              FactNum(
+                               5
+                              ) [FactNum]
+                            ) [SingleTerm]
+                          ) [SingleExpr]
+                          Plus(
+                          ) [Plus]
+                          MultipleTerms(
+                            SingleTerm(
+                              FactNum(
+                               7
+                              ) [FactNum]
+                            ) [SingleTerm]
+                            Asterisk(
+                            ) [Asterisk]
+                            FactBoolean(
+                            ) [FactBoolean]
+                          ) [MultipleTerms]
+                        ) [MultipleExpr]
+                      ) [FactExpr]
+                    ) [SingleTerm]
+                  ) [SingleExpr]
+                ) [ReturnExpr]
+              ) [MethodStmt]
+              ReturnExpr(
+                SingleExpr(
+                  SingleTerm(
+                    FactConstrArray(
+                      Type(
+                       int
+                      ) [Type]
+                      MultipleExpr(
+                        SingleExpr(
+                          MultipleTerms(
+                            SingleTerm(
+                              FactNum(
+                               5
+                              ) [FactNum]
+                            ) [SingleTerm]
+                            Asterisk(
+                            ) [Asterisk]
+                            FactNum(
+                             6
+                            ) [FactNum]
+                          ) [MultipleTerms]
+                        ) [SingleExpr]
+                        Plus(
+                        ) [Plus]
+                        SingleTerm(
+                          FactNum(
+                           4
+                          ) [FactNum]
+                        ) [SingleTerm]
+                      ) [MultipleExpr]
+                    ) [FactConstrArray]
+                  ) [SingleTerm]
+                ) [SingleExpr]
+              ) [ReturnExpr]
+            ) [MethodStmt]
+            DesignStmt(
+              MultipleDesignExpr(
+                SingleDesignIdent(
+                 petar
+                ) [SingleDesignIdent]
+                MultipleExpr(
+                  NegativeExpr(
+                    SingleTerm(
+                      FactNum(
+                       5
+                      ) [FactNum]
+                    ) [SingleTerm]
+                  ) [NegativeExpr]
+                  Plus(
+                  ) [Plus]
+                  MultipleTerms(
+                    SingleTerm(
+                      FactBoolean(
+                      ) [FactBoolean]
+                    ) [SingleTerm]
+                    Asterisk(
+                    ) [Asterisk]
+                    FactNum(
+                     5
+                    ) [FactNum]
+                  ) [MultipleTerms]
+                ) [MultipleExpr]
+              ) [MultipleDesignExpr]
+            ) [DesignStmt]
+          ) [MethodStmt]
+          BreakStmt(
+          ) [BreakStmt]
+        ) [MethodStmt]
+        ContinueStmt(
+        ) [ContinueStmt]
+      ) [MethodStmt]
+    ) [VoidMethodDecl]
+  ) [MethodDecls]
+) [Program]
+INFO  21:16:53,104 - ===================================

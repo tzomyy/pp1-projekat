@@ -1,71 +1,106 @@
-INFO  21:16:53,050 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
-INFO  21:16:53,078 - #39 program
-INFO  21:16:53,078 - #47 MJProgram
-INFO  21:16:53,078 - #44 const
-INFO  21:16:53,078 - #47 int
-INFO  21:16:53,078 - #47 milica
-INFO  21:16:53,079 - #20 =
-INFO  21:16:53,079 - #8 true
-INFO  21:16:53,079 - #5 ,
-INFO  21:16:53,080 - #47 jovanka
-INFO  21:16:53,080 - #20 =
-INFO  21:16:53,080 - #33 "Joc"
-INFO  21:16:53,080 - #6 ;
-INFO  21:16:53,080 - #47 int
-INFO  21:16:53,081 - #47 zorana
-INFO  21:16:53,081 - #22 [
-INFO  21:16:53,081 - #40 ]
-INFO  21:16:53,082 - #5 ,
-INFO  21:16:53,083 - #47 milic
-INFO  21:16:53,083 - #6 ;
-INFO  21:16:53,084 - #13 {
-INFO  21:16:53,084 - #17 void
-INFO  21:16:53,091 - #47 milica
-INFO  21:16:53,091 - #19 (
-INFO  21:16:53,091 - #4 )
-INFO  21:16:53,092 - #47 int
-INFO  21:16:53,092 - #47 x
-INFO  21:16:53,092 - #6 ;
-INFO  21:16:53,092 - #13 {
-INFO  21:16:53,093 - #41 return
-INFO  21:16:53,093 - #6 ;
-INFO  21:16:53,093 - #41 return
-INFO  21:16:53,094 - #19 (
-INFO  21:16:53,094 - #46 5
-INFO  21:16:53,094 - #3 +
-INFO  21:16:53,094 - #46 7
-INFO  21:16:53,095 - #27 *
-INFO  21:16:53,095 - #8 true
-INFO  21:16:53,096 - #4 )
-INFO  21:16:53,097 - #6 ;
-INFO  21:16:53,097 - #41 return
-INFO  21:16:53,097 - #9 new
-INFO  21:16:53,097 - #47 int
-INFO  21:16:53,098 - #22 [
-INFO  21:16:53,098 - #46 5
-INFO  21:16:53,098 - #27 *
-INFO  21:16:53,098 - #46 6
-INFO  21:16:53,098 - #3 +
-INFO  21:16:53,098 - #46 4
-INFO  21:16:53,098 - #40 ]
-INFO  21:16:53,098 - #6 ;
-INFO  21:16:53,098 - #47 petar
-INFO  21:16:53,098 - #22 [
-INFO  21:16:53,098 - #15 -
-INFO  21:16:53,098 - #46 5
-INFO  21:16:53,098 - #3 +
-INFO  21:16:53,098 - #8 true
-INFO  21:16:53,099 - #27 *
-INFO  21:16:53,099 - #46 5
-INFO  21:16:53,099 - #40 ]
-INFO  21:16:53,099 - #6 ;
-INFO  21:16:53,099 - #24 break
-INFO  21:16:53,099 - #6 ;
-INFO  21:16:53,099 - #42 continue
-INFO  21:16:53,100 - #6 ;
-INFO  21:16:53,100 - #36 }
-INFO  21:16:53,100 - #36 }
-INFO  21:16:53,103 - Program(
+INFO  21:42:08,794 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  21:42:08,823 - #39 program
+INFO  21:42:08,823 - #47 MJProgram
+INFO  21:42:08,823 - #44 const
+INFO  21:42:08,824 - #47 int
+INFO  21:42:08,824 - #47 milica
+INFO  21:42:08,825 - #20 =
+INFO  21:42:08,825 - #8 true
+INFO  21:42:08,825 - #5 ,
+INFO  21:42:08,826 - #47 jovanka
+INFO  21:42:08,826 - #20 =
+INFO  21:42:08,826 - #33 "Joc"
+INFO  21:42:08,827 - #6 ;
+INFO  21:42:08,827 - #47 int
+INFO  21:42:08,828 - #47 zorana
+INFO  21:42:08,828 - #22 [
+INFO  21:42:08,828 - #40 ]
+INFO  21:42:08,828 - #5 ,
+INFO  21:42:08,830 - #47 milic
+INFO  21:42:08,830 - #6 ;
+INFO  21:42:08,830 - #13 {
+INFO  21:42:08,831 - #17 void
+INFO  21:42:08,838 - #47 milica
+INFO  21:42:08,838 - #19 (
+INFO  21:42:08,838 - #4 )
+INFO  21:42:08,838 - #47 int
+INFO  21:42:08,838 - #47 x
+INFO  21:42:08,838 - #6 ;
+INFO  21:42:08,838 - #13 {
+INFO  21:42:08,839 - #47 niki
+INFO  21:42:08,839 - #22 [
+INFO  21:42:08,839 - #15 -
+INFO  21:42:08,839 - #46 5
+INFO  21:42:08,839 - #40 ]
+INFO  21:42:08,839 - #12 .
+INFO  21:42:08,840 - #35 foreach
+INFO  21:42:08,840 - #19 (
+INFO  21:42:08,840 - #47 losa
+INFO  21:42:08,840 - #14 =>
+INFO  21:42:08,840 - #42 continue
+INFO  21:42:08,840 - #6 ;
+INFO  21:42:08,840 - #4 )
+INFO  21:42:08,841 - #6 ;
+INFO  21:42:08,841 - #25 read
+INFO  21:42:08,841 - #19 (
+INFO  21:42:08,842 - #47 mi
+INFO  21:42:08,842 - #12 .
+INFO  21:42:08,842 - #47 kalasi
+INFO  21:42:08,842 - #22 [
+INFO  21:42:08,842 - #46 5
+INFO  21:42:08,842 - #40 ]
+INFO  21:42:08,842 - #12 .
+INFO  21:42:08,842 - #47 lepa
+INFO  21:42:08,842 - #4 )
+INFO  21:42:08,842 - #6 ;
+INFO  21:42:08,842 - #34 print
+INFO  21:42:08,842 - #19 (
+INFO  21:42:08,842 - #46 5
+INFO  21:42:08,843 - #3 +
+INFO  21:42:08,843 - #46 6
+INFO  21:42:08,843 - #5 ,
+INFO  21:42:08,844 - #46 5
+INFO  21:42:08,844 - #4 )
+INFO  21:42:08,844 - #6 ;
+INFO  21:42:08,844 - #41 return
+INFO  21:42:08,844 - #6 ;
+INFO  21:42:08,845 - #41 return
+INFO  21:42:08,846 - #19 (
+INFO  21:42:08,849 - #46 5
+INFO  21:42:08,849 - #3 +
+INFO  21:42:08,849 - #46 7
+INFO  21:42:08,850 - #27 *
+INFO  21:42:08,850 - #8 true
+INFO  21:42:08,851 - #4 )
+INFO  21:42:08,852 - #6 ;
+INFO  21:42:08,852 - #41 return
+INFO  21:42:08,852 - #9 new
+INFO  21:42:08,852 - #47 int
+INFO  21:42:08,852 - #22 [
+INFO  21:42:08,852 - #46 5
+INFO  21:42:08,852 - #27 *
+INFO  21:42:08,852 - #46 6
+INFO  21:42:08,852 - #3 +
+INFO  21:42:08,852 - #46 4
+INFO  21:42:08,853 - #40 ]
+INFO  21:42:08,853 - #6 ;
+INFO  21:42:08,853 - #47 petar
+INFO  21:42:08,853 - #22 [
+INFO  21:42:08,853 - #15 -
+INFO  21:42:08,853 - #46 5
+INFO  21:42:08,853 - #3 +
+INFO  21:42:08,853 - #8 true
+INFO  21:42:08,853 - #27 *
+INFO  21:42:08,853 - #46 5
+INFO  21:42:08,853 - #40 ]
+INFO  21:42:08,853 - #6 ;
+INFO  21:42:08,853 - #24 break
+INFO  21:42:08,853 - #6 ;
+INFO  21:42:08,855 - #42 continue
+INFO  21:42:08,855 - #6 ;
+INFO  21:42:08,856 - #36 }
+INFO  21:42:08,857 - #36 }
+INFO  21:42:08,862 - Program(
  MJProgram
   VarDeclaration(
     ConstDeclaration(
@@ -132,8 +167,72 @@ INFO  21:16:53,103 - Program(
             MethodStmt(
               MethodStmt(
                 MethodStmt(
-                  NoMethodStmt(
-                  ) [NoMethodStmt]
+                  MethodStmt(
+                    MethodStmt(
+                      MethodStmt(
+                        NoMethodStmt(
+                        ) [NoMethodStmt]
+                        ForeachStmt(
+                          MultipleDesignExpr(
+                            SingleDesignIdent(
+                             niki
+                            ) [SingleDesignIdent]
+                            NegativeExpr(
+                              SingleTerm(
+                                FactNum(
+                                 5
+                                ) [FactNum]
+                              ) [SingleTerm]
+                            ) [NegativeExpr]
+                          ) [MultipleDesignExpr]
+                         losa
+                          ContinueStmt(
+                          ) [ContinueStmt]
+                        ) [ForeachStmt]
+                      ) [MethodStmt]
+                      ReadStmt(
+                        MultipleDesignIdent(
+                          MultipleDesignExpr(
+                            MultipleDesignIdent(
+                              SingleDesignIdent(
+                               mi
+                              ) [SingleDesignIdent]
+                             kalasi
+                            ) [MultipleDesignIdent]
+                            SingleExpr(
+                              SingleTerm(
+                                FactNum(
+                                 5
+                                ) [FactNum]
+                              ) [SingleTerm]
+                            ) [SingleExpr]
+                          ) [MultipleDesignExpr]
+                         lepa
+                        ) [MultipleDesignIdent]
+                      ) [ReadStmt]
+                    ) [MethodStmt]
+                    PrintStmt(
+                      MultipleExpr(
+                        SingleExpr(
+                          SingleTerm(
+                            FactNum(
+                             5
+                            ) [FactNum]
+                          ) [SingleTerm]
+                        ) [SingleExpr]
+                        Plus(
+                        ) [Plus]
+                        SingleTerm(
+                          FactNum(
+                           6
+                          ) [FactNum]
+                        ) [SingleTerm]
+                      ) [MultipleExpr]
+                      StmtCnst(
+                       5
+                      ) [StmtCnst]
+                    ) [PrintStmt]
+                  ) [MethodStmt]
                   ReturnNoExpr(
                   ) [ReturnNoExpr]
                 ) [MethodStmt]
@@ -242,4 +341,4 @@ INFO  21:16:53,103 - Program(
     ) [VoidMethodDecl]
   ) [MethodDecls]
 ) [Program]
-INFO  21:16:53,104 - ===================================
+INFO  21:42:08,863 - ===================================

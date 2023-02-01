@@ -69,6 +69,7 @@ nonterminal SingleFormPar;
 nonterminal MultipleFormPar;
 
 nonterminal Statement;
+nonterminal StmtConst;
 
 nonterminal Expr;
 nonterminal Term;
@@ -164,6 +165,17 @@ Statement ::= (DesignStmt) Designator SEMICOLON
 			(ReturnNoExpr) RETURN SEMICOLON
 			|
 			(ReturnExpr) RETURN Expr SEMICOLON
+			|
+			(ReadStmt) READ LPAREN Designator RPAREN SEMICOLON
+			|
+			(PrintStmt) PRINT LPAREN Expr StmtConst RPAREN SEMICOLON
+			|
+			(ForeachStmt) Designator DOT FOREACH LPAREN IDENT ASSIGN Statement RPAREN SEMICOLON
+			;
+			
+StmtConst ::= (StmtCnst) COMMA NUMBER
+			|
+			(NoStmtCnst) /* epsilon */
 			;
 
 Expr ::= (NegativeExpr) MINUS Term
