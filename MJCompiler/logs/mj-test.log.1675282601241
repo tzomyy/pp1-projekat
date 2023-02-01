@@ -1,0 +1,239 @@
+INFO  21:12:58,833 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  21:12:58,863 - #39 program
+INFO  21:12:58,863 - #47 MJProgram
+INFO  21:12:58,863 - #44 const
+INFO  21:12:58,864 - #47 int
+INFO  21:12:58,864 - #47 milica
+INFO  21:12:58,865 - #20 =
+INFO  21:12:58,865 - #8 true
+INFO  21:12:58,866 - #5 ,
+INFO  21:12:58,866 - #47 jovanka
+INFO  21:12:58,867 - #20 =
+INFO  21:12:58,867 - #33 "Joc"
+INFO  21:12:58,867 - #6 ;
+INFO  21:12:58,867 - #47 int
+INFO  21:12:58,868 - #47 zorana
+INFO  21:12:58,868 - #22 [
+INFO  21:12:58,869 - #40 ]
+INFO  21:12:58,869 - #5 ,
+INFO  21:12:58,871 - #47 milic
+INFO  21:12:58,871 - #6 ;
+INFO  21:12:58,872 - #13 {
+INFO  21:12:58,873 - #17 void
+INFO  21:12:58,874 - #47 milica
+INFO  21:12:58,874 - #19 (
+INFO  21:12:58,874 - #4 )
+INFO  21:12:58,875 - #47 int
+INFO  21:12:58,875 - #47 x
+INFO  21:12:58,875 - #6 ;
+INFO  21:12:58,875 - #13 {
+INFO  21:12:58,875 - #41 return
+INFO  21:12:58,876 - #19 (
+INFO  21:12:58,876 - #46 5
+INFO  21:12:58,876 - #3 +
+INFO  21:12:58,876 - #46 7
+INFO  21:12:58,877 - #27 *
+INFO  21:12:58,877 - #8 true
+INFO  21:12:58,878 - #4 )
+INFO  21:12:58,879 - #6 ;
+INFO  21:12:58,879 - #41 return
+INFO  21:12:58,880 - #9 new
+INFO  21:12:58,880 - #47 int
+INFO  21:12:58,880 - #22 [
+INFO  21:12:58,880 - #46 5
+INFO  21:12:58,880 - #27 *
+INFO  21:12:58,880 - #46 6
+INFO  21:12:58,880 - #3 +
+INFO  21:12:58,880 - #46 4
+INFO  21:12:58,880 - #40 ]
+INFO  21:12:58,880 - #6 ;
+INFO  21:12:58,881 - #47 petar
+INFO  21:12:58,881 - #22 [
+INFO  21:12:58,881 - #15 -
+INFO  21:12:58,881 - #46 5
+INFO  21:12:58,881 - #3 +
+INFO  21:12:58,881 - #8 true
+INFO  21:12:58,881 - #27 *
+INFO  21:12:58,882 - #46 5
+INFO  21:12:58,882 - #40 ]
+INFO  21:12:58,882 - #6 ;
+INFO  21:12:58,882 - #24 break
+INFO  21:12:58,882 - #6 ;
+INFO  21:12:58,882 - #42 continue
+INFO  21:12:58,883 - #6 ;
+INFO  21:12:58,883 - #36 }
+INFO  21:12:58,883 - #36 }
+INFO  21:12:58,886 - Program(
+ MJProgram
+  VarDeclaration(
+    ConstDeclaration(
+      NoDeclaration(
+      ) [NoDeclaration]
+      ConstDecl(
+        Type(
+         int
+        ) [Type]
+        BoolConstDecl(
+         milica
+        ) [BoolConstDecl]
+        MultipleConstDecls(
+          EndOfDeclaration(
+          ) [EndOfDeclaration]
+          CharConstDecl(
+           jovanka
+          ) [CharConstDecl]
+        ) [MultipleConstDecls]
+      ) [ConstDecl]
+    ) [ConstDeclaration]
+    VarDecl(
+      Type(
+       int
+      ) [Type]
+      SingleVarDecl(
+       zorana
+        Brackets(
+        ) [Brackets]
+      ) [SingleVarDecl]
+      MultipleVarDecls(
+        EndOfVarDeclaration(
+        ) [EndOfVarDeclaration]
+        SingleVarDecl(
+         milic
+          NoBrackets(
+          ) [NoBrackets]
+        ) [SingleVarDecl]
+      ) [MultipleVarDecls]
+    ) [VarDecl]
+  ) [VarDeclaration]
+  MethodDecls(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    VoidMethodDecl(
+     milica
+      NoMethodFormParams(
+      ) [NoMethodFormParams]
+      VarDecl(
+        Type(
+         int
+        ) [Type]
+        SingleVarDecl(
+         x
+          NoBrackets(
+          ) [NoBrackets]
+        ) [SingleVarDecl]
+        EndOfVarDeclaration(
+        ) [EndOfVarDeclaration]
+      ) [VarDecl]
+      MethodStmt(
+        MethodStmt(
+          MethodStmt(
+            MethodStmt(
+              MethodStmt(
+                NoMethodStmt(
+                ) [NoMethodStmt]
+                ReturnExpr(
+                  SingleExpr(
+                    SingleTerm(
+                      FactExpr(
+                        MultipleExpr(
+                          SingleExpr(
+                            SingleTerm(
+                              FactNum(
+                               5
+                              ) [FactNum]
+                            ) [SingleTerm]
+                          ) [SingleExpr]
+                          Plus(
+                          ) [Plus]
+                          MultipleTerms(
+                            SingleTerm(
+                              FactNum(
+                               7
+                              ) [FactNum]
+                            ) [SingleTerm]
+                            Asterisk(
+                            ) [Asterisk]
+                            FactBoolean(
+                            ) [FactBoolean]
+                          ) [MultipleTerms]
+                        ) [MultipleExpr]
+                      ) [FactExpr]
+                    ) [SingleTerm]
+                  ) [SingleExpr]
+                ) [ReturnExpr]
+              ) [MethodStmt]
+              ReturnExpr(
+                SingleExpr(
+                  SingleTerm(
+                    FactConstrArray(
+                      Type(
+                       int
+                      ) [Type]
+                      MultipleExpr(
+                        SingleExpr(
+                          MultipleTerms(
+                            SingleTerm(
+                              FactNum(
+                               5
+                              ) [FactNum]
+                            ) [SingleTerm]
+                            Asterisk(
+                            ) [Asterisk]
+                            FactNum(
+                             6
+                            ) [FactNum]
+                          ) [MultipleTerms]
+                        ) [SingleExpr]
+                        Plus(
+                        ) [Plus]
+                        SingleTerm(
+                          FactNum(
+                           4
+                          ) [FactNum]
+                        ) [SingleTerm]
+                      ) [MultipleExpr]
+                    ) [FactConstrArray]
+                  ) [SingleTerm]
+                ) [SingleExpr]
+              ) [ReturnExpr]
+            ) [MethodStmt]
+            DesignStmt(
+              MultipleDesignExpr(
+                SingleDesignIdent(
+                 petar
+                ) [SingleDesignIdent]
+                MultipleExpr(
+                  NegativeExpr(
+                    SingleTerm(
+                      FactNum(
+                       5
+                      ) [FactNum]
+                    ) [SingleTerm]
+                  ) [NegativeExpr]
+                  Plus(
+                  ) [Plus]
+                  MultipleTerms(
+                    SingleTerm(
+                      FactBoolean(
+                      ) [FactBoolean]
+                    ) [SingleTerm]
+                    Asterisk(
+                    ) [Asterisk]
+                    FactNum(
+                     5
+                    ) [FactNum]
+                  ) [MultipleTerms]
+                ) [MultipleExpr]
+              ) [MultipleDesignExpr]
+            ) [DesignStmt]
+          ) [MethodStmt]
+          BreakStmt(
+          ) [BreakStmt]
+        ) [MethodStmt]
+        ContinueStmt(
+        ) [ContinueStmt]
+      ) [MethodStmt]
+    ) [VoidMethodDecl]
+  ) [MethodDecls]
+) [Program]
+INFO  21:12:58,886 - ===================================

@@ -1,0 +1,187 @@
+INFO  21:10:57,038 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  21:10:57,084 - #39 program
+INFO  21:10:57,084 - #47 MJProgram
+INFO  21:10:57,084 - #44 const
+INFO  21:10:57,085 - #47 int
+INFO  21:10:57,085 - #47 milica
+INFO  21:10:57,086 - #20 =
+INFO  21:10:57,086 - #8 true
+INFO  21:10:57,087 - #5 ,
+INFO  21:10:57,088 - #47 jovanka
+INFO  21:10:57,088 - #20 =
+INFO  21:10:57,088 - #33 "Joc"
+INFO  21:10:57,088 - #6 ;
+INFO  21:10:57,088 - #47 int
+INFO  21:10:57,090 - #47 zorana
+INFO  21:10:57,090 - #22 [
+INFO  21:10:57,090 - #40 ]
+INFO  21:10:57,090 - #5 ,
+INFO  21:10:57,099 - #47 milic
+INFO  21:10:57,099 - #6 ;
+INFO  21:10:57,100 - #13 {
+INFO  21:10:57,101 - #17 void
+INFO  21:10:57,108 - #47 milica
+INFO  21:10:57,108 - #19 (
+INFO  21:10:57,108 - #4 )
+INFO  21:10:57,109 - #47 int
+INFO  21:10:57,109 - #47 x
+INFO  21:10:57,109 - #6 ;
+INFO  21:10:57,109 - #13 {
+INFO  21:10:57,109 - #41 return
+INFO  21:10:57,110 - #9 new
+INFO  21:10:57,110 - #47 int
+INFO  21:10:57,110 - #22 [
+INFO  21:10:57,110 - #46 5
+INFO  21:10:57,110 - #27 *
+INFO  21:10:57,111 - #46 6
+INFO  21:10:57,112 - #40 ]
+INFO  21:10:57,112 - #6 ;
+INFO  21:10:57,113 - #47 petar
+INFO  21:10:57,113 - #22 [
+INFO  21:10:57,114 - #15 -
+INFO  21:10:57,115 - #46 5
+INFO  21:10:57,115 - #3 +
+INFO  21:10:57,116 - #8 true
+INFO  21:10:57,117 - #27 *
+INFO  21:10:57,118 - #46 5
+INFO  21:10:57,118 - #40 ]
+INFO  21:10:57,118 - #6 ;
+INFO  21:10:57,118 - #24 break
+INFO  21:10:57,118 - #6 ;
+INFO  21:10:57,119 - #42 continue
+INFO  21:10:57,119 - #6 ;
+INFO  21:10:57,119 - #36 }
+INFO  21:10:57,120 - #36 }
+INFO  21:10:57,122 - Program(
+ MJProgram
+  VarDeclaration(
+    ConstDeclaration(
+      NoDeclaration(
+      ) [NoDeclaration]
+      ConstDecl(
+        Type(
+         int
+        ) [Type]
+        BoolConstDecl(
+         milica
+        ) [BoolConstDecl]
+        MultipleConstDecls(
+          EndOfDeclaration(
+          ) [EndOfDeclaration]
+          CharConstDecl(
+           jovanka
+          ) [CharConstDecl]
+        ) [MultipleConstDecls]
+      ) [ConstDecl]
+    ) [ConstDeclaration]
+    VarDecl(
+      Type(
+       int
+      ) [Type]
+      SingleVarDecl(
+       zorana
+        Brackets(
+        ) [Brackets]
+      ) [SingleVarDecl]
+      MultipleVarDecls(
+        EndOfVarDeclaration(
+        ) [EndOfVarDeclaration]
+        SingleVarDecl(
+         milic
+          NoBrackets(
+          ) [NoBrackets]
+        ) [SingleVarDecl]
+      ) [MultipleVarDecls]
+    ) [VarDecl]
+  ) [VarDeclaration]
+  MethodDecls(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    VoidMethodDecl(
+     milica
+      NoMethodFormParams(
+      ) [NoMethodFormParams]
+      VarDecl(
+        Type(
+         int
+        ) [Type]
+        SingleVarDecl(
+         x
+          NoBrackets(
+          ) [NoBrackets]
+        ) [SingleVarDecl]
+        EndOfVarDeclaration(
+        ) [EndOfVarDeclaration]
+      ) [VarDecl]
+      MethodStmt(
+        MethodStmt(
+          MethodStmt(
+            MethodStmt(
+              NoMethodStmt(
+              ) [NoMethodStmt]
+              ReturnExpr(
+                SingleExpr(
+                  SingleTerm(
+                    FactConstrArray(
+                      Type(
+                       int
+                      ) [Type]
+                      SingleExpr(
+                        MultipleTerms(
+                          SingleTerm(
+                            FactNum(
+                             5
+                            ) [FactNum]
+                          ) [SingleTerm]
+                          Asterisk(
+                          ) [Asterisk]
+                          FactNum(
+                           6
+                          ) [FactNum]
+                        ) [MultipleTerms]
+                      ) [SingleExpr]
+                    ) [FactConstrArray]
+                  ) [SingleTerm]
+                ) [SingleExpr]
+              ) [ReturnExpr]
+            ) [MethodStmt]
+            DesignStmt(
+              MultipleDesignExpr(
+                SingleDesignIdent(
+                 petar
+                ) [SingleDesignIdent]
+                MultipleExpr(
+                  NegativeExpr(
+                    SingleTerm(
+                      FactNum(
+                       5
+                      ) [FactNum]
+                    ) [SingleTerm]
+                  ) [NegativeExpr]
+                  Plus(
+                  ) [Plus]
+                  MultipleTerms(
+                    SingleTerm(
+                      FactBoolean(
+                      ) [FactBoolean]
+                    ) [SingleTerm]
+                    Asterisk(
+                    ) [Asterisk]
+                    FactNum(
+                     5
+                    ) [FactNum]
+                  ) [MultipleTerms]
+                ) [MultipleExpr]
+              ) [MultipleDesignExpr]
+            ) [DesignStmt]
+          ) [MethodStmt]
+          BreakStmt(
+          ) [BreakStmt]
+        ) [MethodStmt]
+        ContinueStmt(
+        ) [ContinueStmt]
+      ) [MethodStmt]
+    ) [VoidMethodDecl]
+  ) [MethodDecls]
+) [Program]
+INFO  21:10:57,122 - ===================================

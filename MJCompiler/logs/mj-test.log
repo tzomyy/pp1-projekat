@@ -1,49 +1,71 @@
-INFO  20:53:49,395 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
-INFO  20:53:49,421 - #39 program
-INFO  20:53:49,421 - #47 MJProgram
-INFO  20:53:49,421 - #44 const
-INFO  20:53:49,422 - #47 int
-INFO  20:53:49,422 - #47 milica
-INFO  20:53:49,423 - #20 =
-INFO  20:53:49,423 - #8 true
-INFO  20:53:49,423 - #5 ,
-INFO  20:53:49,424 - #47 jovanka
-INFO  20:53:49,424 - #20 =
-INFO  20:53:49,424 - #33 "Joc"
-INFO  20:53:49,424 - #6 ;
-INFO  20:53:49,424 - #47 int
-INFO  20:53:49,425 - #47 zorana
-INFO  20:53:49,425 - #22 [
-INFO  20:53:49,426 - #40 ]
-INFO  20:53:49,426 - #5 ,
-INFO  20:53:49,428 - #47 milic
-INFO  20:53:49,428 - #6 ;
-INFO  20:53:49,429 - #13 {
-INFO  20:53:49,430 - #17 void
-INFO  20:53:49,437 - #47 milica
-INFO  20:53:49,437 - #19 (
-INFO  20:53:49,437 - #4 )
-INFO  20:53:49,438 - #47 int
-INFO  20:53:49,438 - #47 x
-INFO  20:53:49,438 - #6 ;
-INFO  20:53:49,438 - #13 {
-INFO  20:53:49,438 - #47 petar
-INFO  20:53:49,439 - #22 [
-INFO  20:53:49,439 - #15 -
-INFO  20:53:49,440 - #46 5
-INFO  20:53:49,440 - #3 +
-INFO  20:53:49,440 - #8 true
-INFO  20:53:49,441 - #27 *
-INFO  20:53:49,442 - #46 5
-INFO  20:53:49,443 - #40 ]
-INFO  20:53:49,443 - #6 ;
-INFO  20:53:49,444 - #24 break
-INFO  20:53:49,444 - #6 ;
-INFO  20:53:49,444 - #42 continue
-INFO  20:53:49,445 - #6 ;
-INFO  20:53:49,445 - #36 }
-INFO  20:53:49,446 - #36 }
-INFO  20:53:49,447 - Program(
+INFO  21:16:53,050 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  21:16:53,078 - #39 program
+INFO  21:16:53,078 - #47 MJProgram
+INFO  21:16:53,078 - #44 const
+INFO  21:16:53,078 - #47 int
+INFO  21:16:53,078 - #47 milica
+INFO  21:16:53,079 - #20 =
+INFO  21:16:53,079 - #8 true
+INFO  21:16:53,079 - #5 ,
+INFO  21:16:53,080 - #47 jovanka
+INFO  21:16:53,080 - #20 =
+INFO  21:16:53,080 - #33 "Joc"
+INFO  21:16:53,080 - #6 ;
+INFO  21:16:53,080 - #47 int
+INFO  21:16:53,081 - #47 zorana
+INFO  21:16:53,081 - #22 [
+INFO  21:16:53,081 - #40 ]
+INFO  21:16:53,082 - #5 ,
+INFO  21:16:53,083 - #47 milic
+INFO  21:16:53,083 - #6 ;
+INFO  21:16:53,084 - #13 {
+INFO  21:16:53,084 - #17 void
+INFO  21:16:53,091 - #47 milica
+INFO  21:16:53,091 - #19 (
+INFO  21:16:53,091 - #4 )
+INFO  21:16:53,092 - #47 int
+INFO  21:16:53,092 - #47 x
+INFO  21:16:53,092 - #6 ;
+INFO  21:16:53,092 - #13 {
+INFO  21:16:53,093 - #41 return
+INFO  21:16:53,093 - #6 ;
+INFO  21:16:53,093 - #41 return
+INFO  21:16:53,094 - #19 (
+INFO  21:16:53,094 - #46 5
+INFO  21:16:53,094 - #3 +
+INFO  21:16:53,094 - #46 7
+INFO  21:16:53,095 - #27 *
+INFO  21:16:53,095 - #8 true
+INFO  21:16:53,096 - #4 )
+INFO  21:16:53,097 - #6 ;
+INFO  21:16:53,097 - #41 return
+INFO  21:16:53,097 - #9 new
+INFO  21:16:53,097 - #47 int
+INFO  21:16:53,098 - #22 [
+INFO  21:16:53,098 - #46 5
+INFO  21:16:53,098 - #27 *
+INFO  21:16:53,098 - #46 6
+INFO  21:16:53,098 - #3 +
+INFO  21:16:53,098 - #46 4
+INFO  21:16:53,098 - #40 ]
+INFO  21:16:53,098 - #6 ;
+INFO  21:16:53,098 - #47 petar
+INFO  21:16:53,098 - #22 [
+INFO  21:16:53,098 - #15 -
+INFO  21:16:53,098 - #46 5
+INFO  21:16:53,098 - #3 +
+INFO  21:16:53,098 - #8 true
+INFO  21:16:53,099 - #27 *
+INFO  21:16:53,099 - #46 5
+INFO  21:16:53,099 - #40 ]
+INFO  21:16:53,099 - #6 ;
+INFO  21:16:53,099 - #24 break
+INFO  21:16:53,099 - #6 ;
+INFO  21:16:53,099 - #42 continue
+INFO  21:16:53,100 - #6 ;
+INFO  21:16:53,100 - #36 }
+INFO  21:16:53,100 - #36 }
+INFO  21:16:53,103 - Program(
  MJProgram
   VarDeclaration(
     ConstDeclaration(
@@ -107,8 +129,80 @@ INFO  20:53:49,447 - Program(
       MethodStmt(
         MethodStmt(
           MethodStmt(
-            NoMethodStmt(
-            ) [NoMethodStmt]
+            MethodStmt(
+              MethodStmt(
+                MethodStmt(
+                  NoMethodStmt(
+                  ) [NoMethodStmt]
+                  ReturnNoExpr(
+                  ) [ReturnNoExpr]
+                ) [MethodStmt]
+                ReturnExpr(
+                  SingleExpr(
+                    SingleTerm(
+                      FactExpr(
+                        MultipleExpr(
+                          SingleExpr(
+                            SingleTerm(
+                              FactNum(
+                               5
+                              ) [FactNum]
+                            ) [SingleTerm]
+                          ) [SingleExpr]
+                          Plus(
+                          ) [Plus]
+                          MultipleTerms(
+                            SingleTerm(
+                              FactNum(
+                               7
+                              ) [FactNum]
+                            ) [SingleTerm]
+                            Asterisk(
+                            ) [Asterisk]
+                            FactBoolean(
+                            ) [FactBoolean]
+                          ) [MultipleTerms]
+                        ) [MultipleExpr]
+                      ) [FactExpr]
+                    ) [SingleTerm]
+                  ) [SingleExpr]
+                ) [ReturnExpr]
+              ) [MethodStmt]
+              ReturnExpr(
+                SingleExpr(
+                  SingleTerm(
+                    FactConstrArray(
+                      Type(
+                       int
+                      ) [Type]
+                      MultipleExpr(
+                        SingleExpr(
+                          MultipleTerms(
+                            SingleTerm(
+                              FactNum(
+                               5
+                              ) [FactNum]
+                            ) [SingleTerm]
+                            Asterisk(
+                            ) [Asterisk]
+                            FactNum(
+                             6
+                            ) [FactNum]
+                          ) [MultipleTerms]
+                        ) [SingleExpr]
+                        Plus(
+                        ) [Plus]
+                        SingleTerm(
+                          FactNum(
+                           4
+                          ) [FactNum]
+                        ) [SingleTerm]
+                      ) [MultipleExpr]
+                    ) [FactConstrArray]
+                  ) [SingleTerm]
+                ) [SingleExpr]
+              ) [ReturnExpr]
+            ) [MethodStmt]
             DesignStmt(
               MultipleDesignExpr(
                 SingleDesignIdent(
@@ -148,4 +242,4 @@ INFO  20:53:49,447 - Program(
     ) [VoidMethodDecl]
   ) [MethodDecls]
 ) [Program]
-INFO  20:53:49,448 - ===================================
+INFO  21:16:53,104 - ===================================

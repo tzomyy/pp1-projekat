@@ -77,7 +77,7 @@ nonterminal Statement Statement;
 nonterminal Expr Expr;
 nonterminal Term Term;
 nonterminal Factor Factor;
-nonterminal FactFuncParam FactFuncParam;
+nonterminal FactParam FactParam;
 nonterminal ActPars ActPars;
 
 nonterminal Designator Designator;
@@ -164,6 +164,10 @@ Statement ::= (DesignStmt) Designator:D1 SEMICOLON {: RESULT=new DesignStmt(D1);
 			(BreakStmt) BREAK SEMICOLON {: RESULT=new BreakStmt(); :}
 			|
 			(ContinueStmt) CONTINUE SEMICOLON {: RESULT=new ContinueStmt(); :}
+			|
+			(ReturnNoExpr) RETURN SEMICOLON {: RESULT=new ReturnNoExpr(); :}
+			|
+			(ReturnExpr) RETURN Expr:E1 SEMICOLON {: RESULT=new ReturnExpr(E1); RESULT.setLine(E1left); :}
 			;
 
 Expr ::= (NegativeExpr) MINUS Term:T1 {: RESULT=new NegativeExpr(T1); RESULT.setLine(T1left); :}
@@ -180,16 +184,22 @@ Term ::= (SingleTerm) Factor:F1 {: RESULT=new SingleTerm(F1); RESULT.setLine(F1l
 
 Factor ::= (FactVar) Designator:D1 {: RESULT=new FactVar(D1); RESULT.setLine(D1left); :}
 		|
-		(FactFunc) Designator:D1 LPAREN FactFuncParam:F2 RPAREN {: RESULT=new FactFunc(D1, F2); RESULT.setLine(D1left); :} 
+		(FactFunc) Designator:D1 LPAREN FactParam:F2 RPAREN {: RESULT=new FactFunc(D1, F2); RESULT.setLine(D1left); :} 
 		|
 		(FactNum) NUMBER:N1 {: RESULT=new FactNum(N1); RESULT.setLine(N1left); :}
 		|
 		(FactChar) CHAR {: RESULT=new FactChar(); :}
 		|
 		(FactBoolean) BOOL {: RESULT=new FactBoolean(); :}
+		|
+		(FactConstrArray) NEW Type:arrayType LSQUARE Expr:E1 RSQUARE {: RESULT=new FactConstrArray(arrayType, E1); RESULT.setLine(arrayTypeleft); :}
+		|
+		(FactConstrObject) NEW Type:objectType LPAREN FactParam:F1 RPAREN {: RESULT=new FactConstrObject(objectType, F1); RESULT.setLine(objectTypeleft); :}
+		|
+		(FactExpr) LPAREN Expr:E1 RPAREN {: RESULT=new FactExpr(E1); RESULT.setLine(E1left); :}
 		;
 		
-FactFuncParam ::= (FactFuncParams) ActPars:A1 {: RESULT=new FactFuncParams(A1); RESULT.setLine(A1left); :}
+FactParam ::= (FactFuncParams) ActPars:A1 {: RESULT=new FactFuncParams(A1); RESULT.setLine(A1left); :}
 				|
 				(NoFactFuncParams) {: RESULT=new NoFactFuncParams(); :} /* epsilon */
 				;

@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 1/1/2023 20:49:49
+// 1/1/2023 21:15:58
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -16,6 +16,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Expr Expr) { }
     public void visit(MethodFormPars MethodFormPars) { }
     public void visit(SingleConstDecl SingleConstDecl) { }
+    public void visit(FactParam FactParam) { }
     public void visit(MultipleMethodDecl MultipleMethodDecl) { }
     public void visit(MethodStatement MethodStatement) { }
     public void visit(MultipleConstDecl MultipleConstDecl) { }
@@ -23,7 +24,6 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Addop Addop) { }
     public void visit(Statement Statement) { }
     public void visit(Relop Relop) { }
-    public void visit(FactFuncParam FactFuncParam) { }
     public void visit(Term Term) { }
     public void visit(ActPars ActPars) { }
     public void visit(SingleFormPar SingleFormPar) { }
@@ -48,6 +48,9 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(ActParams ActParams) { visit(); }
     public void visit(NoFactFuncParams NoFactFuncParams) { visit(); }
     public void visit(FactFuncParams FactFuncParams) { visit(); }
+    public void visit(FactExpr FactExpr) { visit(); }
+    public void visit(FactConstrObject FactConstrObject) { visit(); }
+    public void visit(FactConstrArray FactConstrArray) { visit(); }
     public void visit(FactBoolean FactBoolean) { visit(); }
     public void visit(FactChar FactChar) { visit(); }
     public void visit(FactNum FactNum) { visit(); }
@@ -58,6 +61,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(SingleExpr SingleExpr) { visit(); }
     public void visit(MultipleExpr MultipleExpr) { visit(); }
     public void visit(NegativeExpr NegativeExpr) { visit(); }
+    public void visit(ReturnExpr ReturnExpr) { visit(); }
+    public void visit(ReturnNoExpr ReturnNoExpr) { visit(); }
     public void visit(ContinueStmt ContinueStmt) { visit(); }
     public void visit(BreakStmt BreakStmt) { visit(); }
     public void visit(DesignStmt DesignStmt) { visit(); }

@@ -73,7 +73,7 @@ nonterminal Statement;
 nonterminal Expr;
 nonterminal Term;
 nonterminal Factor;
-nonterminal FactFuncParam;
+nonterminal FactParam;
 nonterminal ActPars;
 
 nonterminal Designator;
@@ -160,6 +160,10 @@ Statement ::= (DesignStmt) Designator SEMICOLON
 			(BreakStmt) BREAK SEMICOLON
 			|
 			(ContinueStmt) CONTINUE SEMICOLON
+			|
+			(ReturnNoExpr) RETURN SEMICOLON
+			|
+			(ReturnExpr) RETURN Expr SEMICOLON
 			;
 
 Expr ::= (NegativeExpr) MINUS Term
@@ -176,16 +180,22 @@ Term ::= (SingleTerm) Factor
 
 Factor ::= (FactVar) Designator
 		|
-		(FactFunc) Designator LPAREN FactFuncParam RPAREN 
+		(FactFunc) Designator LPAREN FactParam RPAREN 
 		|
 		(FactNum) NUMBER
 		|
 		(FactChar) CHAR
 		|
 		(FactBoolean) BOOL
+		|
+		(FactConstrArray) NEW Type:arrayType LSQUARE Expr RSQUARE
+		|
+		(FactConstrObject) NEW Type:objectType LPAREN FactParam RPAREN
+		|
+		(FactExpr) LPAREN Expr RPAREN
 		;
 		
-FactFuncParam ::= (FactFuncParams) ActPars
+FactParam ::= (FactFuncParams) ActPars
 				|
 				(NoFactFuncParams) /* epsilon */
 				;
