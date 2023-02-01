@@ -70,6 +70,7 @@ nonterminal MultipleFormPar;
 
 nonterminal Statement;
 nonterminal StmtConst;
+nonterminal ElseStatement;
 nonterminal StatementList;
 
 nonterminal Expr;
@@ -90,6 +91,7 @@ nonterminal Relop;
 nonterminal Addop;
 nonterminal Mulop;
 
+precedence left ELSE;
 
 Program ::= (Program) PROG IDENT Declaration LCURLY MethodDecl RCURLY;
 
@@ -163,7 +165,7 @@ MultipleFormPar ::= (MultipleFormPars) MultipleFormPar COMMA SingleFormPar
 				
 Statement ::= (DesignStmt) Designator SEMICOLON
 			|
-			(IfStmt) IF LPAREN Condition RPAREN
+			(IfStmt) IF LPAREN Condition RPAREN Statement ElseStatement
 			|
 			(BreakStmt) BREAK SEMICOLON
 			|
@@ -191,6 +193,11 @@ StmtConst ::= (StmtCnst) COMMA NUMBER
 			|
 			(NoStmtCnst) /* epsilon */
 			;
+			
+ElseStatement ::= (ElseStmt) ELSE Statement
+				|
+				(NoElseStmt) /* epsilon */
+				;
 
 Expr ::= (NegativeExpr) MINUS Term
 		|

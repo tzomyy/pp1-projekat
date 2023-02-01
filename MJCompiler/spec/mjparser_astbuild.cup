@@ -74,6 +74,7 @@ nonterminal MultipleFormPar MultipleFormPar;
 
 nonterminal Statement Statement;
 nonterminal StmtConst StmtConst;
+nonterminal ElseStatement ElseStatement;
 nonterminal StatementList StatementList;
 
 nonterminal Expr Expr;
@@ -94,6 +95,7 @@ nonterminal Relop Relop;
 nonterminal Addop Addop;
 nonterminal Mulop Mulop;
 
+precedence left ELSE;
 
 Program ::= (Program) PROG IDENT:I1 Declaration:D2 LCURLY MethodDecl:M3 RCURLY {: RESULT=new Program(I1, D2, M3); RESULT.setLine(I1left); :};
 
@@ -167,7 +169,7 @@ MultipleFormPar ::= (MultipleFormPars) MultipleFormPar:M1 COMMA SingleFormPar:S2
 				
 Statement ::= (DesignStmt) Designator:D1 SEMICOLON {: RESULT=new DesignStmt(D1); RESULT.setLine(D1left); :}
 			|
-			(IfStmt) IF LPAREN Condition:C1 RPAREN {: RESULT=new IfStmt(C1); RESULT.setLine(C1left); :}
+			(IfStmt) IF LPAREN Condition:C1 RPAREN Statement:S2 ElseStatement:E3 {: RESULT=new IfStmt(C1, S2, E3); RESULT.setLine(C1left); :}
 			|
 			(BreakStmt) BREAK SEMICOLON {: RESULT=new BreakStmt(); :}
 			|
@@ -195,6 +197,11 @@ StmtConst ::= (StmtCnst) COMMA NUMBER:N1 {: RESULT=new StmtCnst(N1); RESULT.setL
 			|
 			(NoStmtCnst) {: RESULT=new NoStmtCnst(); :} /* epsilon */
 			;
+			
+ElseStatement ::= (ElseStmt) ELSE Statement:S1 {: RESULT=new ElseStmt(S1); RESULT.setLine(S1left); :}
+				|
+				(NoElseStmt) {: RESULT=new NoElseStmt(); :} /* epsilon */
+				;
 
 Expr ::= (NegativeExpr) MINUS Term:T1 {: RESULT=new NegativeExpr(T1); RESULT.setLine(T1left); :}
 		|

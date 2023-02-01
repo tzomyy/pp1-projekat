@@ -3,7 +3,7 @@ program MJProgram
 	int zorana[], milic;
 {
 	void milica() int x; { 
-		if (milica && andrijana || andjela == 1 )
+		if (milica && andrijana || andjela == 1 ) break; 
 		{ break;}
 		niki[-5].foreach(losa=>continue;);
 		read(mi.kalasi[5].lepa);
