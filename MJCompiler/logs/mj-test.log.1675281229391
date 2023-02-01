@@ -1,0 +1,142 @@
+INFO  20:53:20,663 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  20:53:20,691 - #39 program
+INFO  20:53:20,691 - #47 MJProgram
+INFO  20:53:20,691 - #44 const
+INFO  20:53:20,692 - #47 int
+INFO  20:53:20,692 - #47 milica
+INFO  20:53:20,693 - #20 =
+INFO  20:53:20,693 - #8 true
+INFO  20:53:20,693 - #5 ,
+INFO  20:53:20,694 - #47 jovanka
+INFO  20:53:20,694 - #20 =
+INFO  20:53:20,694 - #33 "Joc"
+INFO  20:53:20,694 - #6 ;
+INFO  20:53:20,694 - #47 int
+INFO  20:53:20,695 - #47 zorana
+INFO  20:53:20,695 - #22 [
+INFO  20:53:20,695 - #40 ]
+INFO  20:53:20,695 - #5 ,
+INFO  20:53:20,697 - #47 milic
+INFO  20:53:20,697 - #6 ;
+INFO  20:53:20,698 - #13 {
+INFO  20:53:20,699 - #17 void
+INFO  20:53:20,700 - #47 milica
+INFO  20:53:20,700 - #19 (
+INFO  20:53:20,700 - #4 )
+INFO  20:53:20,701 - #47 int
+INFO  20:53:20,701 - #47 x
+INFO  20:53:20,701 - #6 ;
+INFO  20:53:20,701 - #13 {
+INFO  20:53:20,701 - #47 petar
+INFO  20:53:20,702 - #22 [
+INFO  20:53:20,702 - #15 -
+INFO  20:53:20,703 - #46 5
+INFO  20:53:20,703 - #3 +
+INFO  20:53:20,703 - #8 true
+INFO  20:53:20,703 - #40 ]
+INFO  20:53:20,704 - #6 ;
+INFO  20:53:20,704 - #24 break
+INFO  20:53:20,704 - #6 ;
+INFO  20:53:20,705 - #42 continue
+INFO  20:53:20,705 - #6 ;
+INFO  20:53:20,705 - #36 }
+INFO  20:53:20,706 - #36 }
+INFO  20:53:20,708 - Program(
+ MJProgram
+  VarDeclaration(
+    ConstDeclaration(
+      NoDeclaration(
+      ) [NoDeclaration]
+      ConstDecl(
+        Type(
+         int
+        ) [Type]
+        BoolConstDecl(
+         milica
+        ) [BoolConstDecl]
+        MultipleConstDecls(
+          EndOfDeclaration(
+          ) [EndOfDeclaration]
+          CharConstDecl(
+           jovanka
+          ) [CharConstDecl]
+        ) [MultipleConstDecls]
+      ) [ConstDecl]
+    ) [ConstDeclaration]
+    VarDecl(
+      Type(
+       int
+      ) [Type]
+      SingleVarDecl(
+       zorana
+        Brackets(
+        ) [Brackets]
+      ) [SingleVarDecl]
+      MultipleVarDecls(
+        EndOfVarDeclaration(
+        ) [EndOfVarDeclaration]
+        SingleVarDecl(
+         milic
+          NoBrackets(
+          ) [NoBrackets]
+        ) [SingleVarDecl]
+      ) [MultipleVarDecls]
+    ) [VarDecl]
+  ) [VarDeclaration]
+  MethodDecls(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    VoidMethodDecl(
+     milica
+      NoMethodFormParams(
+      ) [NoMethodFormParams]
+      VarDecl(
+        Type(
+         int
+        ) [Type]
+        SingleVarDecl(
+         x
+          NoBrackets(
+          ) [NoBrackets]
+        ) [SingleVarDecl]
+        EndOfVarDeclaration(
+        ) [EndOfVarDeclaration]
+      ) [VarDecl]
+      MethodStmt(
+        MethodStmt(
+          MethodStmt(
+            NoMethodStmt(
+            ) [NoMethodStmt]
+            DesignStmt(
+              MultipleDesignExpr(
+                SingleDesignIdent(
+                 petar
+                ) [SingleDesignIdent]
+                MultipleExpr(
+                  NegativeExpr(
+                    SingleTerm(
+                      FactNum(
+                       5
+                      ) [FactNum]
+                    ) [SingleTerm]
+                  ) [NegativeExpr]
+                  Plus(
+                  ) [Plus]
+                  SingleTerm(
+                    FactBoolean(
+                    ) [FactBoolean]
+                  ) [SingleTerm]
+                ) [MultipleExpr]
+              ) [MultipleDesignExpr]
+            ) [DesignStmt]
+          ) [MethodStmt]
+          BreakStmt(
+          ) [BreakStmt]
+        ) [MethodStmt]
+        ContinueStmt(
+        ) [ContinueStmt]
+      ) [MethodStmt]
+    ) [VoidMethodDecl]
+  ) [MethodDecls]
+) [Program]
+INFO  20:53:20,708 - ===================================

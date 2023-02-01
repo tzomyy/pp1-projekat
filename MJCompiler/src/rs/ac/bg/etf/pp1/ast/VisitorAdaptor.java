@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 1/1/2023 15:10:16
+// 1/1/2023 20:49:49
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -9,9 +9,11 @@ public abstract class VisitorAdaptor implements Visitor {
 
     public void visit(Designator Designator) { }
     public void visit(MethodDecl MethodDecl) { }
+    public void visit(Factor Factor) { }
     public void visit(Mulop Mulop) { }
     public void visit(MultipleVarDecl MultipleVarDecl) { }
     public void visit(Declaration Declaration) { }
+    public void visit(Expr Expr) { }
     public void visit(MethodFormPars MethodFormPars) { }
     public void visit(SingleConstDecl SingleConstDecl) { }
     public void visit(MultipleMethodDecl MultipleMethodDecl) { }
@@ -21,6 +23,9 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Addop Addop) { }
     public void visit(Statement Statement) { }
     public void visit(Relop Relop) { }
+    public void visit(FactFuncParam FactFuncParam) { }
+    public void visit(Term Term) { }
+    public void visit(ActPars ActPars) { }
     public void visit(SingleFormPar SingleFormPar) { }
     public void visit(Percent Percent) { visit(); }
     public void visit(Slash Slash) { visit(); }
@@ -36,8 +41,25 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Assignop Assignop) { visit(); }
     public void visit(Label Label) { visit(); }
     public void visit(Type Type) { visit(); }
-    public void visit(SingleDesignator SingleDesignator) { visit(); }
-    public void visit(MultipleDesignator MultipleDesignator) { visit(); }
+    public void visit(SingleDesignIdent SingleDesignIdent) { visit(); }
+    public void visit(MultipleDesignExpr MultipleDesignExpr) { visit(); }
+    public void visit(MultipleDesignIdent MultipleDesignIdent) { visit(); }
+    public void visit(SingleActParam SingleActParam) { visit(); }
+    public void visit(ActParams ActParams) { visit(); }
+    public void visit(NoFactFuncParams NoFactFuncParams) { visit(); }
+    public void visit(FactFuncParams FactFuncParams) { visit(); }
+    public void visit(FactBoolean FactBoolean) { visit(); }
+    public void visit(FactChar FactChar) { visit(); }
+    public void visit(FactNum FactNum) { visit(); }
+    public void visit(FactFunc FactFunc) { visit(); }
+    public void visit(FactVar FactVar) { visit(); }
+    public void visit(MultipleTerms MultipleTerms) { visit(); }
+    public void visit(SingleTerm SingleTerm) { visit(); }
+    public void visit(SingleExpr SingleExpr) { visit(); }
+    public void visit(MultipleExpr MultipleExpr) { visit(); }
+    public void visit(NegativeExpr NegativeExpr) { visit(); }
+    public void visit(ContinueStmt ContinueStmt) { visit(); }
+    public void visit(BreakStmt BreakStmt) { visit(); }
     public void visit(DesignStmt DesignStmt) { visit(); }
     public void visit(EndOfFormPar EndOfFormPar) { visit(); }
     public void visit(MultipleFormPars MultipleFormPars) { visit(); }

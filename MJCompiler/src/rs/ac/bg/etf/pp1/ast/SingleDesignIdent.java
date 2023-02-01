@@ -1,15 +1,15 @@
 // generated with ast extension for cup
 // version 0.8
-// 1/1/2023 15:10:16
+// 1/1/2023 20:49:49
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class SingleDesignator extends Designator {
+public class SingleDesignIdent extends Designator {
 
     private String I1;
 
-    public SingleDesignator (String I1) {
+    public SingleDesignIdent (String I1) {
         this.I1=I1;
     }
 
@@ -39,13 +39,13 @@ public class SingleDesignator extends Designator {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("SingleDesignator(\n");
+        buffer.append("SingleDesignIdent(\n");
 
         buffer.append(" "+tab+I1);
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [SingleDesignator]");
+        buffer.append(") [SingleDesignIdent]");
         return buffer.toString();
     }
 }

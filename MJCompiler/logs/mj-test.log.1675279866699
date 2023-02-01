@@ -1,0 +1,109 @@
+INFO  20:29:17,881 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  20:29:17,904 - #39 program
+INFO  20:29:17,904 - #47 MJProgram
+INFO  20:29:17,904 - #44 const
+INFO  20:29:17,905 - #47 int
+INFO  20:29:17,905 - #47 milica
+INFO  20:29:17,906 - #20 =
+INFO  20:29:17,906 - #8 true
+INFO  20:29:17,906 - #5 ,
+INFO  20:29:17,907 - #47 jovanka
+INFO  20:29:17,907 - #20 =
+INFO  20:29:17,907 - #33 "Joc"
+INFO  20:29:17,908 - #6 ;
+INFO  20:29:17,909 - #47 int
+INFO  20:29:17,909 - #47 zorana
+INFO  20:29:17,910 - #22 [
+INFO  20:29:17,910 - #40 ]
+INFO  20:29:17,910 - #5 ,
+INFO  20:29:17,912 - #47 milic
+INFO  20:29:17,912 - #6 ;
+INFO  20:29:17,913 - #13 {
+INFO  20:29:17,914 - #17 void
+INFO  20:29:17,915 - #47 milica
+INFO  20:29:17,915 - #19 (
+INFO  20:29:17,915 - #4 )
+INFO  20:29:17,916 - #47 int
+INFO  20:29:17,916 - #47 x
+INFO  20:29:17,916 - #6 ;
+INFO  20:29:17,916 - #13 {
+INFO  20:29:17,916 - #47 petar
+INFO  20:29:17,916 - #12 .
+INFO  20:29:17,916 - #47 radmilac
+INFO  20:29:17,916 - #36 }
+INFO  20:29:17,917 - #36 }
+INFO  20:29:17,919 - Program(
+ MJProgram
+  VarDeclaration(
+    ConstDeclaration(
+      NoDeclaration(
+      ) [NoDeclaration]
+      ConstDecl(
+        Type(
+         int
+        ) [Type]
+        BoolConstDecl(
+         milica
+        ) [BoolConstDecl]
+        MultipleConstDecls(
+          EndOfDeclaration(
+          ) [EndOfDeclaration]
+          CharConstDecl(
+           jovanka
+          ) [CharConstDecl]
+        ) [MultipleConstDecls]
+      ) [ConstDecl]
+    ) [ConstDeclaration]
+    VarDecl(
+      Type(
+       int
+      ) [Type]
+      SingleVarDecl(
+       zorana
+        Brackets(
+        ) [Brackets]
+      ) [SingleVarDecl]
+      MultipleVarDecls(
+        EndOfVarDeclaration(
+        ) [EndOfVarDeclaration]
+        SingleVarDecl(
+         milic
+          NoBrackets(
+          ) [NoBrackets]
+        ) [SingleVarDecl]
+      ) [MultipleVarDecls]
+    ) [VarDecl]
+  ) [VarDeclaration]
+  MethodDecls(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    VoidMethodDecl(
+     milica
+      NoMethodFormParams(
+      ) [NoMethodFormParams]
+      VarDecl(
+        Type(
+         int
+        ) [Type]
+        SingleVarDecl(
+         x
+          NoBrackets(
+          ) [NoBrackets]
+        ) [SingleVarDecl]
+        EndOfVarDeclaration(
+        ) [EndOfVarDeclaration]
+      ) [VarDecl]
+      MethodStmt(
+        DesignStmt(
+          MultipleDesignIdent(
+            SingleDesignIdent(
+             petar
+            ) [SingleDesignIdent]
+           radmilac
+          ) [MultipleDesignIdent]
+        ) [DesignStmt]
+      ) [MethodStmt]
+    ) [VoidMethodDecl]
+  ) [MethodDecls]
+) [Program]
+INFO  20:29:17,919 - ===================================

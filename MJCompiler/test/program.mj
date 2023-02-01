@@ -2,5 +2,9 @@ program MJProgram
 	const int milica = true, jovanka = "Joc";
 	int zorana[], milic;
 {
-	void milica() int x; { petar.radmilac}
+	void milica() int x; { 
+		petar[-5+true*5];
+		break;
+		continue;
+	}
 }

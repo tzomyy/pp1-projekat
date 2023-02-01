@@ -69,6 +69,13 @@ nonterminal SingleFormPar;
 nonterminal MultipleFormPar;
 
 nonterminal Statement;
+
+nonterminal Expr;
+nonterminal Term;
+nonterminal Factor;
+nonterminal FactFuncParam;
+nonterminal ActPars;
+
 nonterminal Designator;
 
 nonterminal Label;
@@ -126,14 +133,15 @@ MethodDecl ::= (MethodDecls) MethodDecl MultipleMethodDecl
 
 MultipleMethodDecl ::= (TypeMethodDecl) Type:methodType IDENT:methodName LPAREN MethodFormPars RPAREN VarDecl LCURLY MethodStatement RCURLY
 					|
-					(VoidMethodDecl) VOID IDENT:methodName LPAREN MethodFormPars RPAREN VarDecl LCURLY MethodStatement RCURLY;
+					(VoidMethodDecl) VOID IDENT:methodName LPAREN MethodFormPars RPAREN VarDecl LCURLY MethodStatement RCURLY
+					;
 					
 MethodFormPars ::= (MethodFormParams) FormPars
 				|
 				(NoMethodFormParams) /* epsilon */
 				;
 				
-MethodStatement ::= (MethodStmt) Statement
+MethodStatement ::= (MethodStmt) MethodStatement Statement
 				|
 				(NoMethodStmt) /* epsilon */
 				;
@@ -147,12 +155,51 @@ MultipleFormPar ::= (MultipleFormPars) MultipleFormPar COMMA SingleFormPar
 				(EndOfFormPar) /*epsilon*/
 				;
 				
-Statement ::= (DesignStmt) Designator;
-					
-Designator ::= (MultipleDesignator) Designator DOT IDENT
+Statement ::= (DesignStmt) Designator SEMICOLON
 			|
-			(SingleDesignator) IDENT
+			(BreakStmt) BREAK SEMICOLON
+			|
+			(ContinueStmt) CONTINUE SEMICOLON
 			;
+
+Expr ::= (NegativeExpr) MINUS Term
+		|
+		(MultipleExpr) Expr Addop Term
+		|
+		(SingleExpr) Term
+		;
+		
+Term ::= (SingleTerm) Factor
+		|
+		(MultipleTerms) Term Mulop Factor
+		;
+
+Factor ::= (FactVar) Designator
+		|
+		(FactFunc) Designator LPAREN FactFuncParam RPAREN 
+		|
+		(FactNum) NUMBER
+		|
+		(FactChar) CHAR
+		|
+		(FactBoolean) BOOL
+		;
+		
+FactFuncParam ::= (FactFuncParams) ActPars
+				|
+				(NoFactFuncParams) /* epsilon */
+				;
+				
+ActPars ::= (ActParams) ActPars COMMA Expr
+		|
+		(SingleActParam) Expr
+		; 
+					
+Designator ::= (MultipleDesignIdent) Designator DOT IDENT
+			|
+			(MultipleDesignExpr) Designator LSQUARE Expr RSQUARE
+			|
+			(SingleDesignIdent) IDENT;
 
 Type ::= (Type) IDENT;	
 

@@ -73,6 +73,13 @@ nonterminal SingleFormPar SingleFormPar;
 nonterminal MultipleFormPar MultipleFormPar;
 
 nonterminal Statement Statement;
+
+nonterminal Expr Expr;
+nonterminal Term Term;
+nonterminal Factor Factor;
+nonterminal FactFuncParam FactFuncParam;
+nonterminal ActPars ActPars;
+
 nonterminal Designator Designator;
 
 nonterminal Label Label;
@@ -130,14 +137,15 @@ MethodDecl ::= (MethodDecls) MethodDecl:M1 MultipleMethodDecl:M2 {: RESULT=new M
 
 MultipleMethodDecl ::= (TypeMethodDecl) Type:methodType IDENT:methodName LPAREN MethodFormPars:M1 RPAREN VarDecl:V2 LCURLY MethodStatement:M3 RCURLY {: RESULT=new TypeMethodDecl(methodType, methodName, M1, V2, M3); RESULT.setLine(methodTypeleft); :}
 					|
-					(VoidMethodDecl) VOID IDENT:methodName LPAREN MethodFormPars:M1 RPAREN VarDecl:V2 LCURLY MethodStatement:M3 RCURLY {: RESULT=new VoidMethodDecl(methodName, M1, V2, M3); RESULT.setLine(methodNameleft); :};
+					(VoidMethodDecl) VOID IDENT:methodName LPAREN MethodFormPars:M1 RPAREN VarDecl:V2 LCURLY MethodStatement:M3 RCURLY {: RESULT=new VoidMethodDecl(methodName, M1, V2, M3); RESULT.setLine(methodNameleft); :}
+					;
 					
 MethodFormPars ::= (MethodFormParams) FormPars:F1 {: RESULT=new MethodFormParams(F1); RESULT.setLine(F1left); :}
 				|
 				(NoMethodFormParams) {: RESULT=new NoMethodFormParams(); :} /* epsilon */
 				;
 				
-MethodStatement ::= (MethodStmt) Statement:S1 {: RESULT=new MethodStmt(S1); RESULT.setLine(S1left); :}
+MethodStatement ::= (MethodStmt) MethodStatement:M1 Statement:S2 {: RESULT=new MethodStmt(M1, S2); RESULT.setLine(M1left); :}
 				|
 				(NoMethodStmt) {: RESULT=new NoMethodStmt(); :} /* epsilon */
 				;
@@ -151,12 +159,51 @@ MultipleFormPar ::= (MultipleFormPars) MultipleFormPar:M1 COMMA SingleFormPar:S2
 				(EndOfFormPar) {: RESULT=new EndOfFormPar(); :} /*epsilon*/
 				;
 				
-Statement ::= (DesignStmt) Designator:D1 {: RESULT=new DesignStmt(D1); RESULT.setLine(D1left); :};
-					
-Designator ::= (MultipleDesignator) Designator:D1 DOT IDENT:I2 {: RESULT=new MultipleDesignator(D1, I2); RESULT.setLine(D1left); :}
+Statement ::= (DesignStmt) Designator:D1 SEMICOLON {: RESULT=new DesignStmt(D1); RESULT.setLine(D1left); :}
 			|
-			(SingleDesignator) IDENT:I1 {: RESULT=new SingleDesignator(I1); RESULT.setLine(I1left); :}
+			(BreakStmt) BREAK SEMICOLON {: RESULT=new BreakStmt(); :}
+			|
+			(ContinueStmt) CONTINUE SEMICOLON {: RESULT=new ContinueStmt(); :}
 			;
+
+Expr ::= (NegativeExpr) MINUS Term:T1 {: RESULT=new NegativeExpr(T1); RESULT.setLine(T1left); :}
+		|
+		(MultipleExpr) Expr:E1 Addop:A2 Term:T3 {: RESULT=new MultipleExpr(E1, A2, T3); RESULT.setLine(E1left); :}
+		|
+		(SingleExpr) Term:T1 {: RESULT=new SingleExpr(T1); RESULT.setLine(T1left); :}
+		;
+		
+Term ::= (SingleTerm) Factor:F1 {: RESULT=new SingleTerm(F1); RESULT.setLine(F1left); :}
+		|
+		(MultipleTerms) Term:T1 Mulop:M2 Factor:F3 {: RESULT=new MultipleTerms(T1, M2, F3); RESULT.setLine(T1left); :}
+		;
+
+Factor ::= (FactVar) Designator:D1 {: RESULT=new FactVar(D1); RESULT.setLine(D1left); :}
+		|
+		(FactFunc) Designator:D1 LPAREN FactFuncParam:F2 RPAREN {: RESULT=new FactFunc(D1, F2); RESULT.setLine(D1left); :} 
+		|
+		(FactNum) NUMBER:N1 {: RESULT=new FactNum(N1); RESULT.setLine(N1left); :}
+		|
+		(FactChar) CHAR {: RESULT=new FactChar(); :}
+		|
+		(FactBoolean) BOOL {: RESULT=new FactBoolean(); :}
+		;
+		
+FactFuncParam ::= (FactFuncParams) ActPars:A1 {: RESULT=new FactFuncParams(A1); RESULT.setLine(A1left); :}
+				|
+				(NoFactFuncParams) {: RESULT=new NoFactFuncParams(); :} /* epsilon */
+				;
+				
+ActPars ::= (ActParams) ActPars:A1 COMMA Expr:E2 {: RESULT=new ActParams(A1, E2); RESULT.setLine(A1left); :}
+		|
+		(SingleActParam) Expr:E1 {: RESULT=new SingleActParam(E1); RESULT.setLine(E1left); :}
+		; 
+					
+Designator ::= (MultipleDesignIdent) Designator:D1 DOT IDENT:I2 {: RESULT=new MultipleDesignIdent(D1, I2); RESULT.setLine(D1left); :}
+			|
+			(MultipleDesignExpr) Designator:D1 LSQUARE Expr:E2 RSQUARE {: RESULT=new MultipleDesignExpr(D1, E2); RESULT.setLine(D1left); :}
+			|
+			(SingleDesignIdent) IDENT:I1 {: RESULT=new SingleDesignIdent(I1); RESULT.setLine(I1left); :};
 
 Type ::= (Type) IDENT:I1 {: RESULT=new Type(I1); RESULT.setLine(I1left); :};	
 

@@ -1,16 +1,16 @@
 // generated with ast extension for cup
 // version 0.8
-// 1/1/2023 15:10:16
+// 1/1/2023 20:49:49
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class MultipleDesignator extends Designator {
+public class MultipleDesignIdent extends Designator {
 
     private Designator Designator;
     private String I2;
 
-    public MultipleDesignator (Designator Designator, String I2) {
+    public MultipleDesignIdent (Designator Designator, String I2) {
         this.Designator=Designator;
         if(Designator!=null) Designator.setParent(this);
         this.I2=I2;
@@ -53,7 +53,7 @@ public class MultipleDesignator extends Designator {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("MultipleDesignator(\n");
+        buffer.append("MultipleDesignIdent(\n");
 
         if(Designator!=null)
             buffer.append(Designator.toString("  "+tab));
@@ -65,7 +65,7 @@ public class MultipleDesignator extends Designator {
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [MultipleDesignator]");
+        buffer.append(") [MultipleDesignIdent]");
         return buffer.toString();
     }
 }
