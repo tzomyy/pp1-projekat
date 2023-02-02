@@ -1,8 +1,16 @@
 program MJProgram
 	const int milica = true, jovanka = "Joc";
 	int zorana[], milic;
+	class B extends M {int x; double y, z; {
+	 	B(){}
+	 	B(){}
+		void milica(){}
+		void milica(){}
+	}}
 {
 	void milica() int x; { 
+		[a,b, , , c ,] = niz;
+		milica.vasiljevic++;
 		while (kuzma == "studentijada") return 5;
 		if (milica && andrijana || andjela == 1 ) break; 
 		{ break;}
@@ -12,8 +20,12 @@ program MJProgram
 		return;
 		return (5+7*true);
 		return new int[5*6+4];
-		petar[-5+true*5];
+		petar[-5+true*5]--;
 		break;
 		continue;
+	}
+	
+	void andreja() int marta, djokara; {
+		
 	}
 }

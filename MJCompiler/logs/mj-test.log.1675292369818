@@ -1,0 +1,23 @@
+INFO  23:59:10,011 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  23:59:10,049 - #39 program
+INFO  23:59:10,049 - #47 MJProgram
+INFO  23:59:10,050 - #44 const
+INFO  23:59:10,050 - #47 int
+INFO  23:59:10,050 - #47 milica
+INFO  23:59:10,051 - #20 =
+INFO  23:59:10,051 - #8 true
+INFO  23:59:10,051 - #5 ,
+INFO  23:59:10,052 - #47 jovanka
+INFO  23:59:10,052 - #20 =
+INFO  23:59:10,052 - #33 "Joc"
+INFO  23:59:10,052 - #6 ;
+INFO  23:59:10,052 - #47 int
+INFO  23:59:10,053 - #47 zorana
+INFO  23:59:10,053 - #22 [
+INFO  23:59:10,053 - #40 ]
+INFO  23:59:10,053 - #5 ,
+INFO  23:59:10,055 - #47 milic
+INFO  23:59:10,055 - #6 ;
+ERROR 23:59:10,055 - 
+Sintaksna greska na liniji 3
+ERROR 23:59:10,061 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 3

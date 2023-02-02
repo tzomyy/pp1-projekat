@@ -1,25 +1,25 @@
 // generated with ast extension for cup
 // version 0.8
-// 1/1/2023 23:21:56
+// 2/1/2023 1:48:41
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class DesignStmt extends Statement {
 
-    private Designator Designator;
+    private DesignatorStatement DesignatorStatement;
 
-    public DesignStmt (Designator Designator) {
-        this.Designator=Designator;
-        if(Designator!=null) Designator.setParent(this);
+    public DesignStmt (DesignatorStatement DesignatorStatement) {
+        this.DesignatorStatement=DesignatorStatement;
+        if(DesignatorStatement!=null) DesignatorStatement.setParent(this);
     }
 
-    public Designator getDesignator() {
-        return Designator;
+    public DesignatorStatement getDesignatorStatement() {
+        return DesignatorStatement;
     }
 
-    public void setDesignator(Designator Designator) {
-        this.Designator=Designator;
+    public void setDesignatorStatement(DesignatorStatement DesignatorStatement) {
+        this.DesignatorStatement=DesignatorStatement;
     }
 
     public void accept(Visitor visitor) {
@@ -27,16 +27,16 @@ public class DesignStmt extends Statement {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(Designator!=null) Designator.accept(visitor);
+        if(DesignatorStatement!=null) DesignatorStatement.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(Designator!=null) Designator.traverseTopDown(visitor);
+        if(DesignatorStatement!=null) DesignatorStatement.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(Designator!=null) Designator.traverseBottomUp(visitor);
+        if(DesignatorStatement!=null) DesignatorStatement.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -45,8 +45,8 @@ public class DesignStmt extends Statement {
         buffer.append(tab);
         buffer.append("DesignStmt(\n");
 
-        if(Designator!=null)
-            buffer.append(Designator.toString("  "+tab));
+        if(DesignatorStatement!=null)
+            buffer.append(DesignatorStatement.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 1/1/2023 23:21:56
+// 2/1/2023 1:48:41
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -9,11 +9,15 @@ public abstract class VisitorAdaptor implements Visitor {
 
     public void visit(Mulop Mulop) { }
     public void visit(MethodDecl MethodDecl) { }
+    public void visit(DesignOptional DesignOptional) { }
     public void visit(Relop Relop) { }
     public void visit(MultipleMethodDecl MultipleMethodDecl) { }
+    public void visit(ConstructorFormPars ConstructorFormPars) { }
     public void visit(MethodStatement MethodStatement) { }
     public void visit(StatementList StatementList) { }
+    public void visit(ClassVarDecl ClassVarDecl) { }
     public void visit(Addop Addop) { }
+    public void visit(ClassConstr ClassConstr) { }
     public void visit(StmtConst StmtConst) { }
     public void visit(Factor Factor) { }
     public void visit(CondTerm CondTerm) { }
@@ -25,10 +29,18 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(MultipleVarDecl MultipleVarDecl) { }
     public void visit(MultipleFormPar MultipleFormPar) { }
     public void visit(ElseStatement ElseStatement) { }
+    public void visit(ClassConstrMethod ClassConstrMethod) { }
+    public void visit(MethodVarDecl MethodVarDecl) { }
+    public void visit(ClassExtends ClassExtends) { }
     public void visit(Expr Expr) { }
+    public void visit(ClassMethod ClassMethod) { }
     public void visit(ActPars ActPars) { }
+    public void visit(DesignatorStatement DesignatorStatement) { }
     public void visit(MultipleConstDecl MultipleConstDecl) { }
+    public void visit(DesignArray DesignArray) { }
     public void visit(Statement Statement) { }
+    public void visit(ConstructorStatement ConstructorStatement) { }
+    public void visit(ConstructorVarDecl ConstructorVarDecl) { }
     public void visit(CondFact CondFact) { }
     public void visit(Declaration Declaration) { }
     public void visit(SingleConstDecl SingleConstDecl) { }
@@ -58,6 +70,15 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Conditions Conditions) { visit(); }
     public void visit(SingleActParam SingleActParam) { visit(); }
     public void visit(ActParams ActParams) { visit(); }
+    public void visit(NoDesignator NoDesignator) { visit(); }
+    public void visit(HasDesignator HasDesignator) { visit(); }
+    public void visit(SingleDesignators SingleDesignators) { visit(); }
+    public void visit(MultipleDesignators MultipleDesignators) { visit(); }
+    public void visit(DesignAssignArray DesignAssignArray) { visit(); }
+    public void visit(DesignDec DesignDec) { visit(); }
+    public void visit(DesignInc DesignInc) { visit(); }
+    public void visit(DesignFunction DesignFunction) { visit(); }
+    public void visit(DesignAssign DesignAssign) { visit(); }
     public void visit(NoFactFuncParams NoFactFuncParams) { visit(); }
     public void visit(FactFuncParams FactFuncParams) { visit(); }
     public void visit(FactExpr FactExpr) { visit(); }
@@ -96,12 +117,35 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(FormPars FormPars) { visit(); }
     public void visit(NoMethodStmt NoMethodStmt) { visit(); }
     public void visit(MethodStmt MethodStmt) { visit(); }
+    public void visit(EndOfMethodVarDecl EndOfMethodVarDecl) { visit(); }
+    public void visit(MethodVarDecls MethodVarDecls) { visit(); }
     public void visit(NoMethodFormParams NoMethodFormParams) { visit(); }
     public void visit(MethodFormParams MethodFormParams) { visit(); }
     public void visit(VoidMethodDecl VoidMethodDecl) { visit(); }
     public void visit(TypeMethodDecl TypeMethodDecl) { visit(); }
     public void visit(NoMethodDeclList NoMethodDeclList) { visit(); }
     public void visit(MethodDecls MethodDecls) { visit(); }
+    public void visit(EndOfConstrStmt EndOfConstrStmt) { visit(); }
+    public void visit(ConstrMultipleStmt ConstrMultipleStmt) { visit(); }
+    public void visit(EndOfConstrVarDecl EndOfConstrVarDecl) { visit(); }
+    public void visit(ConstrVarDecls ConstrVarDecls) { visit(); }
+    public void visit(NoConstrFormParams NoConstrFormParams) { visit(); }
+    public void visit(ConstrFormParams ConstrFormParams) { visit(); }
+    public void visit(ConstructorDecl ConstructorDecl) { visit(); }
+    public void visit(NoClassExtend NoClassExtend) { visit(); }
+    public void visit(ClassExtend ClassExtend) { visit(); }
+    public void visit(EndOfClassVarDecl EndOfClassVarDecl) { visit(); }
+    public void visit(MultipleClassVarDecl MultipleClassVarDecl) { visit(); }
+    public void visit(EndOfClassConstrDecl EndOfClassConstrDecl) { visit(); }
+    public void visit(MultipleClassConstr MultipleClassConstr) { visit(); }
+    public void visit(EndOfClassMethod EndOfClassMethod) { visit(); }
+    public void visit(MultipleClassMethod MultipleClassMethod) { visit(); }
+    public void visit(End End) { visit(); }
+    public void visit(NoClassConstrMethodCurly NoClassConstrMethodCurly) { visit(); }
+    public void visit(ClassConstrMethodCurly ClassConstrMethodCurly) { visit(); }
+    public void visit(ClassMethodCurly ClassMethodCurly) { visit(); }
+    public void visit(ClassConstrCurly ClassConstrCurly) { visit(); }
+    public void visit(ClassOnlyCurly ClassOnlyCurly) { visit(); }
     public void visit(ClassDecl ClassDecl) { visit(); }
     public void visit(EndOfVarDeclaration EndOfVarDeclaration) { visit(); }
     public void visit(MultipleVarDecls MultipleVarDecls) { visit(); }

@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 1/1/2023 23:21:56
+// 2/1/2023 1:48:41
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -11,14 +11,14 @@ public class Program implements SyntaxNode {
     private int line;
     private String I1;
     private Declaration Declaration;
-    private MethodDecl MethodDecl;
+    private MultipleMethodDecl MultipleMethodDecl;
 
-    public Program (String I1, Declaration Declaration, MethodDecl MethodDecl) {
+    public Program (String I1, Declaration Declaration, MultipleMethodDecl MultipleMethodDecl) {
         this.I1=I1;
         this.Declaration=Declaration;
         if(Declaration!=null) Declaration.setParent(this);
-        this.MethodDecl=MethodDecl;
-        if(MethodDecl!=null) MethodDecl.setParent(this);
+        this.MultipleMethodDecl=MultipleMethodDecl;
+        if(MultipleMethodDecl!=null) MultipleMethodDecl.setParent(this);
     }
 
     public String getI1() {
@@ -37,12 +37,12 @@ public class Program implements SyntaxNode {
         this.Declaration=Declaration;
     }
 
-    public MethodDecl getMethodDecl() {
-        return MethodDecl;
+    public MultipleMethodDecl getMultipleMethodDecl() {
+        return MultipleMethodDecl;
     }
 
-    public void setMethodDecl(MethodDecl MethodDecl) {
-        this.MethodDecl=MethodDecl;
+    public void setMultipleMethodDecl(MultipleMethodDecl MultipleMethodDecl) {
+        this.MultipleMethodDecl=MultipleMethodDecl;
     }
 
     public SyntaxNode getParent() {
@@ -67,18 +67,18 @@ public class Program implements SyntaxNode {
 
     public void childrenAccept(Visitor visitor) {
         if(Declaration!=null) Declaration.accept(visitor);
-        if(MethodDecl!=null) MethodDecl.accept(visitor);
+        if(MultipleMethodDecl!=null) MultipleMethodDecl.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(Declaration!=null) Declaration.traverseTopDown(visitor);
-        if(MethodDecl!=null) MethodDecl.traverseTopDown(visitor);
+        if(MultipleMethodDecl!=null) MultipleMethodDecl.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(Declaration!=null) Declaration.traverseBottomUp(visitor);
-        if(MethodDecl!=null) MethodDecl.traverseBottomUp(visitor);
+        if(MultipleMethodDecl!=null) MultipleMethodDecl.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -96,8 +96,8 @@ public class Program implements SyntaxNode {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(MethodDecl!=null)
-            buffer.append(MethodDecl.toString("  "+tab));
+        if(MultipleMethodDecl!=null)
+            buffer.append(MultipleMethodDecl.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

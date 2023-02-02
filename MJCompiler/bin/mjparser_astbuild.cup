@@ -53,9 +53,8 @@ terminal String IDENT;
 
 nonterminal Program Program;
 nonterminal Declaration Declaration;
-nonterminal ConstDecl ConstDecl;
 nonterminal VarDecl VarDecl;
-nonterminal ClassDecl ClassDecl;
+nonterminal ConstDecl ConstDecl;
 nonterminal Type Type;
 nonterminal SingleConstDecl SingleConstDecl;
 nonterminal MultipleConstDecl MultipleConstDecl;
@@ -63,9 +62,22 @@ nonterminal SingleVarDecl SingleVarDecl;
 nonterminal Brackets Brackets;
 nonterminal MultipleVarDecl MultipleVarDecl;
 
+nonterminal ClassDecl ClassDecl;
+nonterminal ClassConstrMethod ClassConstrMethod;
+nonterminal ClassMethod ClassMethod;
+nonterminal ClassConstr ClassConstr;
+nonterminal ClassVarDecl ClassVarDecl;
+nonterminal ClassExtends ClassExtends;
+
+nonterminal ConstructorDecl ConstructorDecl;
+nonterminal ConstructorFormPars ConstructorFormPars;
+nonterminal ConstructorVarDecl ConstructorVarDecl;
+nonterminal ConstructorStatement ConstructorStatement;
+
 nonterminal MethodDecl MethodDecl;
 nonterminal MethodFormPars MethodFormPars;
 nonterminal MethodStatement MethodStatement;
+nonterminal MethodVarDecl MethodVarDecl;
 nonterminal MultipleMethodDecl MultipleMethodDecl;
 
 nonterminal FormPars FormPars;
@@ -81,6 +93,10 @@ nonterminal Expr Expr;
 nonterminal Term Term;
 nonterminal Factor Factor;
 nonterminal FactParam FactParam;
+
+nonterminal DesignatorStatement DesignatorStatement;
+nonterminal DesignArray DesignArray;
+nonterminal DesignOptional DesignOptional;
 nonterminal ActPars ActPars;
 
 nonterminal Condition Condition;
@@ -95,9 +111,11 @@ nonterminal Relop Relop;
 nonterminal Addop Addop;
 nonterminal Mulop Mulop;
 
+nonterminal End End;
+
 precedence left ELSE;
 
-Program ::= (Program) PROG IDENT:I1 Declaration:D2 LCURLY MethodDecl:M3 RCURLY {: RESULT=new Program(I1, D2, M3); RESULT.setLine(I1left); :};
+Program ::= (Program) PROG IDENT:I1 Declaration:D2 LCURLY MultipleMethodDecl:M3 RCURLY {: RESULT=new Program(I1, D2, M3); RESULT.setLine(I1left); :};
 
 Declaration ::= (ConstDeclaration) Declaration:D1 ConstDecl:C2 {: RESULT=new ConstDeclaration(D1, C2); RESULT.setLine(D1left); :}
 			|
@@ -136,21 +154,77 @@ MultipleVarDecl ::= (MultipleVarDecls) MultipleVarDecl:M1 COMMA SingleVarDecl:S2
 				(EndOfVarDeclaration) {: RESULT=new EndOfVarDeclaration(); :} /* epsilon */
 				;
 				
-ClassDecl ::= (ClassDecl) AND {: RESULT=new ClassDecl(); :};
 
-MethodDecl ::= (MethodDecls) MethodDecl:M1 MultipleMethodDecl:M2 {: RESULT=new MethodDecls(M1, M2); RESULT.setLine(M1left); :}
+ClassDecl ::= (ClassDecl) CLASS IDENT:I1 ClassExtends:C2 LCURLY ClassVarDecl:C3 ClassConstrMethod:C4 RCURLY {: RESULT=new ClassDecl(I1, C2, C3, C4); RESULT.setLine(I1left); :};
+
+ClassConstrMethod ::= (ClassOnlyCurly) LCURLY RCURLY {: RESULT=new ClassOnlyCurly(); :}
+					|
+					(ClassConstrCurly) LCURLY ClassConstr:C1 RCURLY {: RESULT=new ClassConstrCurly(C1); RESULT.setLine(C1left); :}
+					|
+					(ClassMethodCurly) LCURLY ClassMethod:C1 RCURLY {: RESULT=new ClassMethodCurly(C1); RESULT.setLine(C1left); :}
+					|
+					(ClassConstrMethodCurly) LCURLY ClassConstr:C1 ClassMethod:C2 RCURLY {: RESULT=new ClassConstrMethodCurly(C1, C2); RESULT.setLine(C1left); :}
+					|
+					(NoClassConstrMethodCurly) {: RESULT=new NoClassConstrMethodCurly(); :} /* epsilon */
+					;
+					
+End ::= (End) {: RESULT=new End(); :} /* epsilon */ ;
+
+ClassMethod ::= (MultipleClassMethod) ClassMethod:C1 MethodDecl:M2 {: RESULT=new MultipleClassMethod(C1, M2); RESULT.setLine(C1left); :}
+			|
+			(EndOfClassMethod) MethodDecl:M1 {: RESULT=new EndOfClassMethod(M1); RESULT.setLine(M1left); :}
+			;
+					
+ClassConstr ::= (MultipleClassConstr) ClassConstr:C1 ConstructorDecl:C2 {: RESULT=new MultipleClassConstr(C1, C2); RESULT.setLine(C1left); :}
+				|
+				(EndOfClassConstrDecl) ConstructorDecl:C1 {: RESULT=new EndOfClassConstrDecl(C1); RESULT.setLine(C1left); :}
+				;
+
+ClassVarDecl ::= (MultipleClassVarDecl) ClassVarDecl:C1 VarDecl:V2 {: RESULT=new MultipleClassVarDecl(C1, V2); RESULT.setLine(C1left); :}
+				|
+				(EndOfClassVarDecl) {: RESULT=new EndOfClassVarDecl(); :} /* epsilon*/
+				;
+
+ClassExtends ::= (ClassExtend) EXTENDS Type:T1 {: RESULT=new ClassExtend(T1); RESULT.setLine(T1left); :}
+				|
+				(NoClassExtend) {: RESULT=new NoClassExtend(); :} /* epsilon */
+				;
+
+ConstructorDecl ::= (ConstructorDecl) IDENT:I1 LPAREN ConstructorFormPars:C2 RPAREN ConstructorVarDecl:C3 LCURLY ConstructorStatement:C4 RCURLY {: RESULT=new ConstructorDecl(I1, C2, C3, C4); RESULT.setLine(I1left); :};
+
+ConstructorFormPars ::= (ConstrFormParams) FormPars:F1 {: RESULT=new ConstrFormParams(F1); RESULT.setLine(F1left); :}
+				|
+				(NoConstrFormParams) {: RESULT=new NoConstrFormParams(); :} /* epsilon */
+				;
+				
+ConstructorVarDecl ::= (ConstrVarDecls) MethodVarDecl:M1 VarDecl:V2 {: RESULT=new ConstrVarDecls(M1, V2); RESULT.setLine(M1left); :}
+				|
+				(EndOfConstrVarDecl) {: RESULT=new EndOfConstrVarDecl(); :} /*epsilon*/
+				;
+				
+ConstructorStatement ::= (ConstrMultipleStmt) ConstructorStatement:C1 Statement:S2 {: RESULT=new ConstrMultipleStmt(C1, S2); RESULT.setLine(C1left); :}
+					|
+					(EndOfConstrStmt) {: RESULT=new EndOfConstrStmt(); :} /* epsilon */;
+
+
+MultipleMethodDecl ::= (MethodDecls) MultipleMethodDecl:M1 MethodDecl:M2 {: RESULT=new MethodDecls(M1, M2); RESULT.setLine(M1left); :}
 				|
 				(NoMethodDeclList) {: RESULT=new NoMethodDeclList(); :} /*epsilon*/
 				;
 
-MultipleMethodDecl ::= (TypeMethodDecl) Type:methodType IDENT:methodName LPAREN MethodFormPars:M1 RPAREN VarDecl:V2 LCURLY MethodStatement:M3 RCURLY {: RESULT=new TypeMethodDecl(methodType, methodName, M1, V2, M3); RESULT.setLine(methodTypeleft); :}
+MethodDecl ::= (TypeMethodDecl) Type:methodType IDENT:methodName LPAREN MethodFormPars:M1 RPAREN MethodVarDecl:M2 LCURLY MethodStatement:M3 RCURLY {: RESULT=new TypeMethodDecl(methodType, methodName, M1, M2, M3); RESULT.setLine(methodTypeleft); :}
 					|
-					(VoidMethodDecl) VOID IDENT:methodName LPAREN MethodFormPars:M1 RPAREN VarDecl:V2 LCURLY MethodStatement:M3 RCURLY {: RESULT=new VoidMethodDecl(methodName, M1, V2, M3); RESULT.setLine(methodNameleft); :}
+					(VoidMethodDecl) VOID IDENT:methodName LPAREN MethodFormPars:M1 RPAREN MethodVarDecl:M2 LCURLY MethodStatement:M3 RCURLY {: RESULT=new VoidMethodDecl(methodName, M1, M2, M3); RESULT.setLine(methodNameleft); :}
 					;
 					
 MethodFormPars ::= (MethodFormParams) FormPars:F1 {: RESULT=new MethodFormParams(F1); RESULT.setLine(F1left); :}
 				|
 				(NoMethodFormParams) {: RESULT=new NoMethodFormParams(); :} /* epsilon */
+				;
+				
+MethodVarDecl ::= (MethodVarDecls) MethodVarDecl:M1 VarDecl:V2 {: RESULT=new MethodVarDecls(M1, V2); RESULT.setLine(M1left); :}
+				|
+				(EndOfMethodVarDecl) {: RESULT=new EndOfMethodVarDecl(); :} /*epsilon*/
 				;
 				
 MethodStatement ::= (MethodStmt) MethodStatement:M1 Statement:S2 {: RESULT=new MethodStmt(M1, S2); RESULT.setLine(M1left); :}
@@ -167,7 +241,7 @@ MultipleFormPar ::= (MultipleFormPars) MultipleFormPar:M1 COMMA SingleFormPar:S2
 				(EndOfFormPar) {: RESULT=new EndOfFormPar(); :} /*epsilon*/
 				;
 				
-Statement ::= (DesignStmt) Designator:D1 SEMICOLON {: RESULT=new DesignStmt(D1); RESULT.setLine(D1left); :}
+Statement ::= (DesignStmt) DesignatorStatement:D1 SEMICOLON {: RESULT=new DesignStmt(D1); RESULT.setLine(D1left); :}
 			|
 			(IfStmt) IF LPAREN Condition:C1 RPAREN Statement:S2 ElseStatement:E3 {: RESULT=new IfStmt(C1, S2, E3); RESULT.setLine(C1left); :}
 			|
@@ -239,6 +313,26 @@ FactParam ::= (FactFuncParams) ActPars:A1 {: RESULT=new FactFuncParams(A1); RESU
 				(NoFactFuncParams) {: RESULT=new NoFactFuncParams(); :} /* epsilon */
 				;
 		
+DesignatorStatement ::= (DesignAssign) Designator:D1 Assignop:A2 Expr:E3 {: RESULT=new DesignAssign(D1, A2, E3); RESULT.setLine(D1left); :}
+					|
+					(DesignFunction) Designator:D1 LPAREN FactParam:F2 RPAREN {: RESULT=new DesignFunction(D1, F2); RESULT.setLine(D1left); :} 
+					|
+					(DesignInc) Designator:D1 INCREMENT {: RESULT=new DesignInc(D1); RESULT.setLine(D1left); :}
+					|
+					(DesignDec) Designator:D1 DECREMENT {: RESULT=new DesignDec(D1); RESULT.setLine(D1left); :}
+					|
+					(DesignAssignArray) LSQUARE DesignArray:D1 RSQUARE EQUAL Designator:D2 {: RESULT=new DesignAssignArray(D1, D2); RESULT.setLine(D1left); :}
+					;
+					
+DesignArray ::= (MultipleDesignators) DesignArray:D1 COMMA DesignOptional:D2 {: RESULT=new MultipleDesignators(D1, D2); RESULT.setLine(D1left); :} 
+			|
+			(SingleDesignators) DesignOptional:D1 {: RESULT=new SingleDesignators(D1); RESULT.setLine(D1left); :}
+			;
+			
+DesignOptional ::= (HasDesignator) Designator:D1 {: RESULT=new HasDesignator(D1); RESULT.setLine(D1left); :}
+				|
+				(NoDesignator) {: RESULT=new NoDesignator(); :} /* epsilon */
+				;
 				
 ActPars ::= (ActParams) ActPars:A1 COMMA Expr:E2 {: RESULT=new ActParams(A1, E2); RESULT.setLine(A1left); :}
 		|

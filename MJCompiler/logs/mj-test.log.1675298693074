@@ -1,0 +1,42 @@
+INFO  01:44:06,526 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  01:44:06,575 - #39 program
+INFO  01:44:06,575 - #47 MJProgram
+INFO  01:44:06,576 - #44 const
+INFO  01:44:06,576 - #47 int
+INFO  01:44:06,576 - #47 milica
+INFO  01:44:06,577 - #20 =
+INFO  01:44:06,577 - #8 true
+INFO  01:44:06,577 - #5 ,
+INFO  01:44:06,578 - #47 jovanka
+INFO  01:44:06,578 - #20 =
+INFO  01:44:06,578 - #33 "Joc"
+INFO  01:44:06,578 - #6 ;
+INFO  01:44:06,578 - #47 int
+INFO  01:44:06,579 - #47 zorana
+INFO  01:44:06,579 - #22 [
+INFO  01:44:06,579 - #40 ]
+INFO  01:44:06,579 - #5 ,
+INFO  01:44:06,581 - #47 milic
+INFO  01:44:06,581 - #6 ;
+INFO  01:44:06,581 - #37 class
+INFO  01:44:06,582 - #47 B
+INFO  01:44:06,588 - #7 extends
+INFO  01:44:06,588 - #47 M
+INFO  01:44:06,588 - #13 {
+INFO  01:44:06,588 - #47 int
+INFO  01:44:06,589 - #47 x
+INFO  01:44:06,589 - #6 ;
+INFO  01:44:06,589 - #47 double
+INFO  01:44:06,589 - #47 y
+INFO  01:44:06,589 - #5 ,
+INFO  01:44:06,589 - #47 z
+INFO  01:44:06,589 - #6 ;
+INFO  01:44:06,590 - #13 {
+INFO  01:44:06,590 - #17 void
+INFO  01:44:06,590 - #47 milica
+INFO  01:44:06,590 - #19 (
+INFO  01:44:06,590 - #4 )
+INFO  01:44:06,590 - #13 {
+ERROR 01:44:06,591 - 
+Sintaksna greska na liniji 4
+ERROR 01:44:06,591 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 4

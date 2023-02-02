@@ -51,7 +51,7 @@ terminal RSQUARE, RETURN, CONTINUE, OR, CONST, PERCENT;
 terminal Integer NUMBER;
 terminal String IDENT;
 
-nonterminal Program, Declaration, ConstDecl, VarDecl, ClassDecl;
+nonterminal Program, Declaration, VarDecl, ConstDecl;
 nonterminal Type;
 nonterminal SingleConstDecl;
 nonterminal MultipleConstDecl;
@@ -59,9 +59,22 @@ nonterminal SingleVarDecl;
 nonterminal Brackets;
 nonterminal MultipleVarDecl;
 
+nonterminal ClassDecl;
+nonterminal ClassConstrMethod;
+nonterminal ClassMethod;
+nonterminal ClassConstr;
+nonterminal ClassVarDecl;
+nonterminal ClassExtends;
+
+nonterminal ConstructorDecl;
+nonterminal ConstructorFormPars;
+nonterminal ConstructorVarDecl;
+nonterminal ConstructorStatement;
+
 nonterminal MethodDecl;
 nonterminal MethodFormPars;
 nonterminal MethodStatement;
+nonterminal MethodVarDecl;
 nonterminal MultipleMethodDecl;
 
 nonterminal FormPars;
@@ -77,6 +90,10 @@ nonterminal Expr;
 nonterminal Term;
 nonterminal Factor;
 nonterminal FactParam;
+
+nonterminal DesignatorStatement;
+nonterminal DesignArray;
+nonterminal DesignOptional;
 nonterminal ActPars;
 
 nonterminal Condition;
@@ -91,9 +108,11 @@ nonterminal Relop;
 nonterminal Addop;
 nonterminal Mulop;
 
+nonterminal End;
+
 precedence left ELSE;
 
-Program ::= (Program) PROG IDENT Declaration LCURLY MethodDecl RCURLY;
+Program ::= (Program) PROG IDENT Declaration LCURLY MultipleMethodDecl RCURLY;
 
 Declaration ::= (ConstDeclaration) Declaration ConstDecl
 			|
@@ -132,21 +151,77 @@ MultipleVarDecl ::= (MultipleVarDecls) MultipleVarDecl COMMA SingleVarDecl
 				(EndOfVarDeclaration) /* epsilon */
 				;
 				
-ClassDecl ::= (ClassDecl) AND;
 
-MethodDecl ::= (MethodDecls) MethodDecl MultipleMethodDecl
+ClassDecl ::= (ClassDecl) CLASS IDENT ClassExtends LCURLY ClassVarDecl ClassConstrMethod RCURLY;
+
+ClassConstrMethod ::= (ClassOnlyCurly) LCURLY RCURLY
+					|
+					(ClassConstrCurly) LCURLY ClassConstr RCURLY
+					|
+					(ClassMethodCurly) LCURLY ClassMethod RCURLY
+					|
+					(ClassConstrMethodCurly) LCURLY ClassConstr ClassMethod RCURLY
+					|
+					(NoClassConstrMethodCurly) /* epsilon */
+					;
+					
+End ::= (End) /* epsilon */ ;
+
+ClassMethod ::= (MultipleClassMethod) ClassMethod MethodDecl
+			|
+			(EndOfClassMethod) MethodDecl
+			;
+					
+ClassConstr ::= (MultipleClassConstr) ClassConstr ConstructorDecl
+				|
+				(EndOfClassConstrDecl) ConstructorDecl
+				;
+
+ClassVarDecl ::= (MultipleClassVarDecl) ClassVarDecl VarDecl
+				|
+				(EndOfClassVarDecl) /* epsilon*/
+				;
+
+ClassExtends ::= (ClassExtend) EXTENDS Type
+				|
+				(NoClassExtend) /* epsilon */
+				;
+
+ConstructorDecl ::= (ConstructorDecl) IDENT LPAREN ConstructorFormPars RPAREN ConstructorVarDecl LCURLY ConstructorStatement RCURLY;
+
+ConstructorFormPars ::= (ConstrFormParams) FormPars
+				|
+				(NoConstrFormParams) /* epsilon */
+				;
+				
+ConstructorVarDecl ::= (ConstrVarDecls) MethodVarDecl VarDecl
+				|
+				(EndOfConstrVarDecl) /*epsilon*/
+				;
+				
+ConstructorStatement ::= (ConstrMultipleStmt) ConstructorStatement Statement
+					|
+					(EndOfConstrStmt) /* epsilon */;
+
+
+MultipleMethodDecl ::= (MethodDecls) MultipleMethodDecl MethodDecl
 				|
 				(NoMethodDeclList) /*epsilon*/
 				;
 
-MultipleMethodDecl ::= (TypeMethodDecl) Type:methodType IDENT:methodName LPAREN MethodFormPars RPAREN VarDecl LCURLY MethodStatement RCURLY
+MethodDecl ::= (TypeMethodDecl) Type:methodType IDENT:methodName LPAREN MethodFormPars RPAREN MethodVarDecl LCURLY MethodStatement RCURLY
 					|
-					(VoidMethodDecl) VOID IDENT:methodName LPAREN MethodFormPars RPAREN VarDecl LCURLY MethodStatement RCURLY
+					(VoidMethodDecl) VOID IDENT:methodName LPAREN MethodFormPars RPAREN MethodVarDecl LCURLY MethodStatement RCURLY
 					;
 					
 MethodFormPars ::= (MethodFormParams) FormPars
 				|
 				(NoMethodFormParams) /* epsilon */
+				;
+				
+MethodVarDecl ::= (MethodVarDecls) MethodVarDecl VarDecl
+				|
+				(EndOfMethodVarDecl) /*epsilon*/
 				;
 				
 MethodStatement ::= (MethodStmt) MethodStatement Statement
@@ -163,7 +238,7 @@ MultipleFormPar ::= (MultipleFormPars) MultipleFormPar COMMA SingleFormPar
 				(EndOfFormPar) /*epsilon*/
 				;
 				
-Statement ::= (DesignStmt) Designator SEMICOLON
+Statement ::= (DesignStmt) DesignatorStatement SEMICOLON
 			|
 			(IfStmt) IF LPAREN Condition RPAREN Statement ElseStatement
 			|
@@ -235,6 +310,26 @@ FactParam ::= (FactFuncParams) ActPars
 				(NoFactFuncParams) /* epsilon */
 				;
 		
+DesignatorStatement ::= (DesignAssign) Designator Assignop Expr
+					|
+					(DesignFunction) Designator LPAREN FactParam RPAREN 
+					|
+					(DesignInc) Designator INCREMENT
+					|
+					(DesignDec) Designator DECREMENT
+					|
+					(DesignAssignArray) LSQUARE DesignArray RSQUARE EQUAL Designator
+					;
+					
+DesignArray ::= (MultipleDesignators) DesignArray COMMA DesignOptional 
+			|
+			(SingleDesignators) DesignOptional
+			;
+			
+DesignOptional ::= (HasDesignator) Designator
+				|
+				(NoDesignator) /* epsilon */
+				;
 				
 ActPars ::= (ActParams) ActPars COMMA Expr
 		|

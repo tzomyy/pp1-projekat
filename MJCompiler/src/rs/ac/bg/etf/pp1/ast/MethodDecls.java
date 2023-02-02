@@ -1,28 +1,20 @@
 // generated with ast extension for cup
 // version 0.8
-// 1/1/2023 23:21:56
+// 2/1/2023 1:48:41
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class MethodDecls extends MethodDecl {
+public class MethodDecls extends MultipleMethodDecl {
 
-    private MethodDecl MethodDecl;
     private MultipleMethodDecl MultipleMethodDecl;
+    private MethodDecl MethodDecl;
 
-    public MethodDecls (MethodDecl MethodDecl, MultipleMethodDecl MultipleMethodDecl) {
-        this.MethodDecl=MethodDecl;
-        if(MethodDecl!=null) MethodDecl.setParent(this);
+    public MethodDecls (MultipleMethodDecl MultipleMethodDecl, MethodDecl MethodDecl) {
         this.MultipleMethodDecl=MultipleMethodDecl;
         if(MultipleMethodDecl!=null) MultipleMethodDecl.setParent(this);
-    }
-
-    public MethodDecl getMethodDecl() {
-        return MethodDecl;
-    }
-
-    public void setMethodDecl(MethodDecl MethodDecl) {
         this.MethodDecl=MethodDecl;
+        if(MethodDecl!=null) MethodDecl.setParent(this);
     }
 
     public MultipleMethodDecl getMultipleMethodDecl() {
@@ -33,24 +25,32 @@ public class MethodDecls extends MethodDecl {
         this.MultipleMethodDecl=MultipleMethodDecl;
     }
 
+    public MethodDecl getMethodDecl() {
+        return MethodDecl;
+    }
+
+    public void setMethodDecl(MethodDecl MethodDecl) {
+        this.MethodDecl=MethodDecl;
+    }
+
     public void accept(Visitor visitor) {
         visitor.visit(this);
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(MethodDecl!=null) MethodDecl.accept(visitor);
         if(MultipleMethodDecl!=null) MultipleMethodDecl.accept(visitor);
+        if(MethodDecl!=null) MethodDecl.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(MethodDecl!=null) MethodDecl.traverseTopDown(visitor);
         if(MultipleMethodDecl!=null) MultipleMethodDecl.traverseTopDown(visitor);
+        if(MethodDecl!=null) MethodDecl.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(MethodDecl!=null) MethodDecl.traverseBottomUp(visitor);
         if(MultipleMethodDecl!=null) MultipleMethodDecl.traverseBottomUp(visitor);
+        if(MethodDecl!=null) MethodDecl.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -59,14 +59,14 @@ public class MethodDecls extends MethodDecl {
         buffer.append(tab);
         buffer.append("MethodDecls(\n");
 
-        if(MethodDecl!=null)
-            buffer.append(MethodDecl.toString("  "+tab));
+        if(MultipleMethodDecl!=null)
+            buffer.append(MultipleMethodDecl.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(MultipleMethodDecl!=null)
-            buffer.append(MultipleMethodDecl.toString("  "+tab));
+        if(MethodDecl!=null)
+            buffer.append(MethodDecl.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

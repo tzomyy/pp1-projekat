@@ -1,0 +1,31 @@
+INFO  00:27:06,742 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  00:27:06,786 - #39 program
+INFO  00:27:06,786 - #47 MJProgram
+INFO  00:27:06,786 - #44 const
+INFO  00:27:06,787 - #47 int
+INFO  00:27:06,787 - #47 milica
+INFO  00:27:06,788 - #20 =
+INFO  00:27:06,788 - #8 true
+INFO  00:27:06,788 - #5 ,
+INFO  00:27:06,789 - #47 jovanka
+INFO  00:27:06,789 - #20 =
+INFO  00:27:06,789 - #33 "Joc"
+INFO  00:27:06,789 - #6 ;
+INFO  00:27:06,789 - #47 int
+INFO  00:27:06,790 - #47 zorana
+INFO  00:27:06,790 - #22 [
+INFO  00:27:06,790 - #40 ]
+INFO  00:27:06,790 - #5 ,
+INFO  00:27:06,793 - #47 milic
+INFO  00:27:06,793 - #6 ;
+INFO  00:27:06,794 - #47 fact
+INFO  00:27:06,795 - #19 (
+INFO  00:27:06,802 - #4 )
+INFO  00:27:06,802 - #13 {
+INFO  00:27:06,803 - #24 break
+INFO  00:27:06,803 - #6 ;
+INFO  00:27:06,803 - #36 }
+INFO  00:27:06,803 - #6 ;
+ERROR 00:27:06,804 - 
+Sintaksna greska na liniji 4
+ERROR 00:27:06,804 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 4

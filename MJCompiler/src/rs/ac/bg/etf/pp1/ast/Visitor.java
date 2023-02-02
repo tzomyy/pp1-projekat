@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 1/1/2023 23:21:56
+// 2/1/2023 1:48:41
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -9,11 +9,15 @@ public interface Visitor {
 
     public void visit(Mulop Mulop);
     public void visit(MethodDecl MethodDecl);
+    public void visit(DesignOptional DesignOptional);
     public void visit(Relop Relop);
     public void visit(MultipleMethodDecl MultipleMethodDecl);
+    public void visit(ConstructorFormPars ConstructorFormPars);
     public void visit(MethodStatement MethodStatement);
     public void visit(StatementList StatementList);
+    public void visit(ClassVarDecl ClassVarDecl);
     public void visit(Addop Addop);
+    public void visit(ClassConstr ClassConstr);
     public void visit(StmtConst StmtConst);
     public void visit(Factor Factor);
     public void visit(CondTerm CondTerm);
@@ -25,10 +29,18 @@ public interface Visitor {
     public void visit(MultipleVarDecl MultipleVarDecl);
     public void visit(MultipleFormPar MultipleFormPar);
     public void visit(ElseStatement ElseStatement);
+    public void visit(ClassConstrMethod ClassConstrMethod);
+    public void visit(MethodVarDecl MethodVarDecl);
+    public void visit(ClassExtends ClassExtends);
     public void visit(Expr Expr);
+    public void visit(ClassMethod ClassMethod);
     public void visit(ActPars ActPars);
+    public void visit(DesignatorStatement DesignatorStatement);
     public void visit(MultipleConstDecl MultipleConstDecl);
+    public void visit(DesignArray DesignArray);
     public void visit(Statement Statement);
+    public void visit(ConstructorStatement ConstructorStatement);
+    public void visit(ConstructorVarDecl ConstructorVarDecl);
     public void visit(CondFact CondFact);
     public void visit(Declaration Declaration);
     public void visit(SingleConstDecl SingleConstDecl);
@@ -58,6 +70,15 @@ public interface Visitor {
     public void visit(Conditions Conditions);
     public void visit(SingleActParam SingleActParam);
     public void visit(ActParams ActParams);
+    public void visit(NoDesignator NoDesignator);
+    public void visit(HasDesignator HasDesignator);
+    public void visit(SingleDesignators SingleDesignators);
+    public void visit(MultipleDesignators MultipleDesignators);
+    public void visit(DesignAssignArray DesignAssignArray);
+    public void visit(DesignDec DesignDec);
+    public void visit(DesignInc DesignInc);
+    public void visit(DesignFunction DesignFunction);
+    public void visit(DesignAssign DesignAssign);
     public void visit(NoFactFuncParams NoFactFuncParams);
     public void visit(FactFuncParams FactFuncParams);
     public void visit(FactExpr FactExpr);
@@ -96,12 +117,35 @@ public interface Visitor {
     public void visit(FormPars FormPars);
     public void visit(NoMethodStmt NoMethodStmt);
     public void visit(MethodStmt MethodStmt);
+    public void visit(EndOfMethodVarDecl EndOfMethodVarDecl);
+    public void visit(MethodVarDecls MethodVarDecls);
     public void visit(NoMethodFormParams NoMethodFormParams);
     public void visit(MethodFormParams MethodFormParams);
     public void visit(VoidMethodDecl VoidMethodDecl);
     public void visit(TypeMethodDecl TypeMethodDecl);
     public void visit(NoMethodDeclList NoMethodDeclList);
     public void visit(MethodDecls MethodDecls);
+    public void visit(EndOfConstrStmt EndOfConstrStmt);
+    public void visit(ConstrMultipleStmt ConstrMultipleStmt);
+    public void visit(EndOfConstrVarDecl EndOfConstrVarDecl);
+    public void visit(ConstrVarDecls ConstrVarDecls);
+    public void visit(NoConstrFormParams NoConstrFormParams);
+    public void visit(ConstrFormParams ConstrFormParams);
+    public void visit(ConstructorDecl ConstructorDecl);
+    public void visit(NoClassExtend NoClassExtend);
+    public void visit(ClassExtend ClassExtend);
+    public void visit(EndOfClassVarDecl EndOfClassVarDecl);
+    public void visit(MultipleClassVarDecl MultipleClassVarDecl);
+    public void visit(EndOfClassConstrDecl EndOfClassConstrDecl);
+    public void visit(MultipleClassConstr MultipleClassConstr);
+    public void visit(EndOfClassMethod EndOfClassMethod);
+    public void visit(MultipleClassMethod MultipleClassMethod);
+    public void visit(End End);
+    public void visit(NoClassConstrMethodCurly NoClassConstrMethodCurly);
+    public void visit(ClassConstrMethodCurly ClassConstrMethodCurly);
+    public void visit(ClassMethodCurly ClassMethodCurly);
+    public void visit(ClassConstrCurly ClassConstrCurly);
+    public void visit(ClassOnlyCurly ClassOnlyCurly);
     public void visit(ClassDecl ClassDecl);
     public void visit(EndOfVarDeclaration EndOfVarDeclaration);
     public void visit(MultipleVarDecls MultipleVarDecls);

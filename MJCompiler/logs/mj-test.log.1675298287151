@@ -1,0 +1,22 @@
+INFO  01:37:04,305 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  01:37:04,350 - #39 program
+INFO  01:37:04,351 - #47 test
+INFO  01:37:04,351 - #37 class
+INFO  01:37:04,351 - #47 A
+INFO  01:37:04,351 - #13 {
+INFO  01:37:04,352 - #36 }
+INFO  01:37:04,353 - #37 class
+INFO  01:37:04,354 - #47 B
+INFO  01:37:04,354 - #7 extends
+INFO  01:37:04,354 - #47 A
+INFO  01:37:04,354 - #13 {
+INFO  01:37:04,354 - #36 }
+INFO  01:37:04,354 - #13 {
+INFO  01:37:04,355 - #17 void
+INFO  01:37:04,355 - #47 main
+INFO  01:37:04,355 - #19 (
+INFO  01:37:04,355 - #4 )
+INFO  01:37:04,356 - #13 {
+ERROR 01:37:04,356 - 
+Sintaksna greska na liniji 14
+ERROR 01:37:04,356 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 14
