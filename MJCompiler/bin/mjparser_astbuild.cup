@@ -169,7 +169,7 @@ Brackets ::= (Brackets) LSQUARE RSQUARE {: RESULT=new Brackets(); :}
 			;
 							
 
-ClassDecl ::= (ClassDecl) CLASS IDENT:I1 ClassExtends:C2 LCURLY ClassVarDecl:C3 ClassConstrMethod:C4 RCURLY {: RESULT=new ClassDecl(I1, C2, C3, C4); RESULT.setLine(I1left); :};
+ClassDecl ::= (ClassDecl) CLASS IDENT:I1 ClassExtends:C2 ClassVarDecl:C3 ClassConstrMethod:C4 RCURLY {: RESULT=new ClassDecl(I1, C2, C3, C4); RESULT.setLine(I1left); :};
 
 ClassConstrMethod ::= (ClassOnlyCurly) LCURLY RCURLY {: RESULT=new ClassOnlyCurly(); :}
 					|
@@ -199,9 +199,12 @@ ClassVarDecl ::= (MultipleClassVarDecl) ClassVarDecl:C1 VarDecl:V2 {: RESULT=new
 				(EndOfClassVarDecl) {: RESULT=new EndOfClassVarDecl(); :} /* epsilon*/
 				;
 
-ClassExtends ::= (ClassExtend) EXTENDS Type:T1 {: RESULT=new ClassExtend(T1); RESULT.setLine(T1left); :}
+ClassExtends ::= (ClassExtend) EXTENDS Type:T1 LCURLY {: RESULT=new ClassExtend(T1); RESULT.setLine(T1left); :} 
 				|
-				(NoClassExtend) {: RESULT=new NoClassExtend(); :} /* epsilon */
+				(NoClassExtend)  LCURLY {: RESULT=new NoClassExtend(); :} 
+				|
+				(ErrorClassExtend) error:l LCURLY
+				{: parser.report_error("Izvrsen oporavak kod prosirenja natklase do { u liniji " + lleft, null); :} {: RESULT=new ErrorClassExtend(); :}
 				;
 
 ConstructorDecl ::= (ConstructorDecl) IDENT:I1 LPAREN ConstructorFormPars:C2 ConstructorVarDecl:C3 LCURLY ConstructorStatement:C4 RCURLY {: RESULT=new ConstructorDecl(I1, C2, C3, C4); RESULT.setLine(I1left); :};

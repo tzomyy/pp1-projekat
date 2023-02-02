@@ -1,241 +1,236 @@
-INFO  00:09:23,685 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
-INFO  00:09:23,735 - #39 program
-INFO  00:09:23,735 - #47 MJProgram
-INFO  00:09:23,735 - #44 const
-INFO  00:09:23,735 - #47 int
-INFO  00:09:23,736 - #47 milica
-INFO  00:09:23,737 - #20 =
-INFO  00:09:23,737 - #8 true
-INFO  00:09:23,737 - #5 ,
-INFO  00:09:23,738 - #47 jovanka
-INFO  00:09:23,738 - #20 =
-INFO  00:09:23,738 - #33 "Joc"
-INFO  00:09:23,738 - #6 ;
-INFO  00:09:23,739 - #47 int
-INFO  00:09:23,739 - #47 zorana
-INFO  00:09:23,740 - #22 [
-INFO  00:09:23,740 - #40 ]
-INFO  00:09:23,740 - #47 tra
-ERROR 00:09:23,740 - 
+INFO  00:01:51,160 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  00:01:51,211 - #39 program
+INFO  00:01:51,211 - #47 MJProgram
+INFO  00:01:51,211 - #44 const
+INFO  00:01:51,212 - #47 int
+INFO  00:01:51,212 - #47 milica
+INFO  00:01:51,213 - #20 =
+INFO  00:01:51,213 - #8 true
+INFO  00:01:51,214 - #5 ,
+INFO  00:01:51,215 - #47 jovanka
+INFO  00:01:51,215 - #20 =
+INFO  00:01:51,215 - #33 "Joc"
+INFO  00:01:51,215 - #6 ;
+INFO  00:01:51,215 - #47 int
+INFO  00:01:51,217 - #47 zorana
+INFO  00:01:51,217 - #22 [
+INFO  00:01:51,217 - #40 ]
+INFO  00:01:51,217 - #47 tra
+ERROR 00:01:51,217 - 
 Sintaksna greska na liniji 3
-INFO  00:09:23,740 - #5 ,
-INFO  00:09:23,740 - #47 milic
-INFO  00:09:23,746 - #47 cici
-INFO  00:09:23,746 - #5 ,
-INFO  00:09:23,746 - #47 jasna
-INFO  00:09:23,746 - #6 ;
-INFO  00:09:23,746 - #37 class
-ERROR 00:09:23,746 - Izvrsen oporavak kod dodeljivanja globalne promenljive do , u liniji  3
-INFO  00:09:23,748 - #47 B
-INFO  00:09:23,748 - #7 extends
-INFO  00:09:23,748 - #47 M
-INFO  00:09:23,748 - #47 l
-ERROR 00:09:23,748 - 
+INFO  00:01:51,217 - #5 ,
+INFO  00:01:51,217 - #47 milic
+INFO  00:01:51,224 - #47 cici
+INFO  00:01:51,224 - #5 ,
+INFO  00:01:51,224 - #47 jasna
+INFO  00:01:51,224 - #6 ;
+INFO  00:01:51,224 - #37 class
+ERROR 00:01:51,225 - Izvrsen oporavak kod dodeljivanja globalne promenljive do , u liniji  3
+INFO  00:01:51,227 - #47 B
+INFO  00:01:51,227 - #7 extends
+INFO  00:01:51,227 - #47 M
+INFO  00:01:51,227 - #47 l
+ERROR 00:01:51,227 - 
 Sintaksna greska na liniji 4
-INFO  00:09:23,748 - #13 {
-INFO  00:09:23,748 - #47 int
-INFO  00:09:23,748 - #47 x
-INFO  00:09:23,748 - #6 ;
-ERROR 00:09:23,749 - Izvrsen oporavak kod prosirenja natklase do { u liniji 4
-INFO  00:09:23,749 - #47 double
-INFO  00:09:23,750 - #47 y
-INFO  00:09:23,750 - #5 ,
-INFO  00:09:23,750 - #47 z
-INFO  00:09:23,750 - #47 ggg
-ERROR 00:09:23,750 - 
-Sintaksna greska na liniji 4
-INFO  00:09:23,750 - #47 gg
-INFO  00:09:23,750 - #6 ;
-INFO  00:09:23,750 - #13 {
-INFO  00:09:23,750 - #47 B
-INFO  00:09:23,750 - #19 (
-ERROR 00:09:23,750 - Izvrsen oporavak kod dodeljivanja globalne promenljive do ; u liniji 4
-INFO  00:09:23,751 - #4 )
-INFO  00:09:23,751 - #13 {
-INFO  00:09:23,752 - #36 }
-INFO  00:09:23,752 - #47 B
-INFO  00:09:23,753 - #19 (
-INFO  00:09:23,753 - #4 )
-INFO  00:09:23,753 - #13 {
-INFO  00:09:23,754 - #36 }
-INFO  00:09:23,754 - #17 void
-INFO  00:09:23,754 - #47 milica
-INFO  00:09:23,754 - #19 (
-INFO  00:09:23,754 - #4 )
-INFO  00:09:23,754 - #13 {
-INFO  00:09:23,755 - #36 }
-INFO  00:09:23,756 - #17 void
-INFO  00:09:23,756 - #47 milica
-INFO  00:09:23,756 - #19 (
-INFO  00:09:23,756 - #4 )
-INFO  00:09:23,756 - #13 {
-INFO  00:09:23,756 - #36 }
-INFO  00:09:23,756 - #36 }
-INFO  00:09:23,756 - #36 }
-INFO  00:09:23,757 - #13 {
-INFO  00:09:23,757 - #17 void
-INFO  00:09:23,758 - #47 milica
-INFO  00:09:23,758 - #19 (
-INFO  00:09:23,758 - #47 int
-INFO  00:09:23,758 - #47 x
-INFO  00:09:23,758 - #22 [
-INFO  00:09:23,758 - #40 ]
-INFO  00:09:23,758 - #47 y
-ERROR 00:09:23,758 - 
+INFO  00:01:51,227 - #13 {
+INFO  00:01:51,227 - #47 int
+INFO  00:01:51,227 - #47 x
+INFO  00:01:51,227 - #6 ;
+ERROR 00:01:51,227 - Izvrsen oporavak kod prosirenja natklase do { u liniji 4
+INFO  00:01:51,228 - #47 double
+INFO  00:01:51,229 - #47 y
+INFO  00:01:51,229 - #5 ,
+INFO  00:01:51,229 - #47 z
+INFO  00:01:51,229 - #6 ;
+INFO  00:01:51,229 - #13 {
+INFO  00:01:51,229 - #47 B
+INFO  00:01:51,229 - #19 (
+INFO  00:01:51,229 - #4 )
+INFO  00:01:51,229 - #13 {
+INFO  00:01:51,230 - #36 }
+INFO  00:01:51,230 - #47 B
+INFO  00:01:51,231 - #19 (
+INFO  00:01:51,231 - #4 )
+INFO  00:01:51,231 - #13 {
+INFO  00:01:51,231 - #36 }
+INFO  00:01:51,231 - #17 void
+INFO  00:01:51,231 - #47 milica
+INFO  00:01:51,231 - #19 (
+INFO  00:01:51,231 - #4 )
+INFO  00:01:51,231 - #13 {
+INFO  00:01:51,232 - #36 }
+INFO  00:01:51,233 - #17 void
+INFO  00:01:51,233 - #47 milica
+INFO  00:01:51,233 - #19 (
+INFO  00:01:51,233 - #4 )
+INFO  00:01:51,233 - #13 {
+INFO  00:01:51,233 - #36 }
+INFO  00:01:51,233 - #36 }
+INFO  00:01:51,233 - #36 }
+INFO  00:01:51,234 - #13 {
+INFO  00:01:51,234 - #17 void
+INFO  00:01:51,235 - #47 milica
+INFO  00:01:51,235 - #19 (
+INFO  00:01:51,235 - #47 int
+INFO  00:01:51,235 - #47 x
+INFO  00:01:51,235 - #22 [
+INFO  00:01:51,235 - #40 ]
+INFO  00:01:51,235 - #47 y
+ERROR 00:01:51,235 - 
 Sintaksna greska na liniji 11
-INFO  00:09:23,758 - #5 ,
-INFO  00:09:23,758 - #47 la
-INFO  00:09:23,758 - #47 la
-INFO  00:09:23,758 - #47 la
-ERROR 00:09:23,759 - Izvrsen oporavak kod formalnog paramtera do , u liniji 11
-ERROR 00:09:23,759 - 
+INFO  00:01:51,235 - #5 ,
+INFO  00:01:51,235 - #47 la
+INFO  00:01:51,235 - #47 la
+INFO  00:01:51,235 - #47 la
+ERROR 00:01:51,235 - Izvrsen oporavak kod formalnog paramtera do , u liniji 11
+ERROR 00:01:51,235 - 
 Sintaksna greska na liniji 11
-INFO  00:09:23,759 - #4 )
-INFO  00:09:23,759 - #47 int
-INFO  00:09:23,759 - #47 x
-INFO  00:09:23,759 - #6 ;
-ERROR 00:09:23,759 - Izvrsen oporavak kod formalnog do ) u liniji 11
-INFO  00:09:23,760 - #13 {
-INFO  00:09:23,760 - #22 [
-INFO  00:09:23,760 - #47 a
-INFO  00:09:23,760 - #5 ,
-INFO  00:09:23,760 - #47 b
-INFO  00:09:23,760 - #5 ,
-INFO  00:09:23,761 - #5 ,
-INFO  00:09:23,761 - #5 ,
-INFO  00:09:23,761 - #47 c
-INFO  00:09:23,763 - #5 ,
-INFO  00:09:23,763 - #40 ]
-INFO  00:09:23,763 - #20 =
-INFO  00:09:23,763 - #47 niz
-INFO  00:09:23,763 - #6 ;
-INFO  00:09:23,763 - #47 milica
-INFO  00:09:23,764 - #12 .
-INFO  00:09:23,764 - #47 vasiljevic
-INFO  00:09:23,764 - #26 ++
-INFO  00:09:23,764 - #6 ;
-INFO  00:09:23,764 - #29 while
-INFO  00:09:23,764 - #19 (
-INFO  00:09:23,764 - #47 kuzma
-INFO  00:09:23,764 - #23 ==
-INFO  00:09:23,765 - #33 "studentijada"
-INFO  00:09:23,765 - #4 )
-INFO  00:09:23,766 - #41 return
-INFO  00:09:23,766 - #46 5
-INFO  00:09:23,766 - #6 ;
-INFO  00:09:23,766 - #11 if
-INFO  00:09:23,766 - #19 (
-INFO  00:09:23,767 - #47 milica
-INFO  00:09:23,767 - #18 &&
-INFO  00:09:23,767 - #47 andrijana
-INFO  00:09:23,767 - #43 ||
-INFO  00:09:23,767 - #47 andjela
-INFO  00:09:23,767 - #23 ==
-INFO  00:09:23,767 - #20 =
-ERROR 00:09:23,767 - 
+INFO  00:01:51,235 - #4 )
+INFO  00:01:51,236 - #47 int
+INFO  00:01:51,236 - #47 x
+INFO  00:01:51,236 - #6 ;
+ERROR 00:01:51,236 - Izvrsen oporavak kod formalnog do ) u liniji 11
+INFO  00:01:51,236 - #13 {
+INFO  00:01:51,237 - #22 [
+INFO  00:01:51,237 - #47 a
+INFO  00:01:51,237 - #5 ,
+INFO  00:01:51,237 - #47 b
+INFO  00:01:51,238 - #5 ,
+INFO  00:01:51,238 - #5 ,
+INFO  00:01:51,239 - #5 ,
+INFO  00:01:51,239 - #47 c
+INFO  00:01:51,239 - #5 ,
+INFO  00:01:51,239 - #40 ]
+INFO  00:01:51,239 - #20 =
+INFO  00:01:51,239 - #47 niz
+INFO  00:01:51,239 - #6 ;
+INFO  00:01:51,240 - #47 milica
+INFO  00:01:51,240 - #12 .
+INFO  00:01:51,240 - #47 vasiljevic
+INFO  00:01:51,240 - #26 ++
+INFO  00:01:51,240 - #6 ;
+INFO  00:01:51,240 - #29 while
+INFO  00:01:51,240 - #19 (
+INFO  00:01:51,240 - #47 kuzma
+INFO  00:01:51,241 - #23 ==
+INFO  00:01:51,241 - #33 "studentijada"
+INFO  00:01:51,242 - #4 )
+INFO  00:01:51,243 - #41 return
+INFO  00:01:51,243 - #46 5
+INFO  00:01:51,243 - #6 ;
+INFO  00:01:51,244 - #11 if
+INFO  00:01:51,244 - #19 (
+INFO  00:01:51,244 - #47 milica
+INFO  00:01:51,244 - #18 &&
+INFO  00:01:51,244 - #47 andrijana
+INFO  00:01:51,244 - #43 ||
+INFO  00:01:51,245 - #47 andjela
+INFO  00:01:51,245 - #23 ==
+INFO  00:01:51,245 - #20 =
+ERROR 00:01:51,245 - 
 Sintaksna greska na liniji 15
-INFO  00:09:23,767 - #46 1
-INFO  00:09:23,767 - #4 )
-INFO  00:09:23,767 - #24 break
-INFO  00:09:23,768 - #6 ;
-INFO  00:09:23,768 - #13 {
-ERROR 00:09:23,768 - Izvrsen oporavak kod if konstrukcije do ; u liniji 15
-INFO  00:09:23,769 - #24 break
-INFO  00:09:23,770 - #6 ;
-INFO  00:09:23,770 - #36 }
-INFO  00:09:23,771 - #47 niki
-INFO  00:09:23,771 - #22 [
-INFO  00:09:23,771 - #15 -
-INFO  00:09:23,771 - #46 5
-INFO  00:09:23,771 - #40 ]
-INFO  00:09:23,771 - #12 .
-INFO  00:09:23,771 - #35 foreach
-INFO  00:09:23,771 - #19 (
-INFO  00:09:23,771 - #47 losa
-INFO  00:09:23,771 - #14 =>
-INFO  00:09:23,771 - #42 continue
-INFO  00:09:23,771 - #6 ;
-INFO  00:09:23,771 - #4 )
-INFO  00:09:23,772 - #6 ;
-INFO  00:09:23,772 - #25 read
-INFO  00:09:23,772 - #19 (
-INFO  00:09:23,772 - #47 mi
-INFO  00:09:23,772 - #12 .
-INFO  00:09:23,772 - #47 kalasi
-INFO  00:09:23,773 - #22 [
-INFO  00:09:23,773 - #46 5
-INFO  00:09:23,773 - #40 ]
-INFO  00:09:23,773 - #12 .
-INFO  00:09:23,773 - #47 lepa
-INFO  00:09:23,773 - #4 )
-INFO  00:09:23,773 - #6 ;
-INFO  00:09:23,773 - #34 print
-INFO  00:09:23,773 - #19 (
-INFO  00:09:23,773 - #46 5
-INFO  00:09:23,773 - #3 +
-INFO  00:09:23,773 - #46 6
-INFO  00:09:23,774 - #5 ,
-INFO  00:09:23,775 - #46 5
-INFO  00:09:23,775 - #4 )
-INFO  00:09:23,775 - #6 ;
-INFO  00:09:23,775 - #41 return
-INFO  00:09:23,775 - #6 ;
-INFO  00:09:23,775 - #41 return
-INFO  00:09:23,776 - #19 (
-INFO  00:09:23,776 - #46 5
-INFO  00:09:23,776 - #3 +
-INFO  00:09:23,776 - #46 7
-INFO  00:09:23,776 - #27 *
-INFO  00:09:23,776 - #8 true
-INFO  00:09:23,777 - #4 )
-INFO  00:09:23,777 - #6 ;
-INFO  00:09:23,777 - #41 return
-INFO  00:09:23,778 - #9 new
-INFO  00:09:23,778 - #47 int
-INFO  00:09:23,778 - #22 [
-INFO  00:09:23,778 - #46 5
-INFO  00:09:23,778 - #27 *
-INFO  00:09:23,778 - #46 6
-INFO  00:09:23,778 - #3 +
-INFO  00:09:23,778 - #46 4
-INFO  00:09:23,778 - #40 ]
-INFO  00:09:23,778 - #6 ;
-INFO  00:09:23,778 - #47 petar
-INFO  00:09:23,778 - #22 [
-INFO  00:09:23,779 - #15 -
-INFO  00:09:23,779 - #46 5
-INFO  00:09:23,779 - #3 +
-INFO  00:09:23,779 - #8 true
-INFO  00:09:23,779 - #27 *
-INFO  00:09:23,779 - #46 5
-INFO  00:09:23,779 - #40 ]
-INFO  00:09:23,779 - #38 --
-INFO  00:09:23,779 - #6 ;
-INFO  00:09:23,779 - #24 break
-INFO  00:09:23,779 - #6 ;
-INFO  00:09:23,779 - #42 continue
-INFO  00:09:23,779 - #6 ;
-INFO  00:09:23,779 - #36 }
-INFO  00:09:23,780 - #17 void
-INFO  00:09:23,780 - #47 andreja
-INFO  00:09:23,780 - #19 (
-INFO  00:09:23,780 - #4 )
-INFO  00:09:23,780 - #47 int
-INFO  00:09:23,780 - #47 marta
-INFO  00:09:23,780 - #5 ,
-INFO  00:09:23,780 - #47 djokara
-INFO  00:09:23,780 - #6 ;
-INFO  00:09:23,780 - #13 {
-INFO  00:09:23,780 - #47 milica
-INFO  00:09:23,780 - #26 ++
-INFO  00:09:23,780 - #26 ++
-ERROR 00:09:23,780 - 
+INFO  00:01:51,245 - #46 1
+INFO  00:01:51,245 - #4 )
+INFO  00:01:51,245 - #24 break
+INFO  00:01:51,245 - #6 ;
+INFO  00:01:51,245 - #13 {
+ERROR 00:01:51,245 - Izvrsen oporavak kod if konstrukcije do ; u liniji 15
+INFO  00:01:51,247 - #24 break
+INFO  00:01:51,247 - #6 ;
+INFO  00:01:51,247 - #36 }
+INFO  00:01:51,247 - #47 niki
+INFO  00:01:51,247 - #22 [
+INFO  00:01:51,247 - #15 -
+INFO  00:01:51,247 - #46 5
+INFO  00:01:51,247 - #40 ]
+INFO  00:01:51,248 - #12 .
+INFO  00:01:51,248 - #35 foreach
+INFO  00:01:51,248 - #19 (
+INFO  00:01:51,248 - #47 losa
+INFO  00:01:51,248 - #14 =>
+INFO  00:01:51,248 - #42 continue
+INFO  00:01:51,248 - #6 ;
+INFO  00:01:51,248 - #4 )
+INFO  00:01:51,248 - #6 ;
+INFO  00:01:51,248 - #25 read
+INFO  00:01:51,248 - #19 (
+INFO  00:01:51,249 - #47 mi
+INFO  00:01:51,249 - #12 .
+INFO  00:01:51,249 - #47 kalasi
+INFO  00:01:51,249 - #22 [
+INFO  00:01:51,249 - #46 5
+INFO  00:01:51,249 - #40 ]
+INFO  00:01:51,249 - #12 .
+INFO  00:01:51,249 - #47 lepa
+INFO  00:01:51,249 - #4 )
+INFO  00:01:51,249 - #6 ;
+INFO  00:01:51,249 - #34 print
+INFO  00:01:51,249 - #19 (
+INFO  00:01:51,249 - #46 5
+INFO  00:01:51,249 - #3 +
+INFO  00:01:51,249 - #46 6
+INFO  00:01:51,250 - #5 ,
+INFO  00:01:51,250 - #46 5
+INFO  00:01:51,250 - #4 )
+INFO  00:01:51,250 - #6 ;
+INFO  00:01:51,250 - #41 return
+INFO  00:01:51,250 - #6 ;
+INFO  00:01:51,251 - #41 return
+INFO  00:01:51,251 - #19 (
+INFO  00:01:51,251 - #46 5
+INFO  00:01:51,251 - #3 +
+INFO  00:01:51,251 - #46 7
+INFO  00:01:51,251 - #27 *
+INFO  00:01:51,251 - #8 true
+INFO  00:01:51,252 - #4 )
+INFO  00:01:51,253 - #6 ;
+INFO  00:01:51,253 - #41 return
+INFO  00:01:51,253 - #9 new
+INFO  00:01:51,253 - #47 int
+INFO  00:01:51,253 - #22 [
+INFO  00:01:51,253 - #46 5
+INFO  00:01:51,253 - #27 *
+INFO  00:01:51,253 - #46 6
+INFO  00:01:51,253 - #3 +
+INFO  00:01:51,253 - #46 4
+INFO  00:01:51,253 - #40 ]
+INFO  00:01:51,253 - #6 ;
+INFO  00:01:51,253 - #47 petar
+INFO  00:01:51,253 - #22 [
+INFO  00:01:51,253 - #15 -
+INFO  00:01:51,253 - #46 5
+INFO  00:01:51,254 - #3 +
+INFO  00:01:51,254 - #8 true
+INFO  00:01:51,254 - #27 *
+INFO  00:01:51,254 - #46 5
+INFO  00:01:51,254 - #40 ]
+INFO  00:01:51,254 - #38 --
+INFO  00:01:51,254 - #6 ;
+INFO  00:01:51,254 - #24 break
+INFO  00:01:51,254 - #6 ;
+INFO  00:01:51,254 - #42 continue
+INFO  00:01:51,254 - #6 ;
+INFO  00:01:51,254 - #36 }
+INFO  00:01:51,254 - #17 void
+INFO  00:01:51,254 - #47 andreja
+INFO  00:01:51,254 - #19 (
+INFO  00:01:51,254 - #4 )
+INFO  00:01:51,254 - #47 int
+INFO  00:01:51,254 - #47 marta
+INFO  00:01:51,254 - #5 ,
+INFO  00:01:51,254 - #47 djokara
+INFO  00:01:51,254 - #6 ;
+INFO  00:01:51,254 - #13 {
+INFO  00:01:51,254 - #47 milica
+INFO  00:01:51,255 - #26 ++
+INFO  00:01:51,255 - #26 ++
+ERROR 00:01:51,255 - 
 Sintaksna greska na liniji 29
-INFO  00:09:23,780 - #6 ;
-INFO  00:09:23,780 - #36 }
-INFO  00:09:23,780 - #36 }
-ERROR 00:09:23,781 - Izvrsen oporavak kod dodeljivanja vrednosti do ; u liniji 29
-INFO  00:09:23,783 - Program(
+INFO  00:01:51,255 - #6 ;
+INFO  00:01:51,255 - #36 }
+INFO  00:01:51,255 - #36 }
+ERROR 00:01:51,255 - Izvrsen oporavak kod dodeljivanja vrednosti do ; u liniji 29
+INFO  00:01:51,257 - Program(
  MJProgram
   ClassDeclaration(
     VarDeclaration(
@@ -307,8 +302,11 @@ INFO  00:09:23,783 - Program(
               ) [NoBrackets]
             ) [MoreVarDecls]
             EndOfVarDeclarations(
-              ErrorEndOfVarDecl(
-              ) [ErrorEndOfVarDecl]
+              EndOfVarDeclar(
+               z
+                NoBrackets(
+                ) [NoBrackets]
+              ) [EndOfVarDeclar]
             ) [EndOfVarDeclarations]
           ) [MultipleVarDecl]
         ) [VarDecls]
@@ -716,4 +714,4 @@ INFO  00:09:23,783 - Program(
     ) [VoidMethodDecl]
   ) [MethodDecls]
 ) [Program]
-INFO  00:09:23,784 - ===================================
+INFO  00:01:51,258 - ===================================

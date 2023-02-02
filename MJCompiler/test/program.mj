@@ -1,7 +1,7 @@
 program MJProgram
 	const int milica = true, jovanka = "Joc";
 	int zorana[]tra, milic cici, jasna;
-	class B extends M {int x; double y, z; {
+	class B extends M {int x ; double y, z ggg gg; {
 	 	B(){}
 	 	B(){}
 		void milica(){}

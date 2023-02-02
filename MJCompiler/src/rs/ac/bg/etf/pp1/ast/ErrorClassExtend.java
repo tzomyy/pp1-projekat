@@ -5,9 +5,9 @@
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class ErrorEndOfVarDecl extends EndOfVarDecl {
+public class ErrorClassExtend extends ClassExtends {
 
-    public ErrorEndOfVarDecl () {
+    public ErrorClassExtend () {
     }
 
     public void accept(Visitor visitor) {
@@ -28,10 +28,10 @@ public class ErrorEndOfVarDecl extends EndOfVarDecl {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("ErrorEndOfVarDecl(\n");
+        buffer.append("ErrorClassExtend(\n");
 
         buffer.append(tab);
-        buffer.append(") [ErrorEndOfVarDecl]");
+        buffer.append(") [ErrorClassExtend]");
         return buffer.toString();
     }
 }

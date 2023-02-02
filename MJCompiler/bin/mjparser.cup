@@ -166,7 +166,7 @@ Brackets ::= (Brackets) LSQUARE RSQUARE
 			;
 							
 
-ClassDecl ::= (ClassDecl) CLASS IDENT ClassExtends LCURLY ClassVarDecl ClassConstrMethod RCURLY;
+ClassDecl ::= (ClassDecl) CLASS IDENT ClassExtends ClassVarDecl ClassConstrMethod RCURLY;
 
 ClassConstrMethod ::= (ClassOnlyCurly) LCURLY RCURLY
 					|
@@ -196,9 +196,12 @@ ClassVarDecl ::= (MultipleClassVarDecl) ClassVarDecl VarDecl
 				(EndOfClassVarDecl) /* epsilon*/
 				;
 
-ClassExtends ::= (ClassExtend) EXTENDS Type
+ClassExtends ::= (ClassExtend) EXTENDS Type LCURLY 
 				|
-				(NoClassExtend) /* epsilon */
+				(NoClassExtend)  LCURLY 
+				|
+				(ErrorClassExtend) error:l LCURLY
+				{: parser.report_error("Izvrsen oporavak kod prosirenja natklase do { u liniji " + lleft, null); :}
 				;
 
 ConstructorDecl ::= (ConstructorDecl) IDENT LPAREN ConstructorFormPars ConstructorVarDecl LCURLY ConstructorStatement RCURLY;
@@ -226,7 +229,7 @@ MultipleMethodDecl ::= (MethodDecls) MultipleMethodDecl MethodDecl
 				(NoMethodDeclList) /*epsilon*/
 				;
 
-MethodDecl ::= (TypeMethodDecl) Type:methodType IDENT:methodName LPAREN MethodFormPars  MethodVarDecl LCURLY MethodStatement RCURLY
+MethodDecl ::= (TypeMethodDecl) Type:methodType IDENT:methodName LPAREN MethodFormPars MethodVarDecl LCURLY MethodStatement RCURLY
 					|
 					(VoidMethodDecl) VOID IDENT:methodName LPAREN MethodFormPars MethodVarDecl LCURLY MethodStatement RCURLY
 					;
