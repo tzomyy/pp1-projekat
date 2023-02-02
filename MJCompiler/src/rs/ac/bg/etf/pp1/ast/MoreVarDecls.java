@@ -1,29 +1,27 @@
 // generated with ast extension for cup
 // version 0.8
-// 2/1/2023 1:48:41
+// 2/1/2023 23:50:43
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class SingleVarDecl implements SyntaxNode {
+public class MoreVarDecls extends MoreVarDecl {
 
-    private SyntaxNode parent;
-    private int line;
-    private String varName;
+    private String I1;
     private Brackets Brackets;
 
-    public SingleVarDecl (String varName, Brackets Brackets) {
-        this.varName=varName;
+    public MoreVarDecls (String I1, Brackets Brackets) {
+        this.I1=I1;
         this.Brackets=Brackets;
         if(Brackets!=null) Brackets.setParent(this);
     }
 
-    public String getVarName() {
-        return varName;
+    public String getI1() {
+        return I1;
     }
 
-    public void setVarName(String varName) {
-        this.varName=varName;
+    public void setI1(String I1) {
+        this.I1=I1;
     }
 
     public Brackets getBrackets() {
@@ -32,22 +30,6 @@ public class SingleVarDecl implements SyntaxNode {
 
     public void setBrackets(Brackets Brackets) {
         this.Brackets=Brackets;
-    }
-
-    public SyntaxNode getParent() {
-        return parent;
-    }
-
-    public void setParent(SyntaxNode parent) {
-        this.parent=parent;
-    }
-
-    public int getLine() {
-        return line;
-    }
-
-    public void setLine(int line) {
-        this.line=line;
     }
 
     public void accept(Visitor visitor) {
@@ -71,9 +53,9 @@ public class SingleVarDecl implements SyntaxNode {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("SingleVarDecl(\n");
+        buffer.append("MoreVarDecls(\n");
 
-        buffer.append(" "+tab+varName);
+        buffer.append(" "+tab+I1);
         buffer.append("\n");
 
         if(Brackets!=null)
@@ -83,7 +65,7 @@ public class SingleVarDecl implements SyntaxNode {
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [SingleVarDecl]");
+        buffer.append(") [MoreVarDecls]");
         return buffer.toString();
     }
 }

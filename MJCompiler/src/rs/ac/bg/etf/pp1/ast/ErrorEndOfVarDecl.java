@@ -1,13 +1,13 @@
 // generated with ast extension for cup
 // version 0.8
-// 2/1/2023 1:48:41
+// 2/1/2023 23:50:43
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class EndOfVarDeclaration extends MultipleVarDecl {
+public class ErrorEndOfVarDecl extends EndOfVarDecl {
 
-    public EndOfVarDeclaration () {
+    public ErrorEndOfVarDecl () {
     }
 
     public void accept(Visitor visitor) {
@@ -28,10 +28,10 @@ public class EndOfVarDeclaration extends MultipleVarDecl {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("EndOfVarDeclaration(\n");
+        buffer.append("ErrorEndOfVarDecl(\n");
 
         buffer.append(tab);
-        buffer.append(") [EndOfVarDeclaration]");
+        buffer.append(") [ErrorEndOfVarDecl]");
         return buffer.toString();
     }
 }

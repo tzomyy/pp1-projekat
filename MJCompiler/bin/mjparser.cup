@@ -55,9 +55,11 @@ nonterminal Program, Declaration, VarDecl, ConstDecl;
 nonterminal Type;
 nonterminal SingleConstDecl;
 nonterminal MultipleConstDecl;
-nonterminal SingleVarDecl;
+
 nonterminal Brackets;
-nonterminal MultipleVarDecl;
+nonterminal VarDeclarations;
+nonterminal MoreVarDecl;
+nonterminal EndOfVarDecl;
 
 nonterminal ClassDecl;
 nonterminal ClassConstrMethod;
@@ -83,6 +85,7 @@ nonterminal MultipleFormPar;
 
 nonterminal Statement;
 nonterminal StmtConst;
+nonterminal IfStatement;
 nonterminal ElseStatement;
 nonterminal StatementList;
 
@@ -137,20 +140,31 @@ MultipleConstDecl ::= (MultipleConstDecls) MultipleConstDecl COMMA SingleConstDe
 					(EndOfDeclaration) /* epsilon */
 					;					
 
-VarDecl ::= (VarDecl) Type:varName SingleVarDecl MultipleVarDecl SEMICOLON;
+VarDecl ::= (VarDecls) Type:varName VarDeclarations
+			;
 
-SingleVarDecl ::= (SingleVarDecl) IDENT:varName Brackets;
+VarDeclarations ::= (MultipleVarDecl) MoreVarDecl VarDeclarations
+				|
+				(EndOfVarDeclarations) EndOfVarDecl
+				;
+				
+MoreVarDecl ::= (MoreVarDecls) IDENT Brackets COMMA
+			|
+			(ErrorMoreVarDecl) error COMMA:l
+			{: parser.report_error("Izvrsen oporavak kod dodeljivanja globalne promenljive do , u liniji  " + lleft, null); :}
+			;
+
+EndOfVarDecl ::= (EndOfVarDeclar) IDENT Brackets SEMICOLON
+			|
+			(ErrorEndOfVarDecl) error SEMICOLON:l
+			{: parser.report_error("Izvrsen oporavak kod dodeljivanja globalne promenljive do ; u liniji " + lleft, null); :}
+			;
 
 Brackets ::= (Brackets) LSQUARE RSQUARE
 			|
 			(NoBrackets) /*epsilon*/
 			;
-			
-MultipleVarDecl ::= (MultipleVarDecls) MultipleVarDecl COMMA SingleVarDecl
-				|
-				(EndOfVarDeclaration) /* epsilon */
-				;
-				
+							
 
 ClassDecl ::= (ClassDecl) CLASS IDENT ClassExtends LCURLY ClassVarDecl ClassConstrMethod RCURLY;
 
@@ -187,11 +201,14 @@ ClassExtends ::= (ClassExtend) EXTENDS Type
 				(NoClassExtend) /* epsilon */
 				;
 
-ConstructorDecl ::= (ConstructorDecl) IDENT LPAREN ConstructorFormPars RPAREN ConstructorVarDecl LCURLY ConstructorStatement RCURLY;
+ConstructorDecl ::= (ConstructorDecl) IDENT LPAREN ConstructorFormPars ConstructorVarDecl LCURLY ConstructorStatement RCURLY;
 
-ConstructorFormPars ::= (ConstrFormParams) FormPars
+ConstructorFormPars ::= (ConstrFormParams) FormPars RPAREN
 				|
-				(NoConstrFormParams) /* epsilon */
+				(NoConstrFormParams) RPAREN 
+				|
+				(ErrorConstrFormParams) error RPAREN:l 
+				{: parser.report_error("Izvrsen oporavak kod formalnog parametra do ) u liniji " + lleft, null); :}
 				;
 				
 ConstructorVarDecl ::= (ConstrVarDecls) MethodVarDecl VarDecl
@@ -209,14 +226,17 @@ MultipleMethodDecl ::= (MethodDecls) MultipleMethodDecl MethodDecl
 				(NoMethodDeclList) /*epsilon*/
 				;
 
-MethodDecl ::= (TypeMethodDecl) Type:methodType IDENT:methodName LPAREN MethodFormPars RPAREN MethodVarDecl LCURLY MethodStatement RCURLY
+MethodDecl ::= (TypeMethodDecl) Type:methodType IDENT:methodName LPAREN MethodFormPars  MethodVarDecl LCURLY MethodStatement RCURLY
 					|
-					(VoidMethodDecl) VOID IDENT:methodName LPAREN MethodFormPars RPAREN MethodVarDecl LCURLY MethodStatement RCURLY
+					(VoidMethodDecl) VOID IDENT:methodName LPAREN MethodFormPars MethodVarDecl LCURLY MethodStatement RCURLY
 					;
 					
-MethodFormPars ::= (MethodFormParams) FormPars
+MethodFormPars ::= (MethodFormParams) FormPars RPAREN
 				|
-				(NoMethodFormParams) /* epsilon */
+				(NoMethodFormParams) RPAREN
+				|
+				(ErrorMethodFormParams) error RPAREN:l
+				{: parser.report_error("Izvrsen oporavak kod formalnog do ) u liniji " + lleft, null); :}
 				;
 				
 MethodVarDecl ::= (MethodVarDecls) MethodVarDecl VarDecl
@@ -229,18 +249,20 @@ MethodStatement ::= (MethodStmt) MethodStatement Statement
 				(NoMethodStmt) /* epsilon */
 				;
 
-FormPars ::= (FormPars) SingleFormPar MultipleFormPar;
+FormPars ::= (FormPars) MultipleFormPar;
 
 SingleFormPar ::= (SingleFormParam) Type:formType IDENT:formName Brackets;
 
 MultipleFormPar ::= (MultipleFormPars) MultipleFormPar COMMA SingleFormPar
 				|
-				(EndOfFormPar) /*epsilon*/
+				(EndOfFormPar) SingleFormPar
+				|
+				(ErrorFormComma) error:l {: parser.report_error("Izvrsen oporavak kod formalnog paramtera do , u liniji " + lleft, null); :} COMMA SingleFormPar
 				;
 				
-Statement ::= (DesignStmt) DesignatorStatement SEMICOLON
+Statement ::= (DesignStmt) DesignatorStatement
 			|
-			(IfStmt) IF LPAREN Condition RPAREN Statement ElseStatement
+			(IfStmt) IfStatement Statement ElseStatement
 			|
 			(WhileStmt) WHILE LPAREN Condition RPAREN Statement
 			|
@@ -259,6 +281,12 @@ Statement ::= (DesignStmt) DesignatorStatement SEMICOLON
 			(ForeachStmt) Designator DOT FOREACH LPAREN IDENT ASSIGN Statement RPAREN SEMICOLON
 			|
 			(ListStmts) LCURLY StatementList RCURLY
+			;
+			
+IfStatement ::= (IfState) IF LPAREN Condition RPAREN
+			|
+			(ErrorStmt) error RPAREN:l
+			{: parser.report_error("Izvrsen oporavak kod if konstrukcije do ; u liniji " + lleft, null); :}
 			;
 			
 StatementList ::= (MoreStatements) StatementList Statement
@@ -310,15 +338,18 @@ FactParam ::= (FactFuncParams) ActPars
 				(NoFactFuncParams) /* epsilon */
 				;
 		
-DesignatorStatement ::= (DesignAssign) Designator Assignop Expr
+DesignatorStatement ::= (DesignAssign) Designator Assignop Expr SEMICOLON
 					|
-					(DesignFunction) Designator LPAREN FactParam RPAREN 
+					(DesignFunction) Designator LPAREN FactParam RPAREN SEMICOLON
 					|
-					(DesignInc) Designator INCREMENT
+					(DesignInc) Designator INCREMENT SEMICOLON
 					|
-					(DesignDec) Designator DECREMENT
+					(DesignDec) Designator DECREMENT SEMICOLON
 					|
-					(DesignAssignArray) LSQUARE DesignArray RSQUARE EQUAL Designator
+					(DesignAssignArray) LSQUARE DesignArray RSQUARE EQUAL Designator SEMICOLON
+					|
+					(DesignError) error SEMICOLON:l
+					{: parser.report_error("Izvrsen oporavak kod dodeljivanja vrednosti do ; u liniji " + lleft, null); :}
 					;
 					
 DesignArray ::= (MultipleDesignators) DesignArray COMMA DesignOptional 

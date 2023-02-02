@@ -1,37 +1,78 @@
 // generated with ast extension for cup
 // version 0.8
-// 2/1/2023 1:48:41
+// 2/1/2023 23:50:43
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public abstract class MultipleVarDecl implements SyntaxNode {
+public class MultipleVarDecl extends VarDeclarations {
 
-    private SyntaxNode parent;
+    private MoreVarDecl MoreVarDecl;
+    private VarDeclarations VarDeclarations;
 
-    private int line;
-
-    public SyntaxNode getParent() {
-        return parent;
+    public MultipleVarDecl (MoreVarDecl MoreVarDecl, VarDeclarations VarDeclarations) {
+        this.MoreVarDecl=MoreVarDecl;
+        if(MoreVarDecl!=null) MoreVarDecl.setParent(this);
+        this.VarDeclarations=VarDeclarations;
+        if(VarDeclarations!=null) VarDeclarations.setParent(this);
     }
 
-    public void setParent(SyntaxNode parent) {
-        this.parent=parent;
+    public MoreVarDecl getMoreVarDecl() {
+        return MoreVarDecl;
     }
 
-    public int getLine() {
-        return line;
+    public void setMoreVarDecl(MoreVarDecl MoreVarDecl) {
+        this.MoreVarDecl=MoreVarDecl;
     }
 
-    public void setLine(int line) {
-        this.line=line;
+    public VarDeclarations getVarDeclarations() {
+        return VarDeclarations;
     }
 
-    public abstract void accept(Visitor visitor);
-    public abstract void childrenAccept(Visitor visitor);
-    public abstract void traverseTopDown(Visitor visitor);
-    public abstract void traverseBottomUp(Visitor visitor);
+    public void setVarDeclarations(VarDeclarations VarDeclarations) {
+        this.VarDeclarations=VarDeclarations;
+    }
 
-    public String toString() { return toString(""); }
-    public abstract String toString(String tab);
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
+
+    public void childrenAccept(Visitor visitor) {
+        if(MoreVarDecl!=null) MoreVarDecl.accept(visitor);
+        if(VarDeclarations!=null) VarDeclarations.accept(visitor);
+    }
+
+    public void traverseTopDown(Visitor visitor) {
+        accept(visitor);
+        if(MoreVarDecl!=null) MoreVarDecl.traverseTopDown(visitor);
+        if(VarDeclarations!=null) VarDeclarations.traverseTopDown(visitor);
+    }
+
+    public void traverseBottomUp(Visitor visitor) {
+        if(MoreVarDecl!=null) MoreVarDecl.traverseBottomUp(visitor);
+        if(VarDeclarations!=null) VarDeclarations.traverseBottomUp(visitor);
+        accept(visitor);
+    }
+
+    public String toString(String tab) {
+        StringBuffer buffer=new StringBuffer();
+        buffer.append(tab);
+        buffer.append("MultipleVarDecl(\n");
+
+        if(MoreVarDecl!=null)
+            buffer.append(MoreVarDecl.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        if(VarDeclarations!=null)
+            buffer.append(VarDeclarations.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        buffer.append(tab);
+        buffer.append(") [MultipleVarDecl]");
+        return buffer.toString();
+    }
 }

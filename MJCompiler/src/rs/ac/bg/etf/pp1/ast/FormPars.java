@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 2/1/2023 1:48:41
+// 2/1/2023 23:50:43
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -9,22 +9,11 @@ public class FormPars implements SyntaxNode {
 
     private SyntaxNode parent;
     private int line;
-    private SingleFormPar SingleFormPar;
     private MultipleFormPar MultipleFormPar;
 
-    public FormPars (SingleFormPar SingleFormPar, MultipleFormPar MultipleFormPar) {
-        this.SingleFormPar=SingleFormPar;
-        if(SingleFormPar!=null) SingleFormPar.setParent(this);
+    public FormPars (MultipleFormPar MultipleFormPar) {
         this.MultipleFormPar=MultipleFormPar;
         if(MultipleFormPar!=null) MultipleFormPar.setParent(this);
-    }
-
-    public SingleFormPar getSingleFormPar() {
-        return SingleFormPar;
-    }
-
-    public void setSingleFormPar(SingleFormPar SingleFormPar) {
-        this.SingleFormPar=SingleFormPar;
     }
 
     public MultipleFormPar getMultipleFormPar() {
@@ -56,18 +45,15 @@ public class FormPars implements SyntaxNode {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(SingleFormPar!=null) SingleFormPar.accept(visitor);
         if(MultipleFormPar!=null) MultipleFormPar.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(SingleFormPar!=null) SingleFormPar.traverseTopDown(visitor);
         if(MultipleFormPar!=null) MultipleFormPar.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(SingleFormPar!=null) SingleFormPar.traverseBottomUp(visitor);
         if(MultipleFormPar!=null) MultipleFormPar.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -76,12 +62,6 @@ public class FormPars implements SyntaxNode {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("FormPars(\n");
-
-        if(SingleFormPar!=null)
-            buffer.append(SingleFormPar.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
-        buffer.append("\n");
 
         if(MultipleFormPar!=null)
             buffer.append(MultipleFormPar.toString("  "+tab));

@@ -1,199 +1,232 @@
-INFO  01:49:38,566 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
-INFO  01:49:38,615 - #39 program
-INFO  01:49:38,615 - #47 MJProgram
-INFO  01:49:38,615 - #44 const
-INFO  01:49:38,616 - #47 int
-INFO  01:49:38,616 - #47 milica
-INFO  01:49:38,616 - #20 =
-INFO  01:49:38,617 - #8 true
-INFO  01:49:38,617 - #5 ,
-INFO  01:49:38,617 - #47 jovanka
-INFO  01:49:38,617 - #20 =
-INFO  01:49:38,618 - #33 "Joc"
-INFO  01:49:38,618 - #6 ;
-INFO  01:49:38,618 - #47 int
-INFO  01:49:38,619 - #47 zorana
-INFO  01:49:38,619 - #22 [
-INFO  01:49:38,619 - #40 ]
-INFO  01:49:38,619 - #5 ,
-INFO  01:49:38,620 - #47 milic
-INFO  01:49:38,620 - #6 ;
-INFO  01:49:38,621 - #37 class
-INFO  01:49:38,622 - #47 B
-INFO  01:49:38,627 - #7 extends
-INFO  01:49:38,627 - #47 M
-INFO  01:49:38,627 - #13 {
-INFO  01:49:38,627 - #47 int
-INFO  01:49:38,628 - #47 x
-INFO  01:49:38,628 - #6 ;
-INFO  01:49:38,628 - #47 double
-INFO  01:49:38,628 - #47 y
-INFO  01:49:38,628 - #5 ,
-INFO  01:49:38,628 - #47 z
-INFO  01:49:38,628 - #6 ;
-INFO  01:49:38,628 - #13 {
-INFO  01:49:38,628 - #47 B
-INFO  01:49:38,629 - #19 (
-INFO  01:49:38,629 - #4 )
-INFO  01:49:38,629 - #13 {
-INFO  01:49:38,630 - #36 }
-INFO  01:49:38,630 - #47 B
-INFO  01:49:38,631 - #19 (
-INFO  01:49:38,631 - #4 )
-INFO  01:49:38,631 - #13 {
-INFO  01:49:38,631 - #36 }
-INFO  01:49:38,631 - #17 void
-INFO  01:49:38,631 - #47 milica
-INFO  01:49:38,631 - #19 (
-INFO  01:49:38,631 - #4 )
-INFO  01:49:38,632 - #13 {
-INFO  01:49:38,632 - #36 }
-INFO  01:49:38,633 - #17 void
-INFO  01:49:38,633 - #47 milica
-INFO  01:49:38,633 - #19 (
-INFO  01:49:38,633 - #4 )
-INFO  01:49:38,633 - #13 {
-INFO  01:49:38,633 - #36 }
-INFO  01:49:38,634 - #36 }
-INFO  01:49:38,634 - #36 }
-INFO  01:49:38,634 - #13 {
-INFO  01:49:38,634 - #17 void
-INFO  01:49:38,635 - #47 milica
-INFO  01:49:38,635 - #19 (
-INFO  01:49:38,635 - #4 )
-INFO  01:49:38,635 - #47 int
-INFO  01:49:38,635 - #47 x
-INFO  01:49:38,635 - #6 ;
-INFO  01:49:38,635 - #13 {
-INFO  01:49:38,636 - #22 [
-INFO  01:49:38,636 - #47 a
-INFO  01:49:38,636 - #5 ,
-INFO  01:49:38,636 - #47 b
-INFO  01:49:38,636 - #5 ,
-INFO  01:49:38,636 - #5 ,
-INFO  01:49:38,636 - #5 ,
-INFO  01:49:38,636 - #47 c
-INFO  01:49:38,637 - #5 ,
-INFO  01:49:38,637 - #40 ]
-INFO  01:49:38,637 - #20 =
-INFO  01:49:38,637 - #47 niz
-INFO  01:49:38,637 - #6 ;
-INFO  01:49:38,637 - #47 milica
-INFO  01:49:38,637 - #12 .
-INFO  01:49:38,637 - #47 vasiljevic
-INFO  01:49:38,637 - #26 ++
-INFO  01:49:38,637 - #6 ;
-INFO  01:49:38,637 - #29 while
-INFO  01:49:38,637 - #19 (
-INFO  01:49:38,637 - #47 kuzma
-INFO  01:49:38,637 - #23 ==
-INFO  01:49:38,638 - #33 "studentijada"
-INFO  01:49:38,638 - #4 )
-INFO  01:49:38,639 - #41 return
-INFO  01:49:38,639 - #46 5
-INFO  01:49:38,639 - #6 ;
-INFO  01:49:38,639 - #11 if
-INFO  01:49:38,639 - #19 (
-INFO  01:49:38,640 - #47 milica
-INFO  01:49:38,640 - #18 &&
-INFO  01:49:38,640 - #47 andrijana
-INFO  01:49:38,640 - #43 ||
-INFO  01:49:38,640 - #47 andjela
-INFO  01:49:38,640 - #23 ==
-INFO  01:49:38,640 - #46 1
-INFO  01:49:38,640 - #4 )
-INFO  01:49:38,641 - #24 break
-INFO  01:49:38,641 - #6 ;
-INFO  01:49:38,641 - #13 {
-INFO  01:49:38,642 - #24 break
-INFO  01:49:38,642 - #6 ;
-INFO  01:49:38,642 - #36 }
-INFO  01:49:38,643 - #47 niki
-INFO  01:49:38,643 - #22 [
-INFO  01:49:38,643 - #15 -
-INFO  01:49:38,643 - #46 5
-INFO  01:49:38,643 - #40 ]
-INFO  01:49:38,643 - #12 .
-INFO  01:49:38,644 - #35 foreach
-INFO  01:49:38,644 - #19 (
-INFO  01:49:38,644 - #47 losa
-INFO  01:49:38,644 - #14 =>
-INFO  01:49:38,644 - #42 continue
-INFO  01:49:38,644 - #6 ;
-INFO  01:49:38,644 - #4 )
-INFO  01:49:38,645 - #6 ;
-INFO  01:49:38,645 - #25 read
-INFO  01:49:38,645 - #19 (
-INFO  01:49:38,646 - #47 mi
-INFO  01:49:38,646 - #12 .
-INFO  01:49:38,646 - #47 kalasi
-INFO  01:49:38,646 - #22 [
-INFO  01:49:38,646 - #46 5
-INFO  01:49:38,646 - #40 ]
-INFO  01:49:38,646 - #12 .
-INFO  01:49:38,646 - #47 lepa
-INFO  01:49:38,646 - #4 )
-INFO  01:49:38,646 - #6 ;
-INFO  01:49:38,646 - #34 print
-INFO  01:49:38,646 - #19 (
-INFO  01:49:38,646 - #46 5
-INFO  01:49:38,646 - #3 +
-INFO  01:49:38,647 - #46 6
-INFO  01:49:38,647 - #5 ,
-INFO  01:49:38,648 - #46 5
-INFO  01:49:38,648 - #4 )
-INFO  01:49:38,648 - #6 ;
-INFO  01:49:38,648 - #41 return
-INFO  01:49:38,648 - #6 ;
-INFO  01:49:38,648 - #41 return
-INFO  01:49:38,648 - #19 (
-INFO  01:49:38,648 - #46 5
-INFO  01:49:38,648 - #3 +
-INFO  01:49:38,649 - #46 7
-INFO  01:49:38,649 - #27 *
-INFO  01:49:38,649 - #8 true
-INFO  01:49:38,649 - #4 )
-INFO  01:49:38,650 - #6 ;
-INFO  01:49:38,650 - #41 return
-INFO  01:49:38,650 - #9 new
-INFO  01:49:38,650 - #47 int
-INFO  01:49:38,650 - #22 [
-INFO  01:49:38,650 - #46 5
-INFO  01:49:38,650 - #27 *
-INFO  01:49:38,650 - #46 6
-INFO  01:49:38,650 - #3 +
-INFO  01:49:38,650 - #46 4
-INFO  01:49:38,652 - #40 ]
-INFO  01:49:38,652 - #6 ;
-INFO  01:49:38,652 - #47 petar
-INFO  01:49:38,652 - #22 [
-INFO  01:49:38,652 - #15 -
-INFO  01:49:38,652 - #46 5
-INFO  01:49:38,652 - #3 +
-INFO  01:49:38,652 - #8 true
-INFO  01:49:38,652 - #27 *
-INFO  01:49:38,652 - #46 5
-INFO  01:49:38,653 - #40 ]
-INFO  01:49:38,653 - #38 --
-INFO  01:49:38,653 - #6 ;
-INFO  01:49:38,653 - #24 break
-INFO  01:49:38,653 - #6 ;
-INFO  01:49:38,653 - #42 continue
-INFO  01:49:38,653 - #6 ;
-INFO  01:49:38,653 - #36 }
-INFO  01:49:38,653 - #17 void
-INFO  01:49:38,653 - #47 andreja
-INFO  01:49:38,653 - #19 (
-INFO  01:49:38,653 - #4 )
-INFO  01:49:38,654 - #47 int
-INFO  01:49:38,654 - #47 marta
-INFO  01:49:38,654 - #5 ,
-INFO  01:49:38,654 - #47 djokara
-INFO  01:49:38,654 - #6 ;
-INFO  01:49:38,654 - #13 {
-INFO  01:49:38,654 - #36 }
-INFO  01:49:38,654 - #36 }
-INFO  01:49:38,656 - Program(
+INFO  23:51:24,057 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  23:51:24,108 - #39 program
+INFO  23:51:24,108 - #47 MJProgram
+INFO  23:51:24,108 - #44 const
+INFO  23:51:24,109 - #47 int
+INFO  23:51:24,109 - #47 milica
+INFO  23:51:24,110 - #20 =
+INFO  23:51:24,110 - #8 true
+INFO  23:51:24,111 - #5 ,
+INFO  23:51:24,112 - #47 jovanka
+INFO  23:51:24,112 - #20 =
+INFO  23:51:24,112 - #33 "Joc"
+INFO  23:51:24,112 - #6 ;
+INFO  23:51:24,112 - #47 int
+INFO  23:51:24,113 - #47 zorana
+INFO  23:51:24,113 - #22 [
+INFO  23:51:24,113 - #40 ]
+INFO  23:51:24,114 - #47 tra
+ERROR 23:51:24,114 - 
+Sintaksna greska na liniji 3
+INFO  23:51:24,114 - #5 ,
+INFO  23:51:24,114 - #47 milic
+INFO  23:51:24,120 - #47 cici
+INFO  23:51:24,121 - #5 ,
+INFO  23:51:24,121 - #47 jasna
+INFO  23:51:24,121 - #6 ;
+INFO  23:51:24,121 - #37 class
+ERROR 23:51:24,121 - Izvrsen oporavak kod dodeljivanja globalne promenljive do , u liniji  3
+INFO  23:51:24,123 - #47 B
+INFO  23:51:24,123 - #7 extends
+INFO  23:51:24,123 - #47 M
+INFO  23:51:24,123 - #13 {
+INFO  23:51:24,124 - #47 int
+INFO  23:51:24,124 - #47 x
+INFO  23:51:24,124 - #6 ;
+INFO  23:51:24,124 - #47 double
+INFO  23:51:24,124 - #47 y
+INFO  23:51:24,125 - #5 ,
+INFO  23:51:24,125 - #47 z
+INFO  23:51:24,125 - #6 ;
+INFO  23:51:24,125 - #13 {
+INFO  23:51:24,125 - #47 B
+INFO  23:51:24,125 - #19 (
+INFO  23:51:24,125 - #4 )
+INFO  23:51:24,125 - #13 {
+INFO  23:51:24,126 - #36 }
+INFO  23:51:24,127 - #47 B
+INFO  23:51:24,127 - #19 (
+INFO  23:51:24,128 - #4 )
+INFO  23:51:24,128 - #13 {
+INFO  23:51:24,128 - #36 }
+INFO  23:51:24,128 - #17 void
+INFO  23:51:24,128 - #47 milica
+INFO  23:51:24,128 - #19 (
+INFO  23:51:24,128 - #4 )
+INFO  23:51:24,128 - #13 {
+INFO  23:51:24,130 - #36 }
+INFO  23:51:24,130 - #17 void
+INFO  23:51:24,131 - #47 milica
+INFO  23:51:24,131 - #19 (
+INFO  23:51:24,131 - #4 )
+INFO  23:51:24,131 - #13 {
+INFO  23:51:24,131 - #36 }
+INFO  23:51:24,131 - #36 }
+INFO  23:51:24,131 - #36 }
+INFO  23:51:24,131 - #13 {
+INFO  23:51:24,132 - #17 void
+INFO  23:51:24,133 - #47 milica
+INFO  23:51:24,133 - #19 (
+INFO  23:51:24,133 - #47 int
+INFO  23:51:24,133 - #47 x
+INFO  23:51:24,133 - #22 [
+INFO  23:51:24,133 - #40 ]
+INFO  23:51:24,133 - #47 y
+ERROR 23:51:24,133 - 
+Sintaksna greska na liniji 11
+INFO  23:51:24,133 - #5 ,
+INFO  23:51:24,133 - #47 la
+INFO  23:51:24,133 - #47 la
+INFO  23:51:24,133 - #47 la
+ERROR 23:51:24,133 - Izvrsen oporavak kod formalnog paramtera do , u liniji 11
+ERROR 23:51:24,133 - 
+Sintaksna greska na liniji 11
+INFO  23:51:24,133 - #4 )
+INFO  23:51:24,133 - #47 int
+INFO  23:51:24,133 - #47 x
+INFO  23:51:24,134 - #6 ;
+ERROR 23:51:24,134 - Izvrsen oporavak kod formalnog do ) u liniji 11
+INFO  23:51:24,134 - #13 {
+INFO  23:51:24,134 - #22 [
+INFO  23:51:24,134 - #47 a
+INFO  23:51:24,135 - #5 ,
+INFO  23:51:24,135 - #47 b
+INFO  23:51:24,135 - #5 ,
+INFO  23:51:24,135 - #5 ,
+INFO  23:51:24,136 - #5 ,
+INFO  23:51:24,136 - #47 c
+INFO  23:51:24,136 - #5 ,
+INFO  23:51:24,136 - #40 ]
+INFO  23:51:24,136 - #20 =
+INFO  23:51:24,136 - #47 niz
+INFO  23:51:24,136 - #6 ;
+INFO  23:51:24,136 - #47 milica
+INFO  23:51:24,136 - #12 .
+INFO  23:51:24,136 - #47 vasiljevic
+INFO  23:51:24,137 - #26 ++
+INFO  23:51:24,137 - #6 ;
+INFO  23:51:24,137 - #29 while
+INFO  23:51:24,137 - #19 (
+INFO  23:51:24,137 - #47 kuzma
+INFO  23:51:24,137 - #23 ==
+INFO  23:51:24,137 - #33 "studentijada"
+INFO  23:51:24,138 - #4 )
+INFO  23:51:24,139 - #41 return
+INFO  23:51:24,139 - #46 5
+INFO  23:51:24,139 - #6 ;
+INFO  23:51:24,139 - #11 if
+INFO  23:51:24,139 - #19 (
+INFO  23:51:24,139 - #47 milica
+INFO  23:51:24,140 - #18 &&
+INFO  23:51:24,140 - #47 andrijana
+INFO  23:51:24,140 - #43 ||
+INFO  23:51:24,140 - #47 andjela
+INFO  23:51:24,140 - #23 ==
+INFO  23:51:24,140 - #20 =
+ERROR 23:51:24,140 - 
+Sintaksna greska na liniji 15
+INFO  23:51:24,140 - #46 1
+INFO  23:51:24,140 - #4 )
+INFO  23:51:24,140 - #24 break
+INFO  23:51:24,140 - #6 ;
+INFO  23:51:24,141 - #13 {
+ERROR 23:51:24,141 - Izvrsen oporavak kod if konstrukcije do ; u liniji 15
+INFO  23:51:24,142 - #24 break
+INFO  23:51:24,143 - #6 ;
+INFO  23:51:24,143 - #36 }
+INFO  23:51:24,143 - #47 niki
+INFO  23:51:24,143 - #22 [
+INFO  23:51:24,143 - #15 -
+INFO  23:51:24,143 - #46 5
+INFO  23:51:24,143 - #40 ]
+INFO  23:51:24,143 - #12 .
+INFO  23:51:24,143 - #35 foreach
+INFO  23:51:24,144 - #19 (
+INFO  23:51:24,144 - #47 losa
+INFO  23:51:24,144 - #14 =>
+INFO  23:51:24,144 - #42 continue
+INFO  23:51:24,144 - #6 ;
+INFO  23:51:24,144 - #4 )
+INFO  23:51:24,144 - #6 ;
+INFO  23:51:24,144 - #25 read
+INFO  23:51:24,144 - #19 (
+INFO  23:51:24,144 - #47 mi
+INFO  23:51:24,144 - #12 .
+INFO  23:51:24,144 - #47 kalasi
+INFO  23:51:24,145 - #22 [
+INFO  23:51:24,145 - #46 5
+INFO  23:51:24,145 - #40 ]
+INFO  23:51:24,145 - #12 .
+INFO  23:51:24,145 - #47 lepa
+INFO  23:51:24,145 - #4 )
+INFO  23:51:24,145 - #6 ;
+INFO  23:51:24,145 - #34 print
+INFO  23:51:24,146 - #19 (
+INFO  23:51:24,146 - #46 5
+INFO  23:51:24,146 - #3 +
+INFO  23:51:24,146 - #46 6
+INFO  23:51:24,147 - #5 ,
+INFO  23:51:24,147 - #46 5
+INFO  23:51:24,148 - #4 )
+INFO  23:51:24,148 - #6 ;
+INFO  23:51:24,148 - #41 return
+INFO  23:51:24,148 - #6 ;
+INFO  23:51:24,148 - #41 return
+INFO  23:51:24,149 - #19 (
+INFO  23:51:24,149 - #46 5
+INFO  23:51:24,149 - #3 +
+INFO  23:51:24,149 - #46 7
+INFO  23:51:24,149 - #27 *
+INFO  23:51:24,149 - #8 true
+INFO  23:51:24,150 - #4 )
+INFO  23:51:24,150 - #6 ;
+INFO  23:51:24,150 - #41 return
+INFO  23:51:24,150 - #9 new
+INFO  23:51:24,151 - #47 int
+INFO  23:51:24,151 - #22 [
+INFO  23:51:24,151 - #46 5
+INFO  23:51:24,151 - #27 *
+INFO  23:51:24,151 - #46 6
+INFO  23:51:24,151 - #3 +
+INFO  23:51:24,151 - #46 4
+INFO  23:51:24,151 - #40 ]
+INFO  23:51:24,151 - #6 ;
+INFO  23:51:24,151 - #47 petar
+INFO  23:51:24,151 - #22 [
+INFO  23:51:24,151 - #15 -
+INFO  23:51:24,151 - #46 5
+INFO  23:51:24,151 - #3 +
+INFO  23:51:24,151 - #8 true
+INFO  23:51:24,151 - #27 *
+INFO  23:51:24,151 - #46 5
+INFO  23:51:24,151 - #40 ]
+INFO  23:51:24,151 - #38 --
+INFO  23:51:24,151 - #6 ;
+INFO  23:51:24,151 - #24 break
+INFO  23:51:24,152 - #6 ;
+INFO  23:51:24,152 - #42 continue
+INFO  23:51:24,152 - #6 ;
+INFO  23:51:24,152 - #36 }
+INFO  23:51:24,152 - #17 void
+INFO  23:51:24,152 - #47 andreja
+INFO  23:51:24,152 - #19 (
+INFO  23:51:24,152 - #4 )
+INFO  23:51:24,152 - #47 int
+INFO  23:51:24,152 - #47 marta
+INFO  23:51:24,152 - #5 ,
+INFO  23:51:24,152 - #47 djokara
+INFO  23:51:24,152 - #6 ;
+INFO  23:51:24,152 - #13 {
+INFO  23:51:24,152 - #47 milica
+INFO  23:51:24,152 - #26 ++
+INFO  23:51:24,152 - #26 ++
+ERROR 23:51:24,152 - 
+Sintaksna greska na liniji 29
+INFO  23:51:24,152 - #6 ;
+INFO  23:51:24,152 - #36 }
+INFO  23:51:24,152 - #36 }
+ERROR 23:51:24,153 - Izvrsen oporavak kod dodeljivanja vrednosti do ; u liniji 29
+INFO  23:51:24,155 - Program(
  MJProgram
   ClassDeclaration(
     VarDeclaration(
@@ -216,25 +249,22 @@ INFO  01:49:38,656 - Program(
           ) [MultipleConstDecls]
         ) [ConstDecl]
       ) [ConstDeclaration]
-      VarDecl(
+      VarDecls(
         Type(
          int
         ) [Type]
-        SingleVarDecl(
-         zorana
-          Brackets(
-          ) [Brackets]
-        ) [SingleVarDecl]
-        MultipleVarDecls(
-          EndOfVarDeclaration(
-          ) [EndOfVarDeclaration]
-          SingleVarDecl(
-           milic
-            NoBrackets(
-            ) [NoBrackets]
-          ) [SingleVarDecl]
-        ) [MultipleVarDecls]
-      ) [VarDecl]
+        MultipleVarDecl(
+          ErrorMoreVarDecl(
+          ) [ErrorMoreVarDecl]
+          EndOfVarDeclarations(
+            EndOfVarDeclar(
+             jasna
+              NoBrackets(
+              ) [NoBrackets]
+            ) [EndOfVarDeclar]
+          ) [EndOfVarDeclarations]
+        ) [MultipleVarDecl]
+      ) [VarDecls]
     ) [VarDeclaration]
     ClassDecl(
      B
@@ -247,38 +277,38 @@ INFO  01:49:38,656 - Program(
         MultipleClassVarDecl(
           EndOfClassVarDecl(
           ) [EndOfClassVarDecl]
-          VarDecl(
+          VarDecls(
             Type(
              int
             ) [Type]
-            SingleVarDecl(
-             x
-              NoBrackets(
-              ) [NoBrackets]
-            ) [SingleVarDecl]
-            EndOfVarDeclaration(
-            ) [EndOfVarDeclaration]
-          ) [VarDecl]
+            EndOfVarDeclarations(
+              EndOfVarDeclar(
+               x
+                NoBrackets(
+                ) [NoBrackets]
+              ) [EndOfVarDeclar]
+            ) [EndOfVarDeclarations]
+          ) [VarDecls]
         ) [MultipleClassVarDecl]
-        VarDecl(
+        VarDecls(
           Type(
            double
           ) [Type]
-          SingleVarDecl(
-           y
-            NoBrackets(
-            ) [NoBrackets]
-          ) [SingleVarDecl]
-          MultipleVarDecls(
-            EndOfVarDeclaration(
-            ) [EndOfVarDeclaration]
-            SingleVarDecl(
-             z
+          MultipleVarDecl(
+            MoreVarDecls(
+             y
               NoBrackets(
               ) [NoBrackets]
-            ) [SingleVarDecl]
-          ) [MultipleVarDecls]
-        ) [VarDecl]
+            ) [MoreVarDecls]
+            EndOfVarDeclarations(
+              EndOfVarDeclar(
+               z
+                NoBrackets(
+                ) [NoBrackets]
+              ) [EndOfVarDeclar]
+            ) [EndOfVarDeclarations]
+          ) [MultipleVarDecl]
+        ) [VarDecls]
       ) [MultipleClassVarDecl]
       ClassConstrMethodCurly(
         MultipleClassConstr(
@@ -334,23 +364,23 @@ INFO  01:49:38,656 - Program(
       ) [NoMethodDeclList]
       VoidMethodDecl(
        milica
-        NoMethodFormParams(
-        ) [NoMethodFormParams]
+        ErrorMethodFormParams(
+        ) [ErrorMethodFormParams]
         MethodVarDecls(
           EndOfMethodVarDecl(
           ) [EndOfMethodVarDecl]
-          VarDecl(
+          VarDecls(
             Type(
              int
             ) [Type]
-            SingleVarDecl(
-             x
-              NoBrackets(
-              ) [NoBrackets]
-            ) [SingleVarDecl]
-            EndOfVarDeclaration(
-            ) [EndOfVarDeclaration]
-          ) [VarDecl]
+            EndOfVarDeclarations(
+              EndOfVarDeclar(
+               x
+                NoBrackets(
+                ) [NoBrackets]
+              ) [EndOfVarDeclar]
+            ) [EndOfVarDeclarations]
+          ) [VarDecls]
         ) [MethodVarDecls]
         MethodStmt(
           MethodStmt(
@@ -458,56 +488,8 @@ INFO  01:49:38,656 - Program(
                                 ) [WhileStmt]
                               ) [MethodStmt]
                               IfStmt(
-                                Conditions(
-                                  CondTerms(
-                                    SingleCondFact(
-                                      SingleExpr(
-                                        SingleTerm(
-                                          FactVar(
-                                            SingleDesignIdent(
-                                             milica
-                                            ) [SingleDesignIdent]
-                                          ) [FactVar]
-                                        ) [SingleTerm]
-                                      ) [SingleExpr]
-                                    ) [SingleCondFact]
-                                    SingleCondFact(
-                                      SingleExpr(
-                                        SingleTerm(
-                                          FactVar(
-                                            SingleDesignIdent(
-                                             andrijana
-                                            ) [SingleDesignIdent]
-                                          ) [FactVar]
-                                        ) [SingleTerm]
-                                      ) [SingleExpr]
-                                    ) [SingleCondFact]
-                                  ) [CondTerms]
-                                  SingleCondTerm(
-                                    CondFacts(
-                                      SingleCondFact(
-                                        SingleExpr(
-                                          SingleTerm(
-                                            FactVar(
-                                              SingleDesignIdent(
-                                               andjela
-                                              ) [SingleDesignIdent]
-                                            ) [FactVar]
-                                          ) [SingleTerm]
-                                        ) [SingleExpr]
-                                      ) [SingleCondFact]
-                                      IsEqual(
-                                      ) [IsEqual]
-                                      SingleExpr(
-                                        SingleTerm(
-                                          FactNum(
-                                           1
-                                          ) [FactNum]
-                                        ) [SingleTerm]
-                                      ) [SingleExpr]
-                                    ) [CondFacts]
-                                  ) [SingleCondTerm]
-                                ) [Conditions]
+                                ErrorStmt(
+                                ) [ErrorStmt]
                                 BreakStmt(
                                 ) [BreakStmt]
                                 NoElseStmt(
@@ -700,29 +682,35 @@ INFO  01:49:38,656 - Program(
       MethodVarDecls(
         EndOfMethodVarDecl(
         ) [EndOfMethodVarDecl]
-        VarDecl(
+        VarDecls(
           Type(
            int
           ) [Type]
-          SingleVarDecl(
-           marta
-            NoBrackets(
-            ) [NoBrackets]
-          ) [SingleVarDecl]
-          MultipleVarDecls(
-            EndOfVarDeclaration(
-            ) [EndOfVarDeclaration]
-            SingleVarDecl(
-             djokara
+          MultipleVarDecl(
+            MoreVarDecls(
+             marta
               NoBrackets(
               ) [NoBrackets]
-            ) [SingleVarDecl]
-          ) [MultipleVarDecls]
-        ) [VarDecl]
+            ) [MoreVarDecls]
+            EndOfVarDeclarations(
+              EndOfVarDeclar(
+               djokara
+                NoBrackets(
+                ) [NoBrackets]
+              ) [EndOfVarDeclar]
+            ) [EndOfVarDeclarations]
+          ) [MultipleVarDecl]
+        ) [VarDecls]
       ) [MethodVarDecls]
-      NoMethodStmt(
-      ) [NoMethodStmt]
+      MethodStmt(
+        NoMethodStmt(
+        ) [NoMethodStmt]
+        DesignStmt(
+          DesignError(
+          ) [DesignError]
+        ) [DesignStmt]
+      ) [MethodStmt]
     ) [VoidMethodDecl]
   ) [MethodDecls]
 ) [Program]
-INFO  01:49:38,657 - ===================================
+INFO  23:51:24,156 - ===================================

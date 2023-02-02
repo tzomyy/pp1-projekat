@@ -58,9 +58,11 @@ nonterminal ConstDecl ConstDecl;
 nonterminal Type Type;
 nonterminal SingleConstDecl SingleConstDecl;
 nonterminal MultipleConstDecl MultipleConstDecl;
-nonterminal SingleVarDecl SingleVarDecl;
+
 nonterminal Brackets Brackets;
-nonterminal MultipleVarDecl MultipleVarDecl;
+nonterminal VarDeclarations VarDeclarations;
+nonterminal MoreVarDecl MoreVarDecl;
+nonterminal EndOfVarDecl EndOfVarDecl;
 
 nonterminal ClassDecl ClassDecl;
 nonterminal ClassConstrMethod ClassConstrMethod;
@@ -86,6 +88,7 @@ nonterminal MultipleFormPar MultipleFormPar;
 
 nonterminal Statement Statement;
 nonterminal StmtConst StmtConst;
+nonterminal IfStatement IfStatement;
 nonterminal ElseStatement ElseStatement;
 nonterminal StatementList StatementList;
 
@@ -140,20 +143,31 @@ MultipleConstDecl ::= (MultipleConstDecls) MultipleConstDecl:M1 COMMA SingleCons
 					(EndOfDeclaration) {: RESULT=new EndOfDeclaration(); :} /* epsilon */
 					;					
 
-VarDecl ::= (VarDecl) Type:varName SingleVarDecl:S1 MultipleVarDecl:M2 SEMICOLON {: RESULT=new VarDecl(varName, S1, M2); RESULT.setLine(varNameleft); :};
+VarDecl ::= (VarDecls) Type:varName VarDeclarations:V1 {: RESULT=new VarDecls(varName, V1); RESULT.setLine(varNameleft); :}
+			;
 
-SingleVarDecl ::= (SingleVarDecl) IDENT:varName Brackets:B1 {: RESULT=new SingleVarDecl(varName, B1); RESULT.setLine(varNameleft); :};
+VarDeclarations ::= (MultipleVarDecl) MoreVarDecl:M1 VarDeclarations:V2 {: RESULT=new MultipleVarDecl(M1, V2); RESULT.setLine(M1left); :}
+				|
+				(EndOfVarDeclarations) EndOfVarDecl:E1 {: RESULT=new EndOfVarDeclarations(E1); RESULT.setLine(E1left); :}
+				;
+				
+MoreVarDecl ::= (MoreVarDecls) IDENT:I1 Brackets:B2 COMMA {: RESULT=new MoreVarDecls(I1, B2); RESULT.setLine(I1left); :}
+			|
+			(ErrorMoreVarDecl) error COMMA:l
+			{: parser.report_error("Izvrsen oporavak kod dodeljivanja globalne promenljive do , u liniji  " + lleft, null); :} {: RESULT=new ErrorMoreVarDecl(); :}
+			;
+
+EndOfVarDecl ::= (EndOfVarDeclar) IDENT:I1 Brackets:B2 SEMICOLON {: RESULT=new EndOfVarDeclar(I1, B2); RESULT.setLine(I1left); :}
+			|
+			(ErrorEndOfVarDecl) error SEMICOLON:l
+			{: parser.report_error("Izvrsen oporavak kod dodeljivanja globalne promenljive do ; u liniji " + lleft, null); :} {: RESULT=new ErrorEndOfVarDecl(); :}
+			;
 
 Brackets ::= (Brackets) LSQUARE RSQUARE {: RESULT=new Brackets(); :}
 			|
 			(NoBrackets) {: RESULT=new NoBrackets(); :} /*epsilon*/
 			;
-			
-MultipleVarDecl ::= (MultipleVarDecls) MultipleVarDecl:M1 COMMA SingleVarDecl:S2 {: RESULT=new MultipleVarDecls(M1, S2); RESULT.setLine(M1left); :}
-				|
-				(EndOfVarDeclaration) {: RESULT=new EndOfVarDeclaration(); :} /* epsilon */
-				;
-				
+							
 
 ClassDecl ::= (ClassDecl) CLASS IDENT:I1 ClassExtends:C2 LCURLY ClassVarDecl:C3 ClassConstrMethod:C4 RCURLY {: RESULT=new ClassDecl(I1, C2, C3, C4); RESULT.setLine(I1left); :};
 
@@ -190,11 +204,14 @@ ClassExtends ::= (ClassExtend) EXTENDS Type:T1 {: RESULT=new ClassExtend(T1); RE
 				(NoClassExtend) {: RESULT=new NoClassExtend(); :} /* epsilon */
 				;
 
-ConstructorDecl ::= (ConstructorDecl) IDENT:I1 LPAREN ConstructorFormPars:C2 RPAREN ConstructorVarDecl:C3 LCURLY ConstructorStatement:C4 RCURLY {: RESULT=new ConstructorDecl(I1, C2, C3, C4); RESULT.setLine(I1left); :};
+ConstructorDecl ::= (ConstructorDecl) IDENT:I1 LPAREN ConstructorFormPars:C2 ConstructorVarDecl:C3 LCURLY ConstructorStatement:C4 RCURLY {: RESULT=new ConstructorDecl(I1, C2, C3, C4); RESULT.setLine(I1left); :};
 
-ConstructorFormPars ::= (ConstrFormParams) FormPars:F1 {: RESULT=new ConstrFormParams(F1); RESULT.setLine(F1left); :}
+ConstructorFormPars ::= (ConstrFormParams) FormPars:F1 RPAREN {: RESULT=new ConstrFormParams(F1); RESULT.setLine(F1left); :}
 				|
-				(NoConstrFormParams) {: RESULT=new NoConstrFormParams(); :} /* epsilon */
+				(NoConstrFormParams) RPAREN {: RESULT=new NoConstrFormParams(); :} 
+				|
+				(ErrorConstrFormParams) error RPAREN:l 
+				{: parser.report_error("Izvrsen oporavak kod formalnog parametra do ) u liniji " + lleft, null); :} {: RESULT=new ErrorConstrFormParams(); :}
 				;
 				
 ConstructorVarDecl ::= (ConstrVarDecls) MethodVarDecl:M1 VarDecl:V2 {: RESULT=new ConstrVarDecls(M1, V2); RESULT.setLine(M1left); :}
@@ -212,14 +229,17 @@ MultipleMethodDecl ::= (MethodDecls) MultipleMethodDecl:M1 MethodDecl:M2 {: RESU
 				(NoMethodDeclList) {: RESULT=new NoMethodDeclList(); :} /*epsilon*/
 				;
 
-MethodDecl ::= (TypeMethodDecl) Type:methodType IDENT:methodName LPAREN MethodFormPars:M1 RPAREN MethodVarDecl:M2 LCURLY MethodStatement:M3 RCURLY {: RESULT=new TypeMethodDecl(methodType, methodName, M1, M2, M3); RESULT.setLine(methodTypeleft); :}
+MethodDecl ::= (TypeMethodDecl) Type:methodType IDENT:methodName LPAREN MethodFormPars:M1  MethodVarDecl:M2 LCURLY MethodStatement:M3 RCURLY {: RESULT=new TypeMethodDecl(methodType, methodName, M1, M2, M3); RESULT.setLine(methodTypeleft); :}
 					|
-					(VoidMethodDecl) VOID IDENT:methodName LPAREN MethodFormPars:M1 RPAREN MethodVarDecl:M2 LCURLY MethodStatement:M3 RCURLY {: RESULT=new VoidMethodDecl(methodName, M1, M2, M3); RESULT.setLine(methodNameleft); :}
+					(VoidMethodDecl) VOID IDENT:methodName LPAREN MethodFormPars:M1 MethodVarDecl:M2 LCURLY MethodStatement:M3 RCURLY {: RESULT=new VoidMethodDecl(methodName, M1, M2, M3); RESULT.setLine(methodNameleft); :}
 					;
 					
-MethodFormPars ::= (MethodFormParams) FormPars:F1 {: RESULT=new MethodFormParams(F1); RESULT.setLine(F1left); :}
+MethodFormPars ::= (MethodFormParams) FormPars:F1 RPAREN {: RESULT=new MethodFormParams(F1); RESULT.setLine(F1left); :}
 				|
-				(NoMethodFormParams) {: RESULT=new NoMethodFormParams(); :} /* epsilon */
+				(NoMethodFormParams) RPAREN {: RESULT=new NoMethodFormParams(); :}
+				|
+				(ErrorMethodFormParams) error RPAREN:l
+				{: parser.report_error("Izvrsen oporavak kod formalnog do ) u liniji " + lleft, null); :} {: RESULT=new ErrorMethodFormParams(); :}
 				;
 				
 MethodVarDecl ::= (MethodVarDecls) MethodVarDecl:M1 VarDecl:V2 {: RESULT=new MethodVarDecls(M1, V2); RESULT.setLine(M1left); :}
@@ -232,18 +252,20 @@ MethodStatement ::= (MethodStmt) MethodStatement:M1 Statement:S2 {: RESULT=new M
 				(NoMethodStmt) {: RESULT=new NoMethodStmt(); :} /* epsilon */
 				;
 
-FormPars ::= (FormPars) SingleFormPar:S1 MultipleFormPar:M2 {: RESULT=new FormPars(S1, M2); RESULT.setLine(S1left); :};
+FormPars ::= (FormPars) MultipleFormPar:M1 {: RESULT=new FormPars(M1); RESULT.setLine(M1left); :};
 
 SingleFormPar ::= (SingleFormParam) Type:formType IDENT:formName Brackets:B1 {: RESULT=new SingleFormParam(formType, formName, B1); RESULT.setLine(formTypeleft); :};
 
 MultipleFormPar ::= (MultipleFormPars) MultipleFormPar:M1 COMMA SingleFormPar:S2 {: RESULT=new MultipleFormPars(M1, S2); RESULT.setLine(M1left); :}
 				|
-				(EndOfFormPar) {: RESULT=new EndOfFormPar(); :} /*epsilon*/
+				(EndOfFormPar) SingleFormPar:S1 {: RESULT=new EndOfFormPar(S1); RESULT.setLine(S1left); :}
+				|
+				(ErrorFormComma) error:l {: parser.report_error("Izvrsen oporavak kod formalnog paramtera do , u liniji " + lleft, null); :} COMMA SingleFormPar:S1 {: RESULT=new ErrorFormComma(S1); RESULT.setLine(S1left); :}
 				;
 				
-Statement ::= (DesignStmt) DesignatorStatement:D1 SEMICOLON {: RESULT=new DesignStmt(D1); RESULT.setLine(D1left); :}
+Statement ::= (DesignStmt) DesignatorStatement:D1 {: RESULT=new DesignStmt(D1); RESULT.setLine(D1left); :}
 			|
-			(IfStmt) IF LPAREN Condition:C1 RPAREN Statement:S2 ElseStatement:E3 {: RESULT=new IfStmt(C1, S2, E3); RESULT.setLine(C1left); :}
+			(IfStmt) IfStatement:I1 Statement:S2 ElseStatement:E3 {: RESULT=new IfStmt(I1, S2, E3); RESULT.setLine(I1left); :}
 			|
 			(WhileStmt) WHILE LPAREN Condition:C1 RPAREN Statement:S2 {: RESULT=new WhileStmt(C1, S2); RESULT.setLine(C1left); :}
 			|
@@ -262,6 +284,12 @@ Statement ::= (DesignStmt) DesignatorStatement:D1 SEMICOLON {: RESULT=new Design
 			(ForeachStmt) Designator:D1 DOT FOREACH LPAREN IDENT:I2 ASSIGN Statement:S3 RPAREN SEMICOLON {: RESULT=new ForeachStmt(D1, I2, S3); RESULT.setLine(D1left); :}
 			|
 			(ListStmts) LCURLY StatementList:S1 RCURLY {: RESULT=new ListStmts(S1); RESULT.setLine(S1left); :}
+			;
+			
+IfStatement ::= (IfState) IF LPAREN Condition:C1 RPAREN {: RESULT=new IfState(C1); RESULT.setLine(C1left); :}
+			|
+			(ErrorStmt) error RPAREN:l
+			{: parser.report_error("Izvrsen oporavak kod if konstrukcije do ; u liniji " + lleft, null); :} {: RESULT=new ErrorStmt(); :}
 			;
 			
 StatementList ::= (MoreStatements) StatementList:S1 Statement:S2 {: RESULT=new MoreStatements(S1, S2); RESULT.setLine(S1left); :}
@@ -313,15 +341,18 @@ FactParam ::= (FactFuncParams) ActPars:A1 {: RESULT=new FactFuncParams(A1); RESU
 				(NoFactFuncParams) {: RESULT=new NoFactFuncParams(); :} /* epsilon */
 				;
 		
-DesignatorStatement ::= (DesignAssign) Designator:D1 Assignop:A2 Expr:E3 {: RESULT=new DesignAssign(D1, A2, E3); RESULT.setLine(D1left); :}
+DesignatorStatement ::= (DesignAssign) Designator:D1 Assignop:A2 Expr:E3 SEMICOLON {: RESULT=new DesignAssign(D1, A2, E3); RESULT.setLine(D1left); :}
 					|
-					(DesignFunction) Designator:D1 LPAREN FactParam:F2 RPAREN {: RESULT=new DesignFunction(D1, F2); RESULT.setLine(D1left); :} 
+					(DesignFunction) Designator:D1 LPAREN FactParam:F2 RPAREN SEMICOLON {: RESULT=new DesignFunction(D1, F2); RESULT.setLine(D1left); :}
 					|
-					(DesignInc) Designator:D1 INCREMENT {: RESULT=new DesignInc(D1); RESULT.setLine(D1left); :}
+					(DesignInc) Designator:D1 INCREMENT SEMICOLON {: RESULT=new DesignInc(D1); RESULT.setLine(D1left); :}
 					|
-					(DesignDec) Designator:D1 DECREMENT {: RESULT=new DesignDec(D1); RESULT.setLine(D1left); :}
+					(DesignDec) Designator:D1 DECREMENT SEMICOLON {: RESULT=new DesignDec(D1); RESULT.setLine(D1left); :}
 					|
-					(DesignAssignArray) LSQUARE DesignArray:D1 RSQUARE EQUAL Designator:D2 {: RESULT=new DesignAssignArray(D1, D2); RESULT.setLine(D1left); :}
+					(DesignAssignArray) LSQUARE DesignArray:D1 RSQUARE EQUAL Designator:D2 SEMICOLON {: RESULT=new DesignAssignArray(D1, D2); RESULT.setLine(D1left); :}
+					|
+					(DesignError) error SEMICOLON:l
+					{: parser.report_error("Izvrsen oporavak kod dodeljivanja vrednosti do ; u liniji " + lleft, null); :} {: RESULT=new DesignError(); :}
 					;
 					
 DesignArray ::= (MultipleDesignators) DesignArray:D1 COMMA DesignOptional:D2 {: RESULT=new MultipleDesignators(D1, D2); RESULT.setLine(D1left); :} 
