@@ -23,6 +23,7 @@ program MJProgram
 		petar[-5+true*5]--;
 		break;
 		continue;
+		return +;
 	}
 	
 	void andreja() int marta, djokara; {

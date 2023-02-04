@@ -232,7 +232,7 @@ MultipleMethodDecl ::= (MethodDecls) MultipleMethodDecl:M1 MethodDecl:M2 {: RESU
 				(NoMethodDeclList) {: RESULT=new NoMethodDeclList(); :} /*epsilon*/
 				;
 
-MethodDecl ::= (TypeMethodDecl) Type:methodType IDENT:methodName LPAREN MethodFormPars:M1  MethodVarDecl:M2 LCURLY MethodStatement:M3 RCURLY {: RESULT=new TypeMethodDecl(methodType, methodName, M1, M2, M3); RESULT.setLine(methodTypeleft); :}
+MethodDecl ::= (TypeMethodDecl) Type:methodType IDENT:methodName LPAREN MethodFormPars:M1 MethodVarDecl:M2 LCURLY MethodStatement:M3 RCURLY {: RESULT=new TypeMethodDecl(methodType, methodName, M1, M2, M3); RESULT.setLine(methodTypeleft); :}
 					|
 					(VoidMethodDecl) VOID IDENT:methodName LPAREN MethodFormPars:M1 MethodVarDecl:M2 LCURLY MethodStatement:M3 RCURLY {: RESULT=new VoidMethodDecl(methodName, M1, M2, M3); RESULT.setLine(methodNameleft); :}
 					;

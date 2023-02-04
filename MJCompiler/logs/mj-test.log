@@ -1,873 +1,395 @@
-INFO  00:39:04,947 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\test302.mj
-INFO  00:39:05,002 - #39 program
-INFO  00:39:05,002 - #47 test302
-INFO  00:39:05,002 - #44 const
-INFO  00:39:05,003 - #47 int
-INFO  00:39:05,003 - #47 jedan
-INFO  00:39:05,004 - #20 =
-INFO  00:39:05,004 - #46 1
-INFO  00:39:05,004 - #6 ;
-INFO  00:39:05,005 - #47 int
-INFO  00:39:05,005 - #47 i
-INFO  00:39:05,006 - #6 ;
-INFO  00:39:05,007 - #47 bool
-INFO  00:39:05,007 - #47 ibool
-INFO  00:39:05,007 - #6 ;
-INFO  00:39:05,008 - #47 int
-INFO  00:39:05,008 - #47 niz2
-INFO  00:39:05,008 - #6 ;
-INFO  00:39:05,008 - #47 int
-INFO  00:39:05,008 - #47 niz
-INFO  00:39:05,008 - #22 [
-INFO  00:39:05,008 - #40 ]
-INFO  00:39:05,014 - #6 ;
-INFO  00:39:05,014 - #47 int
-INFO  00:39:05,014 - #47 a
-INFO  00:39:05,014 - #5 ,
-INFO  00:39:05,014 - #47 curr
-INFO  00:39:05,014 - #6 ;
-INFO  00:39:05,014 - #13 {
-INFO  00:39:05,015 - #47 int
-INFO  00:39:05,015 - #47 sum
-INFO  00:39:05,015 - #19 (
-INFO  00:39:05,015 - #47 int
-INFO  00:39:05,016 - #47 z
-INFO  00:39:05,016 - #5 ,
-INFO  00:39:05,016 - #47 int
-INFO  00:39:05,016 - #47 d
-INFO  00:39:05,016 - #4 )
-INFO  00:39:05,017 - #13 {
-INFO  00:39:05,018 - #41 return
-INFO  00:39:05,019 - #47 z
-INFO  00:39:05,019 - #3 +
-INFO  00:39:05,019 - #47 d
-INFO  00:39:05,020 - #6 ;
-INFO  00:39:05,020 - #36 }
-INFO  00:39:05,021 - #47 int
-INFO  00:39:05,021 - #47 inkrement
-INFO  00:39:05,021 - #19 (
-INFO  00:39:05,021 - #47 int
-INFO  00:39:05,021 - #47 a
-INFO  00:39:05,021 - #5 ,
-INFO  00:39:05,021 - #47 int
-INFO  00:39:05,022 - #47 inc
-INFO  00:39:05,022 - #4 )
-INFO  00:39:05,022 - #47 int
-INFO  00:39:05,022 - #47 pom
-INFO  00:39:05,022 - #6 ;
-INFO  00:39:05,022 - #13 {
-INFO  00:39:05,022 - #11 if
-INFO  00:39:05,022 - #19 (
-INFO  00:39:05,022 - #47 inc
-INFO  00:39:05,022 - #23 ==
-INFO  00:39:05,023 - #47 jedan
-INFO  00:39:05,024 - #4 )
-INFO  00:39:05,025 - #47 pom
-INFO  00:39:05,025 - #20 =
-INFO  00:39:05,025 - #46 1
-INFO  00:39:05,026 - #6 ;
-INFO  00:39:05,026 - #10 else
-INFO  00:39:05,026 - #11 if
-INFO  00:39:05,026 - #19 (
-INFO  00:39:05,026 - #47 inc
-INFO  00:39:05,026 - #23 ==
-INFO  00:39:05,026 - #46 2
-INFO  00:39:05,026 - #4 )
-INFO  00:39:05,026 - #47 pom
-INFO  00:39:05,026 - #20 =
-INFO  00:39:05,026 - #47 a
-INFO  00:39:05,026 - #6 ;
-INFO  00:39:05,026 - #41 return
-INFO  00:39:05,027 - #47 sum
-INFO  00:39:05,027 - #19 (
-INFO  00:39:05,027 - #47 a
-INFO  00:39:05,027 - #5 ,
-INFO  00:39:05,027 - #47 pom
-INFO  00:39:05,027 - #4 )
-INFO  00:39:05,027 - #6 ;
-INFO  00:39:05,028 - #36 }
-INFO  00:39:05,028 - #47 bool
-INFO  00:39:05,028 - #47 verify
-INFO  00:39:05,028 - #19 (
-INFO  00:39:05,028 - #4 )
-INFO  00:39:05,028 - #13 {
-INFO  00:39:05,029 - #34 print
-INFO  00:39:05,029 - #19 (
-INFO  00:39:05,029 - #47 v
-INFO  00:39:05,029 - #4 )
-INFO  00:39:05,030 - #6 ;
-INFO  00:39:05,030 - #41 return
-INFO  00:39:05,030 - #8 false
-INFO  00:39:05,031 - #6 ;
-INFO  00:39:05,033 - #36 }
-INFO  00:39:05,033 - #17 void
-INFO  00:39:05,033 - #47 main
-INFO  00:39:05,033 - #19 (
-INFO  00:39:05,033 - #4 )
-INFO  00:39:05,033 - #13 {
-INFO  00:39:05,033 - #11 if
-INFO  00:39:05,033 - #19 (
-INFO  00:39:05,034 - #46 1
-INFO  00:39:05,034 - #16 !=
-INFO  00:39:05,034 - #46 1
-INFO  00:39:05,034 - #4 )
-INFO  00:39:05,034 - #34 print
-INFO  00:39:05,034 - #19 (
-INFO  00:39:05,034 - #15 -
-INFO  00:39:05,035 - #46 6
-INFO  00:39:05,035 - #4 )
-INFO  00:39:05,035 - #6 ;
-INFO  00:39:05,035 - #10 else
-INFO  00:39:05,035 - #34 print
-INFO  00:39:05,035 - #19 (
-INFO  00:39:05,035 - #46 0
-INFO  00:39:05,035 - #4 )
-INFO  00:39:05,035 - #6 ;
-INFO  00:39:05,035 - #47 ibool
-INFO  00:39:05,035 - #20 =
-INFO  00:39:05,035 - #8 false
-INFO  00:39:05,036 - #6 ;
-INFO  00:39:05,036 - #47 i
-INFO  00:39:05,036 - #20 =
-INFO  00:39:05,036 - #46 0
-INFO  00:39:05,036 - #6 ;
-INFO  00:39:05,036 - #29 while
-INFO  00:39:05,036 - #19 (
-INFO  00:39:05,036 - #47 i
-INFO  00:39:05,036 - #21 <
-INFO  00:39:05,036 - #46 5
-INFO  00:39:05,037 - #4 )
-INFO  00:39:05,037 - #13 {
-INFO  00:39:05,037 - #11 if
-INFO  00:39:05,038 - #19 (
-INFO  00:39:05,038 - #47 i
-INFO  00:39:05,038 - #23 ==
-INFO  00:39:05,038 - #46 2
-INFO  00:39:05,038 - #4 )
-INFO  00:39:05,038 - #47 ibool
-INFO  00:39:05,038 - #20 =
-INFO  00:39:05,038 - #8 true
-INFO  00:39:05,038 - #6 ;
-INFO  00:39:05,038 - #47 i
-INFO  00:39:05,038 - #26 ++
-INFO  00:39:05,038 - #6 ;
-INFO  00:39:05,039 - #36 }
-INFO  00:39:05,039 - #11 if
-INFO  00:39:05,039 - #19 (
-INFO  00:39:05,039 - #47 ibool
-INFO  00:39:05,039 - #4 )
-INFO  00:39:05,039 - #11 if
-INFO  00:39:05,039 - #19 (
-INFO  00:39:05,039 - #47 i
-INFO  00:39:05,039 - #23 ==
-INFO  00:39:05,039 - #46 5
-INFO  00:39:05,039 - #4 )
-INFO  00:39:05,039 - #34 print
-INFO  00:39:05,039 - #19 (
-INFO  00:39:05,040 - #46 1
-INFO  00:39:05,040 - #4 )
-INFO  00:39:05,040 - #6 ;
-INFO  00:39:05,040 - #10 else
-INFO  00:39:05,040 - #34 print
-INFO  00:39:05,040 - #19 (
-INFO  00:39:05,040 - #15 -
-INFO  00:39:05,040 - #46 1
-INFO  00:39:05,040 - #4 )
-INFO  00:39:05,040 - #6 ;
-INFO  00:39:05,040 - #47 a
-INFO  00:39:05,040 - #20 =
-INFO  00:39:05,040 - #46 2
-INFO  00:39:05,040 - #6 ;
-INFO  00:39:05,041 - #47 niz
-INFO  00:39:05,041 - #20 =
-INFO  00:39:05,041 - #9 new
-INFO  00:39:05,041 - #47 int
-INFO  00:39:05,041 - #22 [
-INFO  00:39:05,041 - #46 3
-INFO  00:39:05,041 - #40 ]
-INFO  00:39:05,041 - #6 ;
-INFO  00:39:05,041 - #47 niz
-INFO  00:39:05,041 - #22 [
-INFO  00:39:05,041 - #46 0
-INFO  00:39:05,041 - #40 ]
-INFO  00:39:05,042 - #20 =
-INFO  00:39:05,042 - #46 1
-INFO  00:39:05,042 - #27 *
-INFO  00:39:05,042 - #47 a
-INFO  00:39:05,043 - #6 ;
-INFO  00:39:05,043 - #47 niz
-INFO  00:39:05,043 - #22 [
-INFO  00:39:05,043 - #46 1
-INFO  00:39:05,043 - #40 ]
-INFO  00:39:05,043 - #20 =
-INFO  00:39:05,043 - #46 2
-INFO  00:39:05,043 - #27 *
-INFO  00:39:05,043 - #47 a
-INFO  00:39:05,043 - #6 ;
-INFO  00:39:05,043 - #47 niz
-INFO  00:39:05,043 - #22 [
-INFO  00:39:05,043 - #46 2
-INFO  00:39:05,043 - #40 ]
-INFO  00:39:05,043 - #20 =
-INFO  00:39:05,043 - #47 sum
-INFO  00:39:05,043 - #19 (
-INFO  00:39:05,043 - #47 niz
-INFO  00:39:05,044 - #22 [
-INFO  00:39:05,044 - #46 1
-INFO  00:39:05,044 - #40 ]
-INFO  00:39:05,044 - #5 ,
-INFO  00:39:05,044 - #47 niz
-INFO  00:39:05,044 - #22 [
-INFO  00:39:05,044 - #46 0
-INFO  00:39:05,044 - #40 ]
-INFO  00:39:05,044 - #4 )
-INFO  00:39:05,044 - #27 *
-INFO  00:39:05,044 - #47 a
-INFO  00:39:05,044 - #3 +
-INFO  00:39:05,044 - #46 1
-INFO  00:39:05,044 - #6 ;
-INFO  00:39:05,044 - #11 if
-INFO  00:39:05,044 - #19 (
-INFO  00:39:05,044 - #47 verify
-INFO  00:39:05,044 - #19 (
-INFO  00:39:05,045 - #4 )
-INFO  00:39:05,045 - #43 ||
-INFO  00:39:05,045 - #47 niz
-INFO  00:39:05,045 - #22 [
-INFO  00:39:05,045 - #46 2
-INFO  00:39:05,045 - #40 ]
-INFO  00:39:05,045 - #23 ==
-INFO  00:39:05,045 - #46 4
-INFO  00:39:05,045 - #4 )
-INFO  00:39:05,045 - #34 print
-INFO  00:39:05,045 - #19 (
-INFO  00:39:05,045 - #47 ord
-INFO  00:39:05,045 - #19 (
-INFO  00:39:05,046 - #47 A
-INFO  00:39:05,046 - #4 )
-INFO  00:39:05,046 - #4 )
-INFO  00:39:05,046 - #6 ;
-INFO  00:39:05,046 - #10 else
-INFO  00:39:05,046 - #34 print
-INFO  00:39:05,046 - #19 (
-INFO  00:39:05,046 - #47 ord
-INFO  00:39:05,046 - #19 (
-INFO  00:39:05,046 - #47 a
-INFO  00:39:05,046 - #4 )
-INFO  00:39:05,046 - #4 )
-INFO  00:39:05,046 - #6 ;
-INFO  00:39:05,046 - #34 print
-INFO  00:39:05,047 - #19 (
-INFO  00:39:05,047 - #47 eol
-INFO  00:39:05,047 - #4 )
-INFO  00:39:05,047 - #6 ;
-INFO  00:39:05,047 - #47 i
-INFO  00:39:05,047 - #20 =
-INFO  00:39:05,047 - #46 0
-INFO  00:39:05,047 - #6 ;
-INFO  00:39:05,047 - #29 while
-INFO  00:39:05,047 - #19 (
-INFO  00:39:05,047 - #47 i
-INFO  00:39:05,047 - #21 <
-INFO  00:39:05,048 - #46 10
-INFO  00:39:05,048 - #4 )
-INFO  00:39:05,048 - #13 {
-INFO  00:39:05,048 - #11 if
-INFO  00:39:05,048 - #19 (
-INFO  00:39:05,048 - #47 i
-INFO  00:39:05,048 - #23 ==
-INFO  00:39:05,048 - #46 3
-INFO  00:39:05,048 - #4 )
-INFO  00:39:05,048 - #13 {
-INFO  00:39:05,048 - #47 i
-INFO  00:39:05,048 - #26 ++
-INFO  00:39:05,048 - #6 ;
-INFO  00:39:05,048 - #42 continue
-INFO  00:39:05,048 - #6 ;
-INFO  00:39:05,048 - #36 }
-INFO  00:39:05,049 - #11 if
-INFO  00:39:05,049 - #19 (
-INFO  00:39:05,049 - #47 i
-INFO  00:39:05,049 - #23 ==
-INFO  00:39:05,049 - #46 4
-INFO  00:39:05,049 - #4 )
-INFO  00:39:05,049 - #24 break
-INFO  00:39:05,049 - #6 ;
-INFO  00:39:05,049 - #47 i
-INFO  00:39:05,050 - #20 =
-INFO  00:39:05,050 - #47 inkrement
-INFO  00:39:05,050 - #19 (
-INFO  00:39:05,050 - #47 i
-INFO  00:39:05,050 - #5 ,
-INFO  00:39:05,050 - #46 1
-INFO  00:39:05,050 - #4 )
-INFO  00:39:05,050 - #6 ;
-INFO  00:39:05,050 - #36 }
-INFO  00:39:05,050 - #11 if
-INFO  00:39:05,050 - #19 (
-INFO  00:39:05,050 - #47 i
-INFO  00:39:05,050 - #23 ==
-INFO  00:39:05,050 - #46 3
-INFO  00:39:05,050 - #18 &&
-INFO  00:39:05,050 - #47 verify
-INFO  00:39:05,050 - #19 (
-INFO  00:39:05,051 - #4 )
-INFO  00:39:05,051 - #4 )
-INFO  00:39:05,051 - #34 print
-INFO  00:39:05,051 - #19 (
-INFO  00:39:05,051 - #15 -
-INFO  00:39:05,051 - #46 4
-INFO  00:39:05,051 - #4 )
-INFO  00:39:05,051 - #6 ;
-INFO  00:39:05,051 - #10 else
-INFO  00:39:05,051 - #34 print
-INFO  00:39:05,051 - #19 (
-INFO  00:39:05,051 - #46 4
-INFO  00:39:05,051 - #4 )
-INFO  00:39:05,051 - #6 ;
-INFO  00:39:05,051 - #25 read
-INFO  00:39:05,051 - #19 (
-INFO  00:39:05,051 - #47 niz
-INFO  00:39:05,051 - #22 [
-INFO  00:39:05,051 - #46 0
-INFO  00:39:05,051 - #40 ]
-INFO  00:39:05,051 - #4 )
-INFO  00:39:05,051 - #6 ;
-INFO  00:39:05,051 - #25 read
-INFO  00:39:05,052 - #19 (
-INFO  00:39:05,052 - #47 niz
-INFO  00:39:05,052 - #22 [
-INFO  00:39:05,052 - #46 1
-INFO  00:39:05,052 - #40 ]
-INFO  00:39:05,052 - #4 )
-INFO  00:39:05,052 - #6 ;
-INFO  00:39:05,052 - #25 read
-INFO  00:39:05,052 - #19 (
-INFO  00:39:05,052 - #47 niz
-INFO  00:39:05,052 - #22 [
-INFO  00:39:05,052 - #46 2
-INFO  00:39:05,052 - #40 ]
-INFO  00:39:05,052 - #4 )
-INFO  00:39:05,052 - #6 ;
-INFO  00:39:05,052 - #34 print
-INFO  00:39:05,052 - #19 (
-INFO  00:39:05,052 - #47 eol
-INFO  00:39:05,052 - #4 )
-INFO  00:39:05,052 - #6 ;
-INFO  00:39:05,052 - #34 print
-INFO  00:39:05,052 - #19 (
-INFO  00:39:05,052 - #47 sum
-INFO  00:39:05,052 - #19 (
-INFO  00:39:05,052 - #47 sum
-INFO  00:39:05,052 - #19 (
-INFO  00:39:05,052 - #47 niz
-INFO  00:39:05,052 - #22 [
-INFO  00:39:05,052 - #46 0
-INFO  00:39:05,052 - #40 ]
-INFO  00:39:05,052 - #5 ,
-INFO  00:39:05,052 - #47 niz
-INFO  00:39:05,052 - #22 [
-INFO  00:39:05,052 - #46 1
-INFO  00:39:05,053 - #40 ]
-INFO  00:39:05,053 - #4 )
-INFO  00:39:05,053 - #5 ,
-INFO  00:39:05,053 - #47 niz
-INFO  00:39:05,053 - #22 [
-INFO  00:39:05,053 - #46 2
-INFO  00:39:05,053 - #40 ]
-INFO  00:39:05,053 - #4 )
-INFO  00:39:05,053 - #4 )
-INFO  00:39:05,053 - #6 ;
-INFO  00:39:05,053 - #34 print
-INFO  00:39:05,053 - #19 (
-INFO  00:39:05,053 - #47 eol
-INFO  00:39:05,053 - #4 )
-INFO  00:39:05,053 - #6 ;
-INFO  00:39:05,053 - #34 print
-INFO  00:39:05,053 - #19 (
-INFO  00:39:05,053 - #47 inkrement
-INFO  00:39:05,053 - #19 (
-INFO  00:39:05,053 - #47 niz
-INFO  00:39:05,053 - #22 [
-INFO  00:39:05,053 - #46 2
-INFO  00:39:05,053 - #40 ]
-INFO  00:39:05,053 - #5 ,
-INFO  00:39:05,053 - #46 2
-INFO  00:39:05,053 - #4 )
-INFO  00:39:05,053 - #4 )
-INFO  00:39:05,053 - #6 ;
-INFO  00:39:05,054 - #47 a
-INFO  00:39:05,054 - #20 =
-INFO  00:39:05,054 - #46 3
-INFO  00:39:05,054 - #6 ;
-INFO  00:39:05,054 - #47 i
-INFO  00:39:05,054 - #20 =
-INFO  00:39:05,054 - #46 0
-INFO  00:39:05,054 - #6 ;
-INFO  00:39:05,054 - #29 while
-INFO  00:39:05,054 - #19 (
-INFO  00:39:05,054 - #47 i
-INFO  00:39:05,054 - #21 <
-INFO  00:39:05,054 - #46 3
-INFO  00:39:05,054 - #4 )
-INFO  00:39:05,054 - #13 {
-INFO  00:39:05,054 - #47 niz
-INFO  00:39:05,054 - #22 [
-INFO  00:39:05,054 - #47 i
-INFO  00:39:05,054 - #40 ]
-INFO  00:39:05,054 - #20 =
-INFO  00:39:05,054 - #47 niz
-INFO  00:39:05,054 - #22 [
-INFO  00:39:05,054 - #47 i
-INFO  00:39:05,054 - #40 ]
-INFO  00:39:05,054 - #27 *
-INFO  00:39:05,054 - #46 2
-INFO  00:39:05,054 - #27 *
-INFO  00:39:05,054 - #47 a
-INFO  00:39:05,055 - #6 ;
-INFO  00:39:05,055 - #47 i
-INFO  00:39:05,055 - #26 ++
-INFO  00:39:05,055 - #6 ;
-INFO  00:39:05,055 - #36 }
-INFO  00:39:05,055 - #47 niz
-INFO  00:39:05,055 - #12 .
-INFO  00:39:05,055 - #35 foreach
-INFO  00:39:05,055 - #19 (
-INFO  00:39:05,055 - #47 curr
-INFO  00:39:05,055 - #14 =>
-INFO  00:39:05,055 - #34 print
-INFO  00:39:05,055 - #19 (
-INFO  00:39:05,055 - #47 curr
-INFO  00:39:05,055 - #4 )
-INFO  00:39:05,055 - #6 ;
-INFO  00:39:05,055 - #4 )
-INFO  00:39:05,055 - #6 ;
-INFO  00:39:05,055 - #34 print
-INFO  00:39:05,055 - #19 (
-INFO  00:39:05,055 - #47 eol
-INFO  00:39:05,055 - #4 )
-INFO  00:39:05,055 - #6 ;
-INFO  00:39:05,056 - #47 niz2
-INFO  00:39:05,056 - #20 =
-INFO  00:39:05,056 - #46 0
-INFO  00:39:05,056 - #6 ;
-INFO  00:39:05,056 - #47 niz
-INFO  00:39:05,056 - #12 .
-INFO  00:39:05,056 - #35 foreach
-INFO  00:39:05,056 - #19 (
-INFO  00:39:05,056 - #47 curr
-INFO  00:39:05,056 - #14 =>
-INFO  00:39:05,056 - #13 {
-INFO  00:39:05,056 - #47 niz2
-INFO  00:39:05,056 - #20 =
-INFO  00:39:05,056 - #47 niz2
-INFO  00:39:05,056 - #3 +
-INFO  00:39:05,056 - #47 curr
-INFO  00:39:05,056 - #27 *
-INFO  00:39:05,056 - #47 curr
-INFO  00:39:05,056 - #6 ;
-INFO  00:39:05,056 - #36 }
-INFO  00:39:05,056 - #4 )
-INFO  00:39:05,056 - #6 ;
-INFO  00:39:05,056 - #34 print
-INFO  00:39:05,056 - #19 (
-INFO  00:39:05,056 - #47 niz2
-INFO  00:39:05,056 - #4 )
-INFO  00:39:05,056 - #6 ;
-INFO  00:39:05,056 - #36 }
-INFO  00:39:05,056 - #36 }
-INFO  00:39:05,067 - Program(
- test302
-  VarDeclaration(
+INFO  18:37:46,600 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  18:37:46,659 - #39 program
+INFO  18:37:46,659 - #47 MJProgram
+INFO  18:37:46,659 - #44 const
+INFO  18:37:46,660 - #47 int
+INFO  18:37:46,660 - #47 milica
+INFO  18:37:46,661 - #20 =
+INFO  18:37:46,661 - #8 true
+INFO  18:37:46,661 - #5 ,
+INFO  18:37:46,661 - #47 jovanka
+INFO  18:37:46,662 - #20 =
+INFO  18:37:46,662 - #33 "Joc"
+INFO  18:37:46,662 - #6 ;
+INFO  18:37:46,662 - #47 int
+INFO  18:37:46,662 - #47 zorana
+INFO  18:37:46,663 - #22 [
+INFO  18:37:46,663 - #40 ]
+INFO  18:37:46,663 - #47 tra
+ERROR 18:37:46,663 - 
+Sintaksna greska na liniji 3
+INFO  18:37:46,663 - #5 ,
+INFO  18:37:46,663 - #47 milic
+INFO  18:37:46,669 - #47 cici
+INFO  18:37:46,669 - #5 ,
+INFO  18:37:46,669 - #47 jasna
+INFO  18:37:46,670 - #6 ;
+INFO  18:37:46,670 - #37 class
+ERROR 18:37:46,670 - Izvrsen oporavak kod dodeljivanja globalne promenljive do , u liniji  3
+INFO  18:37:46,672 - #47 B
+INFO  18:37:46,672 - #7 extends
+INFO  18:37:46,672 - #47 M
+INFO  18:37:46,672 - #13 {
+INFO  18:37:46,672 - #47 int
+INFO  18:37:46,673 - #47 x
+INFO  18:37:46,673 - #6 ;
+INFO  18:37:46,673 - #47 double
+INFO  18:37:46,673 - #47 y
+INFO  18:37:46,673 - #5 ,
+INFO  18:37:46,673 - #47 z
+INFO  18:37:46,673 - #47 ggg
+ERROR 18:37:46,673 - 
+Sintaksna greska na liniji 4
+INFO  18:37:46,673 - #47 gg
+INFO  18:37:46,673 - #6 ;
+INFO  18:37:46,673 - #13 {
+INFO  18:37:46,674 - #47 B
+INFO  18:37:46,674 - #19 (
+ERROR 18:37:46,674 - Izvrsen oporavak kod dodeljivanja globalne promenljive do ; u liniji 4
+INFO  18:37:46,674 - #4 )
+INFO  18:37:46,674 - #13 {
+INFO  18:37:46,676 - #36 }
+INFO  18:37:46,676 - #47 B
+INFO  18:37:46,677 - #19 (
+INFO  18:37:46,677 - #4 )
+INFO  18:37:46,677 - #13 {
+INFO  18:37:46,677 - #36 }
+INFO  18:37:46,677 - #17 void
+INFO  18:37:46,677 - #47 milica
+INFO  18:37:46,677 - #19 (
+INFO  18:37:46,677 - #4 )
+INFO  18:37:46,678 - #13 {
+INFO  18:37:46,678 - #36 }
+INFO  18:37:46,679 - #17 void
+INFO  18:37:46,679 - #47 milica
+INFO  18:37:46,679 - #19 (
+INFO  18:37:46,679 - #4 )
+INFO  18:37:46,679 - #13 {
+INFO  18:37:46,680 - #36 }
+INFO  18:37:46,680 - #36 }
+INFO  18:37:46,680 - #36 }
+INFO  18:37:46,680 - #13 {
+INFO  18:37:46,681 - #17 void
+INFO  18:37:46,681 - #47 milica
+INFO  18:37:46,681 - #19 (
+INFO  18:37:46,682 - #47 int
+INFO  18:37:46,682 - #47 x
+INFO  18:37:46,682 - #22 [
+INFO  18:37:46,682 - #40 ]
+INFO  18:37:46,682 - #47 y
+ERROR 18:37:46,682 - 
+Sintaksna greska na liniji 11
+INFO  18:37:46,682 - #5 ,
+INFO  18:37:46,682 - #47 la
+INFO  18:37:46,682 - #47 la
+INFO  18:37:46,682 - #47 la
+ERROR 18:37:46,682 - Izvrsen oporavak kod formalnog paramtera do , u liniji 11
+ERROR 18:37:46,682 - 
+Sintaksna greska na liniji 11
+INFO  18:37:46,683 - #4 )
+INFO  18:37:46,683 - #47 int
+INFO  18:37:46,683 - #47 x
+INFO  18:37:46,683 - #6 ;
+ERROR 18:37:46,683 - Izvrsen oporavak kod formalnog do ) u liniji 11
+INFO  18:37:46,684 - #13 {
+INFO  18:37:46,684 - #22 [
+INFO  18:37:46,684 - #47 a
+INFO  18:37:46,684 - #5 ,
+INFO  18:37:46,684 - #47 b
+INFO  18:37:46,684 - #5 ,
+INFO  18:37:46,684 - #5 ,
+INFO  18:37:46,685 - #5 ,
+INFO  18:37:46,685 - #47 c
+INFO  18:37:46,685 - #5 ,
+INFO  18:37:46,685 - #40 ]
+INFO  18:37:46,685 - #20 =
+INFO  18:37:46,687 - #47 niz
+INFO  18:37:46,687 - #6 ;
+INFO  18:37:46,687 - #47 milica
+INFO  18:37:46,687 - #12 .
+INFO  18:37:46,687 - #47 vasiljevic
+INFO  18:37:46,687 - #26 ++
+INFO  18:37:46,687 - #6 ;
+INFO  18:37:46,687 - #29 while
+INFO  18:37:46,687 - #19 (
+INFO  18:37:46,687 - #47 kuzma
+INFO  18:37:46,687 - #23 ==
+INFO  18:37:46,688 - #33 "studentijada"
+INFO  18:37:46,688 - #4 )
+INFO  18:37:46,689 - #41 return
+INFO  18:37:46,689 - #46 5
+INFO  18:37:46,689 - #6 ;
+INFO  18:37:46,689 - #11 if
+INFO  18:37:46,690 - #19 (
+INFO  18:37:46,690 - #47 milica
+INFO  18:37:46,690 - #18 &&
+INFO  18:37:46,690 - #47 andrijana
+INFO  18:37:46,690 - #43 ||
+INFO  18:37:46,690 - #47 andjela
+INFO  18:37:46,691 - #23 ==
+INFO  18:37:46,691 - #20 =
+ERROR 18:37:46,691 - 
+Sintaksna greska na liniji 15
+INFO  18:37:46,691 - #46 1
+INFO  18:37:46,691 - #4 )
+INFO  18:37:46,691 - #24 break
+INFO  18:37:46,691 - #6 ;
+INFO  18:37:46,691 - #13 {
+ERROR 18:37:46,691 - Izvrsen oporavak kod if konstrukcije do ; u liniji 15
+INFO  18:37:46,693 - #24 break
+INFO  18:37:46,694 - #6 ;
+INFO  18:37:46,694 - #36 }
+INFO  18:37:46,694 - #47 niki
+INFO  18:37:46,694 - #22 [
+INFO  18:37:46,694 - #15 -
+INFO  18:37:46,695 - #46 5
+INFO  18:37:46,695 - #40 ]
+INFO  18:37:46,695 - #12 .
+INFO  18:37:46,695 - #35 foreach
+INFO  18:37:46,695 - #19 (
+INFO  18:37:46,695 - #47 losa
+INFO  18:37:46,695 - #14 =>
+INFO  18:37:46,695 - #42 continue
+INFO  18:37:46,695 - #6 ;
+INFO  18:37:46,695 - #4 )
+INFO  18:37:46,695 - #6 ;
+INFO  18:37:46,696 - #25 read
+INFO  18:37:46,696 - #19 (
+INFO  18:37:46,696 - #47 mi
+INFO  18:37:46,696 - #12 .
+INFO  18:37:46,696 - #47 kalasi
+INFO  18:37:46,696 - #22 [
+INFO  18:37:46,696 - #46 5
+INFO  18:37:46,696 - #40 ]
+INFO  18:37:46,696 - #12 .
+INFO  18:37:46,696 - #47 lepa
+INFO  18:37:46,696 - #4 )
+INFO  18:37:46,696 - #6 ;
+INFO  18:37:46,696 - #34 print
+INFO  18:37:46,696 - #19 (
+INFO  18:37:46,696 - #46 5
+INFO  18:37:46,696 - #3 +
+INFO  18:37:46,696 - #46 6
+INFO  18:37:46,697 - #5 ,
+INFO  18:37:46,698 - #46 5
+INFO  18:37:46,698 - #4 )
+INFO  18:37:46,698 - #6 ;
+INFO  18:37:46,698 - #41 return
+INFO  18:37:46,698 - #6 ;
+INFO  18:37:46,698 - #41 return
+INFO  18:37:46,699 - #19 (
+INFO  18:37:46,699 - #46 5
+INFO  18:37:46,699 - #3 +
+INFO  18:37:46,699 - #46 7
+INFO  18:37:46,699 - #27 *
+INFO  18:37:46,699 - #8 true
+INFO  18:37:46,700 - #4 )
+INFO  18:37:46,701 - #6 ;
+INFO  18:37:46,701 - #41 return
+INFO  18:37:46,701 - #9 new
+INFO  18:37:46,701 - #47 int
+INFO  18:37:46,701 - #22 [
+INFO  18:37:46,701 - #46 5
+INFO  18:37:46,701 - #27 *
+INFO  18:37:46,701 - #46 6
+INFO  18:37:46,701 - #3 +
+INFO  18:37:46,701 - #46 4
+INFO  18:37:46,701 - #40 ]
+INFO  18:37:46,701 - #6 ;
+INFO  18:37:46,701 - #47 petar
+INFO  18:37:46,701 - #22 [
+INFO  18:37:46,701 - #15 -
+INFO  18:37:46,702 - #46 5
+INFO  18:37:46,702 - #3 +
+INFO  18:37:46,702 - #8 true
+INFO  18:37:46,702 - #27 *
+INFO  18:37:46,702 - #46 5
+INFO  18:37:46,702 - #40 ]
+INFO  18:37:46,702 - #38 --
+INFO  18:37:46,702 - #6 ;
+INFO  18:37:46,702 - #24 break
+INFO  18:37:46,702 - #6 ;
+INFO  18:37:46,702 - #42 continue
+INFO  18:37:46,702 - #6 ;
+INFO  18:37:46,702 - #41 return
+INFO  18:37:46,702 - #3 +
+ERROR 18:37:46,702 - 
+Sintaksna greska na liniji 26
+INFO  18:37:46,702 - #6 ;
+INFO  18:37:46,702 - #36 }
+INFO  18:37:46,702 - #17 void
+INFO  18:37:46,702 - #47 andreja
+ERROR 18:37:46,703 - Izvrsen oporavak kod dodeljivanja vrednosti do ; u liniji 26
+INFO  18:37:46,703 - #19 (
+INFO  18:37:46,703 - #4 )
+INFO  18:37:46,704 - #47 int
+INFO  18:37:46,704 - #47 marta
+INFO  18:37:46,704 - #5 ,
+INFO  18:37:46,704 - #47 djokara
+INFO  18:37:46,704 - #6 ;
+INFO  18:37:46,704 - #13 {
+INFO  18:37:46,704 - #47 milica
+INFO  18:37:46,704 - #26 ++
+INFO  18:37:46,704 - #26 ++
+ERROR 18:37:46,704 - 
+Sintaksna greska na liniji 30
+INFO  18:37:46,704 - #6 ;
+INFO  18:37:46,704 - #36 }
+INFO  18:37:46,704 - #36 }
+ERROR 18:37:46,705 - Izvrsen oporavak kod dodeljivanja vrednosti do ; u liniji 30
+INFO  18:37:46,710 - Program(
+ MJProgram
+  ClassDeclaration(
     VarDeclaration(
-      VarDeclaration(
-        VarDeclaration(
-          VarDeclaration(
-            ConstDeclaration(
-              NoDeclaration(
-              ) [NoDeclaration]
-              ConstDecl(
-                Type(
-                 int
-                ) [Type]
-                IntegerConstDecl(
-                 jedan
-                 1
-                ) [IntegerConstDecl]
-                EndOfDeclaration(
-                ) [EndOfDeclaration]
-              ) [ConstDecl]
-            ) [ConstDeclaration]
-            VarDecls(
-              Type(
-               int
-              ) [Type]
-              EndOfVarDeclarations(
-                EndOfVarDeclar(
-                 i
-                  NoBrackets(
-                  ) [NoBrackets]
-                ) [EndOfVarDeclar]
-              ) [EndOfVarDeclarations]
-            ) [VarDecls]
-          ) [VarDeclaration]
+      ConstDeclaration(
+        NoDeclaration(
+        ) [NoDeclaration]
+        ConstDecl(
+          Type(
+           int
+          ) [Type]
+          BoolConstDecl(
+           milica
+          ) [BoolConstDecl]
+          MultipleConstDecls(
+            EndOfDeclaration(
+            ) [EndOfDeclaration]
+            CharConstDecl(
+             jovanka
+            ) [CharConstDecl]
+          ) [MultipleConstDecls]
+        ) [ConstDecl]
+      ) [ConstDeclaration]
+      VarDecls(
+        Type(
+         int
+        ) [Type]
+        MultipleVarDecl(
+          ErrorMoreVarDecl(
+          ) [ErrorMoreVarDecl]
+          EndOfVarDeclarations(
+            EndOfVarDeclar(
+             jasna
+              NoBrackets(
+              ) [NoBrackets]
+            ) [EndOfVarDeclar]
+          ) [EndOfVarDeclarations]
+        ) [MultipleVarDecl]
+      ) [VarDecls]
+    ) [VarDeclaration]
+    ClassDecl(
+     B
+      ClassExtend(
+        Type(
+         M
+        ) [Type]
+      ) [ClassExtend]
+      MultipleClassVarDecl(
+        MultipleClassVarDecl(
+          EndOfClassVarDecl(
+          ) [EndOfClassVarDecl]
           VarDecls(
             Type(
-             bool
+             int
             ) [Type]
             EndOfVarDeclarations(
               EndOfVarDeclar(
-               ibool
+               x
                 NoBrackets(
                 ) [NoBrackets]
               ) [EndOfVarDeclar]
             ) [EndOfVarDeclarations]
           ) [VarDecls]
-        ) [VarDeclaration]
+        ) [MultipleClassVarDecl]
         VarDecls(
           Type(
-           int
+           double
           ) [Type]
-          EndOfVarDeclarations(
-            EndOfVarDeclar(
-             niz2
+          MultipleVarDecl(
+            MoreVarDecls(
+             y
               NoBrackets(
               ) [NoBrackets]
-            ) [EndOfVarDeclar]
-          ) [EndOfVarDeclarations]
+            ) [MoreVarDecls]
+            EndOfVarDeclarations(
+              ErrorEndOfVarDecl(
+              ) [ErrorEndOfVarDecl]
+            ) [EndOfVarDeclarations]
+          ) [MultipleVarDecl]
         ) [VarDecls]
-      ) [VarDeclaration]
-      VarDecls(
-        Type(
-         int
-        ) [Type]
-        EndOfVarDeclarations(
-          EndOfVarDeclar(
-           niz
-            Brackets(
-            ) [Brackets]
-          ) [EndOfVarDeclar]
-        ) [EndOfVarDeclarations]
-      ) [VarDecls]
-    ) [VarDeclaration]
-    VarDecls(
-      Type(
-       int
-      ) [Type]
-      MultipleVarDecl(
-        MoreVarDecls(
-         a
-          NoBrackets(
-          ) [NoBrackets]
-        ) [MoreVarDecls]
-        EndOfVarDeclarations(
-          EndOfVarDeclar(
-           curr
-            NoBrackets(
-            ) [NoBrackets]
-          ) [EndOfVarDeclar]
-        ) [EndOfVarDeclarations]
-      ) [MultipleVarDecl]
-    ) [VarDecls]
-  ) [VarDeclaration]
+      ) [MultipleClassVarDecl]
+      ClassConstrMethodCurly(
+        MultipleClassConstr(
+          EndOfClassConstrDecl(
+            ConstructorDecl(
+             B
+              NoConstrFormParams(
+              ) [NoConstrFormParams]
+              EndOfConstrVarDecl(
+              ) [EndOfConstrVarDecl]
+              EndOfConstrStmt(
+              ) [EndOfConstrStmt]
+            ) [ConstructorDecl]
+          ) [EndOfClassConstrDecl]
+          ConstructorDecl(
+           B
+            NoConstrFormParams(
+            ) [NoConstrFormParams]
+            EndOfConstrVarDecl(
+            ) [EndOfConstrVarDecl]
+            EndOfConstrStmt(
+            ) [EndOfConstrStmt]
+          ) [ConstructorDecl]
+        ) [MultipleClassConstr]
+        MultipleClassMethod(
+          EndOfClassMethod(
+            VoidMethodDecl(
+             milica
+              NoMethodFormParams(
+              ) [NoMethodFormParams]
+              EndOfMethodVarDecl(
+              ) [EndOfMethodVarDecl]
+              NoMethodStmt(
+              ) [NoMethodStmt]
+            ) [VoidMethodDecl]
+          ) [EndOfClassMethod]
+          VoidMethodDecl(
+           milica
+            NoMethodFormParams(
+            ) [NoMethodFormParams]
+            EndOfMethodVarDecl(
+            ) [EndOfMethodVarDecl]
+            NoMethodStmt(
+            ) [NoMethodStmt]
+          ) [VoidMethodDecl]
+        ) [MultipleClassMethod]
+      ) [ClassConstrMethodCurly]
+    ) [ClassDecl]
+  ) [ClassDeclaration]
   MethodDecls(
     MethodDecls(
-      MethodDecls(
-        MethodDecls(
-          NoMethodDeclList(
-          ) [NoMethodDeclList]
-          TypeMethodDecl(
+      NoMethodDeclList(
+      ) [NoMethodDeclList]
+      VoidMethodDecl(
+       milica
+        ErrorMethodFormParams(
+        ) [ErrorMethodFormParams]
+        MethodVarDecls(
+          EndOfMethodVarDecl(
+          ) [EndOfMethodVarDecl]
+          VarDecls(
             Type(
              int
             ) [Type]
-           sum
-            MethodFormParams(
-              FormPars(
-                MultipleFormPars(
-                  EndOfFormPar(
-                    SingleFormParam(
-                      Type(
-                       int
-                      ) [Type]
-                     z
-                      NoBrackets(
-                      ) [NoBrackets]
-                    ) [SingleFormParam]
-                  ) [EndOfFormPar]
-                  SingleFormParam(
-                    Type(
-                     int
-                    ) [Type]
-                   d
-                    NoBrackets(
-                    ) [NoBrackets]
-                  ) [SingleFormParam]
-                ) [MultipleFormPars]
-              ) [FormPars]
-            ) [MethodFormParams]
-            EndOfMethodVarDecl(
-            ) [EndOfMethodVarDecl]
-            MethodStmt(
-              NoMethodStmt(
-              ) [NoMethodStmt]
-              ReturnExpr(
-                MultipleExpr(
-                  SingleExpr(
-                    SingleTerm(
-                      FactVar(
-                        SingleDesignIdent(
-                         z
-                        ) [SingleDesignIdent]
-                      ) [FactVar]
-                    ) [SingleTerm]
-                  ) [SingleExpr]
-                  Plus(
-                  ) [Plus]
-                  SingleTerm(
-                    FactVar(
-                      SingleDesignIdent(
-                       d
-                      ) [SingleDesignIdent]
-                    ) [FactVar]
-                  ) [SingleTerm]
-                ) [MultipleExpr]
-              ) [ReturnExpr]
-            ) [MethodStmt]
-          ) [TypeMethodDecl]
-        ) [MethodDecls]
-        TypeMethodDecl(
-          Type(
-           int
-          ) [Type]
-         inkrement
-          MethodFormParams(
-            FormPars(
-              MultipleFormPars(
-                EndOfFormPar(
-                  SingleFormParam(
-                    Type(
-                     int
-                    ) [Type]
-                   a
-                    NoBrackets(
-                    ) [NoBrackets]
-                  ) [SingleFormParam]
-                ) [EndOfFormPar]
-                SingleFormParam(
-                  Type(
-                   int
-                  ) [Type]
-                 inc
-                  NoBrackets(
-                  ) [NoBrackets]
-                ) [SingleFormParam]
-              ) [MultipleFormPars]
-            ) [FormPars]
-          ) [MethodFormParams]
-          MethodVarDecls(
-            EndOfMethodVarDecl(
-            ) [EndOfMethodVarDecl]
-            VarDecls(
-              Type(
-               int
-              ) [Type]
-              EndOfVarDeclarations(
-                EndOfVarDeclar(
-                 pom
-                  NoBrackets(
-                  ) [NoBrackets]
-                ) [EndOfVarDeclar]
-              ) [EndOfVarDeclarations]
-            ) [VarDecls]
-          ) [MethodVarDecls]
-          MethodStmt(
-            MethodStmt(
-              NoMethodStmt(
-              ) [NoMethodStmt]
-              IfStmt(
-                IfState(
-                  SingleCondition(
-                    SingleCondTerm(
-                      CondFacts(
-                        SingleCondFact(
-                          SingleExpr(
-                            SingleTerm(
-                              FactVar(
-                                SingleDesignIdent(
-                                 inc
-                                ) [SingleDesignIdent]
-                              ) [FactVar]
-                            ) [SingleTerm]
-                          ) [SingleExpr]
-                        ) [SingleCondFact]
-                        IsEqual(
-                        ) [IsEqual]
-                        SingleExpr(
-                          SingleTerm(
-                            FactVar(
-                              SingleDesignIdent(
-                               jedan
-                              ) [SingleDesignIdent]
-                            ) [FactVar]
-                          ) [SingleTerm]
-                        ) [SingleExpr]
-                      ) [CondFacts]
-                    ) [SingleCondTerm]
-                  ) [SingleCondition]
-                ) [IfState]
-                DesignStmt(
-                  DesignAssign(
-                    SingleDesignIdent(
-                     pom
-                    ) [SingleDesignIdent]
-                    Assignop(
-                    ) [Assignop]
-                    SingleExpr(
-                      SingleTerm(
-                        FactNum(
-                         1
-                        ) [FactNum]
-                      ) [SingleTerm]
-                    ) [SingleExpr]
-                  ) [DesignAssign]
-                ) [DesignStmt]
-                ElseStmt(
-                  IfStmt(
-                    IfState(
-                      SingleCondition(
-                        SingleCondTerm(
-                          CondFacts(
-                            SingleCondFact(
-                              SingleExpr(
-                                SingleTerm(
-                                  FactVar(
-                                    SingleDesignIdent(
-                                     inc
-                                    ) [SingleDesignIdent]
-                                  ) [FactVar]
-                                ) [SingleTerm]
-                              ) [SingleExpr]
-                            ) [SingleCondFact]
-                            IsEqual(
-                            ) [IsEqual]
-                            SingleExpr(
-                              SingleTerm(
-                                FactNum(
-                                 2
-                                ) [FactNum]
-                              ) [SingleTerm]
-                            ) [SingleExpr]
-                          ) [CondFacts]
-                        ) [SingleCondTerm]
-                      ) [SingleCondition]
-                    ) [IfState]
-                    DesignStmt(
-                      DesignAssign(
-                        SingleDesignIdent(
-                         pom
-                        ) [SingleDesignIdent]
-                        Assignop(
-                        ) [Assignop]
-                        SingleExpr(
-                          SingleTerm(
-                            FactVar(
-                              SingleDesignIdent(
-                               a
-                              ) [SingleDesignIdent]
-                            ) [FactVar]
-                          ) [SingleTerm]
-                        ) [SingleExpr]
-                      ) [DesignAssign]
-                    ) [DesignStmt]
-                    NoElseStmt(
-                    ) [NoElseStmt]
-                  ) [IfStmt]
-                ) [ElseStmt]
-              ) [IfStmt]
-            ) [MethodStmt]
-            ReturnExpr(
-              SingleExpr(
-                SingleTerm(
-                  FactFunc(
-                    SingleDesignIdent(
-                     sum
-                    ) [SingleDesignIdent]
-                    FactFuncParams(
-                      ActParams(
-                        SingleActParam(
-                          SingleExpr(
-                            SingleTerm(
-                              FactVar(
-                                SingleDesignIdent(
-                                 a
-                                ) [SingleDesignIdent]
-                              ) [FactVar]
-                            ) [SingleTerm]
-                          ) [SingleExpr]
-                        ) [SingleActParam]
-                        SingleExpr(
-                          SingleTerm(
-                            FactVar(
-                              SingleDesignIdent(
-                               pom
-                              ) [SingleDesignIdent]
-                            ) [FactVar]
-                          ) [SingleTerm]
-                        ) [SingleExpr]
-                      ) [ActParams]
-                    ) [FactFuncParams]
-                  ) [FactFunc]
-                ) [SingleTerm]
-              ) [SingleExpr]
-            ) [ReturnExpr]
-          ) [MethodStmt]
-        ) [TypeMethodDecl]
-      ) [MethodDecls]
-      TypeMethodDecl(
-        Type(
-         bool
-        ) [Type]
-       verify
-        NoMethodFormParams(
-        ) [NoMethodFormParams]
-        EndOfMethodVarDecl(
-        ) [EndOfMethodVarDecl]
-        MethodStmt(
-          MethodStmt(
-            NoMethodStmt(
-            ) [NoMethodStmt]
-            PrintStmt(
-              SingleExpr(
-                SingleTerm(
-                  FactVar(
-                    SingleDesignIdent(
-                     v
-                    ) [SingleDesignIdent]
-                  ) [FactVar]
-                ) [SingleTerm]
-              ) [SingleExpr]
-              NoStmtCnst(
-              ) [NoStmtCnst]
-            ) [PrintStmt]
-          ) [MethodStmt]
-          ReturnExpr(
-            SingleExpr(
-              SingleTerm(
-                FactBoolean(
-                ) [FactBoolean]
-              ) [SingleTerm]
-            ) [SingleExpr]
-          ) [ReturnExpr]
-        ) [MethodStmt]
-      ) [TypeMethodDecl]
-    ) [MethodDecls]
-    VoidMethodDecl(
-     main
-      NoMethodFormParams(
-      ) [NoMethodFormParams]
-      EndOfMethodVarDecl(
-      ) [EndOfMethodVarDecl]
-      MethodStmt(
+            EndOfVarDeclarations(
+              EndOfVarDeclar(
+               x
+                NoBrackets(
+                ) [NoBrackets]
+              ) [EndOfVarDeclar]
+            ) [EndOfVarDeclarations]
+          ) [VarDecls]
+        ) [MethodVarDecls]
         MethodStmt(
           MethodStmt(
             MethodStmt(
@@ -883,1304 +405,328 @@ INFO  00:39:05,067 - Program(
                                 MethodStmt(
                                   MethodStmt(
                                     MethodStmt(
-                                      MethodStmt(
-                                        MethodStmt(
-                                          MethodStmt(
-                                            MethodStmt(
-                                              MethodStmt(
-                                                MethodStmt(
-                                                  MethodStmt(
-                                                    MethodStmt(
-                                                      MethodStmt(
-                                                        MethodStmt(
-                                                          MethodStmt(
-                                                            MethodStmt(
-                                                              MethodStmt(
-                                                                MethodStmt(
-                                                                  NoMethodStmt(
-                                                                  ) [NoMethodStmt]
-                                                                  IfStmt(
-                                                                    IfState(
-                                                                      SingleCondition(
-                                                                        SingleCondTerm(
-                                                                          CondFacts(
-                                                                            SingleCondFact(
-                                                                              SingleExpr(
-                                                                                SingleTerm(
-                                                                                  FactNum(
-                                                                                   1
-                                                                                  ) [FactNum]
-                                                                                ) [SingleTerm]
-                                                                              ) [SingleExpr]
-                                                                            ) [SingleCondFact]
-                                                                            NotEqual(
-                                                                            ) [NotEqual]
-                                                                            SingleExpr(
-                                                                              SingleTerm(
-                                                                                FactNum(
-                                                                                 1
-                                                                                ) [FactNum]
-                                                                              ) [SingleTerm]
-                                                                            ) [SingleExpr]
-                                                                          ) [CondFacts]
-                                                                        ) [SingleCondTerm]
-                                                                      ) [SingleCondition]
-                                                                    ) [IfState]
-                                                                    PrintStmt(
-                                                                      NegativeExpr(
-                                                                        SingleTerm(
-                                                                          FactNum(
-                                                                           6
-                                                                          ) [FactNum]
-                                                                        ) [SingleTerm]
-                                                                      ) [NegativeExpr]
-                                                                      NoStmtCnst(
-                                                                      ) [NoStmtCnst]
-                                                                    ) [PrintStmt]
-                                                                    ElseStmt(
-                                                                      PrintStmt(
-                                                                        SingleExpr(
-                                                                          SingleTerm(
-                                                                            FactNum(
-                                                                             0
-                                                                            ) [FactNum]
-                                                                          ) [SingleTerm]
-                                                                        ) [SingleExpr]
-                                                                        NoStmtCnst(
-                                                                        ) [NoStmtCnst]
-                                                                      ) [PrintStmt]
-                                                                    ) [ElseStmt]
-                                                                  ) [IfStmt]
-                                                                ) [MethodStmt]
-                                                                DesignStmt(
-                                                                  DesignAssign(
-                                                                    SingleDesignIdent(
-                                                                     ibool
-                                                                    ) [SingleDesignIdent]
-                                                                    Assignop(
-                                                                    ) [Assignop]
-                                                                    SingleExpr(
-                                                                      SingleTerm(
-                                                                        FactBoolean(
-                                                                        ) [FactBoolean]
-                                                                      ) [SingleTerm]
-                                                                    ) [SingleExpr]
-                                                                  ) [DesignAssign]
-                                                                ) [DesignStmt]
-                                                              ) [MethodStmt]
-                                                              DesignStmt(
-                                                                DesignAssign(
-                                                                  SingleDesignIdent(
-                                                                   i
-                                                                  ) [SingleDesignIdent]
-                                                                  Assignop(
-                                                                  ) [Assignop]
-                                                                  SingleExpr(
-                                                                    SingleTerm(
-                                                                      FactNum(
-                                                                       0
-                                                                      ) [FactNum]
-                                                                    ) [SingleTerm]
-                                                                  ) [SingleExpr]
-                                                                ) [DesignAssign]
-                                                              ) [DesignStmt]
-                                                            ) [MethodStmt]
-                                                            WhileStmt(
-                                                              SingleCondition(
-                                                                SingleCondTerm(
-                                                                  CondFacts(
-                                                                    SingleCondFact(
-                                                                      SingleExpr(
-                                                                        SingleTerm(
-                                                                          FactVar(
-                                                                            SingleDesignIdent(
-                                                                             i
-                                                                            ) [SingleDesignIdent]
-                                                                          ) [FactVar]
-                                                                        ) [SingleTerm]
-                                                                      ) [SingleExpr]
-                                                                    ) [SingleCondFact]
-                                                                    Less(
-                                                                    ) [Less]
-                                                                    SingleExpr(
-                                                                      SingleTerm(
-                                                                        FactNum(
-                                                                         5
-                                                                        ) [FactNum]
-                                                                      ) [SingleTerm]
-                                                                    ) [SingleExpr]
-                                                                  ) [CondFacts]
-                                                                ) [SingleCondTerm]
-                                                              ) [SingleCondition]
-                                                              ListStmts(
-                                                                MoreStatements(
-                                                                  MoreStatements(
-                                                                    EndOfStatements(
-                                                                    ) [EndOfStatements]
-                                                                    IfStmt(
-                                                                      IfState(
-                                                                        SingleCondition(
-                                                                          SingleCondTerm(
-                                                                            CondFacts(
-                                                                              SingleCondFact(
-                                                                                SingleExpr(
-                                                                                  SingleTerm(
-                                                                                    FactVar(
-                                                                                      SingleDesignIdent(
-                                                                                       i
-                                                                                      ) [SingleDesignIdent]
-                                                                                    ) [FactVar]
-                                                                                  ) [SingleTerm]
-                                                                                ) [SingleExpr]
-                                                                              ) [SingleCondFact]
-                                                                              IsEqual(
-                                                                              ) [IsEqual]
-                                                                              SingleExpr(
-                                                                                SingleTerm(
-                                                                                  FactNum(
-                                                                                   2
-                                                                                  ) [FactNum]
-                                                                                ) [SingleTerm]
-                                                                              ) [SingleExpr]
-                                                                            ) [CondFacts]
-                                                                          ) [SingleCondTerm]
-                                                                        ) [SingleCondition]
-                                                                      ) [IfState]
-                                                                      DesignStmt(
-                                                                        DesignAssign(
-                                                                          SingleDesignIdent(
-                                                                           ibool
-                                                                          ) [SingleDesignIdent]
-                                                                          Assignop(
-                                                                          ) [Assignop]
-                                                                          SingleExpr(
-                                                                            SingleTerm(
-                                                                              FactBoolean(
-                                                                              ) [FactBoolean]
-                                                                            ) [SingleTerm]
-                                                                          ) [SingleExpr]
-                                                                        ) [DesignAssign]
-                                                                      ) [DesignStmt]
-                                                                      NoElseStmt(
-                                                                      ) [NoElseStmt]
-                                                                    ) [IfStmt]
-                                                                  ) [MoreStatements]
-                                                                  DesignStmt(
-                                                                    DesignInc(
-                                                                      SingleDesignIdent(
-                                                                       i
-                                                                      ) [SingleDesignIdent]
-                                                                    ) [DesignInc]
-                                                                  ) [DesignStmt]
-                                                                ) [MoreStatements]
-                                                              ) [ListStmts]
-                                                            ) [WhileStmt]
-                                                          ) [MethodStmt]
-                                                          IfStmt(
-                                                            IfState(
-                                                              SingleCondition(
-                                                                SingleCondTerm(
-                                                                  SingleCondFact(
-                                                                    SingleExpr(
-                                                                      SingleTerm(
-                                                                        FactVar(
-                                                                          SingleDesignIdent(
-                                                                           ibool
-                                                                          ) [SingleDesignIdent]
-                                                                        ) [FactVar]
-                                                                      ) [SingleTerm]
-                                                                    ) [SingleExpr]
-                                                                  ) [SingleCondFact]
-                                                                ) [SingleCondTerm]
-                                                              ) [SingleCondition]
-                                                            ) [IfState]
-                                                            IfStmt(
-                                                              IfState(
-                                                                SingleCondition(
-                                                                  SingleCondTerm(
-                                                                    CondFacts(
-                                                                      SingleCondFact(
-                                                                        SingleExpr(
-                                                                          SingleTerm(
-                                                                            FactVar(
-                                                                              SingleDesignIdent(
-                                                                               i
-                                                                              ) [SingleDesignIdent]
-                                                                            ) [FactVar]
-                                                                          ) [SingleTerm]
-                                                                        ) [SingleExpr]
-                                                                      ) [SingleCondFact]
-                                                                      IsEqual(
-                                                                      ) [IsEqual]
-                                                                      SingleExpr(
-                                                                        SingleTerm(
-                                                                          FactNum(
-                                                                           5
-                                                                          ) [FactNum]
-                                                                        ) [SingleTerm]
-                                                                      ) [SingleExpr]
-                                                                    ) [CondFacts]
-                                                                  ) [SingleCondTerm]
-                                                                ) [SingleCondition]
-                                                              ) [IfState]
-                                                              PrintStmt(
-                                                                SingleExpr(
-                                                                  SingleTerm(
-                                                                    FactNum(
-                                                                     1
-                                                                    ) [FactNum]
-                                                                  ) [SingleTerm]
-                                                                ) [SingleExpr]
-                                                                NoStmtCnst(
-                                                                ) [NoStmtCnst]
-                                                              ) [PrintStmt]
-                                                              ElseStmt(
-                                                                PrintStmt(
-                                                                  NegativeExpr(
-                                                                    SingleTerm(
-                                                                      FactNum(
-                                                                       1
-                                                                      ) [FactNum]
-                                                                    ) [SingleTerm]
-                                                                  ) [NegativeExpr]
-                                                                  NoStmtCnst(
-                                                                  ) [NoStmtCnst]
-                                                                ) [PrintStmt]
-                                                              ) [ElseStmt]
-                                                            ) [IfStmt]
-                                                            NoElseStmt(
-                                                            ) [NoElseStmt]
-                                                          ) [IfStmt]
-                                                        ) [MethodStmt]
-                                                        DesignStmt(
-                                                          DesignAssign(
-                                                            SingleDesignIdent(
-                                                             a
-                                                            ) [SingleDesignIdent]
-                                                            Assignop(
-                                                            ) [Assignop]
-                                                            SingleExpr(
-                                                              SingleTerm(
-                                                                FactNum(
-                                                                 2
-                                                                ) [FactNum]
-                                                              ) [SingleTerm]
-                                                            ) [SingleExpr]
-                                                          ) [DesignAssign]
-                                                        ) [DesignStmt]
-                                                      ) [MethodStmt]
-                                                      DesignStmt(
-                                                        DesignAssign(
-                                                          SingleDesignIdent(
-                                                           niz
-                                                          ) [SingleDesignIdent]
-                                                          Assignop(
-                                                          ) [Assignop]
-                                                          SingleExpr(
-                                                            SingleTerm(
-                                                              FactConstrArray(
-                                                                Type(
-                                                                 int
-                                                                ) [Type]
-                                                                SingleExpr(
-                                                                  SingleTerm(
-                                                                    FactNum(
-                                                                     3
-                                                                    ) [FactNum]
-                                                                  ) [SingleTerm]
-                                                                ) [SingleExpr]
-                                                              ) [FactConstrArray]
-                                                            ) [SingleTerm]
-                                                          ) [SingleExpr]
-                                                        ) [DesignAssign]
-                                                      ) [DesignStmt]
-                                                    ) [MethodStmt]
-                                                    DesignStmt(
-                                                      DesignAssign(
-                                                        MultipleDesignExpr(
-                                                          SingleDesignIdent(
-                                                           niz
-                                                          ) [SingleDesignIdent]
-                                                          SingleExpr(
-                                                            SingleTerm(
-                                                              FactNum(
-                                                               0
-                                                              ) [FactNum]
-                                                            ) [SingleTerm]
-                                                          ) [SingleExpr]
-                                                        ) [MultipleDesignExpr]
-                                                        Assignop(
-                                                        ) [Assignop]
-                                                        SingleExpr(
-                                                          MultipleTerms(
-                                                            SingleTerm(
-                                                              FactNum(
-                                                               1
-                                                              ) [FactNum]
-                                                            ) [SingleTerm]
-                                                            Asterisk(
-                                                            ) [Asterisk]
-                                                            FactVar(
-                                                              SingleDesignIdent(
-                                                               a
-                                                              ) [SingleDesignIdent]
-                                                            ) [FactVar]
-                                                          ) [MultipleTerms]
-                                                        ) [SingleExpr]
-                                                      ) [DesignAssign]
-                                                    ) [DesignStmt]
-                                                  ) [MethodStmt]
-                                                  DesignStmt(
-                                                    DesignAssign(
-                                                      MultipleDesignExpr(
+                                      NoMethodStmt(
+                                      ) [NoMethodStmt]
+                                      DesignStmt(
+                                        DesignAssignArray(
+                                          MultipleDesignators(
+                                            MultipleDesignators(
+                                              MultipleDesignators(
+                                                MultipleDesignators(
+                                                  MultipleDesignators(
+                                                    SingleDesignators(
+                                                      HasDesignator(
                                                         SingleDesignIdent(
-                                                         niz
+                                                         a
                                                         ) [SingleDesignIdent]
-                                                        SingleExpr(
-                                                          SingleTerm(
-                                                            FactNum(
-                                                             1
-                                                            ) [FactNum]
-                                                          ) [SingleTerm]
-                                                        ) [SingleExpr]
-                                                      ) [MultipleDesignExpr]
-                                                      Assignop(
-                                                      ) [Assignop]
-                                                      SingleExpr(
-                                                        MultipleTerms(
-                                                          SingleTerm(
-                                                            FactNum(
-                                                             2
-                                                            ) [FactNum]
-                                                          ) [SingleTerm]
-                                                          Asterisk(
-                                                          ) [Asterisk]
-                                                          FactVar(
-                                                            SingleDesignIdent(
-                                                             a
-                                                            ) [SingleDesignIdent]
-                                                          ) [FactVar]
-                                                        ) [MultipleTerms]
-                                                      ) [SingleExpr]
-                                                    ) [DesignAssign]
-                                                  ) [DesignStmt]
-                                                ) [MethodStmt]
-                                                DesignStmt(
-                                                  DesignAssign(
-                                                    MultipleDesignExpr(
+                                                      ) [HasDesignator]
+                                                    ) [SingleDesignators]
+                                                    HasDesignator(
                                                       SingleDesignIdent(
-                                                       niz
+                                                       b
                                                       ) [SingleDesignIdent]
-                                                      SingleExpr(
-                                                        SingleTerm(
-                                                          FactNum(
-                                                           2
-                                                          ) [FactNum]
-                                                        ) [SingleTerm]
-                                                      ) [SingleExpr]
-                                                    ) [MultipleDesignExpr]
-                                                    Assignop(
-                                                    ) [Assignop]
-                                                    MultipleExpr(
-                                                      SingleExpr(
-                                                        MultipleTerms(
-                                                          SingleTerm(
-                                                            FactFunc(
-                                                              SingleDesignIdent(
-                                                               sum
-                                                              ) [SingleDesignIdent]
-                                                              FactFuncParams(
-                                                                ActParams(
-                                                                  SingleActParam(
-                                                                    SingleExpr(
-                                                                      SingleTerm(
-                                                                        FactVar(
-                                                                          MultipleDesignExpr(
-                                                                            SingleDesignIdent(
-                                                                             niz
-                                                                            ) [SingleDesignIdent]
-                                                                            SingleExpr(
-                                                                              SingleTerm(
-                                                                                FactNum(
-                                                                                 1
-                                                                                ) [FactNum]
-                                                                              ) [SingleTerm]
-                                                                            ) [SingleExpr]
-                                                                          ) [MultipleDesignExpr]
-                                                                        ) [FactVar]
-                                                                      ) [SingleTerm]
-                                                                    ) [SingleExpr]
-                                                                  ) [SingleActParam]
-                                                                  SingleExpr(
-                                                                    SingleTerm(
-                                                                      FactVar(
-                                                                        MultipleDesignExpr(
-                                                                          SingleDesignIdent(
-                                                                           niz
-                                                                          ) [SingleDesignIdent]
-                                                                          SingleExpr(
-                                                                            SingleTerm(
-                                                                              FactNum(
-                                                                               0
-                                                                              ) [FactNum]
-                                                                            ) [SingleTerm]
-                                                                          ) [SingleExpr]
-                                                                        ) [MultipleDesignExpr]
-                                                                      ) [FactVar]
-                                                                    ) [SingleTerm]
-                                                                  ) [SingleExpr]
-                                                                ) [ActParams]
-                                                              ) [FactFuncParams]
-                                                            ) [FactFunc]
-                                                          ) [SingleTerm]
-                                                          Asterisk(
-                                                          ) [Asterisk]
-                                                          FactVar(
-                                                            SingleDesignIdent(
-                                                             a
-                                                            ) [SingleDesignIdent]
-                                                          ) [FactVar]
-                                                        ) [MultipleTerms]
-                                                      ) [SingleExpr]
-                                                      Plus(
-                                                      ) [Plus]
-                                                      SingleTerm(
-                                                        FactNum(
-                                                         1
-                                                        ) [FactNum]
-                                                      ) [SingleTerm]
-                                                    ) [MultipleExpr]
-                                                  ) [DesignAssign]
-                                                ) [DesignStmt]
-                                              ) [MethodStmt]
-                                              IfStmt(
-                                                IfState(
-                                                  Conditions(
-                                                    SingleCondTerm(
-                                                      SingleCondFact(
-                                                        SingleExpr(
-                                                          SingleTerm(
-                                                            FactFunc(
-                                                              SingleDesignIdent(
-                                                               verify
-                                                              ) [SingleDesignIdent]
-                                                              NoFactFuncParams(
-                                                              ) [NoFactFuncParams]
-                                                            ) [FactFunc]
-                                                          ) [SingleTerm]
-                                                        ) [SingleExpr]
-                                                      ) [SingleCondFact]
-                                                    ) [SingleCondTerm]
-                                                    SingleCondTerm(
-                                                      CondFacts(
-                                                        SingleCondFact(
-                                                          SingleExpr(
-                                                            SingleTerm(
-                                                              FactVar(
-                                                                MultipleDesignExpr(
-                                                                  SingleDesignIdent(
-                                                                   niz
-                                                                  ) [SingleDesignIdent]
-                                                                  SingleExpr(
-                                                                    SingleTerm(
-                                                                      FactNum(
-                                                                       2
-                                                                      ) [FactNum]
-                                                                    ) [SingleTerm]
-                                                                  ) [SingleExpr]
-                                                                ) [MultipleDesignExpr]
-                                                              ) [FactVar]
-                                                            ) [SingleTerm]
-                                                          ) [SingleExpr]
-                                                        ) [SingleCondFact]
-                                                        IsEqual(
-                                                        ) [IsEqual]
-                                                        SingleExpr(
-                                                          SingleTerm(
-                                                            FactNum(
-                                                             4
-                                                            ) [FactNum]
-                                                          ) [SingleTerm]
-                                                        ) [SingleExpr]
-                                                      ) [CondFacts]
-                                                    ) [SingleCondTerm]
-                                                  ) [Conditions]
-                                                ) [IfState]
-                                                PrintStmt(
-                                                  SingleExpr(
-                                                    SingleTerm(
-                                                      FactFunc(
-                                                        SingleDesignIdent(
-                                                         ord
-                                                        ) [SingleDesignIdent]
-                                                        FactFuncParams(
-                                                          SingleActParam(
-                                                            SingleExpr(
-                                                              SingleTerm(
-                                                                FactVar(
-                                                                  SingleDesignIdent(
-                                                                   A
-                                                                  ) [SingleDesignIdent]
-                                                                ) [FactVar]
-                                                              ) [SingleTerm]
-                                                            ) [SingleExpr]
-                                                          ) [SingleActParam]
-                                                        ) [FactFuncParams]
-                                                      ) [FactFunc]
-                                                    ) [SingleTerm]
-                                                  ) [SingleExpr]
-                                                  NoStmtCnst(
-                                                  ) [NoStmtCnst]
-                                                ) [PrintStmt]
-                                                ElseStmt(
-                                                  PrintStmt(
-                                                    SingleExpr(
-                                                      SingleTerm(
-                                                        FactFunc(
-                                                          SingleDesignIdent(
-                                                           ord
-                                                          ) [SingleDesignIdent]
-                                                          FactFuncParams(
-                                                            SingleActParam(
-                                                              SingleExpr(
-                                                                SingleTerm(
-                                                                  FactVar(
-                                                                    SingleDesignIdent(
-                                                                     a
-                                                                    ) [SingleDesignIdent]
-                                                                  ) [FactVar]
-                                                                ) [SingleTerm]
-                                                              ) [SingleExpr]
-                                                            ) [SingleActParam]
-                                                          ) [FactFuncParams]
-                                                        ) [FactFunc]
-                                                      ) [SingleTerm]
-                                                    ) [SingleExpr]
-                                                    NoStmtCnst(
-                                                    ) [NoStmtCnst]
-                                                  ) [PrintStmt]
-                                                ) [ElseStmt]
-                                              ) [IfStmt]
-                                            ) [MethodStmt]
-                                            PrintStmt(
-                                              SingleExpr(
-                                                SingleTerm(
-                                                  FactVar(
-                                                    SingleDesignIdent(
-                                                     eol
-                                                    ) [SingleDesignIdent]
-                                                  ) [FactVar]
-                                                ) [SingleTerm]
-                                              ) [SingleExpr]
-                                              NoStmtCnst(
-                                              ) [NoStmtCnst]
-                                            ) [PrintStmt]
-                                          ) [MethodStmt]
-                                          DesignStmt(
-                                            DesignAssign(
-                                              SingleDesignIdent(
-                                               i
-                                              ) [SingleDesignIdent]
-                                              Assignop(
-                                              ) [Assignop]
-                                              SingleExpr(
-                                                SingleTerm(
-                                                  FactNum(
-                                                   0
-                                                  ) [FactNum]
-                                                ) [SingleTerm]
-                                              ) [SingleExpr]
-                                            ) [DesignAssign]
-                                          ) [DesignStmt]
-                                        ) [MethodStmt]
-                                        WhileStmt(
-                                          SingleCondition(
-                                            SingleCondTerm(
-                                              CondFacts(
-                                                SingleCondFact(
-                                                  SingleExpr(
-                                                    SingleTerm(
-                                                      FactVar(
-                                                        SingleDesignIdent(
-                                                         i
-                                                        ) [SingleDesignIdent]
-                                                      ) [FactVar]
-                                                    ) [SingleTerm]
-                                                  ) [SingleExpr]
-                                                ) [SingleCondFact]
-                                                Less(
-                                                ) [Less]
-                                                SingleExpr(
-                                                  SingleTerm(
-                                                    FactNum(
-                                                     10
-                                                    ) [FactNum]
-                                                  ) [SingleTerm]
-                                                ) [SingleExpr]
-                                              ) [CondFacts]
-                                            ) [SingleCondTerm]
-                                          ) [SingleCondition]
-                                          ListStmts(
-                                            MoreStatements(
-                                              MoreStatements(
-                                                MoreStatements(
-                                                  EndOfStatements(
-                                                  ) [EndOfStatements]
-                                                  IfStmt(
-                                                    IfState(
-                                                      SingleCondition(
-                                                        SingleCondTerm(
-                                                          CondFacts(
-                                                            SingleCondFact(
-                                                              SingleExpr(
-                                                                SingleTerm(
-                                                                  FactVar(
-                                                                    SingleDesignIdent(
-                                                                     i
-                                                                    ) [SingleDesignIdent]
-                                                                  ) [FactVar]
-                                                                ) [SingleTerm]
-                                                              ) [SingleExpr]
-                                                            ) [SingleCondFact]
-                                                            IsEqual(
-                                                            ) [IsEqual]
-                                                            SingleExpr(
-                                                              SingleTerm(
-                                                                FactNum(
-                                                                 3
-                                                                ) [FactNum]
-                                                              ) [SingleTerm]
-                                                            ) [SingleExpr]
-                                                          ) [CondFacts]
-                                                        ) [SingleCondTerm]
-                                                      ) [SingleCondition]
-                                                    ) [IfState]
-                                                    ListStmts(
-                                                      MoreStatements(
-                                                        MoreStatements(
-                                                          EndOfStatements(
-                                                          ) [EndOfStatements]
-                                                          DesignStmt(
-                                                            DesignInc(
-                                                              SingleDesignIdent(
-                                                               i
-                                                              ) [SingleDesignIdent]
-                                                            ) [DesignInc]
-                                                          ) [DesignStmt]
-                                                        ) [MoreStatements]
-                                                        ContinueStmt(
-                                                        ) [ContinueStmt]
-                                                      ) [MoreStatements]
-                                                    ) [ListStmts]
-                                                    NoElseStmt(
-                                                    ) [NoElseStmt]
-                                                  ) [IfStmt]
-                                                ) [MoreStatements]
-                                                IfStmt(
-                                                  IfState(
-                                                    SingleCondition(
-                                                      SingleCondTerm(
-                                                        CondFacts(
-                                                          SingleCondFact(
-                                                            SingleExpr(
-                                                              SingleTerm(
-                                                                FactVar(
-                                                                  SingleDesignIdent(
-                                                                   i
-                                                                  ) [SingleDesignIdent]
-                                                                ) [FactVar]
-                                                              ) [SingleTerm]
-                                                            ) [SingleExpr]
-                                                          ) [SingleCondFact]
-                                                          IsEqual(
-                                                          ) [IsEqual]
-                                                          SingleExpr(
-                                                            SingleTerm(
-                                                              FactNum(
-                                                               4
-                                                              ) [FactNum]
-                                                            ) [SingleTerm]
-                                                          ) [SingleExpr]
-                                                        ) [CondFacts]
-                                                      ) [SingleCondTerm]
-                                                    ) [SingleCondition]
-                                                  ) [IfState]
-                                                  BreakStmt(
-                                                  ) [BreakStmt]
-                                                  NoElseStmt(
-                                                  ) [NoElseStmt]
-                                                ) [IfStmt]
-                                              ) [MoreStatements]
-                                              DesignStmt(
-                                                DesignAssign(
-                                                  SingleDesignIdent(
-                                                   i
-                                                  ) [SingleDesignIdent]
-                                                  Assignop(
-                                                  ) [Assignop]
-                                                  SingleExpr(
-                                                    SingleTerm(
-                                                      FactFunc(
-                                                        SingleDesignIdent(
-                                                         inkrement
-                                                        ) [SingleDesignIdent]
-                                                        FactFuncParams(
-                                                          ActParams(
-                                                            SingleActParam(
-                                                              SingleExpr(
-                                                                SingleTerm(
-                                                                  FactVar(
-                                                                    SingleDesignIdent(
-                                                                     i
-                                                                    ) [SingleDesignIdent]
-                                                                  ) [FactVar]
-                                                                ) [SingleTerm]
-                                                              ) [SingleExpr]
-                                                            ) [SingleActParam]
-                                                            SingleExpr(
-                                                              SingleTerm(
-                                                                FactNum(
-                                                                 1
-                                                                ) [FactNum]
-                                                              ) [SingleTerm]
-                                                            ) [SingleExpr]
-                                                          ) [ActParams]
-                                                        ) [FactFuncParams]
-                                                      ) [FactFunc]
-                                                    ) [SingleTerm]
-                                                  ) [SingleExpr]
-                                                ) [DesignAssign]
-                                              ) [DesignStmt]
-                                            ) [MoreStatements]
-                                          ) [ListStmts]
-                                        ) [WhileStmt]
-                                      ) [MethodStmt]
-                                      IfStmt(
-                                        IfState(
-                                          SingleCondition(
-                                            CondTerms(
-                                              CondFacts(
-                                                SingleCondFact(
-                                                  SingleExpr(
-                                                    SingleTerm(
-                                                      FactVar(
-                                                        SingleDesignIdent(
-                                                         i
-                                                        ) [SingleDesignIdent]
-                                                      ) [FactVar]
-                                                    ) [SingleTerm]
-                                                  ) [SingleExpr]
-                                                ) [SingleCondFact]
-                                                IsEqual(
-                                                ) [IsEqual]
-                                                SingleExpr(
-                                                  SingleTerm(
-                                                    FactNum(
-                                                     3
-                                                    ) [FactNum]
-                                                  ) [SingleTerm]
-                                                ) [SingleExpr]
-                                              ) [CondFacts]
-                                              SingleCondFact(
-                                                SingleExpr(
-                                                  SingleTerm(
-                                                    FactFunc(
-                                                      SingleDesignIdent(
-                                                       verify
-                                                      ) [SingleDesignIdent]
-                                                      NoFactFuncParams(
-                                                      ) [NoFactFuncParams]
-                                                    ) [FactFunc]
-                                                  ) [SingleTerm]
-                                                ) [SingleExpr]
-                                              ) [SingleCondFact]
-                                            ) [CondTerms]
-                                          ) [SingleCondition]
-                                        ) [IfState]
-                                        PrintStmt(
-                                          NegativeExpr(
-                                            SingleTerm(
-                                              FactNum(
-                                               4
-                                              ) [FactNum]
-                                            ) [SingleTerm]
-                                          ) [NegativeExpr]
-                                          NoStmtCnst(
-                                          ) [NoStmtCnst]
-                                        ) [PrintStmt]
-                                        ElseStmt(
-                                          PrintStmt(
-                                            SingleExpr(
-                                              SingleTerm(
-                                                FactNum(
-                                                 4
-                                                ) [FactNum]
-                                              ) [SingleTerm]
-                                            ) [SingleExpr]
-                                            NoStmtCnst(
-                                            ) [NoStmtCnst]
-                                          ) [PrintStmt]
-                                        ) [ElseStmt]
-                                      ) [IfStmt]
-                                    ) [MethodStmt]
-                                    ReadStmt(
-                                      MultipleDesignExpr(
-                                        SingleDesignIdent(
-                                         niz
-                                        ) [SingleDesignIdent]
-                                        SingleExpr(
-                                          SingleTerm(
-                                            FactNum(
-                                             0
-                                            ) [FactNum]
-                                          ) [SingleTerm]
-                                        ) [SingleExpr]
-                                      ) [MultipleDesignExpr]
-                                    ) [ReadStmt]
-                                  ) [MethodStmt]
-                                  ReadStmt(
-                                    MultipleDesignExpr(
-                                      SingleDesignIdent(
-                                       niz
-                                      ) [SingleDesignIdent]
-                                      SingleExpr(
-                                        SingleTerm(
-                                          FactNum(
-                                           1
-                                          ) [FactNum]
-                                        ) [SingleTerm]
-                                      ) [SingleExpr]
-                                    ) [MultipleDesignExpr]
-                                  ) [ReadStmt]
-                                ) [MethodStmt]
-                                ReadStmt(
-                                  MultipleDesignExpr(
-                                    SingleDesignIdent(
-                                     niz
-                                    ) [SingleDesignIdent]
-                                    SingleExpr(
-                                      SingleTerm(
-                                        FactNum(
-                                         2
-                                        ) [FactNum]
-                                      ) [SingleTerm]
-                                    ) [SingleExpr]
-                                  ) [MultipleDesignExpr]
-                                ) [ReadStmt]
-                              ) [MethodStmt]
-                              PrintStmt(
-                                SingleExpr(
-                                  SingleTerm(
-                                    FactVar(
-                                      SingleDesignIdent(
-                                       eol
-                                      ) [SingleDesignIdent]
-                                    ) [FactVar]
-                                  ) [SingleTerm]
-                                ) [SingleExpr]
-                                NoStmtCnst(
-                                ) [NoStmtCnst]
-                              ) [PrintStmt]
-                            ) [MethodStmt]
-                            PrintStmt(
-                              SingleExpr(
-                                SingleTerm(
-                                  FactFunc(
-                                    SingleDesignIdent(
-                                     sum
-                                    ) [SingleDesignIdent]
-                                    FactFuncParams(
-                                      ActParams(
-                                        SingleActParam(
-                                          SingleExpr(
-                                            SingleTerm(
-                                              FactFunc(
+                                                    ) [HasDesignator]
+                                                  ) [MultipleDesignators]
+                                                  NoDesignator(
+                                                  ) [NoDesignator]
+                                                ) [MultipleDesignators]
+                                                NoDesignator(
+                                                ) [NoDesignator]
+                                              ) [MultipleDesignators]
+                                              HasDesignator(
                                                 SingleDesignIdent(
-                                                 sum
+                                                 c
                                                 ) [SingleDesignIdent]
-                                                FactFuncParams(
-                                                  ActParams(
-                                                    SingleActParam(
-                                                      SingleExpr(
-                                                        SingleTerm(
-                                                          FactVar(
-                                                            MultipleDesignExpr(
-                                                              SingleDesignIdent(
-                                                               niz
-                                                              ) [SingleDesignIdent]
-                                                              SingleExpr(
-                                                                SingleTerm(
-                                                                  FactNum(
-                                                                   0
-                                                                  ) [FactNum]
-                                                                ) [SingleTerm]
-                                                              ) [SingleExpr]
-                                                            ) [MultipleDesignExpr]
-                                                          ) [FactVar]
-                                                        ) [SingleTerm]
-                                                      ) [SingleExpr]
-                                                    ) [SingleActParam]
-                                                    SingleExpr(
-                                                      SingleTerm(
-                                                        FactVar(
-                                                          MultipleDesignExpr(
-                                                            SingleDesignIdent(
-                                                             niz
-                                                            ) [SingleDesignIdent]
-                                                            SingleExpr(
-                                                              SingleTerm(
-                                                                FactNum(
-                                                                 1
-                                                                ) [FactNum]
-                                                              ) [SingleTerm]
-                                                            ) [SingleExpr]
-                                                          ) [MultipleDesignExpr]
-                                                        ) [FactVar]
-                                                      ) [SingleTerm]
-                                                    ) [SingleExpr]
-                                                  ) [ActParams]
-                                                ) [FactFuncParams]
-                                              ) [FactFunc]
-                                            ) [SingleTerm]
-                                          ) [SingleExpr]
-                                        ) [SingleActParam]
-                                        SingleExpr(
-                                          SingleTerm(
-                                            FactVar(
-                                              MultipleDesignExpr(
-                                                SingleDesignIdent(
-                                                 niz
-                                                ) [SingleDesignIdent]
-                                                SingleExpr(
-                                                  SingleTerm(
-                                                    FactNum(
-                                                     2
-                                                    ) [FactNum]
-                                                  ) [SingleTerm]
-                                                ) [SingleExpr]
-                                              ) [MultipleDesignExpr]
-                                            ) [FactVar]
-                                          ) [SingleTerm]
-                                        ) [SingleExpr]
-                                      ) [ActParams]
-                                    ) [FactFuncParams]
-                                  ) [FactFunc]
-                                ) [SingleTerm]
-                              ) [SingleExpr]
-                              NoStmtCnst(
-                              ) [NoStmtCnst]
-                            ) [PrintStmt]
-                          ) [MethodStmt]
-                          PrintStmt(
-                            SingleExpr(
-                              SingleTerm(
-                                FactVar(
-                                  SingleDesignIdent(
-                                   eol
-                                  ) [SingleDesignIdent]
-                                ) [FactVar]
-                              ) [SingleTerm]
-                            ) [SingleExpr]
-                            NoStmtCnst(
-                            ) [NoStmtCnst]
-                          ) [PrintStmt]
-                        ) [MethodStmt]
-                        PrintStmt(
-                          SingleExpr(
-                            SingleTerm(
-                              FactFunc(
-                                SingleDesignIdent(
-                                 inkrement
-                                ) [SingleDesignIdent]
-                                FactFuncParams(
-                                  ActParams(
-                                    SingleActParam(
-                                      SingleExpr(
-                                        SingleTerm(
-                                          FactVar(
-                                            MultipleDesignExpr(
-                                              SingleDesignIdent(
-                                               niz
-                                              ) [SingleDesignIdent]
-                                              SingleExpr(
-                                                SingleTerm(
-                                                  FactNum(
-                                                   2
-                                                  ) [FactNum]
-                                                ) [SingleTerm]
-                                              ) [SingleExpr]
-                                            ) [MultipleDesignExpr]
-                                          ) [FactVar]
-                                        ) [SingleTerm]
-                                      ) [SingleExpr]
-                                    ) [SingleActParam]
-                                    SingleExpr(
-                                      SingleTerm(
-                                        FactNum(
-                                         2
-                                        ) [FactNum]
-                                      ) [SingleTerm]
-                                    ) [SingleExpr]
-                                  ) [ActParams]
-                                ) [FactFuncParams]
-                              ) [FactFunc]
-                            ) [SingleTerm]
-                          ) [SingleExpr]
-                          NoStmtCnst(
-                          ) [NoStmtCnst]
-                        ) [PrintStmt]
-                      ) [MethodStmt]
-                      DesignStmt(
-                        DesignAssign(
-                          SingleDesignIdent(
-                           a
-                          ) [SingleDesignIdent]
-                          Assignop(
-                          ) [Assignop]
-                          SingleExpr(
-                            SingleTerm(
-                              FactNum(
-                               3
-                              ) [FactNum]
-                            ) [SingleTerm]
-                          ) [SingleExpr]
-                        ) [DesignAssign]
-                      ) [DesignStmt]
-                    ) [MethodStmt]
-                    DesignStmt(
-                      DesignAssign(
-                        SingleDesignIdent(
-                         i
-                        ) [SingleDesignIdent]
-                        Assignop(
-                        ) [Assignop]
-                        SingleExpr(
-                          SingleTerm(
-                            FactNum(
-                             0
-                            ) [FactNum]
-                          ) [SingleTerm]
-                        ) [SingleExpr]
-                      ) [DesignAssign]
-                    ) [DesignStmt]
-                  ) [MethodStmt]
-                  WhileStmt(
-                    SingleCondition(
-                      SingleCondTerm(
-                        CondFacts(
-                          SingleCondFact(
-                            SingleExpr(
-                              SingleTerm(
-                                FactVar(
-                                  SingleDesignIdent(
-                                   i
-                                  ) [SingleDesignIdent]
-                                ) [FactVar]
-                              ) [SingleTerm]
-                            ) [SingleExpr]
-                          ) [SingleCondFact]
-                          Less(
-                          ) [Less]
-                          SingleExpr(
-                            SingleTerm(
-                              FactNum(
-                               3
-                              ) [FactNum]
-                            ) [SingleTerm]
-                          ) [SingleExpr]
-                        ) [CondFacts]
-                      ) [SingleCondTerm]
-                    ) [SingleCondition]
-                    ListStmts(
-                      MoreStatements(
-                        MoreStatements(
-                          EndOfStatements(
-                          ) [EndOfStatements]
-                          DesignStmt(
-                            DesignAssign(
-                              MultipleDesignExpr(
-                                SingleDesignIdent(
-                                 niz
-                                ) [SingleDesignIdent]
-                                SingleExpr(
-                                  SingleTerm(
-                                    FactVar(
-                                      SingleDesignIdent(
-                                       i
-                                      ) [SingleDesignIdent]
-                                    ) [FactVar]
-                                  ) [SingleTerm]
-                                ) [SingleExpr]
-                              ) [MultipleDesignExpr]
-                              Assignop(
-                              ) [Assignop]
-                              SingleExpr(
-                                MultipleTerms(
-                                  MultipleTerms(
-                                    SingleTerm(
-                                      FactVar(
-                                        MultipleDesignExpr(
+                                              ) [HasDesignator]
+                                            ) [MultipleDesignators]
+                                            NoDesignator(
+                                            ) [NoDesignator]
+                                          ) [MultipleDesignators]
                                           SingleDesignIdent(
                                            niz
                                           ) [SingleDesignIdent]
+                                        ) [DesignAssignArray]
+                                      ) [DesignStmt]
+                                    ) [MethodStmt]
+                                    DesignStmt(
+                                      DesignInc(
+                                        MultipleDesignIdent(
+                                          SingleDesignIdent(
+                                           milica
+                                          ) [SingleDesignIdent]
+                                         vasiljevic
+                                        ) [MultipleDesignIdent]
+                                      ) [DesignInc]
+                                    ) [DesignStmt]
+                                  ) [MethodStmt]
+                                  WhileStmt(
+                                    SingleCondition(
+                                      SingleCondTerm(
+                                        CondFacts(
+                                          SingleCondFact(
+                                            SingleExpr(
+                                              SingleTerm(
+                                                FactVar(
+                                                  SingleDesignIdent(
+                                                   kuzma
+                                                  ) [SingleDesignIdent]
+                                                ) [FactVar]
+                                              ) [SingleTerm]
+                                            ) [SingleExpr]
+                                          ) [SingleCondFact]
+                                          IsEqual(
+                                          ) [IsEqual]
                                           SingleExpr(
                                             SingleTerm(
-                                              FactVar(
-                                                SingleDesignIdent(
-                                                 i
-                                                ) [SingleDesignIdent]
-                                              ) [FactVar]
+                                              FactChar(
+                                              ) [FactChar]
                                             ) [SingleTerm]
                                           ) [SingleExpr]
-                                        ) [MultipleDesignExpr]
-                                      ) [FactVar]
-                                    ) [SingleTerm]
-                                    Asterisk(
-                                    ) [Asterisk]
+                                        ) [CondFacts]
+                                      ) [SingleCondTerm]
+                                    ) [SingleCondition]
+                                    ReturnExpr(
+                                      SingleExpr(
+                                        SingleTerm(
+                                          FactNum(
+                                           5
+                                          ) [FactNum]
+                                        ) [SingleTerm]
+                                      ) [SingleExpr]
+                                    ) [ReturnExpr]
+                                  ) [WhileStmt]
+                                ) [MethodStmt]
+                                IfStmt(
+                                  ErrorStmt(
+                                  ) [ErrorStmt]
+                                  BreakStmt(
+                                  ) [BreakStmt]
+                                  NoElseStmt(
+                                  ) [NoElseStmt]
+                                ) [IfStmt]
+                              ) [MethodStmt]
+                              ListStmts(
+                                MoreStatements(
+                                  EndOfStatements(
+                                  ) [EndOfStatements]
+                                  BreakStmt(
+                                  ) [BreakStmt]
+                                ) [MoreStatements]
+                              ) [ListStmts]
+                            ) [MethodStmt]
+                            ForeachStmt(
+                              MultipleDesignExpr(
+                                SingleDesignIdent(
+                                 niki
+                                ) [SingleDesignIdent]
+                                NegativeExpr(
+                                  SingleTerm(
                                     FactNum(
-                                     2
+                                     5
                                     ) [FactNum]
-                                  ) [MultipleTerms]
-                                  Asterisk(
-                                  ) [Asterisk]
-                                  FactVar(
-                                    SingleDesignIdent(
-                                     a
-                                    ) [SingleDesignIdent]
-                                  ) [FactVar]
-                                ) [MultipleTerms]
-                              ) [SingleExpr]
-                            ) [DesignAssign]
-                          ) [DesignStmt]
-                        ) [MoreStatements]
-                        DesignStmt(
-                          DesignInc(
-                            SingleDesignIdent(
-                             i
-                            ) [SingleDesignIdent]
-                          ) [DesignInc]
-                        ) [DesignStmt]
-                      ) [MoreStatements]
-                    ) [ListStmts]
-                  ) [WhileStmt]
-                ) [MethodStmt]
-                ForeachStmt(
-                  SingleDesignIdent(
-                   niz
-                  ) [SingleDesignIdent]
-                 curr
-                  PrintStmt(
-                    SingleExpr(
-                      SingleTerm(
-                        FactVar(
-                          SingleDesignIdent(
-                           curr
-                          ) [SingleDesignIdent]
-                        ) [FactVar]
-                      ) [SingleTerm]
-                    ) [SingleExpr]
-                    NoStmtCnst(
-                    ) [NoStmtCnst]
-                  ) [PrintStmt]
-                ) [ForeachStmt]
-              ) [MethodStmt]
-              PrintStmt(
-                SingleExpr(
-                  SingleTerm(
-                    FactVar(
-                      SingleDesignIdent(
-                       eol
-                      ) [SingleDesignIdent]
-                    ) [FactVar]
-                  ) [SingleTerm]
-                ) [SingleExpr]
-                NoStmtCnst(
-                ) [NoStmtCnst]
-              ) [PrintStmt]
-            ) [MethodStmt]
-            DesignStmt(
-              DesignAssign(
-                SingleDesignIdent(
-                 niz2
-                ) [SingleDesignIdent]
-                Assignop(
-                ) [Assignop]
-                SingleExpr(
-                  SingleTerm(
-                    FactNum(
-                     0
-                    ) [FactNum]
-                  ) [SingleTerm]
-                ) [SingleExpr]
-              ) [DesignAssign]
-            ) [DesignStmt]
-          ) [MethodStmt]
-          ForeachStmt(
-            SingleDesignIdent(
-             niz
-            ) [SingleDesignIdent]
-           curr
-            ListStmts(
-              MoreStatements(
-                EndOfStatements(
-                ) [EndOfStatements]
-                DesignStmt(
-                  DesignAssign(
-                    SingleDesignIdent(
-                     niz2
-                    ) [SingleDesignIdent]
-                    Assignop(
-                    ) [Assignop]
-                    MultipleExpr(
+                                  ) [SingleTerm]
+                                ) [NegativeExpr]
+                              ) [MultipleDesignExpr]
+                             losa
+                              ContinueStmt(
+                              ) [ContinueStmt]
+                            ) [ForeachStmt]
+                          ) [MethodStmt]
+                          ReadStmt(
+                            MultipleDesignIdent(
+                              MultipleDesignExpr(
+                                MultipleDesignIdent(
+                                  SingleDesignIdent(
+                                   mi
+                                  ) [SingleDesignIdent]
+                                 kalasi
+                                ) [MultipleDesignIdent]
+                                SingleExpr(
+                                  SingleTerm(
+                                    FactNum(
+                                     5
+                                    ) [FactNum]
+                                  ) [SingleTerm]
+                                ) [SingleExpr]
+                              ) [MultipleDesignExpr]
+                             lepa
+                            ) [MultipleDesignIdent]
+                          ) [ReadStmt]
+                        ) [MethodStmt]
+                        PrintStmt(
+                          MultipleExpr(
+                            SingleExpr(
+                              SingleTerm(
+                                FactNum(
+                                 5
+                                ) [FactNum]
+                              ) [SingleTerm]
+                            ) [SingleExpr]
+                            Plus(
+                            ) [Plus]
+                            SingleTerm(
+                              FactNum(
+                               6
+                              ) [FactNum]
+                            ) [SingleTerm]
+                          ) [MultipleExpr]
+                          StmtCnst(
+                           5
+                          ) [StmtCnst]
+                        ) [PrintStmt]
+                      ) [MethodStmt]
+                      ReturnNoExpr(
+                      ) [ReturnNoExpr]
+                    ) [MethodStmt]
+                    ReturnExpr(
                       SingleExpr(
                         SingleTerm(
-                          FactVar(
-                            SingleDesignIdent(
-                             niz2
-                            ) [SingleDesignIdent]
-                          ) [FactVar]
+                          FactExpr(
+                            MultipleExpr(
+                              SingleExpr(
+                                SingleTerm(
+                                  FactNum(
+                                   5
+                                  ) [FactNum]
+                                ) [SingleTerm]
+                              ) [SingleExpr]
+                              Plus(
+                              ) [Plus]
+                              MultipleTerms(
+                                SingleTerm(
+                                  FactNum(
+                                   7
+                                  ) [FactNum]
+                                ) [SingleTerm]
+                                Asterisk(
+                                ) [Asterisk]
+                                FactBoolean(
+                                ) [FactBoolean]
+                              ) [MultipleTerms]
+                            ) [MultipleExpr]
+                          ) [FactExpr]
                         ) [SingleTerm]
                       ) [SingleExpr]
-                      Plus(
-                      ) [Plus]
-                      MultipleTerms(
-                        SingleTerm(
-                          FactVar(
-                            SingleDesignIdent(
-                             curr
-                            ) [SingleDesignIdent]
-                          ) [FactVar]
-                        ) [SingleTerm]
-                        Asterisk(
-                        ) [Asterisk]
-                        FactVar(
-                          SingleDesignIdent(
-                           curr
-                          ) [SingleDesignIdent]
-                        ) [FactVar]
-                      ) [MultipleTerms]
-                    ) [MultipleExpr]
-                  ) [DesignAssign]
+                    ) [ReturnExpr]
+                  ) [MethodStmt]
+                  ReturnExpr(
+                    SingleExpr(
+                      SingleTerm(
+                        FactConstrArray(
+                          Type(
+                           int
+                          ) [Type]
+                          MultipleExpr(
+                            SingleExpr(
+                              MultipleTerms(
+                                SingleTerm(
+                                  FactNum(
+                                   5
+                                  ) [FactNum]
+                                ) [SingleTerm]
+                                Asterisk(
+                                ) [Asterisk]
+                                FactNum(
+                                 6
+                                ) [FactNum]
+                              ) [MultipleTerms]
+                            ) [SingleExpr]
+                            Plus(
+                            ) [Plus]
+                            SingleTerm(
+                              FactNum(
+                               4
+                              ) [FactNum]
+                            ) [SingleTerm]
+                          ) [MultipleExpr]
+                        ) [FactConstrArray]
+                      ) [SingleTerm]
+                    ) [SingleExpr]
+                  ) [ReturnExpr]
+                ) [MethodStmt]
+                DesignStmt(
+                  DesignDec(
+                    MultipleDesignExpr(
+                      SingleDesignIdent(
+                       petar
+                      ) [SingleDesignIdent]
+                      MultipleExpr(
+                        NegativeExpr(
+                          SingleTerm(
+                            FactNum(
+                             5
+                            ) [FactNum]
+                          ) [SingleTerm]
+                        ) [NegativeExpr]
+                        Plus(
+                        ) [Plus]
+                        MultipleTerms(
+                          SingleTerm(
+                            FactBoolean(
+                            ) [FactBoolean]
+                          ) [SingleTerm]
+                          Asterisk(
+                          ) [Asterisk]
+                          FactNum(
+                           5
+                          ) [FactNum]
+                        ) [MultipleTerms]
+                      ) [MultipleExpr]
+                    ) [MultipleDesignExpr]
+                  ) [DesignDec]
                 ) [DesignStmt]
-              ) [MoreStatements]
-            ) [ListStmts]
-          ) [ForeachStmt]
+              ) [MethodStmt]
+              BreakStmt(
+              ) [BreakStmt]
+            ) [MethodStmt]
+            ContinueStmt(
+            ) [ContinueStmt]
+          ) [MethodStmt]
+          DesignStmt(
+            DesignError(
+            ) [DesignError]
+          ) [DesignStmt]
         ) [MethodStmt]
-        PrintStmt(
-          SingleExpr(
-            SingleTerm(
-              FactVar(
-                SingleDesignIdent(
-                 niz2
-                ) [SingleDesignIdent]
-              ) [FactVar]
-            ) [SingleTerm]
-          ) [SingleExpr]
-          NoStmtCnst(
-          ) [NoStmtCnst]
-        ) [PrintStmt]
+      ) [VoidMethodDecl]
+    ) [MethodDecls]
+    VoidMethodDecl(
+     andreja
+      NoMethodFormParams(
+      ) [NoMethodFormParams]
+      MethodVarDecls(
+        EndOfMethodVarDecl(
+        ) [EndOfMethodVarDecl]
+        VarDecls(
+          Type(
+           int
+          ) [Type]
+          MultipleVarDecl(
+            MoreVarDecls(
+             marta
+              NoBrackets(
+              ) [NoBrackets]
+            ) [MoreVarDecls]
+            EndOfVarDeclarations(
+              EndOfVarDeclar(
+               djokara
+                NoBrackets(
+                ) [NoBrackets]
+              ) [EndOfVarDeclar]
+            ) [EndOfVarDeclarations]
+          ) [MultipleVarDecl]
+        ) [VarDecls]
+      ) [MethodVarDecls]
+      MethodStmt(
+        NoMethodStmt(
+        ) [NoMethodStmt]
+        DesignStmt(
+          DesignError(
+          ) [DesignError]
+        ) [DesignStmt]
       ) [MethodStmt]
     ) [VoidMethodDecl]
   ) [MethodDecls]
 ) [Program]
-INFO  00:39:05,070 - ===================================
+INFO  18:37:46,711 - ===================================
+INFO  18:37:46,713 - ===================================
+INFO  18:37:46,714 - Parsiranje uspesno izvrseno!
