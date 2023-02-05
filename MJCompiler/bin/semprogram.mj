@@ -1,0 +1,6 @@
+program p
+	const bool flag1 = true, flag2 = false;
+	const int n = 5, k = 7;
+	const char milica = 'm' , jovanka = 'j';
+{
+}

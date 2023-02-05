@@ -43,16 +43,22 @@ scan with {:
 	return s;
 :}
 
-terminal COLON, PLUS, RPAREN, COMMA, SEMICOLON, EXTENDS, BOOL, NEW, ELSE, IF, DOT, LCURLY;
+terminal COLON, PLUS, RPAREN, COMMA, SEMICOLON, EXTENDS, NEW, ELSE, IF, DOT, LCURLY;
 terminal ASSIGN, MINUS, NOT_EQUAL, VOID, AND, LPAREN, EQUAL, LESS, LSQUARE;
 terminal IS_EQUAL, BREAK, READ, INCREMENT, ASTERISK, GREATER, WHILE, SLASH;
-terminal GREATER_EQUAL, LESS_EQUAL, CHAR, PRINT, FOREACH, RCURLY, CLASS, DECREMENT, PROG;
+terminal GREATER_EQUAL, LESS_EQUAL, PRINT, FOREACH, RCURLY, CLASS, DECREMENT, PROG;
 terminal RSQUARE, RETURN, CONTINUE, OR, CONST, PERCENT;
+terminal Character CHAR;
 terminal Integer NUMBER;
+terminal Boolean BOOL;
 terminal String IDENT;
 
-nonterminal Program, Declaration, VarDecl, ConstDecl;
-nonterminal Type;
+
+
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program;
+nonterminal Declaration, VarDecl, ConstDecl;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type;
 nonterminal SingleConstDecl;
 nonterminal MultipleConstDecl;
 
@@ -115,7 +121,9 @@ nonterminal End;
 
 precedence left ELSE;
 
-Program ::= (Program) PROG IDENT Declaration LCURLY MultipleMethodDecl RCURLY;
+Program ::= (Program) ProgName:p Declaration LCURLY MultipleMethodDecl RCURLY;
+
+ProgName ::= (ProgName) PROG IDENT:progName;
 
 Declaration ::= (ConstDeclaration) Declaration ConstDecl
 			|
@@ -391,7 +399,7 @@ Designator ::= (MultipleDesignIdent) Designator DOT IDENT
 			|
 			(SingleDesignIdent) IDENT;
 
-Type ::= (Type) IDENT;	
+Type ::= (Type) IDENT:typeName;	
 
 Label ::= (Label) IDENT;
 

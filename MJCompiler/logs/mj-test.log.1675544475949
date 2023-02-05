@@ -1,0 +1,17 @@
+INFO  21:14:36,132 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\semprogram.mj
+INFO  21:14:36,191 - #39 program
+INFO  21:14:36,191 - #47 p
+INFO  21:14:36,191 - #13 {
+INFO  21:14:36,192 - #36 }
+INFO  21:14:36,197 - Program(
+  ProgName(
+   p
+  ) [ProgName]
+  NoDeclaration(
+  ) [NoDeclaration]
+  NoMethodDeclList(
+  ) [NoMethodDeclList]
+) [Program]
+INFO  21:14:36,197 - ===================================
+INFO  21:14:36,198 - ===================================
+INFO  21:14:36,198 - Parsiranje uspesno izvrseno!

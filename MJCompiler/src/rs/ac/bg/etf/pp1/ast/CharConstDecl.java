@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 4/1/2023 18:33:11
+// 5/1/2023 1:38:41
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,9 +8,11 @@ package rs.ac.bg.etf.pp1.ast;
 public class CharConstDecl extends SingleConstDecl {
 
     private String constName;
+    private Character charConst;
 
-    public CharConstDecl (String constName) {
+    public CharConstDecl (String constName, Character charConst) {
         this.constName=constName;
+        this.charConst=charConst;
     }
 
     public String getConstName() {
@@ -19,6 +21,14 @@ public class CharConstDecl extends SingleConstDecl {
 
     public void setConstName(String constName) {
         this.constName=constName;
+    }
+
+    public Character getCharConst() {
+        return charConst;
+    }
+
+    public void setCharConst(Character charConst) {
+        this.charConst=charConst;
     }
 
     public void accept(Visitor visitor) {
@@ -42,6 +52,9 @@ public class CharConstDecl extends SingleConstDecl {
         buffer.append("CharConstDecl(\n");
 
         buffer.append(" "+tab+constName);
+        buffer.append("\n");
+
+        buffer.append(" "+tab+charConst);
         buffer.append("\n");
 
         buffer.append(tab);

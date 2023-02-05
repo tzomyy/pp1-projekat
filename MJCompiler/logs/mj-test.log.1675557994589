@@ -1,0 +1,110 @@
+INFO  01:45:43,271 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\semprogram.mj
+INFO  01:45:43,325 - #37 program
+INFO  01:45:43,325 - #47 p
+INFO  01:45:43,325 - #42 const
+INFO  01:45:43,326 - #47 bool
+INFO  01:45:43,326 - #47 flag1
+INFO  01:45:43,327 - #19 =
+INFO  01:45:43,327 - #46 true
+INFO  01:45:43,327 - #5 ,
+INFO  01:45:43,328 - #47 flag2
+INFO  01:45:43,328 - #19 =
+INFO  01:45:43,328 - #46 false
+INFO  01:45:43,328 - #6 ;
+INFO  01:45:43,328 - #42 const
+INFO  01:45:43,329 - #47 int
+INFO  01:45:43,329 - #47 n
+INFO  01:45:43,329 - #19 =
+INFO  01:45:43,329 - #45 5
+INFO  01:45:43,329 - #5 ,
+INFO  01:45:43,330 - #47 k
+INFO  01:45:43,330 - #19 =
+INFO  01:45:43,330 - #45 7
+INFO  01:45:43,330 - #6 ;
+INFO  01:45:43,336 - #42 const
+INFO  01:45:43,336 - #47 char
+INFO  01:45:43,336 - #47 milica
+INFO  01:45:43,336 - #19 =
+INFO  01:45:43,336 - #44 m
+INFO  01:45:43,336 - #5 ,
+INFO  01:45:43,337 - #47 jovanka
+INFO  01:45:43,337 - #19 =
+INFO  01:45:43,337 - #44 j
+INFO  01:45:43,337 - #6 ;
+INFO  01:45:43,337 - #12 {
+INFO  01:45:43,338 - #34 }
+INFO  01:45:43,343 - Program(
+  ProgName(
+   p
+  ) [ProgName]
+  ConstDeclaration(
+    ConstDeclaration(
+      ConstDeclaration(
+        NoDeclaration(
+        ) [NoDeclaration]
+        ConstDecl(
+          Type(
+           bool
+          ) [Type]
+          BoolConstDecl(
+           flag1
+           true
+          ) [BoolConstDecl]
+          MultipleConstDecls(
+            EndOfDeclaration(
+            ) [EndOfDeclaration]
+            BoolConstDecl(
+             flag2
+             false
+            ) [BoolConstDecl]
+          ) [MultipleConstDecls]
+        ) [ConstDecl]
+      ) [ConstDeclaration]
+      ConstDecl(
+        Type(
+         int
+        ) [Type]
+        IntegerConstDecl(
+         n
+         5
+        ) [IntegerConstDecl]
+        MultipleConstDecls(
+          EndOfDeclaration(
+          ) [EndOfDeclaration]
+          IntegerConstDecl(
+           k
+           7
+          ) [IntegerConstDecl]
+        ) [MultipleConstDecls]
+      ) [ConstDecl]
+    ) [ConstDeclaration]
+    ConstDecl(
+      Type(
+       char
+      ) [Type]
+      CharConstDecl(
+       milica
+       m
+      ) [CharConstDecl]
+      MultipleConstDecls(
+        EndOfDeclaration(
+        ) [EndOfDeclaration]
+        CharConstDecl(
+         jovanka
+         j
+        ) [CharConstDecl]
+      ) [MultipleConstDecls]
+    ) [ConstDecl]
+  ) [ConstDeclaration]
+  NoMethodDeclList(
+  ) [NoMethodDeclList]
+) [Program]
+INFO  01:45:43,344 - ===================================
+INFO  01:45:43,346 - Naisla na konstantu na liniji 2
+INFO  01:45:43,346 - Naisla na konstantu na liniji 2
+INFO  01:45:43,346 - Naisla na konstantu na liniji 3
+INFO  01:45:43,346 - Naisla na konstantu na liniji 3
+ERROR 01:45:43,346 - Greska: Tip konstante milica nije kompatibilan sa vrednoscu konstante! na liniji 4
+ERROR 01:45:43,346 - Greska: Tip konstante jovanka nije kompatibilan sa vrednoscu konstante! na liniji 4
+INFO  01:45:43,346 - ===================================
+INFO  01:45:43,347 - Parsiranje nije uspesno izvrseno!

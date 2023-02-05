@@ -1,0 +1,47 @@
+INFO  22:36:52,549 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\semprogram.mj
+INFO  22:36:52,599 - #39 program
+INFO  22:36:52,600 - #47 p
+INFO  22:36:52,600 - #44 const
+INFO  22:36:52,601 - #47 int
+INFO  22:36:52,601 - #47 milica
+INFO  22:36:52,601 - #20 =
+INFO  22:36:52,601 - #8 true
+INFO  22:36:52,602 - #5 ,
+INFO  22:36:52,602 - #47 jovanka
+INFO  22:36:52,602 - #20 =
+INFO  22:36:52,602 - #33 "Joc"
+INFO  22:36:52,602 - #6 ;
+INFO  22:36:52,603 - #13 {
+INFO  22:36:52,603 - #36 }
+INFO  22:36:52,608 - Program(
+  ProgName(
+   p
+  ) [ProgName]
+  ConstDeclaration(
+    NoDeclaration(
+    ) [NoDeclaration]
+    ConstDecl(
+      Type(
+       int
+      ) [Type]
+      BoolConstDecl(
+       milica
+      ) [BoolConstDecl]
+      MultipleConstDecls(
+        EndOfDeclaration(
+        ) [EndOfDeclaration]
+        CharConstDecl(
+         jovanka
+        ) [CharConstDecl]
+      ) [MultipleConstDecls]
+    ) [ConstDecl]
+  ) [ConstDeclaration]
+  NoMethodDeclList(
+  ) [NoMethodDeclList]
+) [Program]
+INFO  22:36:52,615 - ===================================
+INFO  22:36:52,617 - 1 na liniji 2
+INFO  22:36:52,617 - 5 na liniji 2
+ERROR 22:36:52,617 - Greska: Tip konstante milica nije kompatibilan sa vrednoscu konstante! na liniji 2
+INFO  22:36:52,617 - ===================================
+INFO  22:36:52,618 - Parsiranje nije uspesno izvrseno!

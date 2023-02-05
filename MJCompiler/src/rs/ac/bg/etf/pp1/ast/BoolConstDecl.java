@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 4/1/2023 18:33:11
+// 5/1/2023 1:38:41
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,9 +8,11 @@ package rs.ac.bg.etf.pp1.ast;
 public class BoolConstDecl extends SingleConstDecl {
 
     private String constName;
+    private Boolean booleanConst;
 
-    public BoolConstDecl (String constName) {
+    public BoolConstDecl (String constName, Boolean booleanConst) {
         this.constName=constName;
+        this.booleanConst=booleanConst;
     }
 
     public String getConstName() {
@@ -19,6 +21,14 @@ public class BoolConstDecl extends SingleConstDecl {
 
     public void setConstName(String constName) {
         this.constName=constName;
+    }
+
+    public Boolean getBooleanConst() {
+        return booleanConst;
+    }
+
+    public void setBooleanConst(Boolean booleanConst) {
+        this.booleanConst=booleanConst;
     }
 
     public void accept(Visitor visitor) {
@@ -42,6 +52,9 @@ public class BoolConstDecl extends SingleConstDecl {
         buffer.append("BoolConstDecl(\n");
 
         buffer.append(" "+tab+constName);
+        buffer.append("\n");
+
+        buffer.append(" "+tab+booleanConst);
         buffer.append("\n");
 
         buffer.append(tab);

@@ -1,0 +1,45 @@
+INFO  22:02:23,192 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\semprogram.mj
+INFO  22:02:23,247 - #39 program
+INFO  22:02:23,247 - #47 p
+INFO  22:02:23,247 - #44 const
+INFO  22:02:23,249 - #47 intlll
+INFO  22:02:23,249 - #47 milica
+INFO  22:02:23,249 - #20 =
+INFO  22:02:23,250 - #8 true
+INFO  22:02:23,250 - #5 ,
+INFO  22:02:23,251 - #47 jovanka
+INFO  22:02:23,251 - #20 =
+INFO  22:02:23,251 - #33 "Joc"
+INFO  22:02:23,251 - #6 ;
+INFO  22:02:23,251 - #13 {
+INFO  22:02:23,253 - #36 }
+INFO  22:02:23,258 - Program(
+  ProgName(
+   p
+  ) [ProgName]
+  ConstDeclaration(
+    NoDeclaration(
+    ) [NoDeclaration]
+    ConstDecl(
+      Type(
+       intlll
+      ) [Type]
+      BoolConstDecl(
+       milica
+      ) [BoolConstDecl]
+      MultipleConstDecls(
+        EndOfDeclaration(
+        ) [EndOfDeclaration]
+        CharConstDecl(
+         jovanka
+        ) [CharConstDecl]
+      ) [MultipleConstDecls]
+    ) [ConstDecl]
+  ) [ConstDeclaration]
+  NoMethodDeclList(
+  ) [NoMethodDeclList]
+) [Program]
+INFO  22:02:23,264 - ===================================
+ERROR 22:02:23,266 - Nije pronadjen tip intlll u tabeli simbola !
+INFO  22:02:23,266 - ===================================
+INFO  22:02:23,267 - Parsiranje nije uspesno izvrseno!

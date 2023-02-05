@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 4/1/2023 18:33:11
+// 5/1/2023 1:38:41
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -9,24 +9,27 @@ public class Program implements SyntaxNode {
 
     private SyntaxNode parent;
     private int line;
-    private String I1;
+    public rs.etf.pp1.symboltable.concepts.Obj obj = null;
+
+    private ProgName ProgName;
     private Declaration Declaration;
     private MultipleMethodDecl MultipleMethodDecl;
 
-    public Program (String I1, Declaration Declaration, MultipleMethodDecl MultipleMethodDecl) {
-        this.I1=I1;
+    public Program (ProgName ProgName, Declaration Declaration, MultipleMethodDecl MultipleMethodDecl) {
+        this.ProgName=ProgName;
+        if(ProgName!=null) ProgName.setParent(this);
         this.Declaration=Declaration;
         if(Declaration!=null) Declaration.setParent(this);
         this.MultipleMethodDecl=MultipleMethodDecl;
         if(MultipleMethodDecl!=null) MultipleMethodDecl.setParent(this);
     }
 
-    public String getI1() {
-        return I1;
+    public ProgName getProgName() {
+        return ProgName;
     }
 
-    public void setI1(String I1) {
-        this.I1=I1;
+    public void setProgName(ProgName ProgName) {
+        this.ProgName=ProgName;
     }
 
     public Declaration getDeclaration() {
@@ -66,17 +69,20 @@ public class Program implements SyntaxNode {
     }
 
     public void childrenAccept(Visitor visitor) {
+        if(ProgName!=null) ProgName.accept(visitor);
         if(Declaration!=null) Declaration.accept(visitor);
         if(MultipleMethodDecl!=null) MultipleMethodDecl.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
+        if(ProgName!=null) ProgName.traverseTopDown(visitor);
         if(Declaration!=null) Declaration.traverseTopDown(visitor);
         if(MultipleMethodDecl!=null) MultipleMethodDecl.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
+        if(ProgName!=null) ProgName.traverseBottomUp(visitor);
         if(Declaration!=null) Declaration.traverseBottomUp(visitor);
         if(MultipleMethodDecl!=null) MultipleMethodDecl.traverseBottomUp(visitor);
         accept(visitor);
@@ -87,7 +93,10 @@ public class Program implements SyntaxNode {
         buffer.append(tab);
         buffer.append("Program(\n");
 
-        buffer.append(" "+tab+I1);
+        if(ProgName!=null)
+            buffer.append(ProgName.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
         buffer.append("\n");
 
         if(Declaration!=null)

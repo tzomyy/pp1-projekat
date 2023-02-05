@@ -1,0 +1,31 @@
+INFO  01:44:20,587 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\semprogram.mj
+INFO  01:44:20,635 - #37 program
+INFO  01:44:20,635 - #47 p
+INFO  01:44:20,636 - #42 const
+INFO  01:44:20,637 - #47 bool
+INFO  01:44:20,637 - #47 flag1
+INFO  01:44:20,637 - #19 =
+INFO  01:44:20,637 - #46 true
+INFO  01:44:20,638 - #5 ,
+INFO  01:44:20,639 - #47 flag2
+INFO  01:44:20,639 - #19 =
+INFO  01:44:20,639 - #46 false
+INFO  01:44:20,639 - #6 ;
+INFO  01:44:20,639 - #42 const
+INFO  01:44:20,640 - #47 int
+INFO  01:44:20,640 - #47 n
+INFO  01:44:20,641 - #19 =
+INFO  01:44:20,641 - #45 5
+INFO  01:44:20,641 - #5 ,
+INFO  01:44:20,641 - #47 k
+INFO  01:44:20,641 - #19 =
+INFO  01:44:20,641 - #45 7
+INFO  01:44:20,641 - #6 ;
+INFO  01:44:20,648 - #42 const
+INFO  01:44:20,648 - #47 char
+INFO  01:44:20,648 - #47 milica
+INFO  01:44:20,648 - #19 =
+INFO  01:44:20,648 - #47 milica
+ERROR 01:44:20,648 - 
+Sintaksna greska na liniji 4
+ERROR 01:44:20,649 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 4

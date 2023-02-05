@@ -43,19 +43,24 @@ scan with {:
 	return s;
 :}
 
-terminal COLON, PLUS, RPAREN, COMMA, SEMICOLON, EXTENDS, BOOL, NEW, ELSE, IF, DOT, LCURLY;
+terminal COLON, PLUS, RPAREN, COMMA, SEMICOLON, EXTENDS, NEW, ELSE, IF, DOT, LCURLY;
 terminal ASSIGN, MINUS, NOT_EQUAL, VOID, AND, LPAREN, EQUAL, LESS, LSQUARE;
 terminal IS_EQUAL, BREAK, READ, INCREMENT, ASTERISK, GREATER, WHILE, SLASH;
-terminal GREATER_EQUAL, LESS_EQUAL, CHAR, PRINT, FOREACH, RCURLY, CLASS, DECREMENT, PROG;
+terminal GREATER_EQUAL, LESS_EQUAL, PRINT, FOREACH, RCURLY, CLASS, DECREMENT, PROG;
 terminal RSQUARE, RETURN, CONTINUE, OR, CONST, PERCENT;
+terminal Character CHAR;
 terminal Integer NUMBER;
+terminal Boolean BOOL;
 terminal String IDENT;
 
-nonterminal Program Program;
+
+
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program;
 nonterminal Declaration Declaration;
 nonterminal VarDecl VarDecl;
 nonterminal ConstDecl ConstDecl;
-nonterminal Type Type;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type;
 nonterminal SingleConstDecl SingleConstDecl;
 nonterminal MultipleConstDecl MultipleConstDecl;
 
@@ -118,7 +123,9 @@ nonterminal End End;
 
 precedence left ELSE;
 
-Program ::= (Program) PROG IDENT:I1 Declaration:D2 LCURLY MultipleMethodDecl:M3 RCURLY {: RESULT=new Program(I1, D2, M3); RESULT.setLine(I1left); :};
+Program ::= (Program) ProgName:p Declaration:D1 LCURLY MultipleMethodDecl:M2 RCURLY {: RESULT=new Program(p, D1, M2); RESULT.setLine(pleft); :};
+
+ProgName ::= (ProgName) PROG IDENT:progName {: RESULT=new ProgName(progName); RESULT.setLine(progNameleft); :};
 
 Declaration ::= (ConstDeclaration) Declaration:D1 ConstDecl:C2 {: RESULT=new ConstDeclaration(D1, C2); RESULT.setLine(D1left); :}
 			|
@@ -131,11 +138,11 @@ Declaration ::= (ConstDeclaration) Declaration:D1 ConstDecl:C2 {: RESULT=new Con
 		
 ConstDecl ::= (ConstDecl) CONST Type:constType SingleConstDecl:S1 MultipleConstDecl:M2 SEMICOLON {: RESULT=new ConstDecl(constType, S1, M2); RESULT.setLine(constTypeleft); :};
 
-SingleConstDecl ::= (BoolConstDecl) IDENT:constName EQUAL BOOL:booleanConst {: RESULT=new BoolConstDecl(constName); RESULT.setLine(constNameleft); :}
+SingleConstDecl ::= (BoolConstDecl) IDENT:constName EQUAL BOOL:booleanConst {: RESULT=new BoolConstDecl(constName, booleanConst); RESULT.setLine(constNameleft); :}
 				|
 				(IntegerConstDecl) IDENT:constName EQUAL NUMBER:numberConst {: RESULT=new IntegerConstDecl(constName, numberConst); RESULT.setLine(constNameleft); :}
 				|
-				(CharConstDecl) IDENT:constName EQUAL CHAR:charConst {: RESULT=new CharConstDecl(constName); RESULT.setLine(constNameleft); :}
+				(CharConstDecl) IDENT:constName EQUAL CHAR:charConst {: RESULT=new CharConstDecl(constName, charConst); RESULT.setLine(constNameleft); :}
 				;
 				
 MultipleConstDecl ::= (MultipleConstDecls) MultipleConstDecl:M1 COMMA SingleConstDecl:S2 {: RESULT=new MultipleConstDecls(M1, S2); RESULT.setLine(M1left); :}
@@ -328,9 +335,9 @@ Factor ::= (FactVar) Designator:D1 {: RESULT=new FactVar(D1); RESULT.setLine(D1l
 		|
 		(FactNum) NUMBER:N1 {: RESULT=new FactNum(N1); RESULT.setLine(N1left); :}
 		|
-		(FactChar) CHAR {: RESULT=new FactChar(); :}
+		(FactChar) CHAR:C1 {: RESULT=new FactChar(C1); RESULT.setLine(C1left); :}
 		|
-		(FactBoolean) BOOL {: RESULT=new FactBoolean(); :}
+		(FactBoolean) BOOL:B1 {: RESULT=new FactBoolean(B1); RESULT.setLine(B1left); :}
 		|
 		(FactConstrArray) NEW Type:arrayType LSQUARE Expr:E1 RSQUARE {: RESULT=new FactConstrArray(arrayType, E1); RESULT.setLine(arrayTypeleft); :}
 		|
@@ -394,7 +401,7 @@ Designator ::= (MultipleDesignIdent) Designator:D1 DOT IDENT:I2 {: RESULT=new Mu
 			|
 			(SingleDesignIdent) IDENT:I1 {: RESULT=new SingleDesignIdent(I1); RESULT.setLine(I1left); :};
 
-Type ::= (Type) IDENT:I1 {: RESULT=new Type(I1); RESULT.setLine(I1left); :};	
+Type ::= (Type) IDENT:typeName {: RESULT=new Type(typeName); RESULT.setLine(typeNameleft); :};	
 
 Label ::= (Label) IDENT:I1 {: RESULT=new Label(I1); RESULT.setLine(I1left); :};
 

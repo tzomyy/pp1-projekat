@@ -1,0 +1,88 @@
+INFO  01:24:04,961 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\semprogram.mj
+INFO  01:24:05,016 - #38 program
+INFO  01:24:05,016 - #47 p
+INFO  01:24:05,016 - #43 const
+INFO  01:24:05,017 - #47 int
+INFO  01:24:05,017 - #47 pi
+INFO  01:24:05,018 - #19 =
+INFO  01:24:05,018 - #45 3
+INFO  01:24:05,018 - #5 ,
+INFO  01:24:05,019 - #47 e
+INFO  01:24:05,019 - #19 =
+INFO  01:24:05,019 - #45 2
+INFO  01:24:05,019 - #6 ;
+INFO  01:24:05,020 - #43 const
+INFO  01:24:05,021 - #47 bool
+INFO  01:24:05,021 - #47 flag1
+INFO  01:24:05,021 - #19 =
+INFO  01:24:05,021 - #46 true
+INFO  01:24:05,021 - #6 ;
+INFO  01:24:05,021 - #43 const
+INFO  01:24:05,021 - #47 bool
+INFO  01:24:05,021 - #47 flag2
+INFO  01:24:05,028 - #19 =
+INFO  01:24:05,028 - #46 false
+INFO  01:24:05,028 - #6 ;
+INFO  01:24:05,028 - #12 {
+INFO  01:24:05,028 - #35 }
+INFO  01:24:05,035 - Program(
+  ProgName(
+   p
+  ) [ProgName]
+  ConstDeclaration(
+    ConstDeclaration(
+      ConstDeclaration(
+        NoDeclaration(
+        ) [NoDeclaration]
+        ConstDecl(
+          Type(
+           int
+          ) [Type]
+          IntegerConstDecl(
+           pi
+           3
+          ) [IntegerConstDecl]
+          MultipleConstDecls(
+            EndOfDeclaration(
+            ) [EndOfDeclaration]
+            IntegerConstDecl(
+             e
+             2
+            ) [IntegerConstDecl]
+          ) [MultipleConstDecls]
+        ) [ConstDecl]
+      ) [ConstDeclaration]
+      ConstDecl(
+        Type(
+         bool
+        ) [Type]
+        BoolConstDecl(
+         flag1
+         true
+        ) [BoolConstDecl]
+        EndOfDeclaration(
+        ) [EndOfDeclaration]
+      ) [ConstDecl]
+    ) [ConstDeclaration]
+    ConstDecl(
+      Type(
+       bool
+      ) [Type]
+      BoolConstDecl(
+       flag2
+       false
+      ) [BoolConstDecl]
+      EndOfDeclaration(
+      ) [EndOfDeclaration]
+    ) [ConstDecl]
+  ) [ConstDeclaration]
+  NoMethodDeclList(
+  ) [NoMethodDeclList]
+) [Program]
+INFO  01:24:05,035 - ===================================
+INFO  01:24:05,037 - Naisla na konstantu na liniji 2
+INFO  01:24:05,037 - Naisla na konstantu na liniji 2
+INFO  01:24:05,037 - Naisla na konstantu na liniji 3
+INFO  01:24:05,037 - Naisla na konstantu na liniji 4
+INFO  01:24:05,037 - ===================================
+INFO  01:24:05,037 - Parsiranje uspesno izvrseno!

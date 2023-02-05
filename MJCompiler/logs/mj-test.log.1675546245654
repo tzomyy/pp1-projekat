@@ -1,0 +1,45 @@
+INFO  22:29:11,302 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\semprogram.mj
+INFO  22:29:11,352 - #39 program
+INFO  22:29:11,352 - #47 p
+INFO  22:29:11,352 - #44 const
+INFO  22:29:11,353 - #47 int
+INFO  22:29:11,354 - #47 milica
+INFO  22:29:11,354 - #20 =
+INFO  22:29:11,354 - #8 true
+INFO  22:29:11,355 - #5 ,
+INFO  22:29:11,355 - #47 jovanka
+INFO  22:29:11,355 - #20 =
+INFO  22:29:11,355 - #33 "Joc"
+INFO  22:29:11,355 - #6 ;
+INFO  22:29:11,356 - #13 {
+INFO  22:29:11,356 - #36 }
+INFO  22:29:11,361 - Program(
+  ProgName(
+   p
+  ) [ProgName]
+  ConstDeclaration(
+    NoDeclaration(
+    ) [NoDeclaration]
+    ConstDecl(
+      Type(
+       int
+      ) [Type]
+      BoolConstDecl(
+       milica
+      ) [BoolConstDecl]
+      MultipleConstDecls(
+        EndOfDeclaration(
+        ) [EndOfDeclaration]
+        CharConstDecl(
+         jovanka
+        ) [CharConstDecl]
+      ) [MultipleConstDecls]
+    ) [ConstDecl]
+  ) [ConstDeclaration]
+  NoMethodDeclList(
+  ) [NoMethodDeclList]
+) [Program]
+INFO  22:29:11,362 - ===================================
+ERROR 22:29:11,363 - Greska: Ime milica vec postoji u tabeli simbola! na liniji 2
+INFO  22:29:11,364 - ===================================
+INFO  22:29:11,364 - Parsiranje nije uspesno izvrseno!

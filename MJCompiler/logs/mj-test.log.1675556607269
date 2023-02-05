@@ -1,0 +1,57 @@
+INFO  01:20:29,340 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\semprogram.mj
+INFO  01:20:29,394 - #38 program
+INFO  01:20:29,394 - #47 p
+INFO  01:20:29,394 - #43 const
+INFO  01:20:29,396 - #47 bool
+INFO  01:20:29,396 - #47 milica
+INFO  01:20:29,397 - #19 =
+INFO  01:20:29,397 - #46 true
+INFO  01:20:29,397 - #6 ;
+INFO  01:20:29,398 - #43 const
+INFO  01:20:29,399 - #47 int
+INFO  01:20:29,400 - #47 mil
+INFO  01:20:29,400 - #19 =
+INFO  01:20:29,400 - #45 5
+INFO  01:20:29,400 - #6 ;
+INFO  01:20:29,401 - #12 {
+INFO  01:20:29,401 - #35 }
+INFO  01:20:29,407 - Program(
+  ProgName(
+   p
+  ) [ProgName]
+  ConstDeclaration(
+    ConstDeclaration(
+      NoDeclaration(
+      ) [NoDeclaration]
+      ConstDecl(
+        Type(
+         bool
+        ) [Type]
+        BoolConstDecl(
+         milica
+         true
+        ) [BoolConstDecl]
+        EndOfDeclaration(
+        ) [EndOfDeclaration]
+      ) [ConstDecl]
+    ) [ConstDeclaration]
+    ConstDecl(
+      Type(
+       int
+      ) [Type]
+      IntegerConstDecl(
+       mil
+       5
+      ) [IntegerConstDecl]
+      EndOfDeclaration(
+      ) [EndOfDeclaration]
+    ) [ConstDecl]
+  ) [ConstDeclaration]
+  NoMethodDeclList(
+  ) [NoMethodDeclList]
+) [Program]
+INFO  01:20:29,413 - ===================================
+INFO  01:20:29,416 - Naisla na konstantu na liniji 2
+INFO  01:20:29,416 - Naisla na konstantu na liniji 3
+INFO  01:20:29,416 - ===================================
+INFO  01:20:29,417 - Parsiranje uspesno izvrseno!
