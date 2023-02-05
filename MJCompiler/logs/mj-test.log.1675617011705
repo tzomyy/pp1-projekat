@@ -1,0 +1,131 @@
+INFO  18:04:57,455 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\semprogram.mj
+INFO  18:04:57,504 - #37 program
+INFO  18:04:57,504 - #47 p
+INFO  18:04:57,504 - #42 const
+INFO  18:04:57,505 - #47 bool
+INFO  18:04:57,506 - #47 flag1
+INFO  18:04:57,506 - #19 =
+INFO  18:04:57,506 - #46 true
+INFO  18:04:57,507 - #5 ,
+INFO  18:04:57,508 - #47 flag2
+INFO  18:04:57,508 - #19 =
+INFO  18:04:57,508 - #46 false
+INFO  18:04:57,508 - #6 ;
+INFO  18:04:57,508 - #42 const
+INFO  18:04:57,509 - #47 int
+INFO  18:04:57,510 - #47 n
+INFO  18:04:57,510 - #19 =
+INFO  18:04:57,510 - #45 5
+INFO  18:04:57,511 - #5 ,
+INFO  18:04:57,511 - #47 k
+INFO  18:04:57,511 - #19 =
+INFO  18:04:57,511 - #45 7
+INFO  18:04:57,511 - #6 ;
+INFO  18:04:57,517 - #42 const
+INFO  18:04:57,517 - #47 char
+INFO  18:04:57,517 - #47 milica
+INFO  18:04:57,517 - #19 =
+INFO  18:04:57,517 - #44 m
+INFO  18:04:57,517 - #5 ,
+INFO  18:04:57,518 - #47 jovanka
+INFO  18:04:57,518 - #19 =
+INFO  18:04:57,518 - #44 j
+INFO  18:04:57,518 - #6 ;
+INFO  18:04:57,518 - #47 int
+INFO  18:04:57,518 - #47 janko
+INFO  18:04:57,518 - #21 [
+INFO  18:04:57,518 - #38 ]
+INFO  18:04:57,518 - #6 ;
+INFO  18:04:57,519 - #12 {
+INFO  18:04:57,519 - #34 }
+INFO  18:04:57,524 - Program(
+  ProgName(
+   p
+  ) [ProgName]
+  VarDeclaration(
+    ConstDeclaration(
+      ConstDeclaration(
+        ConstDeclaration(
+          NoDeclaration(
+          ) [NoDeclaration]
+          ConstDecl(
+            Type(
+             bool
+            ) [Type]
+            BoolConstDecl(
+             flag1
+             true
+            ) [BoolConstDecl]
+            MultipleConstDecls(
+              EndOfDeclaration(
+              ) [EndOfDeclaration]
+              BoolConstDecl(
+               flag2
+               false
+              ) [BoolConstDecl]
+            ) [MultipleConstDecls]
+          ) [ConstDecl]
+        ) [ConstDeclaration]
+        ConstDecl(
+          Type(
+           int
+          ) [Type]
+          IntegerConstDecl(
+           n
+           5
+          ) [IntegerConstDecl]
+          MultipleConstDecls(
+            EndOfDeclaration(
+            ) [EndOfDeclaration]
+            IntegerConstDecl(
+             k
+             7
+            ) [IntegerConstDecl]
+          ) [MultipleConstDecls]
+        ) [ConstDecl]
+      ) [ConstDeclaration]
+      ConstDecl(
+        Type(
+         char
+        ) [Type]
+        CharConstDecl(
+         milica
+         m
+        ) [CharConstDecl]
+        MultipleConstDecls(
+          EndOfDeclaration(
+          ) [EndOfDeclaration]
+          CharConstDecl(
+           jovanka
+           j
+          ) [CharConstDecl]
+        ) [MultipleConstDecls]
+      ) [ConstDecl]
+    ) [ConstDeclaration]
+    VarDecls(
+      Type(
+       int
+      ) [Type]
+      EndOfVarDeclarations(
+        EndOfVarDeclar(
+         janko
+          Brackets(
+          ) [Brackets]
+        ) [EndOfVarDeclar]
+      ) [EndOfVarDeclarations]
+    ) [VarDecls]
+  ) [VarDeclaration]
+  NoMethodDeclList(
+  ) [NoMethodDeclList]
+) [Program]
+INFO  18:04:57,524 - ===================================
+INFO  18:04:57,527 - Naisla na konstantu na liniji 2
+INFO  18:04:57,527 - Naisla na konstantu na liniji 2
+INFO  18:04:57,528 - Naisla na konstantu na liniji 3
+INFO  18:04:57,528 - Naisla na konstantu na liniji 3
+INFO  18:04:57,528 - Naisla na konstantu na liniji 4
+INFO  18:04:57,528 - Naisla na konstantu na liniji 4
+INFO  18:04:57,528 - Brack na liniji 5
+INFO  18:04:57,528 - LALAL na liniji 5
+INFO  18:04:57,528 - ===================================
+INFO  18:04:57,529 - Parsiranje uspesno izvrseno!

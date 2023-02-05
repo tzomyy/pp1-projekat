@@ -1,27 +1,27 @@
 // generated with ast extension for cup
 // version 0.8
-// 5/1/2023 1:38:41
+// 5/1/2023 17:59:25
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class MoreVarDecls extends MoreVarDecl {
 
-    private String I1;
+    private String varName;
     private Brackets Brackets;
 
-    public MoreVarDecls (String I1, Brackets Brackets) {
-        this.I1=I1;
+    public MoreVarDecls (String varName, Brackets Brackets) {
+        this.varName=varName;
         this.Brackets=Brackets;
         if(Brackets!=null) Brackets.setParent(this);
     }
 
-    public String getI1() {
-        return I1;
+    public String getVarName() {
+        return varName;
     }
 
-    public void setI1(String I1) {
-        this.I1=I1;
+    public void setVarName(String varName) {
+        this.varName=varName;
     }
 
     public Brackets getBrackets() {
@@ -55,7 +55,7 @@ public class MoreVarDecls extends MoreVarDecl {
         buffer.append(tab);
         buffer.append("MoreVarDecls(\n");
 
-        buffer.append(" "+tab+I1);
+        buffer.append(" "+tab+varName);
         buffer.append("\n");
 
         if(Brackets!=null)

@@ -150,7 +150,7 @@ MultipleConstDecl ::= (MultipleConstDecls) MultipleConstDecl:M1 COMMA SingleCons
 					(EndOfDeclaration) {: RESULT=new EndOfDeclaration(); :} /* epsilon */
 					;					
 
-VarDecl ::= (VarDecls) Type:varName VarDeclarations:V1 {: RESULT=new VarDecls(varName, V1); RESULT.setLine(varNameleft); :}
+VarDecl ::= (VarDecls) Type:typeVar VarDeclarations:V1 {: RESULT=new VarDecls(typeVar, V1); RESULT.setLine(typeVarleft); :}
 			;
 
 VarDeclarations ::= (MultipleVarDecl) MoreVarDecl:M1 VarDeclarations:V2 {: RESULT=new MultipleVarDecl(M1, V2); RESULT.setLine(M1left); :}
@@ -158,13 +158,13 @@ VarDeclarations ::= (MultipleVarDecl) MoreVarDecl:M1 VarDeclarations:V2 {: RESUL
 				(EndOfVarDeclarations) EndOfVarDecl:E1 {: RESULT=new EndOfVarDeclarations(E1); RESULT.setLine(E1left); :}
 				;
 				
-MoreVarDecl ::= (MoreVarDecls) IDENT:I1 Brackets:B2 COMMA {: RESULT=new MoreVarDecls(I1, B2); RESULT.setLine(I1left); :}
+MoreVarDecl ::= (MoreVarDecls) IDENT:varName Brackets:B1 COMMA {: RESULT=new MoreVarDecls(varName, B1); RESULT.setLine(varNameleft); :}
 			|
 			(ErrorMoreVarDecl) error COMMA:l
 			{: parser.report_error("Izvrsen oporavak kod dodeljivanja globalne promenljive do , u liniji  " + lleft, null); :} {: RESULT=new ErrorMoreVarDecl(); :}
 			;
 
-EndOfVarDecl ::= (EndOfVarDeclar) IDENT:I1 Brackets:B2 SEMICOLON {: RESULT=new EndOfVarDeclar(I1, B2); RESULT.setLine(I1left); :}
+EndOfVarDecl ::= (EndOfVarDeclar) IDENT:varName Brackets:B1 SEMICOLON {: RESULT=new EndOfVarDeclar(varName, B1); RESULT.setLine(varNameleft); :}
 			|
 			(ErrorEndOfVarDecl) error SEMICOLON:l
 			{: parser.report_error("Izvrsen oporavak kod dodeljivanja globalne promenljive do ; u liniji " + lleft, null); :} {: RESULT=new ErrorEndOfVarDecl(); :}

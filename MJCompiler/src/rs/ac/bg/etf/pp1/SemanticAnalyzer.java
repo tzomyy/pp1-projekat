@@ -11,7 +11,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 
 	Logger log = Logger.getLogger(getClass());
 	boolean errorDetected = false;
-	
+	boolean arrayType = false;
 	Struct currType = null;
 	Struct boolType = new Struct(Struct.Bool);
 
@@ -52,86 +52,181 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 
 	public void visit(Type type) {
 		Obj typeNode = Tab.find(type.getTypeName());
-		
+
 		if (typeNode == Tab.noObj) {
 			report_error("Nije pronadjen tip " + type.getTypeName() + " u tabeli simbola !", null);
 			type.struct = Tab.noType;
-		}else {
+		} else {
 			if (Obj.Type == typeNode.getKind()) {
 				type.struct = typeNode.getType();
-			}else {
+			} else {
 				report_error("Greska: Ime " + type.getTypeName() + " ne predstavlja tip!", type);
 				type.struct = Tab.noType;
 			}
 		}
-		
+
 		currType = type.struct;
 //		System.out.println("Type: " + currType.getKind());
 	}
-	
-	public void visit(BoolConstDecl boolConstDecl) {		
+
+	public void visit(BoolConstDecl boolConstDecl) {
 		// da li je ime deklarisano
 		// da li je dobrog tipa
-		
+
 		if (Tab.find(boolConstDecl.getConstName()) != Tab.noObj) {
-			report_error("Greska: Ime " + boolConstDecl.getConstName() + " vec postoji u tabeli simbola!", boolConstDecl);
+			report_error("Greska: Ime " + boolConstDecl.getConstName() + " vec postoji u tabeli simbola!",
+					boolConstDecl);
 			return;
-		}else {
+		} else {
 			if (!boolType.equals(currType)) {
-				report_error("Greska: Tip konstante " + boolConstDecl.getConstName() + " nije kompatibilan sa vrednoscu konstante!", boolConstDecl);
+				report_error("Greska: Tip konstante " + boolConstDecl.getConstName()
+						+ " nije kompatibilan sa vrednoscu konstante!", boolConstDecl);
 				return;
 			} else {
 				report_info("Naisla na konstantu", boolConstDecl);
 				int boolValue;
 				if (boolConstDecl.getBooleanConst() == true) {
 					boolValue = 1;
-				}else {
+				} else {
 					boolValue = 0;
 				}
-				
+
 				Obj boolNode = Tab.insert(Obj.Con, boolConstDecl.getConstName(), boolType);
 				boolNode.setAdr(boolValue);
 			}
-		}		
+		}
 	}
-	
-	public void visit(IntegerConstDecl intConstDecl) {		
+
+	public void visit(IntegerConstDecl intConstDecl) {
 		// da li je ime deklarisano
 		// da li je dobrog tipa
-		
+
 		if (Tab.find(intConstDecl.getConstName()) != Tab.noObj) {
 			report_error("Greska: Ime " + intConstDecl.getConstName() + " vec postoji u tabeli simbola!", intConstDecl);
 			return;
-		}else {
+		} else {
 			if (!Tab.intType.equals(currType)) {
-				report_error("Greska: Tip konstante " + intConstDecl.getConstName() + " nije kompatibilan sa vrednoscu konstante!", intConstDecl);
+				report_error("Greska: Tip konstante " + intConstDecl.getConstName()
+						+ " nije kompatibilan sa vrednoscu konstante!", intConstDecl);
 				return;
 			} else {
 				report_info("Naisla na konstantu", intConstDecl);
-				
+
 				Obj intNode = Tab.insert(Obj.Con, intConstDecl.getConstName(), Tab.intType);
 				intNode.setAdr(intConstDecl.getNumberConst());
 			}
-		}		
+		}
 	}
-	
-	public void visit(CharConstDecl charConstDecl) {		
+
+	public void visit(CharConstDecl charConstDecl) {
 		// da li je ime deklarisano
 		// da li je dobrog tipa
-		
+
 		if (Tab.find(charConstDecl.getConstName()) != Tab.noObj) {
-			report_error("Greska: Ime " + charConstDecl.getConstName() + " vec postoji u tabeli simbola!", charConstDecl);
+			report_error("Greska: Ime " + charConstDecl.getConstName() + " vec postoji u tabeli simbola!",
+					charConstDecl);
 			return;
-		}else {
+		} else {
 			if (!Tab.charType.equals(currType)) {
-				report_error("Greska: Tip konstante " + charConstDecl.getConstName() + " nije kompatibilan sa vrednoscu konstante!", charConstDecl);
+				report_error("Greska: Tip konstante " + charConstDecl.getConstName()
+						+ " nije kompatibilan sa vrednoscu konstante!", charConstDecl);
 				return;
 			} else {
 				report_info("Naisla na konstantu", charConstDecl);
-				
+
 				Obj intNode = Tab.insert(Obj.Con, charConstDecl.getConstName(), Tab.charType);
 				intNode.setAdr(charConstDecl.getCharConst());
 			}
-		}		
+		}
 	}
+
+	public void visit(VarDecls varDecl) {
+		// da proverim da li postoji tip
+//		Obj typeNode = Tab.find(varDecl.getType().getTypeName());
+//		
+//		if (typeNode == Tab.noObj) {
+//			report_error("Nije pronadjen tip " + varDecl.getType().getTypeName() + " u tabeli simbola !", null);
+//			varDecl.getType().struct = Tab.noType;
+//		}else {
+//			if (Obj.Type == typeNode.getKind()) {
+//				varDecl.getType().struct = typeNode.getType();
+//			} else {
+//				report_error("Greska: Ime " + varDecl.getType().getTypeName() + " ne predstavlja tip!", varDecl.getType());
+//				varDecl.getType().struct = Tab.noType;
+//			}
+//		}
+//		
+//		currType = varDecl.getType().struct;
+	}
+
+	public void visit(Brackets brackets) {
+		arrayType = true;
+	}
+
+	public void visit(MoreVarDecls varDecl) {
+		// proveriti da li postoji takav simbol u tabeli simbola, tj. u tom opsegu
+		// vazenja
+		// ako ne postoji dodati ga
+
+		if (Tab.find(varDecl.getVarName()) != Tab.noObj) {
+			// ako je definisan ali ne u tom opsegu
+			if (Tab.currentScope.findSymbol(varDecl.getVarName()) != null) {
+				report_error("Greska: Simbol " + varDecl.getVarName() + " je vec definisan u tabeli simbola", varDecl);
+			} else {
+				if (arrayType == true) {
+					Struct structType = new Struct(Struct.Array, currType);
+					Tab.insert(Obj.Var, varDecl.getVarName() + "[]", structType);
+				} else {
+					Tab.insert(Obj.Var, varDecl.getVarName(), currType);
+				}
+			}
+		} else {
+			// ako uopste nije definisan
+			if (arrayType == true) {
+				Struct structType = new Struct(Struct.Array, currType);
+				Tab.insert(Obj.Var, varDecl.getVarName() + "[]", structType);
+			} else {
+				Tab.insert(Obj.Var, varDecl.getVarName(), currType);
+			}
+		}
+
+		if (arrayType == true) {
+			arrayType = false;
+		}
+	}
+
+	public void visit(EndOfVarDeclar varDecl) {
+		// proveriti da li postoji takav simbol u tabeli simbola, tj. u tom opsegu
+		// vazenja
+		// ako ne postoji dodati ga
+
+		if (Tab.find(varDecl.getVarName()) != Tab.noObj) {
+			// ako je definisan ali ne u tom opsegu
+			if (Tab.currentScope.findSymbol(varDecl.getVarName()) != null) {
+				report_error("Greska: Simbol " + varDecl.getVarName() + " je vec definisan u tabeli simbola", varDecl);
+			} else {
+				if (arrayType == true) {
+					Struct structType = new Struct(Struct.Array, currType);
+					Tab.insert(Obj.Var, varDecl.getVarName() + "[]", structType);
+				} else {
+					Tab.insert(Obj.Var, varDecl.getVarName(), currType);
+				}
+
+			}
+		} else {
+			// ako uopste nije definisan
+			if (arrayType == true) {
+				Struct structType = new Struct(Struct.Array, currType);
+				Tab.insert(Obj.Var, varDecl.getVarName() + "[]", structType);
+			} else {
+				Tab.insert(Obj.Var, varDecl.getVarName(), currType);
+			}
+		}
+
+		if (arrayType == true) {
+			arrayType = false;
+		}
+
+	}
+
 }

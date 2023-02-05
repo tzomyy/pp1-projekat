@@ -148,7 +148,7 @@ MultipleConstDecl ::= (MultipleConstDecls) MultipleConstDecl COMMA SingleConstDe
 					(EndOfDeclaration) /* epsilon */
 					;					
 
-VarDecl ::= (VarDecls) Type:varName VarDeclarations
+VarDecl ::= (VarDecls) Type:typeVar VarDeclarations
 			;
 
 VarDeclarations ::= (MultipleVarDecl) MoreVarDecl VarDeclarations
@@ -156,13 +156,13 @@ VarDeclarations ::= (MultipleVarDecl) MoreVarDecl VarDeclarations
 				(EndOfVarDeclarations) EndOfVarDecl
 				;
 				
-MoreVarDecl ::= (MoreVarDecls) IDENT Brackets COMMA
+MoreVarDecl ::= (MoreVarDecls) IDENT:varName Brackets COMMA
 			|
 			(ErrorMoreVarDecl) error COMMA:l
 			{: parser.report_error("Izvrsen oporavak kod dodeljivanja globalne promenljive do , u liniji  " + lleft, null); :}
 			;
 
-EndOfVarDecl ::= (EndOfVarDeclar) IDENT Brackets SEMICOLON
+EndOfVarDecl ::= (EndOfVarDeclar) IDENT:varName Brackets SEMICOLON
 			|
 			(ErrorEndOfVarDecl) error SEMICOLON:l
 			{: parser.report_error("Izvrsen oporavak kod dodeljivanja globalne promenljive do ; u liniji " + lleft, null); :}
