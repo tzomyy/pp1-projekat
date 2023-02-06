@@ -1,8 +1,0 @@
-INFO  23:38:43,871 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
-INFO  23:38:43,881 - #41 program
-INFO  23:38:43,881 - #18 MJProgram
-INFO  23:38:43,882 - #13 {
-INFO  23:38:43,882 - #38 }
-ERROR 23:38:43,882 - 
-Sintaksna greska na liniji 5
-ERROR 23:38:43,882 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 5
