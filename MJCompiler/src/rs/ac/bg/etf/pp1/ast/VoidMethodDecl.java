@@ -1,19 +1,20 @@
 // generated with ast extension for cup
 // version 0.8
-// 5/1/2023 17:59:25
+// 6/1/2023 2:37:25
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class VoidMethodDecl extends MethodDecl {
 
-    private String methodName;
+    private VoidMethod VoidMethod;
     private MethodFormPars MethodFormPars;
     private MethodVarDecl MethodVarDecl;
     private MethodStatement MethodStatement;
 
-    public VoidMethodDecl (String methodName, MethodFormPars MethodFormPars, MethodVarDecl MethodVarDecl, MethodStatement MethodStatement) {
-        this.methodName=methodName;
+    public VoidMethodDecl (VoidMethod VoidMethod, MethodFormPars MethodFormPars, MethodVarDecl MethodVarDecl, MethodStatement MethodStatement) {
+        this.VoidMethod=VoidMethod;
+        if(VoidMethod!=null) VoidMethod.setParent(this);
         this.MethodFormPars=MethodFormPars;
         if(MethodFormPars!=null) MethodFormPars.setParent(this);
         this.MethodVarDecl=MethodVarDecl;
@@ -22,12 +23,12 @@ public class VoidMethodDecl extends MethodDecl {
         if(MethodStatement!=null) MethodStatement.setParent(this);
     }
 
-    public String getMethodName() {
-        return methodName;
+    public VoidMethod getVoidMethod() {
+        return VoidMethod;
     }
 
-    public void setMethodName(String methodName) {
-        this.methodName=methodName;
+    public void setVoidMethod(VoidMethod VoidMethod) {
+        this.VoidMethod=VoidMethod;
     }
 
     public MethodFormPars getMethodFormPars() {
@@ -59,6 +60,7 @@ public class VoidMethodDecl extends MethodDecl {
     }
 
     public void childrenAccept(Visitor visitor) {
+        if(VoidMethod!=null) VoidMethod.accept(visitor);
         if(MethodFormPars!=null) MethodFormPars.accept(visitor);
         if(MethodVarDecl!=null) MethodVarDecl.accept(visitor);
         if(MethodStatement!=null) MethodStatement.accept(visitor);
@@ -66,12 +68,14 @@ public class VoidMethodDecl extends MethodDecl {
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
+        if(VoidMethod!=null) VoidMethod.traverseTopDown(visitor);
         if(MethodFormPars!=null) MethodFormPars.traverseTopDown(visitor);
         if(MethodVarDecl!=null) MethodVarDecl.traverseTopDown(visitor);
         if(MethodStatement!=null) MethodStatement.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
+        if(VoidMethod!=null) VoidMethod.traverseBottomUp(visitor);
         if(MethodFormPars!=null) MethodFormPars.traverseBottomUp(visitor);
         if(MethodVarDecl!=null) MethodVarDecl.traverseBottomUp(visitor);
         if(MethodStatement!=null) MethodStatement.traverseBottomUp(visitor);
@@ -83,7 +87,10 @@ public class VoidMethodDecl extends MethodDecl {
         buffer.append(tab);
         buffer.append("VoidMethodDecl(\n");
 
-        buffer.append(" "+tab+methodName);
+        if(VoidMethod!=null)
+            buffer.append(VoidMethod.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
         buffer.append("\n");
 
         if(MethodFormPars!=null)

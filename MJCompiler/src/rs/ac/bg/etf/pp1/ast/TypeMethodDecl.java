@@ -1,22 +1,20 @@
 // generated with ast extension for cup
 // version 0.8
-// 5/1/2023 17:59:25
+// 6/1/2023 2:37:25
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class TypeMethodDecl extends MethodDecl {
 
-    private Type Type;
-    private String methodName;
+    private TypeMethod TypeMethod;
     private MethodFormPars MethodFormPars;
     private MethodVarDecl MethodVarDecl;
     private MethodStatement MethodStatement;
 
-    public TypeMethodDecl (Type Type, String methodName, MethodFormPars MethodFormPars, MethodVarDecl MethodVarDecl, MethodStatement MethodStatement) {
-        this.Type=Type;
-        if(Type!=null) Type.setParent(this);
-        this.methodName=methodName;
+    public TypeMethodDecl (TypeMethod TypeMethod, MethodFormPars MethodFormPars, MethodVarDecl MethodVarDecl, MethodStatement MethodStatement) {
+        this.TypeMethod=TypeMethod;
+        if(TypeMethod!=null) TypeMethod.setParent(this);
         this.MethodFormPars=MethodFormPars;
         if(MethodFormPars!=null) MethodFormPars.setParent(this);
         this.MethodVarDecl=MethodVarDecl;
@@ -25,20 +23,12 @@ public class TypeMethodDecl extends MethodDecl {
         if(MethodStatement!=null) MethodStatement.setParent(this);
     }
 
-    public Type getType() {
-        return Type;
+    public TypeMethod getTypeMethod() {
+        return TypeMethod;
     }
 
-    public void setType(Type Type) {
-        this.Type=Type;
-    }
-
-    public String getMethodName() {
-        return methodName;
-    }
-
-    public void setMethodName(String methodName) {
-        this.methodName=methodName;
+    public void setTypeMethod(TypeMethod TypeMethod) {
+        this.TypeMethod=TypeMethod;
     }
 
     public MethodFormPars getMethodFormPars() {
@@ -70,7 +60,7 @@ public class TypeMethodDecl extends MethodDecl {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(Type!=null) Type.accept(visitor);
+        if(TypeMethod!=null) TypeMethod.accept(visitor);
         if(MethodFormPars!=null) MethodFormPars.accept(visitor);
         if(MethodVarDecl!=null) MethodVarDecl.accept(visitor);
         if(MethodStatement!=null) MethodStatement.accept(visitor);
@@ -78,14 +68,14 @@ public class TypeMethodDecl extends MethodDecl {
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(Type!=null) Type.traverseTopDown(visitor);
+        if(TypeMethod!=null) TypeMethod.traverseTopDown(visitor);
         if(MethodFormPars!=null) MethodFormPars.traverseTopDown(visitor);
         if(MethodVarDecl!=null) MethodVarDecl.traverseTopDown(visitor);
         if(MethodStatement!=null) MethodStatement.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(Type!=null) Type.traverseBottomUp(visitor);
+        if(TypeMethod!=null) TypeMethod.traverseBottomUp(visitor);
         if(MethodFormPars!=null) MethodFormPars.traverseBottomUp(visitor);
         if(MethodVarDecl!=null) MethodVarDecl.traverseBottomUp(visitor);
         if(MethodStatement!=null) MethodStatement.traverseBottomUp(visitor);
@@ -97,13 +87,10 @@ public class TypeMethodDecl extends MethodDecl {
         buffer.append(tab);
         buffer.append("TypeMethodDecl(\n");
 
-        if(Type!=null)
-            buffer.append(Type.toString("  "+tab));
+        if(TypeMethod!=null)
+            buffer.append(TypeMethod.toString("  "+tab));
         else
             buffer.append(tab+"  null");
-        buffer.append("\n");
-
-        buffer.append(" "+tab+methodName);
         buffer.append("\n");
 
         if(MethodFormPars!=null)

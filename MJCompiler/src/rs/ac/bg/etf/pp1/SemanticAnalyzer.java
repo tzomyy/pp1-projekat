@@ -12,6 +12,8 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	Logger log = Logger.getLogger(getClass());
 	boolean errorDetected = false;
 	boolean arrayType = false;
+
+	Obj currMethod = null;
 	Struct currType = null;
 	Struct boolType = new Struct(Struct.Bool);
 
@@ -140,25 +142,6 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		}
 	}
 
-	public void visit(VarDecls varDecl) {
-		// da proverim da li postoji tip
-//		Obj typeNode = Tab.find(varDecl.getType().getTypeName());
-//		
-//		if (typeNode == Tab.noObj) {
-//			report_error("Nije pronadjen tip " + varDecl.getType().getTypeName() + " u tabeli simbola !", null);
-//			varDecl.getType().struct = Tab.noType;
-//		}else {
-//			if (Obj.Type == typeNode.getKind()) {
-//				varDecl.getType().struct = typeNode.getType();
-//			} else {
-//				report_error("Greska: Ime " + varDecl.getType().getTypeName() + " ne predstavlja tip!", varDecl.getType());
-//				varDecl.getType().struct = Tab.noType;
-//			}
-//		}
-//		
-//		currType = varDecl.getType().struct;
-	}
-
 	public void visit(Brackets brackets) {
 		arrayType = true;
 	}
@@ -227,6 +210,52 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			arrayType = false;
 		}
 
+	}
+
+	public void visit(TypeMethod methDecl) {
+		// prvo se doda metoda u tabelu simbola pa se onda otvara opseg
+
+		if (Tab.find(methDecl.getMethodName()) != Tab.noObj) {
+			// ako je definisan ali ne u tom opsegu
+			if (Tab.currentScope.findSymbol(methDecl.getMethodName()) != null) {
+				report_error("Greska: Simbol " + methDecl.getMethodName() + " je vec definisan u tabeli simbola",
+						methDecl);
+			} else {
+				currMethod = Tab.insert(Obj.Meth, methDecl.getMethodName(), currType);
+			}
+		} else {
+			// ako uopste nije definisan
+			currMethod = Tab.insert(Obj.Meth, methDecl.getMethodName(), currType);
+		}
+
+		methDecl.struct = currType;
+		Tab.openScope();
+	}
+
+	public void visit(VoidMethod methDecl) {
+//		report_info(currType, methDecl);
+
+		methDecl.struct = currType = Tab.noType;
+
+		if (Tab.find(methDecl.getMethodName()) != Tab.noObj) {
+			// ako je definisan ali ne u tom opsegu
+			if (Tab.currentScope.findSymbol(methDecl.getMethodName()) != null) {
+				report_error("Greska: Simbol " + methDecl.getMethodName() + " je vec definisan u tabeli simbola",
+						methDecl);
+			} else {
+				currMethod = Tab.insert(Obj.Meth, methDecl.getMethodName(), currType);
+			}
+		} else {
+			// ako uopste nije definisan
+			currMethod = Tab.insert(Obj.Meth, methDecl.getMethodName(), currType);
+		}
+
+		Tab.openScope();
+	}
+
+	public void visit(MethodVarDecls varDecl) {
+		Tab.chainLocalSymbols(currMethod);
+		Tab.closeScope();
 	}
 
 }

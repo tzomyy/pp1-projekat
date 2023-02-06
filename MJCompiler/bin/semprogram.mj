@@ -4,5 +4,13 @@ program p
 	const char milica = 'm' , jovanka = 'j';
 	int janko[];
 	int len, arr2[], sum;
+	const char m = 'm';
 {
+	
+	int f1(int x1, int x2, char z) int a; {
+
+	}
+
+
+	void main() int arr1, sum[]; {}
 }

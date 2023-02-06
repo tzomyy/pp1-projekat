@@ -80,6 +80,8 @@ nonterminal ConstructorVarDecl;
 nonterminal ConstructorStatement;
 
 nonterminal MethodDecl;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct TypeMethod;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct VoidMethod;
 nonterminal MethodFormPars;
 nonterminal MethodStatement;
 nonterminal MethodVarDecl;
@@ -237,10 +239,14 @@ MultipleMethodDecl ::= (MethodDecls) MultipleMethodDecl MethodDecl
 				(NoMethodDeclList) /*epsilon*/
 				;
 
-MethodDecl ::= (TypeMethodDecl) Type:methodType IDENT:methodName LPAREN MethodFormPars MethodVarDecl LCURLY MethodStatement RCURLY
+MethodDecl ::= (TypeMethodDecl) TypeMethod LPAREN MethodFormPars MethodVarDecl LCURLY MethodStatement RCURLY
 					|
-					(VoidMethodDecl) VOID IDENT:methodName LPAREN MethodFormPars MethodVarDecl LCURLY MethodStatement RCURLY
+					(VoidMethodDecl) VoidMethod LPAREN MethodFormPars MethodVarDecl LCURLY MethodStatement RCURLY
 					;
+					
+TypeMethod ::= (TypeMethod) Type:methodType IDENT:methodName;
+
+VoidMethod ::= (VoidMethod) VOID IDENT:methodName;
 					
 MethodFormPars ::= (MethodFormParams) FormPars RPAREN
 				|

@@ -82,6 +82,8 @@ nonterminal ConstructorVarDecl ConstructorVarDecl;
 nonterminal ConstructorStatement ConstructorStatement;
 
 nonterminal MethodDecl MethodDecl;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct TypeMethod;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct VoidMethod;
 nonterminal MethodFormPars MethodFormPars;
 nonterminal MethodStatement MethodStatement;
 nonterminal MethodVarDecl MethodVarDecl;
@@ -239,10 +241,14 @@ MultipleMethodDecl ::= (MethodDecls) MultipleMethodDecl:M1 MethodDecl:M2 {: RESU
 				(NoMethodDeclList) {: RESULT=new NoMethodDeclList(); :} /*epsilon*/
 				;
 
-MethodDecl ::= (TypeMethodDecl) Type:methodType IDENT:methodName LPAREN MethodFormPars:M1 MethodVarDecl:M2 LCURLY MethodStatement:M3 RCURLY {: RESULT=new TypeMethodDecl(methodType, methodName, M1, M2, M3); RESULT.setLine(methodTypeleft); :}
+MethodDecl ::= (TypeMethodDecl) TypeMethod:T1 LPAREN MethodFormPars:M2 MethodVarDecl:M3 LCURLY MethodStatement:M4 RCURLY {: RESULT=new TypeMethodDecl(T1, M2, M3, M4); RESULT.setLine(T1left); :}
 					|
-					(VoidMethodDecl) VOID IDENT:methodName LPAREN MethodFormPars:M1 MethodVarDecl:M2 LCURLY MethodStatement:M3 RCURLY {: RESULT=new VoidMethodDecl(methodName, M1, M2, M3); RESULT.setLine(methodNameleft); :}
+					(VoidMethodDecl) VoidMethod:V1 LPAREN MethodFormPars:M2 MethodVarDecl:M3 LCURLY MethodStatement:M4 RCURLY {: RESULT=new VoidMethodDecl(V1, M2, M3, M4); RESULT.setLine(V1left); :}
 					;
+					
+TypeMethod ::= (TypeMethod) Type:methodType IDENT:methodName {: RESULT=new TypeMethod(methodType, methodName); RESULT.setLine(methodTypeleft); :};
+
+VoidMethod ::= (VoidMethod) VOID IDENT:methodName {: RESULT=new VoidMethod(methodName); RESULT.setLine(methodNameleft); :};
 					
 MethodFormPars ::= (MethodFormParams) FormPars:F1 RPAREN {: RESULT=new MethodFormParams(F1); RESULT.setLine(F1left); :}
 				|

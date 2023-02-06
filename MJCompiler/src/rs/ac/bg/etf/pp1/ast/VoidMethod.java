@@ -5,11 +5,24 @@
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class Assignop implements SyntaxNode {
+public class VoidMethod implements SyntaxNode {
 
     private SyntaxNode parent;
     private int line;
-    public Assignop () {
+    public rs.etf.pp1.symboltable.concepts.Struct struct = null;
+
+    private String methodName;
+
+    public VoidMethod (String methodName) {
+        this.methodName=methodName;
+    }
+
+    public String getMethodName() {
+        return methodName;
+    }
+
+    public void setMethodName(String methodName) {
+        this.methodName=methodName;
     }
 
     public SyntaxNode getParent() {
@@ -46,10 +59,13 @@ public class Assignop implements SyntaxNode {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("Assignop(\n");
+        buffer.append("VoidMethod(\n");
+
+        buffer.append(" "+tab+methodName);
+        buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [Assignop]");
+        buffer.append(") [VoidMethod]");
         return buffer.toString();
     }
 }

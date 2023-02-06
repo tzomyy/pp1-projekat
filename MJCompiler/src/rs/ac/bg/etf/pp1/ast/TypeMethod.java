@@ -5,18 +5,19 @@
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class SingleFormParam extends SingleFormPar {
+public class TypeMethod implements SyntaxNode {
+
+    private SyntaxNode parent;
+    private int line;
+    public rs.etf.pp1.symboltable.concepts.Struct struct = null;
 
     private Type Type;
-    private String formName;
-    private Brackets Brackets;
+    private String methodName;
 
-    public SingleFormParam (Type Type, String formName, Brackets Brackets) {
+    public TypeMethod (Type Type, String methodName) {
         this.Type=Type;
         if(Type!=null) Type.setParent(this);
-        this.formName=formName;
-        this.Brackets=Brackets;
-        if(Brackets!=null) Brackets.setParent(this);
+        this.methodName=methodName;
     }
 
     public Type getType() {
@@ -27,20 +28,28 @@ public class SingleFormParam extends SingleFormPar {
         this.Type=Type;
     }
 
-    public String getFormName() {
-        return formName;
+    public String getMethodName() {
+        return methodName;
     }
 
-    public void setFormName(String formName) {
-        this.formName=formName;
+    public void setMethodName(String methodName) {
+        this.methodName=methodName;
     }
 
-    public Brackets getBrackets() {
-        return Brackets;
+    public SyntaxNode getParent() {
+        return parent;
     }
 
-    public void setBrackets(Brackets Brackets) {
-        this.Brackets=Brackets;
+    public void setParent(SyntaxNode parent) {
+        this.parent=parent;
+    }
+
+    public int getLine() {
+        return line;
+    }
+
+    public void setLine(int line) {
+        this.line=line;
     }
 
     public void accept(Visitor visitor) {
@@ -49,25 +58,22 @@ public class SingleFormParam extends SingleFormPar {
 
     public void childrenAccept(Visitor visitor) {
         if(Type!=null) Type.accept(visitor);
-        if(Brackets!=null) Brackets.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(Type!=null) Type.traverseTopDown(visitor);
-        if(Brackets!=null) Brackets.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(Type!=null) Type.traverseBottomUp(visitor);
-        if(Brackets!=null) Brackets.traverseBottomUp(visitor);
         accept(visitor);
     }
 
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("SingleFormParam(\n");
+        buffer.append("TypeMethod(\n");
 
         if(Type!=null)
             buffer.append(Type.toString("  "+tab));
@@ -75,17 +81,11 @@ public class SingleFormParam extends SingleFormPar {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        buffer.append(" "+tab+formName);
-        buffer.append("\n");
-
-        if(Brackets!=null)
-            buffer.append(Brackets.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
+        buffer.append(" "+tab+methodName);
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [SingleFormParam]");
+        buffer.append(") [TypeMethod]");
         return buffer.toString();
     }
 }
