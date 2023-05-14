@@ -1,16 +1,13 @@
 program p
 	const bool flag1 = true, flag2 = false;
 	const int n = 5, k = 7;
-	const char milica = 'm' , jovanka = 'j';
+	const char milica = 'm' , milica = 'j';
 	int janko[];
 	int len, arr2[], sum;
 	const char m = 'm';
 {
-	
-	int f1(int x1, int x2, char z) int a; {
-
+	void main() int x; {
 	}
-
-
-	void main() int arr1, sum[]; {}
+	
+	
 }

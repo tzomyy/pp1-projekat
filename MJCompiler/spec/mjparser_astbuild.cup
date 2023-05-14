@@ -172,7 +172,7 @@ EndOfVarDecl ::= (EndOfVarDeclar) IDENT:varName Brackets:B1 SEMICOLON {: RESULT=
 			{: parser.report_error("Izvrsen oporavak kod dodeljivanja globalne promenljive do ; u liniji " + lleft, null); :} {: RESULT=new ErrorEndOfVarDecl(); :}
 			;
 
-Brackets ::= (Brackets) LSQUARE RSQUARE {: RESULT=new Brackets(); :}
+Brackets ::= (Brackets) LSQUARE RSQUARE LSQUARE RSQUARE {: RESULT=new Brackets(); :}
 			|
 			(NoBrackets) {: RESULT=new NoBrackets(); :} /*epsilon*/
 			;
@@ -345,6 +345,8 @@ Factor ::= (FactVar) Designator:D1 {: RESULT=new FactVar(D1); RESULT.setLine(D1l
 		|
 		(FactBoolean) BOOL:B1 {: RESULT=new FactBoolean(B1); RESULT.setLine(B1left); :}
 		|
+		(FactConstrMatrix) NEW Type:arrayType LSQUARE Expr:E1 RSQUARE LSQUARE Expr:E2 RSQUARE {: RESULT=new FactConstrMatrix(arrayType, E1, E2); RESULT.setLine(arrayTypeleft); :}
+		|
 		(FactConstrArray) NEW Type:arrayType LSQUARE Expr:E1 RSQUARE {: RESULT=new FactConstrArray(arrayType, E1); RESULT.setLine(arrayTypeleft); :}
 		|
 		(FactConstrObject) NEW Type:objectType LPAREN FactParam:F1 RPAREN {: RESULT=new FactConstrObject(objectType, F1); RESULT.setLine(objectTypeleft); :}
@@ -365,16 +367,10 @@ DesignatorStatement ::= (DesignAssign) Designator:D1 Assignop:A2 Expr:E3 SEMICOL
 					|
 					(DesignDec) Designator:D1 DECREMENT SEMICOLON {: RESULT=new DesignDec(D1); RESULT.setLine(D1left); :}
 					|
-					(DesignAssignArray) LSQUARE DesignArray:D1 RSQUARE EQUAL Designator:D2 SEMICOLON {: RESULT=new DesignAssignArray(D1, D2); RESULT.setLine(D1left); :}
-					|
 					(DesignError) error SEMICOLON:l
 					{: parser.report_error("Izvrsen oporavak kod dodeljivanja vrednosti do ; u liniji " + lleft, null); :} {: RESULT=new DesignError(); :}
 					;
 					
-DesignArray ::= (MultipleDesignators) DesignArray:D1 COMMA DesignOptional:D2 {: RESULT=new MultipleDesignators(D1, D2); RESULT.setLine(D1left); :} 
-			|
-			(SingleDesignators) DesignOptional:D1 {: RESULT=new SingleDesignators(D1); RESULT.setLine(D1left); :}
-			;
 			
 DesignOptional ::= (HasDesignator) Designator:D1 {: RESULT=new HasDesignator(D1); RESULT.setLine(D1left); :}
 				|

@@ -254,7 +254,15 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	}
 
 	public void visit(MethodVarDecls varDecl) {
-		Tab.chainLocalSymbols(currMethod);
+		
+		if (Tab.find("main") == Tab.noObj) {
+			report_error("Nije definisana main funkcija!", varDecl);
+		} else {
+			report_info("Definisan je main", varDecl);
+		}
+		
+		if (currMethod != null) Tab.chainLocalSymbols(currMethod);
+		currMethod = null;
 		Tab.closeScope();
 	}
 

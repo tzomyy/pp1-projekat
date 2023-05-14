@@ -1,0 +1,221 @@
+INFO  03:06:16,147 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\semprogram.mj
+INFO  03:06:16,196 - #37 program
+INFO  03:06:16,197 - #47 p
+INFO  03:06:16,197 - #42 const
+INFO  03:06:16,198 - #47 bool
+INFO  03:06:16,198 - #47 flag1
+INFO  03:06:16,198 - #19 =
+INFO  03:06:16,199 - #46 true
+INFO  03:06:16,199 - #5 ,
+INFO  03:06:16,200 - #47 flag2
+INFO  03:06:16,200 - #19 =
+INFO  03:06:16,200 - #46 false
+INFO  03:06:16,200 - #6 ;
+INFO  03:06:16,200 - #42 const
+INFO  03:06:16,201 - #47 int
+INFO  03:06:16,201 - #47 n
+INFO  03:06:16,201 - #19 =
+INFO  03:06:16,201 - #45 5
+INFO  03:06:16,201 - #5 ,
+INFO  03:06:16,201 - #47 k
+INFO  03:06:16,201 - #19 =
+INFO  03:06:16,202 - #45 7
+INFO  03:06:16,202 - #6 ;
+INFO  03:06:16,208 - #42 const
+INFO  03:06:16,208 - #47 char
+INFO  03:06:16,208 - #47 milica
+INFO  03:06:16,208 - #19 =
+INFO  03:06:16,208 - #44 m
+INFO  03:06:16,208 - #5 ,
+INFO  03:06:16,209 - #47 jovanka
+INFO  03:06:16,209 - #19 =
+INFO  03:06:16,209 - #44 j
+INFO  03:06:16,209 - #6 ;
+INFO  03:06:16,209 - #47 int
+INFO  03:06:16,209 - #47 janko
+INFO  03:06:16,209 - #21 [
+INFO  03:06:16,209 - #38 ]
+INFO  03:06:16,209 - #6 ;
+INFO  03:06:16,210 - #47 int
+INFO  03:06:16,211 - #47 len
+INFO  03:06:16,211 - #5 ,
+INFO  03:06:16,212 - #47 arr2
+INFO  03:06:16,212 - #21 [
+INFO  03:06:16,212 - #38 ]
+INFO  03:06:16,212 - #5 ,
+INFO  03:06:16,212 - #47 sum
+INFO  03:06:16,212 - #6 ;
+INFO  03:06:16,212 - #42 const
+INFO  03:06:16,213 - #47 char
+INFO  03:06:16,213 - #47 m
+INFO  03:06:16,213 - #19 =
+INFO  03:06:16,213 - #44 m
+INFO  03:06:16,213 - #6 ;
+INFO  03:06:16,213 - #12 {
+INFO  03:06:16,213 - #16 void
+INFO  03:06:16,214 - #47 milica
+INFO  03:06:16,214 - #18 (
+INFO  03:06:16,215 - #4 )
+INFO  03:06:16,215 - #47 int
+INFO  03:06:16,216 - #47 x
+INFO  03:06:16,216 - #6 ;
+INFO  03:06:16,216 - #12 {
+INFO  03:06:16,217 - #34 }
+INFO  03:06:16,218 - #34 }
+INFO  03:06:16,224 - Program(
+  ProgName(
+   p
+  ) [ProgName]
+  ConstDeclaration(
+    VarDeclaration(
+      VarDeclaration(
+        ConstDeclaration(
+          ConstDeclaration(
+            ConstDeclaration(
+              NoDeclaration(
+              ) [NoDeclaration]
+              ConstDecl(
+                Type(
+                 bool
+                ) [Type]
+                BoolConstDecl(
+                 flag1
+                 true
+                ) [BoolConstDecl]
+                MultipleConstDecls(
+                  EndOfDeclaration(
+                  ) [EndOfDeclaration]
+                  BoolConstDecl(
+                   flag2
+                   false
+                  ) [BoolConstDecl]
+                ) [MultipleConstDecls]
+              ) [ConstDecl]
+            ) [ConstDeclaration]
+            ConstDecl(
+              Type(
+               int
+              ) [Type]
+              IntegerConstDecl(
+               n
+               5
+              ) [IntegerConstDecl]
+              MultipleConstDecls(
+                EndOfDeclaration(
+                ) [EndOfDeclaration]
+                IntegerConstDecl(
+                 k
+                 7
+                ) [IntegerConstDecl]
+              ) [MultipleConstDecls]
+            ) [ConstDecl]
+          ) [ConstDeclaration]
+          ConstDecl(
+            Type(
+             char
+            ) [Type]
+            CharConstDecl(
+             milica
+             m
+            ) [CharConstDecl]
+            MultipleConstDecls(
+              EndOfDeclaration(
+              ) [EndOfDeclaration]
+              CharConstDecl(
+               jovanka
+               j
+              ) [CharConstDecl]
+            ) [MultipleConstDecls]
+          ) [ConstDecl]
+        ) [ConstDeclaration]
+        VarDecls(
+          Type(
+           int
+          ) [Type]
+          EndOfVarDeclarations(
+            EndOfVarDeclar(
+             janko
+              Brackets(
+              ) [Brackets]
+            ) [EndOfVarDeclar]
+          ) [EndOfVarDeclarations]
+        ) [VarDecls]
+      ) [VarDeclaration]
+      VarDecls(
+        Type(
+         int
+        ) [Type]
+        MultipleVarDecl(
+          MoreVarDecls(
+           len
+            NoBrackets(
+            ) [NoBrackets]
+          ) [MoreVarDecls]
+          MultipleVarDecl(
+            MoreVarDecls(
+             arr2
+              Brackets(
+              ) [Brackets]
+            ) [MoreVarDecls]
+            EndOfVarDeclarations(
+              EndOfVarDeclar(
+               sum
+                NoBrackets(
+                ) [NoBrackets]
+              ) [EndOfVarDeclar]
+            ) [EndOfVarDeclarations]
+          ) [MultipleVarDecl]
+        ) [MultipleVarDecl]
+      ) [VarDecls]
+    ) [VarDeclaration]
+    ConstDecl(
+      Type(
+       char
+      ) [Type]
+      CharConstDecl(
+       m
+       m
+      ) [CharConstDecl]
+      EndOfDeclaration(
+      ) [EndOfDeclaration]
+    ) [ConstDecl]
+  ) [ConstDeclaration]
+  MethodDecls(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    VoidMethodDecl(
+      VoidMethod(
+       milica
+      ) [VoidMethod]
+      NoMethodFormParams(
+      ) [NoMethodFormParams]
+      MethodVarDecls(
+        EndOfMethodVarDecl(
+        ) [EndOfMethodVarDecl]
+        VarDecls(
+          Type(
+           int
+          ) [Type]
+          EndOfVarDeclarations(
+            EndOfVarDeclar(
+             x
+              NoBrackets(
+              ) [NoBrackets]
+            ) [EndOfVarDeclar]
+          ) [EndOfVarDeclarations]
+        ) [VarDecls]
+      ) [MethodVarDecls]
+      NoMethodStmt(
+      ) [NoMethodStmt]
+    ) [VoidMethodDecl]
+  ) [MethodDecls]
+) [Program]
+INFO  03:06:16,225 - ===================================
+INFO  03:06:16,227 - Naisla na konstantu na liniji 2
+INFO  03:06:16,227 - Naisla na konstantu na liniji 2
+INFO  03:06:16,227 - Naisla na konstantu na liniji 3
+INFO  03:06:16,227 - Naisla na konstantu na liniji 3
+INFO  03:06:16,227 - Naisla na konstantu na liniji 4
+INFO  03:06:16,227 - Naisla na konstantu na liniji 4
+INFO  03:06:16,228 - Naisla na konstantu na liniji 7
+ERROR 03:06:16,228 - Greska: Simbol milica je vec definisan u tabeli simbola na liniji 9

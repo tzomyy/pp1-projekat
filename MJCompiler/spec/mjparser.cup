@@ -170,7 +170,7 @@ EndOfVarDecl ::= (EndOfVarDeclar) IDENT:varName Brackets SEMICOLON
 			{: parser.report_error("Izvrsen oporavak kod dodeljivanja globalne promenljive do ; u liniji " + lleft, null); :}
 			;
 
-Brackets ::= (Brackets) LSQUARE RSQUARE
+Brackets ::= (Brackets) LSQUARE RSQUARE LSQUARE RSQUARE
 			|
 			(NoBrackets) /*epsilon*/
 			;
@@ -343,6 +343,8 @@ Factor ::= (FactVar) Designator
 		|
 		(FactBoolean) BOOL
 		|
+		(FactConstrMatrix) NEW Type:arrayType LSQUARE Expr RSQUARE LSQUARE Expr RSQUARE
+		|
 		(FactConstrArray) NEW Type:arrayType LSQUARE Expr RSQUARE
 		|
 		(FactConstrObject) NEW Type:objectType LPAREN FactParam RPAREN
@@ -363,16 +365,10 @@ DesignatorStatement ::= (DesignAssign) Designator Assignop Expr SEMICOLON
 					|
 					(DesignDec) Designator DECREMENT SEMICOLON
 					|
-					(DesignAssignArray) LSQUARE DesignArray RSQUARE EQUAL Designator SEMICOLON
-					|
 					(DesignError) error SEMICOLON:l
 					{: parser.report_error("Izvrsen oporavak kod dodeljivanja vrednosti do ; u liniji " + lleft, null); :}
 					;
 					
-DesignArray ::= (MultipleDesignators) DesignArray COMMA DesignOptional 
-			|
-			(SingleDesignators) DesignOptional
-			;
 			
 DesignOptional ::= (HasDesignator) Designator
 				|

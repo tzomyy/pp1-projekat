@@ -1,0 +1,223 @@
+INFO  15:55:28,875 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\semprogram.mj
+INFO  15:55:28,928 - #37 program
+INFO  15:55:28,929 - #47 p
+INFO  15:55:28,929 - #42 const
+INFO  15:55:28,930 - #47 bool
+INFO  15:55:28,930 - #47 flag1
+INFO  15:55:28,931 - #19 =
+INFO  15:55:28,931 - #46 true
+INFO  15:55:28,931 - #5 ,
+INFO  15:55:28,931 - #47 flag2
+INFO  15:55:28,932 - #19 =
+INFO  15:55:28,932 - #46 false
+INFO  15:55:28,932 - #6 ;
+INFO  15:55:28,932 - #42 const
+INFO  15:55:28,933 - #47 int
+INFO  15:55:28,933 - #47 n
+INFO  15:55:28,933 - #19 =
+INFO  15:55:28,933 - #45 5
+INFO  15:55:28,933 - #5 ,
+INFO  15:55:28,933 - #47 k
+INFO  15:55:28,934 - #19 =
+INFO  15:55:28,934 - #45 7
+INFO  15:55:28,934 - #6 ;
+INFO  15:55:28,940 - #42 const
+INFO  15:55:28,940 - #47 char
+INFO  15:55:28,940 - #47 milica
+INFO  15:55:28,940 - #19 =
+INFO  15:55:28,940 - #44 m
+INFO  15:55:28,940 - #5 ,
+INFO  15:55:28,940 - #47 milica
+INFO  15:55:28,941 - #19 =
+INFO  15:55:28,941 - #44 j
+INFO  15:55:28,941 - #6 ;
+INFO  15:55:28,941 - #47 int
+INFO  15:55:28,941 - #47 janko
+INFO  15:55:28,941 - #21 [
+INFO  15:55:28,941 - #38 ]
+INFO  15:55:28,941 - #6 ;
+INFO  15:55:28,942 - #47 int
+INFO  15:55:28,942 - #47 len
+INFO  15:55:28,942 - #5 ,
+INFO  15:55:28,943 - #47 arr2
+INFO  15:55:28,943 - #21 [
+INFO  15:55:28,943 - #38 ]
+INFO  15:55:28,943 - #5 ,
+INFO  15:55:28,943 - #47 sum
+INFO  15:55:28,943 - #6 ;
+INFO  15:55:28,944 - #42 const
+INFO  15:55:28,944 - #47 char
+INFO  15:55:28,944 - #47 m
+INFO  15:55:28,944 - #19 =
+INFO  15:55:28,944 - #44 m
+INFO  15:55:28,944 - #6 ;
+INFO  15:55:28,944 - #12 {
+INFO  15:55:28,944 - #16 void
+INFO  15:55:28,945 - #47 main
+INFO  15:55:28,945 - #18 (
+INFO  15:55:28,945 - #4 )
+INFO  15:55:28,945 - #47 int
+INFO  15:55:28,946 - #47 x
+INFO  15:55:28,946 - #6 ;
+INFO  15:55:28,946 - #12 {
+INFO  15:55:28,946 - #34 }
+INFO  15:55:28,947 - #34 }
+INFO  15:55:28,953 - Program(
+  ProgName(
+   p
+  ) [ProgName]
+  ConstDeclaration(
+    VarDeclaration(
+      VarDeclaration(
+        ConstDeclaration(
+          ConstDeclaration(
+            ConstDeclaration(
+              NoDeclaration(
+              ) [NoDeclaration]
+              ConstDecl(
+                Type(
+                 bool
+                ) [Type]
+                BoolConstDecl(
+                 flag1
+                 true
+                ) [BoolConstDecl]
+                MultipleConstDecls(
+                  EndOfDeclaration(
+                  ) [EndOfDeclaration]
+                  BoolConstDecl(
+                   flag2
+                   false
+                  ) [BoolConstDecl]
+                ) [MultipleConstDecls]
+              ) [ConstDecl]
+            ) [ConstDeclaration]
+            ConstDecl(
+              Type(
+               int
+              ) [Type]
+              IntegerConstDecl(
+               n
+               5
+              ) [IntegerConstDecl]
+              MultipleConstDecls(
+                EndOfDeclaration(
+                ) [EndOfDeclaration]
+                IntegerConstDecl(
+                 k
+                 7
+                ) [IntegerConstDecl]
+              ) [MultipleConstDecls]
+            ) [ConstDecl]
+          ) [ConstDeclaration]
+          ConstDecl(
+            Type(
+             char
+            ) [Type]
+            CharConstDecl(
+             milica
+             m
+            ) [CharConstDecl]
+            MultipleConstDecls(
+              EndOfDeclaration(
+              ) [EndOfDeclaration]
+              CharConstDecl(
+               milica
+               j
+              ) [CharConstDecl]
+            ) [MultipleConstDecls]
+          ) [ConstDecl]
+        ) [ConstDeclaration]
+        VarDecls(
+          Type(
+           int
+          ) [Type]
+          EndOfVarDeclarations(
+            EndOfVarDeclar(
+             janko
+              Brackets(
+              ) [Brackets]
+            ) [EndOfVarDeclar]
+          ) [EndOfVarDeclarations]
+        ) [VarDecls]
+      ) [VarDeclaration]
+      VarDecls(
+        Type(
+         int
+        ) [Type]
+        MultipleVarDecl(
+          MoreVarDecls(
+           len
+            NoBrackets(
+            ) [NoBrackets]
+          ) [MoreVarDecls]
+          MultipleVarDecl(
+            MoreVarDecls(
+             arr2
+              Brackets(
+              ) [Brackets]
+            ) [MoreVarDecls]
+            EndOfVarDeclarations(
+              EndOfVarDeclar(
+               sum
+                NoBrackets(
+                ) [NoBrackets]
+              ) [EndOfVarDeclar]
+            ) [EndOfVarDeclarations]
+          ) [MultipleVarDecl]
+        ) [MultipleVarDecl]
+      ) [VarDecls]
+    ) [VarDeclaration]
+    ConstDecl(
+      Type(
+       char
+      ) [Type]
+      CharConstDecl(
+       m
+       m
+      ) [CharConstDecl]
+      EndOfDeclaration(
+      ) [EndOfDeclaration]
+    ) [ConstDecl]
+  ) [ConstDeclaration]
+  MethodDecls(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    VoidMethodDecl(
+      VoidMethod(
+       main
+      ) [VoidMethod]
+      NoMethodFormParams(
+      ) [NoMethodFormParams]
+      MethodVarDecls(
+        EndOfMethodVarDecl(
+        ) [EndOfMethodVarDecl]
+        VarDecls(
+          Type(
+           int
+          ) [Type]
+          EndOfVarDeclarations(
+            EndOfVarDeclar(
+             x
+              NoBrackets(
+              ) [NoBrackets]
+            ) [EndOfVarDeclar]
+          ) [EndOfVarDeclarations]
+        ) [VarDecls]
+      ) [MethodVarDecls]
+      NoMethodStmt(
+      ) [NoMethodStmt]
+    ) [VoidMethodDecl]
+  ) [MethodDecls]
+) [Program]
+INFO  15:55:28,953 - ===================================
+INFO  15:55:28,955 - Naisla na konstantu na liniji 2
+INFO  15:55:28,955 - Naisla na konstantu na liniji 2
+INFO  15:55:28,955 - Naisla na konstantu na liniji 3
+INFO  15:55:28,955 - Naisla na konstantu na liniji 3
+INFO  15:55:28,956 - Naisla na konstantu na liniji 4
+ERROR 15:55:28,956 - Greska: Ime milica vec postoji u tabeli simbola! na liniji 4
+INFO  15:55:28,956 - Naisla na konstantu na liniji 7
+INFO  15:55:28,956 - Definisan je main na liniji 11
+INFO  15:55:28,956 - ===================================
+INFO  15:55:28,956 - Parsiranje nije uspesno izvrseno!
