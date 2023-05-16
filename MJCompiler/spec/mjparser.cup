@@ -44,10 +44,10 @@ scan with {:
 :}
 
 terminal COLON, PLUS, RPAREN, COMMA, SEMICOLON, EXTENDS, NEW, ELSE, IF, DOT, LCURLY;
-terminal ASSIGN, MINUS, NOT_EQUAL, VOID, AND, LPAREN, EQUAL, LESS, LSQUARE;
+terminal MINUS, NOT_EQUAL, VOID, AND, LPAREN, EQUAL, LESS, LSQUARE;
 terminal IS_EQUAL, BREAK, READ, INCREMENT, ASTERISK, GREATER, WHILE, SLASH;
-terminal GREATER_EQUAL, LESS_EQUAL, PRINT, FOREACH, RCURLY, CLASS, DECREMENT, PROG;
-terminal RSQUARE, RETURN, CONTINUE, OR, CONST, PERCENT;
+terminal GREATER_EQUAL, LESS_EQUAL, PRINT, RCURLY, CLASS, DECREMENT, PROG;
+terminal RSQUARE, RETURN, CONTINUE, OR, CONST, PERCENT, MAP, ASSIGN;
 terminal Character CHAR;
 terminal Integer NUMBER;
 terminal Boolean BOOL;
@@ -103,7 +103,6 @@ nonterminal Factor;
 nonterminal FactParam;
 
 nonterminal DesignatorStatement;
-nonterminal DesignArray;
 nonterminal DesignOptional;
 nonterminal ActPars;
 
@@ -295,7 +294,7 @@ Statement ::= (DesignStmt) DesignatorStatement
 			|
 			(PrintStmt) PRINT LPAREN Expr StmtConst RPAREN SEMICOLON
 			|
-			(ForeachStmt) Designator DOT FOREACH LPAREN IDENT ASSIGN Statement RPAREN SEMICOLON
+			(MapStmt) Designator Assignop Designator DOT MAP LPAREN IDENT ASSIGN Expr RPAREN SEMICOLON
 			|
 			(ListStmts) LCURLY StatementList RCURLY
 			;

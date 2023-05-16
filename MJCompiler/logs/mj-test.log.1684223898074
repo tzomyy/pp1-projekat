@@ -1,0 +1,131 @@
+INFO  09:58:01,231 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  09:58:01,301 - #35 program
+INFO  09:58:01,301 - #47 MJProgram
+INFO  09:58:01,301 - #40 const
+INFO  09:58:01,302 - #47 bool
+INFO  09:58:01,302 - #47 milica
+INFO  09:58:01,303 - #18 =
+INFO  09:58:01,304 - #46 true
+INFO  09:58:01,305 - #6 ;
+INFO  09:58:01,305 - #40 const
+INFO  09:58:01,306 - #47 int
+INFO  09:58:01,307 - #47 nesto
+INFO  09:58:01,307 - #18 =
+INFO  09:58:01,307 - #46 false
+INFO  09:58:01,307 - #6 ;
+INFO  09:58:01,307 - #12 {
+INFO  09:58:01,307 - #15 void
+INFO  09:58:01,308 - #47 main
+INFO  09:58:01,308 - #17 (
+INFO  09:58:01,309 - #4 )
+INFO  09:58:01,309 - #47 int
+INFO  09:58:01,310 - #47 marta
+INFO  09:58:01,316 - #5 ,
+INFO  09:58:01,317 - #47 djokara
+INFO  09:58:01,317 - #6 ;
+INFO  09:58:01,317 - #12 {
+INFO  09:58:01,318 - #47 milica
+INFO  09:58:01,318 - #18 =
+INFO  09:58:01,318 - #47 milica
+INFO  09:58:01,319 - #11 .
+INFO  09:58:01,320 - #42 map
+INFO  09:58:01,320 - #17 (
+INFO  09:58:01,320 - #47 lalal
+INFO  09:58:01,320 - #43 =>
+INFO  09:58:01,320 - #45 1
+INFO  09:58:01,321 - #4 )
+INFO  09:58:01,321 - #6 ;
+INFO  09:58:01,321 - #32 }
+INFO  09:58:01,321 - #32 }
+INFO  09:58:01,328 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  ConstDeclaration(
+    ConstDeclaration(
+      NoDeclaration(
+      ) [NoDeclaration]
+      ConstDecl(
+        Type(
+         bool
+        ) [Type]
+        BoolConstDecl(
+         milica
+         true
+        ) [BoolConstDecl]
+        EndOfDeclaration(
+        ) [EndOfDeclaration]
+      ) [ConstDecl]
+    ) [ConstDeclaration]
+    ConstDecl(
+      Type(
+       int
+      ) [Type]
+      BoolConstDecl(
+       nesto
+       false
+      ) [BoolConstDecl]
+      EndOfDeclaration(
+      ) [EndOfDeclaration]
+    ) [ConstDecl]
+  ) [ConstDeclaration]
+  MethodDecls(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    VoidMethodDecl(
+      VoidMethod(
+       main
+      ) [VoidMethod]
+      NoMethodFormParams(
+      ) [NoMethodFormParams]
+      MethodVarDecls(
+        EndOfMethodVarDecl(
+        ) [EndOfMethodVarDecl]
+        VarDecls(
+          Type(
+           int
+          ) [Type]
+          MultipleVarDecl(
+            MoreVarDecls(
+             marta
+              NoBrackets(
+              ) [NoBrackets]
+            ) [MoreVarDecls]
+            EndOfVarDeclarations(
+              EndOfVarDeclar(
+               djokara
+                NoBrackets(
+                ) [NoBrackets]
+              ) [EndOfVarDeclar]
+            ) [EndOfVarDeclarations]
+          ) [MultipleVarDecl]
+        ) [VarDecls]
+      ) [MethodVarDecls]
+      MethodStmt(
+        NoMethodStmt(
+        ) [NoMethodStmt]
+        MapStmt(
+          SingleDesignIdent(
+           milica
+          ) [SingleDesignIdent]
+          Assignop(
+          ) [Assignop]
+          SingleDesignIdent(
+           milica
+          ) [SingleDesignIdent]
+         lalal
+          SingleExpr(
+            SingleTerm(
+              FactNum(
+               1
+              ) [FactNum]
+            ) [SingleTerm]
+          ) [SingleExpr]
+        ) [MapStmt]
+      ) [MethodStmt]
+    ) [VoidMethodDecl]
+  ) [MethodDecls]
+) [Program]
+INFO  09:58:01,328 - ===================================
+INFO  09:58:01,330 - Naisla na bool const
+ERROR 09:58:01,331 - Greska: Tip konstante nesto nije kompatibilan sa vrednoscu konstante! na liniji 3

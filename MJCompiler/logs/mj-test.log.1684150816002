@@ -1,0 +1,92 @@
+INFO  13:33:20,795 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  13:33:20,854 - #35 program
+INFO  13:33:20,854 - #47 MJProgram
+INFO  13:33:20,854 - #12 {
+INFO  13:33:20,856 - #15 void
+INFO  13:33:20,857 - #47 main
+INFO  13:33:20,857 - #17 (
+INFO  13:33:20,858 - #4 )
+INFO  13:33:20,858 - #47 int
+INFO  13:33:20,860 - #47 marta
+INFO  13:33:20,860 - #5 ,
+INFO  13:33:20,861 - #47 djokara
+INFO  13:33:20,861 - #6 ;
+INFO  13:33:20,861 - #12 {
+INFO  13:33:20,862 - #47 milica
+INFO  13:33:20,862 - #18 =
+INFO  13:33:20,862 - #47 milica
+INFO  13:33:20,863 - #11 .
+INFO  13:33:20,863 - #42 map
+INFO  13:33:20,863 - #17 (
+INFO  13:33:20,863 - #47 lalal
+INFO  13:33:20,864 - #43 =>
+INFO  13:33:20,870 - #45 1
+INFO  13:33:20,870 - #4 )
+INFO  13:33:20,871 - #6 ;
+INFO  13:33:20,871 - #32 }
+INFO  13:33:20,871 - #32 }
+INFO  13:33:20,877 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  NoDeclaration(
+  ) [NoDeclaration]
+  MethodDecls(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    VoidMethodDecl(
+      VoidMethod(
+       main
+      ) [VoidMethod]
+      NoMethodFormParams(
+      ) [NoMethodFormParams]
+      MethodVarDecls(
+        EndOfMethodVarDecl(
+        ) [EndOfMethodVarDecl]
+        VarDecls(
+          Type(
+           int
+          ) [Type]
+          MultipleVarDecl(
+            MoreVarDecls(
+             marta
+              NoBrackets(
+              ) [NoBrackets]
+            ) [MoreVarDecls]
+            EndOfVarDeclarations(
+              EndOfVarDeclar(
+               djokara
+                NoBrackets(
+                ) [NoBrackets]
+              ) [EndOfVarDeclar]
+            ) [EndOfVarDeclarations]
+          ) [MultipleVarDecl]
+        ) [VarDecls]
+      ) [MethodVarDecls]
+      MethodStmt(
+        NoMethodStmt(
+        ) [NoMethodStmt]
+        MapStmt(
+          SingleDesignIdent(
+           milica
+          ) [SingleDesignIdent]
+          Assignop(
+          ) [Assignop]
+          SingleDesignIdent(
+           milica
+          ) [SingleDesignIdent]
+         lalal
+          SingleExpr(
+            SingleTerm(
+              FactNum(
+               1
+              ) [FactNum]
+            ) [SingleTerm]
+          ) [SingleExpr]
+        ) [MapStmt]
+      ) [MethodStmt]
+    ) [VoidMethodDecl]
+  ) [MethodDecls]
+) [Program]
+INFO  13:33:20,877 - ===================================
+INFO  13:33:20,879 - TIPPPP

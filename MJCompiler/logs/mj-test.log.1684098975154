@@ -1,0 +1,15 @@
+INFO  23:15:54,260 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  23:15:54,344 - #35 program
+INFO  23:15:54,344 - #47 MJProgram
+INFO  23:15:54,344 - #40 const
+INFO  23:15:54,345 - #47 int
+INFO  23:15:54,345 - #47 milica
+INFO  23:15:54,346 - #18 =
+INFO  23:15:54,346 - #46 true
+INFO  23:15:54,346 - #5 ,
+INFO  23:15:54,347 - #47 jovanka
+INFO  23:15:54,347 - #18 =
+INFO  23:15:54,347 - #47 Joc
+ERROR 23:15:54,347 - 
+Sintaksna greska na liniji 2
+ERROR 23:15:54,347 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 2

@@ -1,0 +1,131 @@
+INFO  09:59:09,202 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  09:59:09,282 - #35 program
+INFO  09:59:09,283 - #47 MJProgram
+INFO  09:59:09,283 - #40 const
+INFO  09:59:09,284 - #47 bool
+INFO  09:59:09,284 - #47 milica
+INFO  09:59:09,284 - #18 =
+INFO  09:59:09,285 - #46 true
+INFO  09:59:09,285 - #6 ;
+INFO  09:59:09,285 - #40 const
+INFO  09:59:09,286 - #47 int
+INFO  09:59:09,286 - #47 nesto
+INFO  09:59:09,286 - #18 =
+INFO  09:59:09,287 - #45 1
+INFO  09:59:09,287 - #6 ;
+INFO  09:59:09,287 - #12 {
+INFO  09:59:09,287 - #15 void
+INFO  09:59:09,288 - #47 main
+INFO  09:59:09,288 - #17 (
+INFO  09:59:09,288 - #4 )
+INFO  09:59:09,289 - #47 int
+INFO  09:59:09,290 - #47 marta
+INFO  09:59:09,296 - #5 ,
+INFO  09:59:09,297 - #47 djokara
+INFO  09:59:09,297 - #6 ;
+INFO  09:59:09,297 - #12 {
+INFO  09:59:09,297 - #47 milica
+INFO  09:59:09,298 - #18 =
+INFO  09:59:09,298 - #47 milica
+INFO  09:59:09,299 - #11 .
+INFO  09:59:09,299 - #42 map
+INFO  09:59:09,299 - #17 (
+INFO  09:59:09,299 - #47 lalal
+INFO  09:59:09,299 - #43 =>
+INFO  09:59:09,299 - #45 1
+INFO  09:59:09,299 - #4 )
+INFO  09:59:09,299 - #6 ;
+INFO  09:59:09,299 - #32 }
+INFO  09:59:09,300 - #32 }
+INFO  09:59:09,305 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  ConstDeclaration(
+    ConstDeclaration(
+      NoDeclaration(
+      ) [NoDeclaration]
+      ConstDecl(
+        Type(
+         bool
+        ) [Type]
+        BoolConstDecl(
+         milica
+         true
+        ) [BoolConstDecl]
+        EndOfDeclaration(
+        ) [EndOfDeclaration]
+      ) [ConstDecl]
+    ) [ConstDeclaration]
+    ConstDecl(
+      Type(
+       int
+      ) [Type]
+      IntegerConstDecl(
+       nesto
+       1
+      ) [IntegerConstDecl]
+      EndOfDeclaration(
+      ) [EndOfDeclaration]
+    ) [ConstDecl]
+  ) [ConstDeclaration]
+  MethodDecls(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    VoidMethodDecl(
+      VoidMethod(
+       main
+      ) [VoidMethod]
+      NoMethodFormParams(
+      ) [NoMethodFormParams]
+      MethodVarDecls(
+        EndOfMethodVarDecl(
+        ) [EndOfMethodVarDecl]
+        VarDecls(
+          Type(
+           int
+          ) [Type]
+          MultipleVarDecl(
+            MoreVarDecls(
+             marta
+              NoBrackets(
+              ) [NoBrackets]
+            ) [MoreVarDecls]
+            EndOfVarDeclarations(
+              EndOfVarDeclar(
+               djokara
+                NoBrackets(
+                ) [NoBrackets]
+              ) [EndOfVarDeclar]
+            ) [EndOfVarDeclarations]
+          ) [MultipleVarDecl]
+        ) [VarDecls]
+      ) [MethodVarDecls]
+      MethodStmt(
+        NoMethodStmt(
+        ) [NoMethodStmt]
+        MapStmt(
+          SingleDesignIdent(
+           milica
+          ) [SingleDesignIdent]
+          Assignop(
+          ) [Assignop]
+          SingleDesignIdent(
+           milica
+          ) [SingleDesignIdent]
+         lalal
+          SingleExpr(
+            SingleTerm(
+              FactNum(
+               1
+              ) [FactNum]
+            ) [SingleTerm]
+          ) [SingleExpr]
+        ) [MapStmt]
+      ) [MethodStmt]
+    ) [VoidMethodDecl]
+  ) [MethodDecls]
+) [Program]
+INFO  09:59:09,305 - ===================================
+INFO  09:59:09,310 - Naisla na bool const
+INFO  09:59:09,311 - Naisla na intr const

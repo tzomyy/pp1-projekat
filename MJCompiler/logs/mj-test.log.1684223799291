@@ -1,0 +1,130 @@
+INFO  09:50:44,723 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  09:50:44,797 - #35 program
+INFO  09:50:44,798 - #47 MJProgram
+INFO  09:50:44,798 - #40 const
+INFO  09:50:44,799 - #47 bool
+INFO  09:50:44,800 - #47 milica
+INFO  09:50:44,801 - #18 =
+INFO  09:50:44,801 - #46 true
+INFO  09:50:44,802 - #6 ;
+INFO  09:50:44,803 - #47 int
+INFO  09:50:44,803 - #47 milica
+INFO  09:50:44,804 - #18 =
+ERROR 09:50:44,804 - 
+Sintaksna greska na liniji 3
+INFO  09:50:44,804 - #46 false
+INFO  09:50:44,804 - #6 ;
+INFO  09:50:44,804 - #12 {
+INFO  09:50:44,804 - #15 void
+INFO  09:50:44,805 - #47 main
+ERROR 09:50:44,805 - Izvrsen oporavak kod dodeljivanja globalne promenljive do ; u liniji 3
+INFO  09:50:44,812 - #17 (
+INFO  09:50:44,813 - #4 )
+INFO  09:50:44,814 - #47 int
+INFO  09:50:44,815 - #47 marta
+INFO  09:50:44,815 - #5 ,
+INFO  09:50:44,816 - #47 djokara
+INFO  09:50:44,816 - #6 ;
+INFO  09:50:44,816 - #12 {
+INFO  09:50:44,816 - #47 milica
+INFO  09:50:44,817 - #18 =
+INFO  09:50:44,817 - #47 milica
+INFO  09:50:44,818 - #11 .
+INFO  09:50:44,818 - #42 map
+INFO  09:50:44,818 - #17 (
+INFO  09:50:44,818 - #47 lalal
+INFO  09:50:44,818 - #43 =>
+INFO  09:50:44,818 - #45 1
+INFO  09:50:44,818 - #4 )
+INFO  09:50:44,819 - #6 ;
+INFO  09:50:44,819 - #32 }
+INFO  09:50:44,819 - #32 }
+INFO  09:50:44,824 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  VarDeclaration(
+    ConstDeclaration(
+      NoDeclaration(
+      ) [NoDeclaration]
+      ConstDecl(
+        Type(
+         bool
+        ) [Type]
+        BoolConstDecl(
+         milica
+         true
+        ) [BoolConstDecl]
+        EndOfDeclaration(
+        ) [EndOfDeclaration]
+      ) [ConstDecl]
+    ) [ConstDeclaration]
+    VarDecls(
+      Type(
+       int
+      ) [Type]
+      EndOfVarDeclarations(
+        ErrorEndOfVarDecl(
+        ) [ErrorEndOfVarDecl]
+      ) [EndOfVarDeclarations]
+    ) [VarDecls]
+  ) [VarDeclaration]
+  MethodDecls(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    VoidMethodDecl(
+      VoidMethod(
+       main
+      ) [VoidMethod]
+      NoMethodFormParams(
+      ) [NoMethodFormParams]
+      MethodVarDecls(
+        EndOfMethodVarDecl(
+        ) [EndOfMethodVarDecl]
+        VarDecls(
+          Type(
+           int
+          ) [Type]
+          MultipleVarDecl(
+            MoreVarDecls(
+             marta
+              NoBrackets(
+              ) [NoBrackets]
+            ) [MoreVarDecls]
+            EndOfVarDeclarations(
+              EndOfVarDeclar(
+               djokara
+                NoBrackets(
+                ) [NoBrackets]
+              ) [EndOfVarDeclar]
+            ) [EndOfVarDeclarations]
+          ) [MultipleVarDecl]
+        ) [VarDecls]
+      ) [MethodVarDecls]
+      MethodStmt(
+        NoMethodStmt(
+        ) [NoMethodStmt]
+        MapStmt(
+          SingleDesignIdent(
+           milica
+          ) [SingleDesignIdent]
+          Assignop(
+          ) [Assignop]
+          SingleDesignIdent(
+           milica
+          ) [SingleDesignIdent]
+         lalal
+          SingleExpr(
+            SingleTerm(
+              FactNum(
+               1
+              ) [FactNum]
+            ) [SingleTerm]
+          ) [SingleExpr]
+        ) [MapStmt]
+      ) [MethodStmt]
+    ) [VoidMethodDecl]
+  ) [MethodDecls]
+) [Program]
+INFO  09:50:44,824 - ===================================
+INFO  09:50:44,829 - Naisla na bool const

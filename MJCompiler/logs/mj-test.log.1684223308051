@@ -1,0 +1,135 @@
+INFO  16:03:12,466 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  16:03:12,526 - #35 program
+INFO  16:03:12,526 - #47 MJProgram
+INFO  16:03:12,526 - #40 const
+INFO  16:03:12,528 - #47 bool
+INFO  16:03:12,528 - #47 milica
+INFO  16:03:12,529 - #18 =
+INFO  16:03:12,529 - #46 true
+INFO  16:03:12,529 - #6 ;
+INFO  16:03:12,530 - #40 const
+INFO  16:03:12,531 - #47 bool
+INFO  16:03:12,531 - #47 milica
+INFO  16:03:12,531 - #18 =
+INFO  16:03:12,531 - #46 false
+INFO  16:03:12,532 - #6 ;
+INFO  16:03:12,532 - #12 {
+INFO  16:03:12,532 - #15 void
+INFO  16:03:12,533 - #47 main
+INFO  16:03:12,533 - #17 (
+INFO  16:03:12,533 - #4 )
+INFO  16:03:12,534 - #47 int
+INFO  16:03:12,534 - #47 marta
+INFO  16:03:12,542 - #5 ,
+INFO  16:03:12,543 - #47 djokara
+INFO  16:03:12,543 - #6 ;
+INFO  16:03:12,543 - #12 {
+INFO  16:03:12,543 - #47 milica
+INFO  16:03:12,544 - #18 =
+INFO  16:03:12,544 - #47 milica
+INFO  16:03:12,545 - #11 .
+INFO  16:03:12,545 - #42 map
+INFO  16:03:12,545 - #17 (
+INFO  16:03:12,545 - #47 lalal
+INFO  16:03:12,545 - #43 =>
+INFO  16:03:12,545 - #45 1
+INFO  16:03:12,546 - #4 )
+INFO  16:03:12,546 - #6 ;
+INFO  16:03:12,546 - #32 }
+INFO  16:03:12,547 - #32 }
+INFO  16:03:12,553 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  ConstDeclaration(
+    ConstDeclaration(
+      NoDeclaration(
+      ) [NoDeclaration]
+      ConstDecl(
+        Type(
+         bool
+        ) [Type]
+        BoolConstDecl(
+         milica
+         true
+        ) [BoolConstDecl]
+        EndOfDeclaration(
+        ) [EndOfDeclaration]
+      ) [ConstDecl]
+    ) [ConstDeclaration]
+    ConstDecl(
+      Type(
+       bool
+      ) [Type]
+      BoolConstDecl(
+       milica
+       false
+      ) [BoolConstDecl]
+      EndOfDeclaration(
+      ) [EndOfDeclaration]
+    ) [ConstDecl]
+  ) [ConstDeclaration]
+  MethodDecls(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    VoidMethodDecl(
+      VoidMethod(
+       main
+      ) [VoidMethod]
+      NoMethodFormParams(
+      ) [NoMethodFormParams]
+      MethodVarDecls(
+        EndOfMethodVarDecl(
+        ) [EndOfMethodVarDecl]
+        VarDecls(
+          Type(
+           int
+          ) [Type]
+          MultipleVarDecl(
+            MoreVarDecls(
+             marta
+              NoBrackets(
+              ) [NoBrackets]
+            ) [MoreVarDecls]
+            EndOfVarDeclarations(
+              EndOfVarDeclar(
+               djokara
+                NoBrackets(
+                ) [NoBrackets]
+              ) [EndOfVarDeclar]
+            ) [EndOfVarDeclarations]
+          ) [MultipleVarDecl]
+        ) [VarDecls]
+      ) [MethodVarDecls]
+      MethodStmt(
+        NoMethodStmt(
+        ) [NoMethodStmt]
+        MapStmt(
+          SingleDesignIdent(
+           milica
+          ) [SingleDesignIdent]
+          Assignop(
+          ) [Assignop]
+          SingleDesignIdent(
+           milica
+          ) [SingleDesignIdent]
+         lalal
+          SingleExpr(
+            SingleTerm(
+              FactNum(
+               1
+              ) [FactNum]
+            ) [SingleTerm]
+          ) [SingleExpr]
+        ) [MapStmt]
+      ) [MethodStmt]
+    ) [VoidMethodDecl]
+  ) [MethodDecls]
+) [Program]
+INFO  16:03:12,553 - ===================================
+INFO  16:03:12,556 - TIPPPP
+INFO  16:03:12,556 - Naisla na bool const
+INFO  16:03:12,556 - milica
+INFO  16:03:12,556 - TIPPPP
+ERROR 16:03:12,557 - Greska: Ime milica vec postoji u tabeli simbola! na liniji 3
+INFO  16:03:12,557 - TIPPPP

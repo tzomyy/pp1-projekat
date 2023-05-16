@@ -48,7 +48,7 @@ import java_cup.runtime.Symbol;
 "void"		{ return new_symbol(sym.VOID, yytext());}
 "extends"		{ return new_symbol(sym.EXTENDS, yytext());}
 "continue"		{ return new_symbol(sym.CONTINUE, yytext());}
-"foreach"		{ return new_symbol(sym.FOREACH, yytext());}
+"map"		{ return new_symbol(sym.MAP, yytext());}
 
 "//" {yybegin(COMMENT);}
 <COMMENT> . {yybegin(COMMENT);}
