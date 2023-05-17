@@ -23,6 +23,9 @@ program p
 			continue;
 		}
 		
+		void ja();
+		print ja;
+		
 
 	}
 }

@@ -96,6 +96,7 @@ nonterminal Statement;
 nonterminal MapEnd;
 nonterminal WhileStart;
 nonterminal WhileEnd;
+nonterminal PrintExpr;
 nonterminal StmtConst;
 nonterminal IfStatement;
 nonterminal ElseStatement;
@@ -300,12 +301,14 @@ Statement ::= (DesignStmt) DesignatorStatement
 			|
 			(ReadStmt) READ LPAREN Designator RPAREN SEMICOLON
 			|
-			(PrintStmt) PRINT LPAREN Expr StmtConst RPAREN SEMICOLON
+			(PrintStmt) PRINT LPAREN PrintExpr StmtConst RPAREN SEMICOLON
 			|
 			(MapStmt) Designator Assignop Designator DOT MAP LPAREN IDENT ASSIGN Expr RPAREN SEMICOLON MapEnd
 			|
 			(ListStmts) LCURLY StatementList RCURLY
 			;
+			
+PrintExpr ::= (PrintExpr) Expr ;
 
 MapEnd ::= (MapEnd) /* epislon */;		
 			

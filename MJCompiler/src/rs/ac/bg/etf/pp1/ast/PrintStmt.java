@@ -1,28 +1,28 @@
 // generated with ast extension for cup
 // version 0.8
-// 18/4/2023 0:1:7
+// 18/4/2023 0:23:42
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class PrintStmt extends Statement {
 
-    private Expr Expr;
+    private PrintExpr PrintExpr;
     private StmtConst StmtConst;
 
-    public PrintStmt (Expr Expr, StmtConst StmtConst) {
-        this.Expr=Expr;
-        if(Expr!=null) Expr.setParent(this);
+    public PrintStmt (PrintExpr PrintExpr, StmtConst StmtConst) {
+        this.PrintExpr=PrintExpr;
+        if(PrintExpr!=null) PrintExpr.setParent(this);
         this.StmtConst=StmtConst;
         if(StmtConst!=null) StmtConst.setParent(this);
     }
 
-    public Expr getExpr() {
-        return Expr;
+    public PrintExpr getPrintExpr() {
+        return PrintExpr;
     }
 
-    public void setExpr(Expr Expr) {
-        this.Expr=Expr;
+    public void setPrintExpr(PrintExpr PrintExpr) {
+        this.PrintExpr=PrintExpr;
     }
 
     public StmtConst getStmtConst() {
@@ -38,18 +38,18 @@ public class PrintStmt extends Statement {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(Expr!=null) Expr.accept(visitor);
+        if(PrintExpr!=null) PrintExpr.accept(visitor);
         if(StmtConst!=null) StmtConst.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(Expr!=null) Expr.traverseTopDown(visitor);
+        if(PrintExpr!=null) PrintExpr.traverseTopDown(visitor);
         if(StmtConst!=null) StmtConst.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(Expr!=null) Expr.traverseBottomUp(visitor);
+        if(PrintExpr!=null) PrintExpr.traverseBottomUp(visitor);
         if(StmtConst!=null) StmtConst.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -59,8 +59,8 @@ public class PrintStmt extends Statement {
         buffer.append(tab);
         buffer.append("PrintStmt(\n");
 
-        if(Expr!=null)
-            buffer.append(Expr.toString("  "+tab));
+        if(PrintExpr!=null)
+            buffer.append(PrintExpr.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

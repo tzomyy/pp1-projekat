@@ -302,13 +302,22 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	
 	public void visit(BreakStmt breakStmt) {
 		if (this.depthWhile == 0) {
-			report_error("Break se nalazi van while petlje ", breakStmt);
+			report_error("Break se nalazi van while petlje! ", breakStmt);
 		}
 	}
 	
 	public void visit(ContinueStmt breakStmt) {
 		if (this.depthWhile == 0) {
-			report_error("Continue se nalazi van while petlje ", breakStmt);
+			report_error("Continue se nalazi van while petlje! ", breakStmt);
+		}
+	}
+	
+	public void visit(PrintExpr printExpr) {
+		
+		if ( currType != Tab.intType && currType != Tab.charType && currType != boolType) {
+			report_error("Povratna vrednost izraza u print naredbi nije odgovarajuceg tipa!", printExpr);
+		} else {
+			report_info("Print", printExpr);
 		}
 	}
 
