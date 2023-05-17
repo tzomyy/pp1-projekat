@@ -93,6 +93,7 @@ nonterminal SingleFormPar;
 nonterminal MultipleFormPar;
 
 nonterminal Statement;
+nonterminal MapEnd;
 nonterminal WhileStart;
 nonterminal WhileEnd;
 nonterminal StmtConst;
@@ -301,11 +302,12 @@ Statement ::= (DesignStmt) DesignatorStatement
 			|
 			(PrintStmt) PRINT LPAREN Expr StmtConst RPAREN SEMICOLON
 			|
-			(MapStmt) Designator Assignop Designator DOT MAP LPAREN IDENT ASSIGN Expr RPAREN SEMICOLON
+			(MapStmt) Designator Assignop Designator DOT MAP LPAREN IDENT ASSIGN Expr RPAREN SEMICOLON MapEnd
 			|
 			(ListStmts) LCURLY StatementList RCURLY
 			;
-			
+
+MapEnd ::= (MapEnd) /* epislon */;		
 			
 WhileStart ::= (WhileStart) WHILE;
 

@@ -302,7 +302,13 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	
 	public void visit(BreakStmt breakStmt) {
 		if (this.depthWhile == 0) {
-			report_error("Break se nalazi van while petlje", breakStmt);
+			report_error("Break se nalazi van while petlje ", breakStmt);
+		}
+	}
+	
+	public void visit(ContinueStmt breakStmt) {
+		if (this.depthWhile == 0) {
+			report_error("Continue se nalazi van while petlje ", breakStmt);
 		}
 	}
 

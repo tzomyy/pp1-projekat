@@ -18,9 +18,9 @@ program p
 
 {
 	void main() int x, xa[][]; {
-	
+		
 		while(true){
-			break;
+			continue;
 		}
 		
 

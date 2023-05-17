@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 17/4/2023 23:35:9
+// 18/4/2023 0:1:7
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -12,8 +12,9 @@ public class MapStmt extends Statement {
     private Designator Designator1;
     private String I4;
     private Expr Expr;
+    private MapEnd MapEnd;
 
-    public MapStmt (Designator Designator, Assignop Assignop, Designator Designator1, String I4, Expr Expr) {
+    public MapStmt (Designator Designator, Assignop Assignop, Designator Designator1, String I4, Expr Expr, MapEnd MapEnd) {
         this.Designator=Designator;
         if(Designator!=null) Designator.setParent(this);
         this.Assignop=Assignop;
@@ -23,6 +24,8 @@ public class MapStmt extends Statement {
         this.I4=I4;
         this.Expr=Expr;
         if(Expr!=null) Expr.setParent(this);
+        this.MapEnd=MapEnd;
+        if(MapEnd!=null) MapEnd.setParent(this);
     }
 
     public Designator getDesignator() {
@@ -65,6 +68,14 @@ public class MapStmt extends Statement {
         this.Expr=Expr;
     }
 
+    public MapEnd getMapEnd() {
+        return MapEnd;
+    }
+
+    public void setMapEnd(MapEnd MapEnd) {
+        this.MapEnd=MapEnd;
+    }
+
     public void accept(Visitor visitor) {
         visitor.visit(this);
     }
@@ -74,6 +85,7 @@ public class MapStmt extends Statement {
         if(Assignop!=null) Assignop.accept(visitor);
         if(Designator1!=null) Designator1.accept(visitor);
         if(Expr!=null) Expr.accept(visitor);
+        if(MapEnd!=null) MapEnd.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
@@ -82,6 +94,7 @@ public class MapStmt extends Statement {
         if(Assignop!=null) Assignop.traverseTopDown(visitor);
         if(Designator1!=null) Designator1.traverseTopDown(visitor);
         if(Expr!=null) Expr.traverseTopDown(visitor);
+        if(MapEnd!=null) MapEnd.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
@@ -89,6 +102,7 @@ public class MapStmt extends Statement {
         if(Assignop!=null) Assignop.traverseBottomUp(visitor);
         if(Designator1!=null) Designator1.traverseBottomUp(visitor);
         if(Expr!=null) Expr.traverseBottomUp(visitor);
+        if(MapEnd!=null) MapEnd.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -120,6 +134,12 @@ public class MapStmt extends Statement {
 
         if(Expr!=null)
             buffer.append(Expr.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        if(MapEnd!=null)
+            buffer.append(MapEnd.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

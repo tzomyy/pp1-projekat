@@ -95,6 +95,7 @@ nonterminal SingleFormPar SingleFormPar;
 nonterminal MultipleFormPar MultipleFormPar;
 
 nonterminal Statement Statement;
+nonterminal MapEnd MapEnd;
 nonterminal WhileStart WhileStart;
 nonterminal WhileEnd WhileEnd;
 nonterminal StmtConst StmtConst;
@@ -303,11 +304,12 @@ Statement ::= (DesignStmt) DesignatorStatement:D1 {: RESULT=new DesignStmt(D1); 
 			|
 			(PrintStmt) PRINT LPAREN Expr:E1 StmtConst:S2 RPAREN SEMICOLON {: RESULT=new PrintStmt(E1, S2); RESULT.setLine(E1left); :}
 			|
-			(MapStmt) Designator:D1 Assignop:A2 Designator:D3 DOT MAP LPAREN IDENT:I4 ASSIGN Expr:E5 RPAREN SEMICOLON {: RESULT=new MapStmt(D1, A2, D3, I4, E5); RESULT.setLine(D1left); :}
+			(MapStmt) Designator:D1 Assignop:A2 Designator:D3 DOT MAP LPAREN IDENT:I4 ASSIGN Expr:E5 RPAREN SEMICOLON MapEnd:M6 {: RESULT=new MapStmt(D1, A2, D3, I4, E5, M6); RESULT.setLine(D1left); :}
 			|
 			(ListStmts) LCURLY StatementList:S1 RCURLY {: RESULT=new ListStmts(S1); RESULT.setLine(S1left); :}
 			;
-			
+
+MapEnd ::= (MapEnd) {: RESULT=new MapEnd(); :} /* epislon */;		
 			
 WhileStart ::= (WhileStart) WHILE {: RESULT=new WhileStart(); :};
 
