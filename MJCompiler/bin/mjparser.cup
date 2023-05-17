@@ -68,6 +68,7 @@ nonterminal MoreVarDecl;
 nonterminal EndOfVarDecl;
 
 nonterminal ClassDecl;
+nonterminal ClassName;
 nonterminal ClassConstrMethod;
 nonterminal ClassMethod;
 nonterminal ClassConstr;
@@ -92,6 +93,8 @@ nonterminal SingleFormPar;
 nonterminal MultipleFormPar;
 
 nonterminal Statement;
+nonterminal WhileStart;
+nonterminal WhileEnd;
 nonterminal StmtConst;
 nonterminal IfStatement;
 nonterminal ElseStatement;
@@ -169,13 +172,17 @@ EndOfVarDecl ::= (EndOfVarDeclar) IDENT:varName Brackets SEMICOLON
 			{: parser.report_error("Izvrsen oporavak kod dodeljivanja globalne promenljive do ; u liniji " + lleft, null); :}
 			;
 
-Brackets ::= (Brackets) LSQUARE RSQUARE LSQUARE RSQUARE
+Brackets ::= (MatrixBrackets) LSQUARE RSQUARE LSQUARE RSQUARE
+			|
+			(ArrayBrackets) LSQUARE RSQUARE
 			|
 			(NoBrackets) /*epsilon*/
 			;
 							
 
-ClassDecl ::= (ClassDecl) CLASS IDENT ClassExtends ClassVarDecl ClassConstrMethod RCURLY;
+ClassDecl ::= (ClassDecl) CLASS ClassName ClassExtends ClassVarDecl ClassConstrMethod RCURLY;
+
+ClassName ::= (ClassName) IDENT:className;
 
 ClassConstrMethod ::= (ClassOnlyCurly) LCURLY RCURLY
 					|
@@ -280,7 +287,7 @@ Statement ::= (DesignStmt) DesignatorStatement
 			|
 			(IfStmt) IfStatement Statement ElseStatement
 			|
-			(WhileStmt) WHILE LPAREN Condition RPAREN Statement
+			(WhileStmt) WhileStart LPAREN Condition RPAREN Statement WhileEnd
 			|
 			(BreakStmt) BREAK SEMICOLON
 			|
@@ -298,6 +305,11 @@ Statement ::= (DesignStmt) DesignatorStatement
 			|
 			(ListStmts) LCURLY StatementList RCURLY
 			;
+			
+			
+WhileStart ::= (WhileStart) WHILE;
+
+WhileEnd ::= (WhileEnd) /* epsilon */;
 			
 IfStatement ::= (IfState) IF LPAREN Condition RPAREN
 			|

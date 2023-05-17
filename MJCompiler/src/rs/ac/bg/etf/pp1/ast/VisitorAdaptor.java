@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 14/4/2023 23:14:54
+// 17/4/2023 23:35:9
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -31,6 +31,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(MultipleFormPar MultipleFormPar) { }
     public void visit(ElseStatement ElseStatement) { }
     public void visit(ClassConstrMethod ClassConstrMethod) { }
+    public void visit(Brackets Brackets) { }
     public void visit(MethodVarDecl MethodVarDecl) { }
     public void visit(ClassExtends ClassExtends) { }
     public void visit(Expr Expr) { }
@@ -104,6 +105,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(MoreStatements MoreStatements) { visit(); }
     public void visit(ErrorStmt ErrorStmt) { visit(); }
     public void visit(IfState IfState) { visit(); }
+    public void visit(WhileEnd WhileEnd) { visit(); }
+    public void visit(WhileStart WhileStart) { visit(); }
     public void visit(ListStmts ListStmts) { visit(); }
     public void visit(MapStmt MapStmt) { visit(); }
     public void visit(PrintStmt PrintStmt) { visit(); }
@@ -156,9 +159,11 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(ClassMethodCurly ClassMethodCurly) { visit(); }
     public void visit(ClassConstrCurly ClassConstrCurly) { visit(); }
     public void visit(ClassOnlyCurly ClassOnlyCurly) { visit(); }
+    public void visit(ClassName ClassName) { visit(); }
     public void visit(ClassDecl ClassDecl) { visit(); }
     public void visit(NoBrackets NoBrackets) { visit(); }
-    public void visit(Brackets Brackets) { visit(); }
+    public void visit(ArrayBrackets ArrayBrackets) { visit(); }
+    public void visit(MatrixBrackets MatrixBrackets) { visit(); }
     public void visit(ErrorEndOfVarDecl ErrorEndOfVarDecl) { visit(); }
     public void visit(EndOfVarDeclar EndOfVarDeclar) { visit(); }
     public void visit(ErrorMoreVarDecl ErrorMoreVarDecl) { visit(); }

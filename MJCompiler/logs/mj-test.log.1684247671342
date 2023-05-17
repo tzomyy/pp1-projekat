@@ -1,0 +1,219 @@
+INFO  10:07:58,633 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  10:07:58,706 - #35 program
+INFO  10:07:58,706 - #47 p
+INFO  10:07:58,706 - #40 const
+INFO  10:07:58,708 - #47 int
+INFO  10:07:58,708 - #47 pi
+INFO  10:07:58,708 - #18 =
+INFO  10:07:58,709 - #45 3
+INFO  10:07:58,709 - #5 ,
+INFO  10:07:58,709 - #47 e
+INFO  10:07:58,709 - #18 =
+INFO  10:07:58,710 - #45 2
+INFO  10:07:58,710 - #6 ;
+INFO  10:07:58,710 - #40 const
+INFO  10:07:58,710 - #47 bool
+INFO  10:07:58,711 - #47 flag1
+INFO  10:07:58,711 - #18 =
+INFO  10:07:58,711 - #46 true
+INFO  10:07:58,711 - #6 ;
+INFO  10:07:58,711 - #40 const
+INFO  10:07:58,711 - #47 bool
+INFO  10:07:58,711 - #47 flag2
+INFO  10:07:58,711 - #18 =
+INFO  10:07:58,718 - #46 false
+INFO  10:07:58,718 - #6 ;
+INFO  10:07:58,718 - #40 const
+INFO  10:07:58,718 - #47 int
+INFO  10:07:58,718 - #47 n_1
+INFO  10:07:58,718 - #18 =
+INFO  10:07:58,718 - #45 1
+INFO  10:07:58,718 - #5 ,
+INFO  10:07:58,719 - #47 n_2
+INFO  10:07:58,719 - #18 =
+INFO  10:07:58,719 - #45 2
+INFO  10:07:58,719 - #5 ,
+INFO  10:07:58,719 - #47 n_3
+INFO  10:07:58,719 - #18 =
+INFO  10:07:58,719 - #45 3
+INFO  10:07:58,719 - #6 ;
+INFO  10:07:58,719 - #40 const
+INFO  10:07:58,719 - #47 char
+INFO  10:07:58,720 - #47 a
+INFO  10:07:58,720 - #18 =
+INFO  10:07:58,720 - #44 a
+INFO  10:07:58,720 - #6 ;
+INFO  10:07:58,720 - #40 const
+INFO  10:07:58,720 - #47 int
+INFO  10:07:58,720 - #47 b
+INFO  10:07:58,721 - #18 =
+INFO  10:07:58,721 - #44 a
+INFO  10:07:58,721 - #5 ,
+INFO  10:07:58,721 - #47 x
+INFO  10:07:58,721 - #18 =
+INFO  10:07:58,721 - #46 false
+INFO  10:07:58,721 - #6 ;
+INFO  10:07:58,721 - #40 const
+INFO  10:07:58,721 - #47 char
+INFO  10:07:58,722 - #47 n_1
+INFO  10:07:58,722 - #18 =
+INFO  10:07:58,723 - #45 7
+INFO  10:07:58,723 - #6 ;
+INFO  10:07:58,723 - #40 const
+INFO  10:07:58,723 - #47 char
+INFO  10:07:58,723 - #47 n_2
+INFO  10:07:58,724 - #18 =
+INFO  10:07:58,724 - #44 b
+INFO  10:07:58,724 - #6 ;
+INFO  10:07:58,724 - #12 {
+INFO  10:07:58,724 - #32 }
+INFO  10:07:58,731 - Program(
+  ProgName(
+   p
+  ) [ProgName]
+  ConstDeclaration(
+    ConstDeclaration(
+      ConstDeclaration(
+        ConstDeclaration(
+          ConstDeclaration(
+            ConstDeclaration(
+              ConstDeclaration(
+                ConstDeclaration(
+                  NoDeclaration(
+                  ) [NoDeclaration]
+                  ConstDecl(
+                    Type(
+                     int
+                    ) [Type]
+                    IntegerConstDecl(
+                     pi
+                     3
+                    ) [IntegerConstDecl]
+                    MultipleConstDecls(
+                      EndOfDeclaration(
+                      ) [EndOfDeclaration]
+                      IntegerConstDecl(
+                       e
+                       2
+                      ) [IntegerConstDecl]
+                    ) [MultipleConstDecls]
+                  ) [ConstDecl]
+                ) [ConstDeclaration]
+                ConstDecl(
+                  Type(
+                   bool
+                  ) [Type]
+                  BoolConstDecl(
+                   flag1
+                   true
+                  ) [BoolConstDecl]
+                  EndOfDeclaration(
+                  ) [EndOfDeclaration]
+                ) [ConstDecl]
+              ) [ConstDeclaration]
+              ConstDecl(
+                Type(
+                 bool
+                ) [Type]
+                BoolConstDecl(
+                 flag2
+                 false
+                ) [BoolConstDecl]
+                EndOfDeclaration(
+                ) [EndOfDeclaration]
+              ) [ConstDecl]
+            ) [ConstDeclaration]
+            ConstDecl(
+              Type(
+               int
+              ) [Type]
+              IntegerConstDecl(
+               n_1
+               1
+              ) [IntegerConstDecl]
+              MultipleConstDecls(
+                MultipleConstDecls(
+                  EndOfDeclaration(
+                  ) [EndOfDeclaration]
+                  IntegerConstDecl(
+                   n_2
+                   2
+                  ) [IntegerConstDecl]
+                ) [MultipleConstDecls]
+                IntegerConstDecl(
+                 n_3
+                 3
+                ) [IntegerConstDecl]
+              ) [MultipleConstDecls]
+            ) [ConstDecl]
+          ) [ConstDeclaration]
+          ConstDecl(
+            Type(
+             char
+            ) [Type]
+            CharConstDecl(
+             a
+             a
+            ) [CharConstDecl]
+            EndOfDeclaration(
+            ) [EndOfDeclaration]
+          ) [ConstDecl]
+        ) [ConstDeclaration]
+        ConstDecl(
+          Type(
+           int
+          ) [Type]
+          CharConstDecl(
+           b
+           a
+          ) [CharConstDecl]
+          MultipleConstDecls(
+            EndOfDeclaration(
+            ) [EndOfDeclaration]
+            BoolConstDecl(
+             x
+             false
+            ) [BoolConstDecl]
+          ) [MultipleConstDecls]
+        ) [ConstDecl]
+      ) [ConstDeclaration]
+      ConstDecl(
+        Type(
+         char
+        ) [Type]
+        IntegerConstDecl(
+         n_1
+         7
+        ) [IntegerConstDecl]
+        EndOfDeclaration(
+        ) [EndOfDeclaration]
+      ) [ConstDecl]
+    ) [ConstDeclaration]
+    ConstDecl(
+      Type(
+       char
+      ) [Type]
+      CharConstDecl(
+       n_2
+       b
+      ) [CharConstDecl]
+      EndOfDeclaration(
+      ) [EndOfDeclaration]
+    ) [ConstDecl]
+  ) [ConstDeclaration]
+  NoMethodDeclList(
+  ) [NoMethodDeclList]
+) [Program]
+INFO  10:07:58,731 - ===================================
+INFO  10:07:58,735 - Naisla na intr const
+INFO  10:07:58,735 - Naisla na intr const
+INFO  10:07:58,735 - Naisla na bool const
+INFO  10:07:58,735 - Naisla na bool const
+INFO  10:07:58,735 - Naisla na intr const
+INFO  10:07:58,735 - Naisla na intr const
+INFO  10:07:58,735 - Naisla na intr const
+INFO  10:07:58,735 - Naisla na char const
+ERROR 10:07:58,736 - Greska: Tip konstante b nije kompatibilan sa vrednoscu konstante! na liniji 7
+ERROR 10:07:58,736 - Greska: Tip konstante x nije kompatibilan sa vrednoscu konstante! na liniji 7
+ERROR 10:07:58,736 - Greska: Ime n_1 vec postoji u tabeli simbola! na liniji 10
+ERROR 10:07:58,736 - Greska: Ime n_2 vec postoji u tabeli simbola! na liniji 11

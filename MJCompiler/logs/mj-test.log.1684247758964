@@ -1,0 +1,251 @@
+INFO  16:34:31,346 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  16:34:31,406 - #35 program
+INFO  16:34:31,406 - #47 p
+INFO  16:34:31,407 - #40 const
+INFO  16:34:31,408 - #47 int
+INFO  16:34:31,408 - #47 pi
+INFO  16:34:31,409 - #18 =
+INFO  16:34:31,409 - #45 3
+INFO  16:34:31,409 - #5 ,
+INFO  16:34:31,410 - #47 e
+INFO  16:34:31,410 - #18 =
+INFO  16:34:31,410 - #45 2
+INFO  16:34:31,410 - #6 ;
+INFO  16:34:31,410 - #40 const
+INFO  16:34:31,411 - #47 bool
+INFO  16:34:31,412 - #47 flag1
+INFO  16:34:31,412 - #18 =
+INFO  16:34:31,412 - #46 true
+INFO  16:34:31,412 - #6 ;
+INFO  16:34:31,412 - #40 const
+INFO  16:34:31,412 - #47 bool
+INFO  16:34:31,412 - #47 flag2
+INFO  16:34:31,412 - #18 =
+INFO  16:34:31,419 - #46 false
+INFO  16:34:31,419 - #6 ;
+INFO  16:34:31,419 - #40 const
+INFO  16:34:31,419 - #47 int
+INFO  16:34:31,419 - #47 n_1
+INFO  16:34:31,419 - #18 =
+INFO  16:34:31,419 - #45 1
+INFO  16:34:31,419 - #5 ,
+INFO  16:34:31,420 - #47 n_2
+INFO  16:34:31,420 - #18 =
+INFO  16:34:31,420 - #45 2
+INFO  16:34:31,420 - #5 ,
+INFO  16:34:31,420 - #47 n_3
+INFO  16:34:31,420 - #18 =
+INFO  16:34:31,420 - #45 3
+INFO  16:34:31,420 - #6 ;
+INFO  16:34:31,420 - #40 const
+INFO  16:34:31,420 - #47 char
+INFO  16:34:31,421 - #47 a
+INFO  16:34:31,421 - #18 =
+INFO  16:34:31,421 - #44 a
+INFO  16:34:31,422 - #6 ;
+INFO  16:34:31,422 - #47 int
+INFO  16:34:31,422 - #47 arr1
+INFO  16:34:31,422 - #20 [
+INFO  16:34:31,422 - #36 ]
+INFO  16:34:31,422 - #6 ;
+ERROR 16:34:31,422 - 
+Sintaksna greska na liniji 14
+INFO  16:34:31,422 - #47 int
+INFO  16:34:31,423 - #47 len
+INFO  16:34:31,423 - #5 ,
+ERROR 16:34:31,424 - Izvrsen oporavak kod dodeljivanja globalne promenljive do ; u liniji 14
+INFO  16:34:31,426 - #47 arr2
+INFO  16:34:31,426 - #20 [
+INFO  16:34:31,426 - #36 ]
+INFO  16:34:31,426 - #5 ,
+ERROR 16:34:31,426 - 
+Sintaksna greska na liniji 16
+INFO  16:34:31,426 - #47 sum
+INFO  16:34:31,426 - #6 ;
+INFO  16:34:31,426 - #12 {
+ERROR 16:34:31,427 - Izvrsen oporavak kod dodeljivanja globalne promenljive do , u liniji  16
+INFO  16:34:31,427 - #15 void
+INFO  16:34:31,428 - #47 main
+INFO  16:34:31,428 - #17 (
+INFO  16:34:31,429 - #4 )
+INFO  16:34:31,429 - #47 int
+INFO  16:34:31,430 - #47 x
+INFO  16:34:31,430 - #5 ,
+INFO  16:34:31,430 - #47 xa
+INFO  16:34:31,430 - #20 [
+INFO  16:34:31,430 - #36 ]
+INFO  16:34:31,430 - #6 ;
+ERROR 16:34:31,430 - 
+Sintaksna greska na liniji 21
+INFO  16:34:31,430 - #12 {
+INFO  16:34:31,430 - #32 }
+INFO  16:34:31,430 - #32 }
+ERROR 16:34:31,430 - Izvrsen oporavak kod dodeljivanja globalne promenljive do ; u liniji 21
+INFO  16:34:31,436 - Program(
+  ProgName(
+   p
+  ) [ProgName]
+  VarDeclaration(
+    VarDeclaration(
+      ConstDeclaration(
+        ConstDeclaration(
+          ConstDeclaration(
+            ConstDeclaration(
+              ConstDeclaration(
+                NoDeclaration(
+                ) [NoDeclaration]
+                ConstDecl(
+                  Type(
+                   int
+                  ) [Type]
+                  IntegerConstDecl(
+                   pi
+                   3
+                  ) [IntegerConstDecl]
+                  MultipleConstDecls(
+                    EndOfDeclaration(
+                    ) [EndOfDeclaration]
+                    IntegerConstDecl(
+                     e
+                     2
+                    ) [IntegerConstDecl]
+                  ) [MultipleConstDecls]
+                ) [ConstDecl]
+              ) [ConstDeclaration]
+              ConstDecl(
+                Type(
+                 bool
+                ) [Type]
+                BoolConstDecl(
+                 flag1
+                 true
+                ) [BoolConstDecl]
+                EndOfDeclaration(
+                ) [EndOfDeclaration]
+              ) [ConstDecl]
+            ) [ConstDeclaration]
+            ConstDecl(
+              Type(
+               bool
+              ) [Type]
+              BoolConstDecl(
+               flag2
+               false
+              ) [BoolConstDecl]
+              EndOfDeclaration(
+              ) [EndOfDeclaration]
+            ) [ConstDecl]
+          ) [ConstDeclaration]
+          ConstDecl(
+            Type(
+             int
+            ) [Type]
+            IntegerConstDecl(
+             n_1
+             1
+            ) [IntegerConstDecl]
+            MultipleConstDecls(
+              MultipleConstDecls(
+                EndOfDeclaration(
+                ) [EndOfDeclaration]
+                IntegerConstDecl(
+                 n_2
+                 2
+                ) [IntegerConstDecl]
+              ) [MultipleConstDecls]
+              IntegerConstDecl(
+               n_3
+               3
+              ) [IntegerConstDecl]
+            ) [MultipleConstDecls]
+          ) [ConstDecl]
+        ) [ConstDeclaration]
+        ConstDecl(
+          Type(
+           char
+          ) [Type]
+          CharConstDecl(
+           a
+           a
+          ) [CharConstDecl]
+          EndOfDeclaration(
+          ) [EndOfDeclaration]
+        ) [ConstDecl]
+      ) [ConstDeclaration]
+      VarDecls(
+        Type(
+         int
+        ) [Type]
+        EndOfVarDeclarations(
+          ErrorEndOfVarDecl(
+          ) [ErrorEndOfVarDecl]
+        ) [EndOfVarDeclarations]
+      ) [VarDecls]
+    ) [VarDeclaration]
+    VarDecls(
+      Type(
+       int
+      ) [Type]
+      MultipleVarDecl(
+        MoreVarDecls(
+         len
+          NoBrackets(
+          ) [NoBrackets]
+        ) [MoreVarDecls]
+        MultipleVarDecl(
+          ErrorMoreVarDecl(
+          ) [ErrorMoreVarDecl]
+          EndOfVarDeclarations(
+            EndOfVarDeclar(
+             sum
+              NoBrackets(
+              ) [NoBrackets]
+            ) [EndOfVarDeclar]
+          ) [EndOfVarDeclarations]
+        ) [MultipleVarDecl]
+      ) [MultipleVarDecl]
+    ) [VarDecls]
+  ) [VarDeclaration]
+  MethodDecls(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    VoidMethodDecl(
+      VoidMethod(
+       main
+      ) [VoidMethod]
+      NoMethodFormParams(
+      ) [NoMethodFormParams]
+      MethodVarDecls(
+        EndOfMethodVarDecl(
+        ) [EndOfMethodVarDecl]
+        VarDecls(
+          Type(
+           int
+          ) [Type]
+          MultipleVarDecl(
+            MoreVarDecls(
+             x
+              NoBrackets(
+              ) [NoBrackets]
+            ) [MoreVarDecls]
+            EndOfVarDeclarations(
+              ErrorEndOfVarDecl(
+              ) [ErrorEndOfVarDecl]
+            ) [EndOfVarDeclarations]
+          ) [MultipleVarDecl]
+        ) [VarDecls]
+      ) [MethodVarDecls]
+      NoMethodStmt(
+      ) [NoMethodStmt]
+    ) [VoidMethodDecl]
+  ) [MethodDecls]
+) [Program]
+INFO  16:34:31,436 - ===================================
+INFO  16:34:31,439 - Naisla na intr const
+INFO  16:34:31,439 - Naisla na intr const
+INFO  16:34:31,439 - Naisla na bool const
+INFO  16:34:31,439 - Naisla na bool const
+INFO  16:34:31,439 - Naisla na intr const
+INFO  16:34:31,439 - Naisla na intr const
+INFO  16:34:31,439 - Naisla na intr const
+INFO  16:34:31,439 - Naisla na char const

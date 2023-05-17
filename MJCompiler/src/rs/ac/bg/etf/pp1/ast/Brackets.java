@@ -1,16 +1,15 @@
 // generated with ast extension for cup
 // version 0.8
-// 14/4/2023 23:14:54
+// 17/4/2023 23:35:9
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class Brackets implements SyntaxNode {
+public abstract class Brackets implements SyntaxNode {
 
     private SyntaxNode parent;
+
     private int line;
-    public Brackets () {
-    }
 
     public SyntaxNode getParent() {
         return parent;
@@ -28,28 +27,11 @@ public class Brackets implements SyntaxNode {
         this.line=line;
     }
 
-    public void accept(Visitor visitor) {
-        visitor.visit(this);
-    }
+    public abstract void accept(Visitor visitor);
+    public abstract void childrenAccept(Visitor visitor);
+    public abstract void traverseTopDown(Visitor visitor);
+    public abstract void traverseBottomUp(Visitor visitor);
 
-    public void childrenAccept(Visitor visitor) {
-    }
-
-    public void traverseTopDown(Visitor visitor) {
-        accept(visitor);
-    }
-
-    public void traverseBottomUp(Visitor visitor) {
-        accept(visitor);
-    }
-
-    public String toString(String tab) {
-        StringBuffer buffer=new StringBuffer();
-        buffer.append(tab);
-        buffer.append("Brackets(\n");
-
-        buffer.append(tab);
-        buffer.append(") [Brackets]");
-        return buffer.toString();
-    }
+    public String toString() { return toString(""); }
+    public abstract String toString(String tab);
 }

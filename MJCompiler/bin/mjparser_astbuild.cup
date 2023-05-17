@@ -70,6 +70,7 @@ nonterminal MoreVarDecl MoreVarDecl;
 nonterminal EndOfVarDecl EndOfVarDecl;
 
 nonterminal ClassDecl ClassDecl;
+nonterminal ClassName ClassName;
 nonterminal ClassConstrMethod ClassConstrMethod;
 nonterminal ClassMethod ClassMethod;
 nonterminal ClassConstr ClassConstr;
@@ -94,6 +95,8 @@ nonterminal SingleFormPar SingleFormPar;
 nonterminal MultipleFormPar MultipleFormPar;
 
 nonterminal Statement Statement;
+nonterminal WhileStart WhileStart;
+nonterminal WhileEnd WhileEnd;
 nonterminal StmtConst StmtConst;
 nonterminal IfStatement IfStatement;
 nonterminal ElseStatement ElseStatement;
@@ -171,13 +174,17 @@ EndOfVarDecl ::= (EndOfVarDeclar) IDENT:varName Brackets:B1 SEMICOLON {: RESULT=
 			{: parser.report_error("Izvrsen oporavak kod dodeljivanja globalne promenljive do ; u liniji " + lleft, null); :} {: RESULT=new ErrorEndOfVarDecl(); :}
 			;
 
-Brackets ::= (Brackets) LSQUARE RSQUARE LSQUARE RSQUARE {: RESULT=new Brackets(); :}
+Brackets ::= (MatrixBrackets) LSQUARE RSQUARE LSQUARE RSQUARE {: RESULT=new MatrixBrackets(); :}
+			|
+			(ArrayBrackets) LSQUARE RSQUARE {: RESULT=new ArrayBrackets(); :}
 			|
 			(NoBrackets) {: RESULT=new NoBrackets(); :} /*epsilon*/
 			;
 							
 
-ClassDecl ::= (ClassDecl) CLASS IDENT:I1 ClassExtends:C2 ClassVarDecl:C3 ClassConstrMethod:C4 RCURLY {: RESULT=new ClassDecl(I1, C2, C3, C4); RESULT.setLine(I1left); :};
+ClassDecl ::= (ClassDecl) CLASS ClassName:C1 ClassExtends:C2 ClassVarDecl:C3 ClassConstrMethod:C4 RCURLY {: RESULT=new ClassDecl(C1, C2, C3, C4); RESULT.setLine(C1left); :};
+
+ClassName ::= (ClassName) IDENT:className {: RESULT=new ClassName(className); RESULT.setLine(classNameleft); :};
 
 ClassConstrMethod ::= (ClassOnlyCurly) LCURLY RCURLY {: RESULT=new ClassOnlyCurly(); :}
 					|
@@ -282,7 +289,7 @@ Statement ::= (DesignStmt) DesignatorStatement:D1 {: RESULT=new DesignStmt(D1); 
 			|
 			(IfStmt) IfStatement:I1 Statement:S2 ElseStatement:E3 {: RESULT=new IfStmt(I1, S2, E3); RESULT.setLine(I1left); :}
 			|
-			(WhileStmt) WHILE LPAREN Condition:C1 RPAREN Statement:S2 {: RESULT=new WhileStmt(C1, S2); RESULT.setLine(C1left); :}
+			(WhileStmt) WhileStart:W1 LPAREN Condition:C2 RPAREN Statement:S3 WhileEnd:W4 {: RESULT=new WhileStmt(W1, C2, S3, W4); RESULT.setLine(W1left); :}
 			|
 			(BreakStmt) BREAK SEMICOLON {: RESULT=new BreakStmt(); :}
 			|
@@ -300,6 +307,11 @@ Statement ::= (DesignStmt) DesignatorStatement:D1 {: RESULT=new DesignStmt(D1); 
 			|
 			(ListStmts) LCURLY StatementList:S1 RCURLY {: RESULT=new ListStmts(S1); RESULT.setLine(S1left); :}
 			;
+			
+			
+WhileStart ::= (WhileStart) WHILE {: RESULT=new WhileStart(); :};
+
+WhileEnd ::= (WhileEnd) {: RESULT=new WhileEnd(); :} /* epsilon */;
 			
 IfStatement ::= (IfState) IF LPAREN Condition:C1 RPAREN {: RESULT=new IfState(C1); RESULT.setLine(C1left); :}
 			|
