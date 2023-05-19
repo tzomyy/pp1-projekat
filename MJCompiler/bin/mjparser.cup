@@ -102,9 +102,9 @@ nonterminal IfStatement;
 nonterminal ElseStatement;
 nonterminal StatementList;
 
-nonterminal Expr;
-nonterminal Term;
-nonterminal Factor;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Expr;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Term;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Factor;
 nonterminal FactParam;
 
 nonterminal DesignatorStatement;
@@ -115,7 +115,7 @@ nonterminal Condition;
 nonterminal CondTerm;
 nonterminal CondFact;
 
-nonterminal Designator;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator;
 
 nonterminal Label;
 nonterminal Assignop;
@@ -337,7 +337,7 @@ ElseStatement ::= (ElseStmt) ELSE Statement
 				(NoElseStmt) /* epsilon */
 				;
 
-Expr ::= (NegativeExpr) MINUS Term
+Expr ::= (NegativeExpr) MINUS Term:t
 		|
 		(MultipleExpr) Expr Addop Term
 		|
@@ -411,11 +411,11 @@ CondFact ::= (CondFacts) CondFact Relop Expr
 		(SingleCondFact) Expr
 		;
 					
-Designator ::= (MultipleDesignIdent) Designator DOT IDENT
+Designator ::= (MultipleDesignIdent) Designator DOT IDENT:var
 			|
-			(MultipleDesignExpr) Designator LSQUARE Expr RSQUARE
+			(MultipleDesignExpr) Designator LSQUARE Expr:expr RSQUARE
 			|
-			(SingleDesignIdent) IDENT;
+			(SingleDesignIdent) IDENT:var;
 
 Type ::= (Type) IDENT:typeName;	
 

@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 18/4/2023 0:23:42
+// 19/4/2023 13:26:15
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,12 +8,12 @@ package rs.ac.bg.etf.pp1.ast;
 public class MultipleDesignIdent extends Designator {
 
     private Designator Designator;
-    private String I2;
+    private String var;
 
-    public MultipleDesignIdent (Designator Designator, String I2) {
+    public MultipleDesignIdent (Designator Designator, String var) {
         this.Designator=Designator;
         if(Designator!=null) Designator.setParent(this);
-        this.I2=I2;
+        this.var=var;
     }
 
     public Designator getDesignator() {
@@ -24,12 +24,12 @@ public class MultipleDesignIdent extends Designator {
         this.Designator=Designator;
     }
 
-    public String getI2() {
-        return I2;
+    public String getVar() {
+        return var;
     }
 
-    public void setI2(String I2) {
-        this.I2=I2;
+    public void setVar(String var) {
+        this.var=var;
     }
 
     public void accept(Visitor visitor) {
@@ -61,7 +61,7 @@ public class MultipleDesignIdent extends Designator {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        buffer.append(" "+tab+I2);
+        buffer.append(" "+tab+var);
         buffer.append("\n");
 
         buffer.append(tab);

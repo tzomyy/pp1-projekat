@@ -104,9 +104,9 @@ nonterminal IfStatement IfStatement;
 nonterminal ElseStatement ElseStatement;
 nonterminal StatementList StatementList;
 
-nonterminal Expr Expr;
-nonterminal Term Term;
-nonterminal Factor Factor;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Expr;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Term;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Factor;
 nonterminal FactParam FactParam;
 
 nonterminal DesignatorStatement DesignatorStatement;
@@ -117,7 +117,7 @@ nonterminal Condition Condition;
 nonterminal CondTerm CondTerm;
 nonterminal CondFact CondFact;
 
-nonterminal Designator Designator;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator;
 
 nonterminal Label Label;
 nonterminal Assignop Assignop;
@@ -339,7 +339,7 @@ ElseStatement ::= (ElseStmt) ELSE Statement:S1 {: RESULT=new ElseStmt(S1); RESUL
 				(NoElseStmt) {: RESULT=new NoElseStmt(); :} /* epsilon */
 				;
 
-Expr ::= (NegativeExpr) MINUS Term:T1 {: RESULT=new NegativeExpr(T1); RESULT.setLine(T1left); :}
+Expr ::= (NegativeExpr) MINUS Term:t {: RESULT=new NegativeExpr(t); RESULT.setLine(tleft); :}
 		|
 		(MultipleExpr) Expr:E1 Addop:A2 Term:T3 {: RESULT=new MultipleExpr(E1, A2, T3); RESULT.setLine(E1left); :}
 		|
@@ -413,11 +413,11 @@ CondFact ::= (CondFacts) CondFact:C1 Relop:R2 Expr:E3 {: RESULT=new CondFacts(C1
 		(SingleCondFact) Expr:E1 {: RESULT=new SingleCondFact(E1); RESULT.setLine(E1left); :}
 		;
 					
-Designator ::= (MultipleDesignIdent) Designator:D1 DOT IDENT:I2 {: RESULT=new MultipleDesignIdent(D1, I2); RESULT.setLine(D1left); :}
+Designator ::= (MultipleDesignIdent) Designator:D1 DOT IDENT:var {: RESULT=new MultipleDesignIdent(D1, var); RESULT.setLine(D1left); :}
 			|
 			(MultipleDesignExpr) Designator:D1 LSQUARE Expr:E2 RSQUARE {: RESULT=new MultipleDesignExpr(D1, E2); RESULT.setLine(D1left); :}
 			|
-			(SingleDesignIdent) IDENT:I1 {: RESULT=new SingleDesignIdent(I1); RESULT.setLine(I1left); :};
+			(SingleDesignIdent) IDENT:var {: RESULT=new SingleDesignIdent(var); RESULT.setLine(varleft); :};
 
 Type ::= (Type) IDENT:typeName {: RESULT=new Type(typeName); RESULT.setLine(typeNameleft); :};	
 

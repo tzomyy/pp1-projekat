@@ -1,0 +1,336 @@
+INFO  15:35:09,748 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  15:35:09,815 - #35 program
+INFO  15:35:09,816 - #47 p
+INFO  15:35:09,816 - #40 const
+INFO  15:35:09,817 - #47 int
+INFO  15:35:09,817 - #47 pi
+INFO  15:35:09,817 - #18 =
+INFO  15:35:09,818 - #45 3
+INFO  15:35:09,818 - #5 ,
+INFO  15:35:09,819 - #47 e
+INFO  15:35:09,819 - #18 =
+INFO  15:35:09,819 - #45 2
+INFO  15:35:09,819 - #6 ;
+INFO  15:35:09,819 - #40 const
+INFO  15:35:09,819 - #47 bool
+INFO  15:35:09,819 - #47 flag1
+INFO  15:35:09,819 - #18 =
+INFO  15:35:09,819 - #46 true
+INFO  15:35:09,819 - #6 ;
+INFO  15:35:09,819 - #40 const
+INFO  15:35:09,820 - #47 bool
+INFO  15:35:09,820 - #47 flag2
+INFO  15:35:09,820 - #18 =
+INFO  15:35:09,826 - #46 false
+INFO  15:35:09,826 - #6 ;
+INFO  15:35:09,826 - #40 const
+INFO  15:35:09,826 - #47 int
+INFO  15:35:09,826 - #47 n_1
+INFO  15:35:09,826 - #18 =
+INFO  15:35:09,826 - #45 1
+INFO  15:35:09,826 - #5 ,
+INFO  15:35:09,828 - #47 n_2
+INFO  15:35:09,828 - #18 =
+INFO  15:35:09,828 - #45 2
+INFO  15:35:09,828 - #5 ,
+INFO  15:35:09,828 - #47 n_3
+INFO  15:35:09,828 - #18 =
+INFO  15:35:09,828 - #45 3
+INFO  15:35:09,828 - #6 ;
+INFO  15:35:09,828 - #40 const
+INFO  15:35:09,829 - #47 char
+INFO  15:35:09,829 - #47 a
+INFO  15:35:09,829 - #18 =
+INFO  15:35:09,829 - #44 a
+INFO  15:35:09,829 - #6 ;
+INFO  15:35:09,829 - #47 int
+INFO  15:35:09,829 - #47 arr1
+INFO  15:35:09,829 - #20 [
+INFO  15:35:09,829 - #36 ]
+INFO  15:35:09,829 - #6 ;
+INFO  15:35:09,830 - #47 int
+INFO  15:35:09,830 - #47 len
+INFO  15:35:09,830 - #5 ,
+INFO  15:35:09,831 - #47 arr2
+INFO  15:35:09,831 - #20 [
+INFO  15:35:09,831 - #36 ]
+INFO  15:35:09,831 - #20 [
+INFO  15:35:09,832 - #36 ]
+INFO  15:35:09,832 - #5 ,
+INFO  15:35:09,832 - #47 sum
+INFO  15:35:09,832 - #6 ;
+INFO  15:35:09,832 - #12 {
+INFO  15:35:09,833 - #15 void
+INFO  15:35:09,833 - #47 main
+INFO  15:35:09,834 - #17 (
+INFO  15:35:09,834 - #4 )
+INFO  15:35:09,834 - #47 int
+INFO  15:35:09,835 - #47 x
+INFO  15:35:09,836 - #5 ,
+INFO  15:35:09,836 - #47 xa
+INFO  15:35:09,836 - #20 [
+INFO  15:35:09,836 - #36 ]
+INFO  15:35:09,836 - #20 [
+INFO  15:35:09,836 - #36 ]
+INFO  15:35:09,836 - #6 ;
+INFO  15:35:09,836 - #12 {
+INFO  15:35:09,836 - #47 sum
+INFO  15:35:09,837 - #18 =
+INFO  15:35:09,837 - #47 sum
+INFO  15:35:09,837 - #3 +
+INFO  15:35:09,838 - #47 len
+INFO  15:35:09,838 - #6 ;
+INFO  15:35:09,839 - #47 len
+INFO  15:35:09,839 - #18 =
+INFO  15:35:09,839 - #47 pi
+INFO  15:35:09,839 - #3 +
+INFO  15:35:09,839 - #47 e
+INFO  15:35:09,839 - #6 ;
+INFO  15:35:09,839 - #37 return
+INFO  15:35:09,839 - #6 ;
+INFO  15:35:09,839 - #32 }
+INFO  15:35:09,840 - #32 }
+INFO  15:35:09,847 - Program(
+  ProgName(
+   p
+  ) [ProgName]
+  VarDeclaration(
+    VarDeclaration(
+      ConstDeclaration(
+        ConstDeclaration(
+          ConstDeclaration(
+            ConstDeclaration(
+              ConstDeclaration(
+                NoDeclaration(
+                ) [NoDeclaration]
+                ConstDecl(
+                  Type(
+                   int
+                  ) [Type]
+                  IntegerConstDecl(
+                   pi
+                   3
+                  ) [IntegerConstDecl]
+                  MultipleConstDecls(
+                    EndOfDeclaration(
+                    ) [EndOfDeclaration]
+                    IntegerConstDecl(
+                     e
+                     2
+                    ) [IntegerConstDecl]
+                  ) [MultipleConstDecls]
+                ) [ConstDecl]
+              ) [ConstDeclaration]
+              ConstDecl(
+                Type(
+                 bool
+                ) [Type]
+                BoolConstDecl(
+                 flag1
+                 true
+                ) [BoolConstDecl]
+                EndOfDeclaration(
+                ) [EndOfDeclaration]
+              ) [ConstDecl]
+            ) [ConstDeclaration]
+            ConstDecl(
+              Type(
+               bool
+              ) [Type]
+              BoolConstDecl(
+               flag2
+               false
+              ) [BoolConstDecl]
+              EndOfDeclaration(
+              ) [EndOfDeclaration]
+            ) [ConstDecl]
+          ) [ConstDeclaration]
+          ConstDecl(
+            Type(
+             int
+            ) [Type]
+            IntegerConstDecl(
+             n_1
+             1
+            ) [IntegerConstDecl]
+            MultipleConstDecls(
+              MultipleConstDecls(
+                EndOfDeclaration(
+                ) [EndOfDeclaration]
+                IntegerConstDecl(
+                 n_2
+                 2
+                ) [IntegerConstDecl]
+              ) [MultipleConstDecls]
+              IntegerConstDecl(
+               n_3
+               3
+              ) [IntegerConstDecl]
+            ) [MultipleConstDecls]
+          ) [ConstDecl]
+        ) [ConstDeclaration]
+        ConstDecl(
+          Type(
+           char
+          ) [Type]
+          CharConstDecl(
+           a
+           a
+          ) [CharConstDecl]
+          EndOfDeclaration(
+          ) [EndOfDeclaration]
+        ) [ConstDecl]
+      ) [ConstDeclaration]
+      VarDecls(
+        Type(
+         int
+        ) [Type]
+        EndOfVarDeclarations(
+          EndOfVarDeclar(
+           arr1
+            ArrayBrackets(
+            ) [ArrayBrackets]
+          ) [EndOfVarDeclar]
+        ) [EndOfVarDeclarations]
+      ) [VarDecls]
+    ) [VarDeclaration]
+    VarDecls(
+      Type(
+       int
+      ) [Type]
+      MultipleVarDecl(
+        MoreVarDecls(
+         len
+          NoBrackets(
+          ) [NoBrackets]
+        ) [MoreVarDecls]
+        MultipleVarDecl(
+          MoreVarDecls(
+           arr2
+            MatrixBrackets(
+            ) [MatrixBrackets]
+          ) [MoreVarDecls]
+          EndOfVarDeclarations(
+            EndOfVarDeclar(
+             sum
+              NoBrackets(
+              ) [NoBrackets]
+            ) [EndOfVarDeclar]
+          ) [EndOfVarDeclarations]
+        ) [MultipleVarDecl]
+      ) [MultipleVarDecl]
+    ) [VarDecls]
+  ) [VarDeclaration]
+  MethodDecls(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    VoidMethodDecl(
+      VoidMethod(
+       main
+      ) [VoidMethod]
+      NoMethodFormParams(
+      ) [NoMethodFormParams]
+      MethodVarDecls(
+        EndOfMethodVarDecl(
+        ) [EndOfMethodVarDecl]
+        VarDecls(
+          Type(
+           int
+          ) [Type]
+          MultipleVarDecl(
+            MoreVarDecls(
+             x
+              NoBrackets(
+              ) [NoBrackets]
+            ) [MoreVarDecls]
+            EndOfVarDeclarations(
+              EndOfVarDeclar(
+               xa
+                MatrixBrackets(
+                ) [MatrixBrackets]
+              ) [EndOfVarDeclar]
+            ) [EndOfVarDeclarations]
+          ) [MultipleVarDecl]
+        ) [VarDecls]
+      ) [MethodVarDecls]
+      MethodStmt(
+        MethodStmt(
+          MethodStmt(
+            NoMethodStmt(
+            ) [NoMethodStmt]
+            DesignStmt(
+              DesignAssign(
+                SingleDesignIdent(
+                 sum
+                ) [SingleDesignIdent]
+                Assignop(
+                ) [Assignop]
+                MultipleExpr(
+                  SingleExpr(
+                    SingleTerm(
+                      FactVar(
+                        SingleDesignIdent(
+                         sum
+                        ) [SingleDesignIdent]
+                      ) [FactVar]
+                    ) [SingleTerm]
+                  ) [SingleExpr]
+                  Plus(
+                  ) [Plus]
+                  SingleTerm(
+                    FactVar(
+                      SingleDesignIdent(
+                       len
+                      ) [SingleDesignIdent]
+                    ) [FactVar]
+                  ) [SingleTerm]
+                ) [MultipleExpr]
+              ) [DesignAssign]
+            ) [DesignStmt]
+          ) [MethodStmt]
+          DesignStmt(
+            DesignAssign(
+              SingleDesignIdent(
+               len
+              ) [SingleDesignIdent]
+              Assignop(
+              ) [Assignop]
+              MultipleExpr(
+                SingleExpr(
+                  SingleTerm(
+                    FactVar(
+                      SingleDesignIdent(
+                       pi
+                      ) [SingleDesignIdent]
+                    ) [FactVar]
+                  ) [SingleTerm]
+                ) [SingleExpr]
+                Plus(
+                ) [Plus]
+                SingleTerm(
+                  FactVar(
+                    SingleDesignIdent(
+                     e
+                    ) [SingleDesignIdent]
+                  ) [FactVar]
+                ) [SingleTerm]
+              ) [MultipleExpr]
+            ) [DesignAssign]
+          ) [DesignStmt]
+        ) [MethodStmt]
+        ReturnNoExpr(
+        ) [ReturnNoExpr]
+      ) [MethodStmt]
+    ) [VoidMethodDecl]
+  ) [MethodDecls]
+) [Program]
+INFO  15:35:09,847 - ===================================
+INFO  15:35:09,850 - Naisla na intr const
+INFO  15:35:09,850 - Naisla na intr const
+INFO  15:35:09,850 - Naisla na bool const
+INFO  15:35:09,850 - Naisla na bool const
+INFO  15:35:09,850 - Naisla na intr const
+INFO  15:35:09,850 - Naisla na intr const
+INFO  15:35:09,850 - Naisla na intr const
+INFO  15:35:09,850 - Naisla na char const
+ERROR 15:35:09,851 - Izrazi operanada treba da budu tipa int! na liniji 22

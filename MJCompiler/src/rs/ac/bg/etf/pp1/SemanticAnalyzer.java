@@ -177,6 +177,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 
 				} else {
 					Tab.insert(Obj.Var, varDecl.getVarName(), currType);
+
 				}
 			}
 		} else {
@@ -191,11 +192,16 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 
 			} else {
 				Tab.insert(Obj.Var, varDecl.getVarName(), currType);
+
 			}
 		}
 
 		if (this.matrixType == true) {
 			this.matrixType = false;
+		}
+
+		if (this.arrayType == true) {
+			this.arrayType = false;
 		}
 	}
 
@@ -216,29 +222,36 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 
 				} else {
 					Tab.insert(Obj.Var, varDecl.getVarName(), currType);
+					Obj nesto = Tab.find(varDecl.getVarName());
+
 				}
 			}
 		} else {
 			if (this.matrixType) {
-				
+
 				Struct arrayType = new Struct(Struct.Array, currType);
 				Struct matrix = new Struct(Struct.Array, arrayType);
 				Tab.insert(Obj.Var, varDecl.getVarName() + "[][]", matrix);
-				
+
 			} else if (this.arrayType) {
 
 				Struct arrayType = new Struct(Struct.Array, currType);
 				Tab.insert(Obj.Var, varDecl.getVarName() + "[]", arrayType);
 
 			} else {
-				
+
 				Tab.insert(Obj.Var, varDecl.getVarName(), currType);
-				
+
+				Obj nesto = Tab.find(varDecl.getVarName());
+
 			}
 		}
 
 		if (this.matrixType == true) {
 			this.matrixType = false;
+		}
+		if (this.arrayType == true) {
+			this.arrayType = false;
 		}
 	}
 
@@ -281,6 +294,10 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	}
 
 	public void visit(ReturnExpr retExpr) {
+		if (this.currMethod == null) {
+			report_error("Return naredba se nalazi van funkcije!", retExpr);
+		}
+
 		this.hasReturn = true;
 	}
 
@@ -289,114 +306,125 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			report_error("Metoda " + this.currMethod.getName() + " nema povratnu vrednost u telu svoje funkcije",
 					methDecl);
 		}
+		this.currMethod = null;
 		this.hasReturn = false;
 	}
-	
+
 	public void visit(WhileStart whileStart) {
 		this.depthWhile++;
 	}
-	
+
 	public void visit(WhileEnd whileEnd) {
 		this.depthWhile--;
 	}
-	
+
 	public void visit(BreakStmt breakStmt) {
 		if (this.depthWhile == 0) {
 			report_error("Break se nalazi van while petlje! ", breakStmt);
 		}
 	}
-	
+
 	public void visit(ContinueStmt breakStmt) {
 		if (this.depthWhile == 0) {
 			report_error("Continue se nalazi van while petlje! ", breakStmt);
 		}
 	}
-	
+
 	public void visit(PrintExpr printExpr) {
-		
-		if ( currType != Tab.intType && currType != Tab.charType && currType != boolType) {
+
+		if (currType != Tab.intType && currType != Tab.charType && currType != boolType) {
 			report_error("Povratna vrednost izraza u print naredbi nije odgovarajuceg tipa!", printExpr);
 		} else {
 			report_info("Print", printExpr);
 		}
 	}
 
-	public void visit(ClassName className) {
-		// treba da se proveri da li postoji simbol u tabeli simbola
-		// ako ne postoji dodati ga
-
+	// expr
+	
+	public void visit(SingleExpr expr) {
+		expr.struct = expr.getTerm().struct;
 	}
 
-//	public void visit(MethodVarDecls methDecls) {
-//		
-//		if (Tab.find("main") == Tab.noObj) {
-//			report_error("Nije definisana main funkcija!", methDecls);
-//		} else {
-//			report_error("Definisana je main funkcija!" , methDecls);
-//		}
-//		
-////		if (currMethod != null) Tab.chainLocalSymbols(currMethod);
-////		currMethod = null;
-////		Tab.closeScope();
-//	}
+	public void visit(NegativeExpr expr) {
+		if (expr.getTerm().struct != Tab.intType) {
+			expr.struct = Tab.noType;
+			report_error("Negativni izraz treba da bude tipa int", expr);
+		} else {
+			expr.struct = expr.getTerm().struct;
+		}		
+		
+	}
+	
+	public void visit(MultipleExpr expr) {
+		
+		if (expr.getExpr().struct != Tab.intType || expr.getTerm().struct != Tab.intType) {
+			report_error("Izrazi operanada treba da budu tipa int!", expr);
+		}
+		if (expr.getExpr().struct.compatibleWith(expr.getTerm().struct)) {
+			expr.struct = expr.getExpr().struct;
+		} else {
+			expr.struct = Tab.noType;
+			report_error("Tipovi operanada treba da budu kompatabilni!" , expr);
+		}
+		
+		
+	}
+	
+	// term
+	
+	
+	public void visit (SingleTerm term) {		
+		term.struct = term.getFactor().struct;
+	}
+	
+	public void visit (MultipleTerms term) {
+		
+		if (term.getTerm().struct != Tab.intType || term.getFactor().struct != Tab.intType) {
+			report_error("Tip operanada treba da bude int! ", term);
+		}
+		term.struct = term.getTerm().struct;
+	}
 
-//	public void visit(TypeMethod methDecl) {
-//		// prvo se doda metoda u tabelu simbola pa se onda otvara opseg
-//
-//		if (Tab.find(methDecl.getMethodName()) != Tab.noObj) {
-//			// ako je definisan ali ne u tom opsegu
-//			if (Tab.currentScope.findSymbol(methDecl.getMethodName()) != null) {
-//				report_error("Greska: Simbol " + methDecl.getMethodName() + " je vec definisan u tabeli simbola",
-//						methDecl);
-//			} else {
-//				currMethod = Tab.insert(Obj.Meth, methDecl.getMethodName(), currType);
-//			}
-//		} else {
-//			// ako uopste nije definisan
-//			currMethod = Tab.insert(Obj.Meth, methDecl.getMethodName(), currType);
-//		}
-//
-//		methDecl.struct = currType;
-//		Tab.openScope();
-//	}
-//
-//	public void visit(VoidMethod methDecl) {
-////		report_info(currType, methDecl);
-//
-//		methDecl.struct = currType = Tab.noType;
-//
-//		if (Tab.find(methDecl.getMethodName()) != Tab.noObj) {
-//			// ako je definisan ali ne u tom opsegu
-//			if (Tab.currentScope.findSymbol(methDecl.getMethodName()) != null) {
-//				report_error("Greska: Simbol " + methDecl.getMethodName() + " je vec definisan u tabeli simbola",
-//						methDecl);
-//			} else {
-//				currMethod = Tab.insert(Obj.Meth, methDecl.getMethodName(), currType);
-//			}
-//		} else {
-//			// ako uopste nije definisan
-//			currMethod = Tab.insert(Obj.Meth, methDecl.getMethodName(), currType);
-//		}
-//
-//		Tab.openScope();
-//	}
-//
-//	public void visit(MethodVarDecls varDecl) {
-//		
-//		if (Tab.find("main") == Tab.noObj) {
-//			report_error("Nije definisana main funkcija!", varDecl);
-//		} else {
-//			report_info("Definisan je main", varDecl);
-//		}
-//		
-//		if (currMethod != null) Tab.chainLocalSymbols(currMethod);
-//		currMethod = null;
-//		Tab.closeScope();
-//	}
-//	
-//	public void visit(ReturnExpr returnExpr) {
-//		
-//		
-//	}
+	// Setovanje tipa faktora
+	
+	public void visit(FactNum factor) {
+		factor.struct = Tab.intType;
+	}
+
+	public void visit(FactChar factor) {
+		factor.struct = Tab.charType;
+	}
+
+	public void visit(FactBoolean factor) {
+		factor.struct = boolType;
+	}
+
+	public void visit(FactVar factor) {
+		factor.struct = factor.getDesignator().obj.getType();
+	}
+
+	// designator
+
+	public void visit(SingleDesignIdent designator) {
+		Obj designNode = Tab.find(designator.getVar());
+
+		if (designNode == Tab.noObj) {
+			report_error(designator.getVar() + " nije deklarisano! ", null);
+		}
+		designator.obj = designNode;
+	}
+	
+	public void visit(MultipleDesignExpr designator) {
+		
+		Obj designNode = designator.getDesignator().obj;
+		
+		if (designNode.getType().getKind() != Struct.Array) {
+			report_error("Promenljiva " + designator.getDesignator().obj.getName() + " nije niz!", designator);			
+		}
+		if (designator.getExpr().struct != Tab.intType) {
+			report_error("Greska: Izraz bi trebalo da bude tipa int! ", designator);
+		}
+	}
+	
 
 }

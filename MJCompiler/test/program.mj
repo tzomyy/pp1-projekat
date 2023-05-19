@@ -15,17 +15,12 @@ program p
 	
 	int len, arr2[][], sum;
 
-
 {
+	
 	void main() int x, xa[][]; {
 		
-		while(true){
-			continue;
-		}
 		
-		void ja();
-		print ja;
-		
-
+		len = sum + a;	
+		return;	
 	}
 }
