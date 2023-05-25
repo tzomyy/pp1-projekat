@@ -432,7 +432,6 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		}
 		
 		if (condition.getExpr().struct.getKind() == Struct.Array) {
-			report_error(currOperator + "", condition);
 			if (!(currOperator == Operator.IS_EQUAL || currOperator == Operator.NOT_EQUAL)) {
 				report_error("Nizovi mogu korisititi != ili  == od relacionih operatora!", condition);
 			}
