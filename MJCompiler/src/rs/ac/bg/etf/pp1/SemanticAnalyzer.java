@@ -124,7 +124,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 				Obj intNode = Tab.insert(Obj.Con, integerConstDecl.getConstName(), Tab.intType);
 				intNode.setAdr(integerConstDecl.getNumberConst());
 			}
-		}
+		}		
 	}
 
 	public void visit(CharConstDecl charConstDecl) {
@@ -169,11 +169,11 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 					Struct arrayType = new Struct(Struct.Array, currType);
 					Struct matrix = new Struct(Struct.Array, arrayType);
 
-					Tab.insert(Obj.Var, varDecl.getVarName() + "[][]", matrix);
+					Tab.insert(Obj.Var, varDecl.getVarName(), matrix);
 				} else if (this.arrayType) {
-
+					
 					Struct arrayType = new Struct(Struct.Array, currType);
-					Tab.insert(Obj.Var, varDecl.getVarName() + "[]", arrayType);
+					Tab.insert(Obj.Var, varDecl.getVarName(), arrayType);
 
 				} else {
 					Tab.insert(Obj.Var, varDecl.getVarName(), currType);
@@ -184,11 +184,11 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			if (this.matrixType) {
 				Struct arrayType = new Struct(Struct.Array, currType);
 				Struct matrix = new Struct(Struct.Array, arrayType);
-				Tab.insert(Obj.Var, varDecl.getVarName() + "[][]", matrix);
+				Tab.insert(Obj.Var, varDecl.getVarName(), matrix);
 			} else if (this.arrayType) {
 
 				Struct arrayType = new Struct(Struct.Array, currType);
-				Tab.insert(Obj.Var, varDecl.getVarName() + "[]", arrayType);
+				Tab.insert(Obj.Var, varDecl.getVarName(), arrayType);
 
 			} else {
 				Tab.insert(Obj.Var, varDecl.getVarName(), currType);
@@ -206,23 +206,28 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	}
 
 	public void visit(MoreVarDecls varDecl) {
+		
+
 		if ((Tab.find(varDecl.getVarName())) != Tab.noObj) {
 			if (Tab.currentScope.findSymbol(varDecl.getVarName()) != null) {
 				report_error("Greska: Ime " + varDecl.getVarName() + " vec postoji u tabeli simbola!", varDecl);
 				return;
 			} else {
 				if (this.matrixType) {
+					
 					Struct arrayType = new Struct(Struct.Array, currType);
 					Struct matrix = new Struct(Struct.Array, arrayType);
-					Tab.insert(Obj.Var, varDecl.getVarName() + "[][]", matrix);
+					Tab.insert(Obj.Var, varDecl.getVarName(), matrix);
 				} else if (this.arrayType) {
 
 					Struct arrayType = new Struct(Struct.Array, currType);
-					Tab.insert(Obj.Var, varDecl.getVarName() + "[]", arrayType);
+					Tab.insert(Obj.Var, varDecl.getVarName(), arrayType);
+					if(varDecl.getVarName() == "niz") {
+					}
 
 				} else {
 					Tab.insert(Obj.Var, varDecl.getVarName(), currType);
-					Obj nesto = Tab.find(varDecl.getVarName());
+					
 
 				}
 			}
@@ -231,12 +236,11 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 
 				Struct arrayType = new Struct(Struct.Array, currType);
 				Struct matrix = new Struct(Struct.Array, arrayType);
-				Tab.insert(Obj.Var, varDecl.getVarName() + "[][]", matrix);
+				Tab.insert(Obj.Var, varDecl.getVarName(), matrix);
 
 			} else if (this.arrayType) {
-
 				Struct arrayType = new Struct(Struct.Array, currType);
-				Tab.insert(Obj.Var, varDecl.getVarName() + "[]", arrayType);
+				Tab.insert(Obj.Var, varDecl.getVarName(), arrayType);
 
 			} else {
 
@@ -365,8 +369,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		} else {
 			expr.struct = Tab.noType;
 			report_error("Tipovi operanada treba da budu kompatabilni!" , expr);
-		}
-		
+		}		
 		
 	}
 	
@@ -402,6 +405,39 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	public void visit(FactVar factor) {
 		factor.struct = factor.getDesignator().obj.getType();
 	}
+	
+	public void visit(FactConstrMatrix factor) {
+		Struct arrayType = new Struct(Struct.Array, factor.getType().struct);
+		Struct matrix = new Struct(Struct.Array, arrayType);
+		factor.struct = matrix;
+	}
+	
+	public void visit(FactConstrArray factor) {
+		report_info(factor.getType().struct.getKind() + "", null);
+		Struct arrayType = new Struct(Struct.Array, factor.getType().struct);
+		factor.struct = arrayType;
+	}
+	
+	// cond
+	
+	
+	public void visit(SingleCondFact condition) {
+		condition.struct = condition.getExpr().struct;
+	}
+	
+	public void visit(CondFacts condition) {
+		if (!condition.getCondFact().struct.compatibleWith(condition.getExpr().struct)) {
+			report_error("Tipovi u uslovu nisu kompatabilni!", condition);
+			return;
+		}
+		
+		if (condition.getExpr().struct.getKind() == Struct.Array) {
+			report_error(currOperator + "", condition);
+			if (!(currOperator == Operator.IS_EQUAL || currOperator == Operator.NOT_EQUAL)) {
+				report_error("Nizovi mogu korisititi != ili  == od relacionih operatora!", condition);
+			}
+		}
+	}
 
 	// designator
 
@@ -409,7 +445,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		Obj designNode = Tab.find(designator.getVar());
 
 		if (designNode == Tab.noObj) {
-			report_error(designator.getVar() + " nije deklarisano! ", null);
+			report_error("Varijabla " + designator.getVar() + " nije deklarisana! ", null);
 		}
 		designator.obj = designNode;
 	}
@@ -424,7 +460,66 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		if (designator.getExpr().struct != Tab.intType) {
 			report_error("Greska: Izraz bi trebalo da bude tipa int! ", designator);
 		}
+		
 	}
 	
+	// operatori
+	
+	enum Operator{
+		ADD, SUB,
+		MUL, DIV, PROC,
+		IS_EQUAL, NOT_EQUAL, GREATER, GREATER_EQUAL, LESS, LESS_EQUAL,
+		EQUAL
+	};
+	
+	Operator currOperator = null;
+	
+	public void visit(Assignop op) {
+		currOperator = Operator.EQUAL;
+	}
+	
+	public void visit(IsEqual op) {
+		currOperator = Operator.IS_EQUAL;
+	}
+	
+	public void visit(NotEqual op) {
+		currOperator = Operator.NOT_EQUAL;
+	}
+	
+	public void visit(Greater op) {
+		currOperator = Operator.GREATER;
+	}
+	
+	public void visit(GreaterEqual op) {
+		currOperator = Operator.GREATER_EQUAL;
+	}
+	
+	public void visit(Less op) {
+		currOperator = Operator.LESS;
+	}
+	
+	public void visit(LessEqual op) {
+		currOperator = Operator.LESS_EQUAL;
+	}
+	
+	public void visit(Plus op) {
+		currOperator = Operator.ADD;
+	}
+	
+	public void visit(Minus op) {
+		currOperator = Operator.SUB;
+	}
+	
+	public void visit(Asterisk op) {
+		currOperator = Operator.MUL;
+	}
+	
+	public void visit(Slash op) {
+		currOperator = Operator.DIV;
+	}
+	
+	public void visit(Percent op) {
+		currOperator = Operator.PROC;
+	}
 
 }

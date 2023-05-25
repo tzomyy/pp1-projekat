@@ -58,10 +58,10 @@ terminal String IDENT;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Program;
 nonterminal Declaration Declaration;
 nonterminal VarDecl VarDecl;
-nonterminal ConstDecl ConstDecl;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct ConstDecl;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type;
-nonterminal SingleConstDecl SingleConstDecl;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct SingleConstDecl;
 nonterminal MultipleConstDecl MultipleConstDecl;
 
 nonterminal Brackets Brackets;
@@ -115,7 +115,7 @@ nonterminal ActPars ActPars;
 
 nonterminal Condition Condition;
 nonterminal CondTerm CondTerm;
-nonterminal CondFact CondFact;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct CondFact;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator;
 
@@ -415,7 +415,7 @@ CondFact ::= (CondFacts) CondFact:C1 Relop:R2 Expr:E3 {: RESULT=new CondFacts(C1
 					
 Designator ::= (MultipleDesignIdent) Designator:D1 DOT IDENT:var {: RESULT=new MultipleDesignIdent(D1, var); RESULT.setLine(D1left); :}
 			|
-			(MultipleDesignExpr) Designator:D1 LSQUARE Expr:E2 RSQUARE {: RESULT=new MultipleDesignExpr(D1, E2); RESULT.setLine(D1left); :}
+			(MultipleDesignExpr) Designator:D1 LSQUARE Expr:expr RSQUARE {: RESULT=new MultipleDesignExpr(D1, expr); RESULT.setLine(D1left); :}
 			|
 			(SingleDesignIdent) IDENT:var {: RESULT=new SingleDesignIdent(var); RESULT.setLine(varleft); :};
 

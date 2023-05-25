@@ -1,90 +1,93 @@
-INFO  15:49:21,999 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
-INFO  15:49:22,063 - #35 program
-INFO  15:49:22,063 - #47 p
-INFO  15:49:22,063 - #40 const
-INFO  15:49:22,065 - #47 int
-INFO  15:49:22,065 - #47 pi
-INFO  15:49:22,065 - #18 =
-INFO  15:49:22,066 - #45 3
-INFO  15:49:22,066 - #5 ,
-INFO  15:49:22,066 - #47 e
-INFO  15:49:22,066 - #18 =
-INFO  15:49:22,066 - #45 2
-INFO  15:49:22,067 - #6 ;
-INFO  15:49:22,067 - #40 const
-INFO  15:49:22,067 - #47 bool
-INFO  15:49:22,068 - #47 flag1
-INFO  15:49:22,068 - #18 =
-INFO  15:49:22,068 - #46 true
-INFO  15:49:22,068 - #6 ;
-INFO  15:49:22,068 - #40 const
-INFO  15:49:22,068 - #47 bool
-INFO  15:49:22,068 - #47 flag2
-INFO  15:49:22,068 - #18 =
-INFO  15:49:22,074 - #46 false
-INFO  15:49:22,074 - #6 ;
-INFO  15:49:22,074 - #40 const
-INFO  15:49:22,074 - #47 int
-INFO  15:49:22,074 - #47 n_1
-INFO  15:49:22,074 - #18 =
-INFO  15:49:22,074 - #45 1
-INFO  15:49:22,074 - #5 ,
-INFO  15:49:22,074 - #47 n_2
-INFO  15:49:22,074 - #18 =
-INFO  15:49:22,074 - #45 2
-INFO  15:49:22,074 - #5 ,
-INFO  15:49:22,075 - #47 n_3
-INFO  15:49:22,075 - #18 =
-INFO  15:49:22,075 - #45 3
-INFO  15:49:22,075 - #6 ;
-INFO  15:49:22,075 - #40 const
-INFO  15:49:22,075 - #47 char
-INFO  15:49:22,075 - #47 a
-INFO  15:49:22,075 - #18 =
-INFO  15:49:22,075 - #44 a
-INFO  15:49:22,075 - #6 ;
-INFO  15:49:22,076 - #47 int
-INFO  15:49:22,076 - #47 arr1
-INFO  15:49:22,076 - #20 [
-INFO  15:49:22,076 - #36 ]
-INFO  15:49:22,076 - #6 ;
-INFO  15:49:22,078 - #47 int
-INFO  15:49:22,078 - #47 len
-INFO  15:49:22,078 - #5 ,
-INFO  15:49:22,079 - #47 arr2
-INFO  15:49:22,079 - #20 [
-INFO  15:49:22,079 - #36 ]
-INFO  15:49:22,080 - #20 [
-INFO  15:49:22,080 - #36 ]
-INFO  15:49:22,080 - #5 ,
-INFO  15:49:22,080 - #47 sum
-INFO  15:49:22,080 - #6 ;
-INFO  15:49:22,081 - #12 {
-INFO  15:49:22,081 - #15 void
-INFO  15:49:22,081 - #47 main
-INFO  15:49:22,081 - #17 (
-INFO  15:49:22,082 - #4 )
-INFO  15:49:22,082 - #47 int
-INFO  15:49:22,083 - #47 x
-INFO  15:49:22,083 - #5 ,
-INFO  15:49:22,083 - #47 xa
-INFO  15:49:22,083 - #20 [
-INFO  15:49:22,084 - #36 ]
-INFO  15:49:22,084 - #20 [
-INFO  15:49:22,084 - #36 ]
-INFO  15:49:22,084 - #6 ;
-INFO  15:49:22,084 - #12 {
-INFO  15:49:22,084 - #47 len
-INFO  15:49:22,084 - #18 =
-INFO  15:49:22,085 - #47 sum
-INFO  15:49:22,085 - #3 +
-INFO  15:49:22,085 - #47 a
-INFO  15:49:22,086 - #6 ;
-INFO  15:49:22,086 - #37 return
-INFO  15:49:22,086 - #6 ;
-INFO  15:49:22,087 - #32 }
-INFO  15:49:22,087 - #32 }
-INFO  15:49:22,095 - Program(
+INFO  22:54:02,732 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  22:54:02,797 - #35 program
+INFO  22:54:02,797 - #47 p
+INFO  22:54:02,798 - #40 const
+INFO  22:54:02,799 - #47 int
+INFO  22:54:02,800 - #47 pi
+INFO  22:54:02,800 - #18 =
+INFO  22:54:02,801 - #45 3
+INFO  22:54:02,801 - #5 ,
+INFO  22:54:02,802 - #47 e
+INFO  22:54:02,802 - #18 =
+INFO  22:54:02,802 - #45 2
+INFO  22:54:02,803 - #6 ;
+INFO  22:54:02,803 - #40 const
+INFO  22:54:02,804 - #47 bool
+INFO  22:54:02,804 - #47 flag1
+INFO  22:54:02,804 - #18 =
+INFO  22:54:02,804 - #46 true
+INFO  22:54:02,804 - #6 ;
+INFO  22:54:02,805 - #40 const
+INFO  22:54:02,805 - #47 bool
+INFO  22:54:02,805 - #47 flag2
+INFO  22:54:02,805 - #18 =
+INFO  22:54:02,811 - #46 false
+INFO  22:54:02,811 - #6 ;
+INFO  22:54:02,811 - #40 const
+INFO  22:54:02,811 - #47 int
+INFO  22:54:02,811 - #47 n_1
+INFO  22:54:02,811 - #18 =
+INFO  22:54:02,811 - #45 1
+INFO  22:54:02,811 - #5 ,
+INFO  22:54:02,811 - #47 n_2
+INFO  22:54:02,811 - #18 =
+INFO  22:54:02,811 - #45 2
+INFO  22:54:02,811 - #5 ,
+INFO  22:54:02,811 - #47 n_3
+INFO  22:54:02,812 - #18 =
+INFO  22:54:02,812 - #45 3
+INFO  22:54:02,812 - #6 ;
+INFO  22:54:02,812 - #40 const
+INFO  22:54:02,812 - #47 char
+INFO  22:54:02,812 - #47 a
+INFO  22:54:02,812 - #18 =
+INFO  22:54:02,812 - #44 a
+INFO  22:54:02,812 - #6 ;
+INFO  22:54:02,812 - #47 int
+INFO  22:54:02,812 - #47 arr1
+INFO  22:54:02,812 - #20 [
+INFO  22:54:02,812 - #36 ]
+INFO  22:54:02,813 - #6 ;
+INFO  22:54:02,814 - #47 int
+INFO  22:54:02,814 - #47 len
+INFO  22:54:02,814 - #5 ,
+INFO  22:54:02,814 - #47 arr2
+INFO  22:54:02,815 - #20 [
+INFO  22:54:02,815 - #36 ]
+INFO  22:54:02,815 - #20 [
+INFO  22:54:02,815 - #36 ]
+INFO  22:54:02,815 - #5 ,
+INFO  22:54:02,817 - #47 sum
+INFO  22:54:02,817 - #6 ;
+INFO  22:54:02,817 - #12 {
+INFO  22:54:02,817 - #15 void
+INFO  22:54:02,818 - #47 main
+INFO  22:54:02,818 - #17 (
+INFO  22:54:02,818 - #4 )
+INFO  22:54:02,819 - #47 int
+INFO  22:54:02,820 - #47 x
+INFO  22:54:02,820 - #5 ,
+INFO  22:54:02,820 - #47 xa
+INFO  22:54:02,820 - #20 [
+INFO  22:54:02,820 - #36 ]
+INFO  22:54:02,820 - #20 [
+INFO  22:54:02,820 - #36 ]
+INFO  22:54:02,820 - #6 ;
+INFO  22:54:02,820 - #12 {
+INFO  22:54:02,820 - #37 return
+INFO  22:54:02,821 - #6 ;
+INFO  22:54:02,821 - #10 if
+INFO  22:54:02,822 - #17 (
+INFO  22:54:02,822 - #47 arr1
+INFO  22:54:02,822 - #21 ==
+INFO  22:54:02,822 - #47 arr1
+INFO  22:54:02,823 - #4 )
+INFO  22:54:02,823 - #47 len
+INFO  22:54:02,823 - #24 ++
+INFO  22:54:02,823 - #6 ;
+INFO  22:54:02,824 - #32 }
+INFO  22:54:02,824 - #32 }
+INFO  22:54:02,830 - Program(
   ProgName(
    p
   ) [ProgName]
@@ -251,51 +254,62 @@ INFO  15:49:22,095 - Program(
         MethodStmt(
           NoMethodStmt(
           ) [NoMethodStmt]
+          ReturnNoExpr(
+          ) [ReturnNoExpr]
+        ) [MethodStmt]
+        IfStmt(
+          IfState(
+            SingleCondition(
+              SingleCondTerm(
+                CondFacts(
+                  SingleCondFact(
+                    SingleExpr(
+                      SingleTerm(
+                        FactVar(
+                          SingleDesignIdent(
+                           arr1
+                          ) [SingleDesignIdent]
+                        ) [FactVar]
+                      ) [SingleTerm]
+                    ) [SingleExpr]
+                  ) [SingleCondFact]
+                  IsEqual(
+                  ) [IsEqual]
+                  SingleExpr(
+                    SingleTerm(
+                      FactVar(
+                        SingleDesignIdent(
+                         arr1
+                        ) [SingleDesignIdent]
+                      ) [FactVar]
+                    ) [SingleTerm]
+                  ) [SingleExpr]
+                ) [CondFacts]
+              ) [SingleCondTerm]
+            ) [SingleCondition]
+          ) [IfState]
           DesignStmt(
-            DesignAssign(
+            DesignInc(
               SingleDesignIdent(
                len
               ) [SingleDesignIdent]
-              Assignop(
-              ) [Assignop]
-              MultipleExpr(
-                SingleExpr(
-                  SingleTerm(
-                    FactVar(
-                      SingleDesignIdent(
-                       sum
-                      ) [SingleDesignIdent]
-                    ) [FactVar]
-                  ) [SingleTerm]
-                ) [SingleExpr]
-                Plus(
-                ) [Plus]
-                SingleTerm(
-                  FactVar(
-                    SingleDesignIdent(
-                     a
-                    ) [SingleDesignIdent]
-                  ) [FactVar]
-                ) [SingleTerm]
-              ) [MultipleExpr]
-            ) [DesignAssign]
+            ) [DesignInc]
           ) [DesignStmt]
-        ) [MethodStmt]
-        ReturnNoExpr(
-        ) [ReturnNoExpr]
+          NoElseStmt(
+          ) [NoElseStmt]
+        ) [IfStmt]
       ) [MethodStmt]
     ) [VoidMethodDecl]
   ) [MethodDecls]
 ) [Program]
-INFO  15:49:22,095 - ===================================
-INFO  15:49:22,098 - Naisla na intr const
-INFO  15:49:22,098 - Naisla na intr const
-INFO  15:49:22,098 - Naisla na bool const
-INFO  15:49:22,098 - Naisla na bool const
-INFO  15:49:22,098 - Naisla na intr const
-INFO  15:49:22,098 - Naisla na intr const
-INFO  15:49:22,098 - Naisla na intr const
-INFO  15:49:22,098 - Naisla na char const
-ERROR 15:49:22,099 - Izrazi operanada treba da budu tipa int! na liniji 23
-ERROR 15:49:22,099 - Tipovi operanada treba da budu kompatabilni! na liniji 23
-ERROR 15:49:22,099 - Definisana je main funkcija!
+INFO  22:54:02,831 - ===================================
+INFO  22:54:02,834 - Naisla na intr const
+INFO  22:54:02,834 - Naisla na intr const
+INFO  22:54:02,834 - Naisla na bool const
+INFO  22:54:02,834 - Naisla na bool const
+INFO  22:54:02,834 - Naisla na intr const
+INFO  22:54:02,834 - Naisla na intr const
+INFO  22:54:02,834 - Naisla na intr const
+INFO  22:54:02,834 - Naisla na char const
+ERROR 22:54:02,835 - IS_EQUAL na liniji 23
+ERROR 22:54:02,836 - Definisana je main funkcija!

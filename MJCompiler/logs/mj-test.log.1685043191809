@@ -1,0 +1,1229 @@
+INFO  18:57:02,255 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\test301.mj
+INFO  18:57:02,316 - #35 program
+INFO  18:57:02,317 - #47 test301
+INFO  18:57:02,317 - #40 const
+INFO  18:57:02,318 - #47 int
+INFO  18:57:02,318 - #47 nula
+INFO  18:57:02,319 - #18 =
+INFO  18:57:02,319 - #45 0
+INFO  18:57:02,319 - #6 ;
+INFO  18:57:02,320 - #40 const
+INFO  18:57:02,321 - #47 int
+INFO  18:57:02,321 - #47 jedan
+INFO  18:57:02,321 - #18 =
+INFO  18:57:02,321 - #45 1
+INFO  18:57:02,321 - #6 ;
+INFO  18:57:02,321 - #40 const
+INFO  18:57:02,321 - #47 int
+INFO  18:57:02,322 - #47 pet
+INFO  18:57:02,322 - #18 =
+INFO  18:57:02,322 - #45 5
+INFO  18:57:02,322 - #6 ;
+INFO  18:57:02,322 - #47 int
+INFO  18:57:02,322 - #47 niz
+INFO  18:57:02,322 - #20 [
+INFO  18:57:02,322 - #36 ]
+INFO  18:57:02,322 - #5 ,
+INFO  18:57:02,323 - #47 niz2
+INFO  18:57:02,323 - #20 [
+INFO  18:57:02,323 - #36 ]
+INFO  18:57:02,323 - #5 ,
+INFO  18:57:02,323 - #47 a
+INFO  18:57:02,323 - #5 ,
+INFO  18:57:02,324 - #47 b
+INFO  18:57:02,324 - #6 ;
+INFO  18:57:02,324 - #47 char
+INFO  18:57:02,324 - #47 nizch
+INFO  18:57:02,324 - #20 [
+INFO  18:57:02,325 - #36 ]
+INFO  18:57:02,325 - #6 ;
+INFO  18:57:02,325 - #12 {
+INFO  18:57:02,325 - #15 void
+INFO  18:57:02,325 - #47 main
+INFO  18:57:02,326 - #17 (
+INFO  18:57:02,326 - #4 )
+INFO  18:57:02,326 - #47 int
+INFO  18:57:02,327 - #47 bodovi
+INFO  18:57:02,327 - #6 ;
+INFO  18:57:02,327 - #47 bool
+INFO  18:57:02,328 - #47 bt
+INFO  18:57:02,328 - #6 ;
+INFO  18:57:02,328 - #12 {
+INFO  18:57:02,328 - #47 bodovi
+INFO  18:57:02,329 - #18 =
+INFO  18:57:02,329 - #45 0
+INFO  18:57:02,330 - #6 ;
+INFO  18:57:02,330 - #47 bodovi
+INFO  18:57:02,330 - #24 ++
+INFO  18:57:02,330 - #6 ;
+INFO  18:57:02,331 - #47 bodovi
+INFO  18:57:02,331 - #18 =
+INFO  18:57:02,331 - #47 bodovi
+INFO  18:57:02,331 - #3 +
+INFO  18:57:02,331 - #47 jedan
+INFO  18:57:02,332 - #6 ;
+INFO  18:57:02,332 - #47 bodovi
+INFO  18:57:02,332 - #18 =
+INFO  18:57:02,332 - #47 bodovi
+INFO  18:57:02,332 - #25 *
+INFO  18:57:02,333 - #47 pet
+INFO  18:57:02,334 - #6 ;
+INFO  18:57:02,334 - #47 bodovi
+INFO  18:57:02,334 - #34 --
+INFO  18:57:02,334 - #6 ;
+INFO  18:57:02,334 - #31 print
+INFO  18:57:02,334 - #17 (
+INFO  18:57:02,334 - #47 bodovi
+INFO  18:57:02,334 - #4 )
+INFO  18:57:02,335 - #6 ;
+INFO  18:57:02,335 - #47 niz
+INFO  18:57:02,335 - #18 =
+INFO  18:57:02,335 - #8 new
+INFO  18:57:02,335 - #47 int
+INFO  18:57:02,335 - #20 [
+INFO  18:57:02,336 - #45 3
+INFO  18:57:02,336 - #36 ]
+INFO  18:57:02,336 - #6 ;
+INFO  18:57:02,336 - #47 niz
+INFO  18:57:02,336 - #20 [
+INFO  18:57:02,336 - #47 nula
+INFO  18:57:02,336 - #36 ]
+INFO  18:57:02,336 - #18 =
+INFO  18:57:02,336 - #47 jedan
+INFO  18:57:02,336 - #6 ;
+INFO  18:57:02,336 - #47 niz
+INFO  18:57:02,336 - #20 [
+INFO  18:57:02,337 - #45 1
+INFO  18:57:02,337 - #36 ]
+INFO  18:57:02,337 - #18 =
+INFO  18:57:02,337 - #45 2
+INFO  18:57:02,337 - #6 ;
+INFO  18:57:02,337 - #47 niz
+INFO  18:57:02,338 - #20 [
+INFO  18:57:02,339 - #47 niz
+INFO  18:57:02,339 - #20 [
+INFO  18:57:02,339 - #47 jedan
+INFO  18:57:02,339 - #36 ]
+INFO  18:57:02,339 - #36 ]
+INFO  18:57:02,339 - #18 =
+INFO  18:57:02,339 - #47 niz
+INFO  18:57:02,339 - #20 [
+INFO  18:57:02,339 - #47 niz
+INFO  18:57:02,339 - #20 [
+INFO  18:57:02,339 - #45 0
+INFO  18:57:02,339 - #36 ]
+INFO  18:57:02,340 - #36 ]
+INFO  18:57:02,340 - #25 *
+INFO  18:57:02,340 - #45 3
+INFO  18:57:02,340 - #6 ;
+INFO  18:57:02,340 - #47 bodovi
+INFO  18:57:02,340 - #18 =
+INFO  18:57:02,340 - #47 niz
+INFO  18:57:02,340 - #20 [
+INFO  18:57:02,340 - #45 2
+INFO  18:57:02,340 - #36 ]
+INFO  18:57:02,340 - #28 /
+INFO  18:57:02,340 - #47 niz
+INFO  18:57:02,341 - #20 [
+INFO  18:57:02,341 - #45 0
+INFO  18:57:02,341 - #36 ]
+INFO  18:57:02,342 - #6 ;
+INFO  18:57:02,342 - #31 print
+INFO  18:57:02,342 - #17 (
+INFO  18:57:02,342 - #47 bodovi
+INFO  18:57:02,342 - #4 )
+INFO  18:57:02,342 - #6 ;
+INFO  18:57:02,342 - #31 print
+INFO  18:57:02,342 - #17 (
+INFO  18:57:02,342 - #47 niz
+INFO  18:57:02,342 - #20 [
+INFO  18:57:02,342 - #45 2
+INFO  18:57:02,342 - #36 ]
+INFO  18:57:02,342 - #4 )
+INFO  18:57:02,342 - #6 ;
+INFO  18:57:02,342 - #20 [
+ERROR 18:57:02,342 - 
+Sintaksna greska na liniji 34
+INFO  18:57:02,343 - #47 a
+INFO  18:57:02,343 - #5 ,
+INFO  18:57:02,343 - #47 b
+INFO  18:57:02,343 - #36 ]
+INFO  18:57:02,343 - #18 =
+INFO  18:57:02,343 - #47 niz
+INFO  18:57:02,344 - #6 ;
+INFO  18:57:02,344 - #31 print
+INFO  18:57:02,344 - #17 (
+INFO  18:57:02,344 - #47 a
+ERROR 18:57:02,344 - Izvrsen oporavak kod dodeljivanja vrednosti do ; u liniji 31
+INFO  18:57:02,344 - #4 )
+INFO  18:57:02,345 - #6 ;
+INFO  18:57:02,345 - #31 print
+INFO  18:57:02,345 - #17 (
+INFO  18:57:02,345 - #47 b
+INFO  18:57:02,345 - #4 )
+INFO  18:57:02,345 - #6 ;
+INFO  18:57:02,345 - #20 [
+ERROR 18:57:02,345 - 
+Sintaksna greska na liniji 39
+INFO  18:57:02,345 - #5 ,
+INFO  18:57:02,345 - #47 a
+INFO  18:57:02,345 - #5 ,
+INFO  18:57:02,345 - #36 ]
+INFO  18:57:02,345 - #18 =
+INFO  18:57:02,345 - #47 niz
+INFO  18:57:02,346 - #6 ;
+INFO  18:57:02,346 - #31 print
+INFO  18:57:02,346 - #17 (
+INFO  18:57:02,346 - #47 a
+ERROR 18:57:02,346 - Izvrsen oporavak kod dodeljivanja vrednosti do ; u liniji 36
+INFO  18:57:02,346 - #4 )
+INFO  18:57:02,346 - #6 ;
+INFO  18:57:02,346 - #47 niz2
+INFO  18:57:02,346 - #18 =
+INFO  18:57:02,347 - #8 new
+INFO  18:57:02,347 - #47 int
+INFO  18:57:02,347 - #20 [
+INFO  18:57:02,347 - #45 2
+INFO  18:57:02,347 - #36 ]
+INFO  18:57:02,347 - #6 ;
+INFO  18:57:02,347 - #20 [
+ERROR 18:57:02,347 - 
+Sintaksna greska na liniji 43
+INFO  18:57:02,347 - #47 niz2
+INFO  18:57:02,347 - #20 [
+INFO  18:57:02,347 - #45 0
+INFO  18:57:02,347 - #36 ]
+INFO  18:57:02,347 - #5 ,
+INFO  18:57:02,347 - #5 ,
+INFO  18:57:02,347 - #47 niz2
+INFO  18:57:02,348 - #20 [
+INFO  18:57:02,348 - #47 niz
+INFO  18:57:02,348 - #20 [
+INFO  18:57:02,348 - #47 nula
+INFO  18:57:02,348 - #36 ]
+INFO  18:57:02,348 - #36 ]
+INFO  18:57:02,348 - #36 ]
+INFO  18:57:02,348 - #18 =
+INFO  18:57:02,348 - #47 niz
+INFO  18:57:02,348 - #6 ;
+INFO  18:57:02,348 - #31 print
+INFO  18:57:02,348 - #17 (
+INFO  18:57:02,348 - #47 niz2
+ERROR 18:57:02,348 - Izvrsen oporavak kod dodeljivanja vrednosti do ; u liniji 42
+INFO  18:57:02,348 - #20 [
+INFO  18:57:02,348 - #45 0
+INFO  18:57:02,349 - #36 ]
+INFO  18:57:02,349 - #4 )
+INFO  18:57:02,349 - #6 ;
+INFO  18:57:02,349 - #31 print
+INFO  18:57:02,349 - #17 (
+INFO  18:57:02,349 - #47 niz2
+INFO  18:57:02,349 - #20 [
+INFO  18:57:02,349 - #45 1
+INFO  18:57:02,349 - #36 ]
+INFO  18:57:02,349 - #4 )
+INFO  18:57:02,349 - #6 ;
+INFO  18:57:02,349 - #47 nizch
+INFO  18:57:02,349 - #18 =
+INFO  18:57:02,349 - #8 new
+INFO  18:57:02,349 - #47 char
+INFO  18:57:02,349 - #20 [
+INFO  18:57:02,349 - #45 3
+INFO  18:57:02,349 - #36 ]
+INFO  18:57:02,349 - #20 [
+INFO  18:57:02,350 - #45 2
+INFO  18:57:02,350 - #36 ]
+INFO  18:57:02,350 - #6 ;
+INFO  18:57:02,350 - #47 nizch
+INFO  18:57:02,350 - #20 [
+INFO  18:57:02,350 - #45 0
+INFO  18:57:02,350 - #36 ]
+INFO  18:57:02,350 - #18 =
+INFO  18:57:02,350 - #44 a
+INFO  18:57:02,350 - #6 ;
+INFO  18:57:02,350 - #47 nizch
+INFO  18:57:02,351 - #20 [
+INFO  18:57:02,351 - #47 jedan
+INFO  18:57:02,351 - #36 ]
+INFO  18:57:02,351 - #18 =
+INFO  18:57:02,351 - #44 b
+INFO  18:57:02,351 - #6 ;
+INFO  18:57:02,351 - #47 nizch
+INFO  18:57:02,351 - #20 [
+INFO  18:57:02,351 - #47 pet
+INFO  18:57:02,351 - #13 -
+INFO  18:57:02,351 - #45 3
+INFO  18:57:02,352 - #36 ]
+INFO  18:57:02,352 - #18 =
+INFO  18:57:02,352 - #44 c
+INFO  18:57:02,355 - #6 ;
+INFO  18:57:02,355 - #31 print
+INFO  18:57:02,355 - #17 (
+INFO  18:57:02,355 - #47 nizch
+INFO  18:57:02,355 - #20 [
+INFO  18:57:02,356 - #45 1
+INFO  18:57:02,356 - #36 ]
+INFO  18:57:02,356 - #4 )
+INFO  18:57:02,356 - #6 ;
+INFO  18:57:02,356 - #31 print
+INFO  18:57:02,356 - #17 (
+INFO  18:57:02,356 - #47 nizch
+INFO  18:57:02,356 - #20 [
+INFO  18:57:02,356 - #47 jedan
+INFO  18:57:02,356 - #25 *
+INFO  18:57:02,356 - #45 2
+INFO  18:57:02,356 - #36 ]
+INFO  18:57:02,356 - #4 )
+INFO  18:57:02,356 - #6 ;
+INFO  18:57:02,356 - #23 read
+INFO  18:57:02,356 - #17 (
+INFO  18:57:02,356 - #47 bodovi
+INFO  18:57:02,356 - #4 )
+INFO  18:57:02,356 - #6 ;
+INFO  18:57:02,356 - #47 bodovi
+INFO  18:57:02,356 - #18 =
+INFO  18:57:02,356 - #13 -
+INFO  18:57:02,356 - #47 bodovi
+INFO  18:57:02,356 - #3 +
+INFO  18:57:02,357 - #17 (
+INFO  18:57:02,357 - #47 pet
+INFO  18:57:02,357 - #25 *
+INFO  18:57:02,357 - #47 a
+INFO  18:57:02,357 - #28 /
+INFO  18:57:02,357 - #45 2
+INFO  18:57:02,357 - #13 -
+INFO  18:57:02,357 - #47 jedan
+INFO  18:57:02,357 - #4 )
+INFO  18:57:02,357 - #25 *
+INFO  18:57:02,357 - #47 bodovi
+INFO  18:57:02,357 - #13 -
+INFO  18:57:02,357 - #17 (
+INFO  18:57:02,357 - #45 3
+INFO  18:57:02,357 - #41 %
+INFO  18:57:02,357 - #45 2
+INFO  18:57:02,358 - #3 +
+INFO  18:57:02,358 - #45 3
+INFO  18:57:02,358 - #25 *
+INFO  18:57:02,358 - #45 2
+INFO  18:57:02,358 - #13 -
+INFO  18:57:02,358 - #45 3
+INFO  18:57:02,358 - #4 )
+INFO  18:57:02,358 - #6 ;
+INFO  18:57:02,358 - #31 print
+INFO  18:57:02,358 - #17 (
+INFO  18:57:02,358 - #47 bodovi
+INFO  18:57:02,358 - #4 )
+INFO  18:57:02,358 - #6 ;
+INFO  18:57:02,358 - #32 }
+INFO  18:57:02,358 - #32 }
+INFO  18:57:02,367 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  VarDeclaration(
+    VarDeclaration(
+      ConstDeclaration(
+        ConstDeclaration(
+          ConstDeclaration(
+            NoDeclaration(
+            ) [NoDeclaration]
+            ConstDecl(
+              Type(
+               int
+              ) [Type]
+              IntegerConstDecl(
+               nula
+               0
+              ) [IntegerConstDecl]
+              EndOfDeclaration(
+              ) [EndOfDeclaration]
+            ) [ConstDecl]
+          ) [ConstDeclaration]
+          ConstDecl(
+            Type(
+             int
+            ) [Type]
+            IntegerConstDecl(
+             jedan
+             1
+            ) [IntegerConstDecl]
+            EndOfDeclaration(
+            ) [EndOfDeclaration]
+          ) [ConstDecl]
+        ) [ConstDeclaration]
+        ConstDecl(
+          Type(
+           int
+          ) [Type]
+          IntegerConstDecl(
+           pet
+           5
+          ) [IntegerConstDecl]
+          EndOfDeclaration(
+          ) [EndOfDeclaration]
+        ) [ConstDecl]
+      ) [ConstDeclaration]
+      VarDecls(
+        Type(
+         int
+        ) [Type]
+        MultipleVarDecl(
+          MoreVarDecls(
+           niz
+            ArrayBrackets(
+            ) [ArrayBrackets]
+          ) [MoreVarDecls]
+          MultipleVarDecl(
+            MoreVarDecls(
+             niz2
+              ArrayBrackets(
+              ) [ArrayBrackets]
+            ) [MoreVarDecls]
+            MultipleVarDecl(
+              MoreVarDecls(
+               a
+                NoBrackets(
+                ) [NoBrackets]
+              ) [MoreVarDecls]
+              EndOfVarDeclarations(
+                EndOfVarDeclar(
+                 b
+                  NoBrackets(
+                  ) [NoBrackets]
+                ) [EndOfVarDeclar]
+              ) [EndOfVarDeclarations]
+            ) [MultipleVarDecl]
+          ) [MultipleVarDecl]
+        ) [MultipleVarDecl]
+      ) [VarDecls]
+    ) [VarDeclaration]
+    VarDecls(
+      Type(
+       char
+      ) [Type]
+      EndOfVarDeclarations(
+        EndOfVarDeclar(
+         nizch
+          ArrayBrackets(
+          ) [ArrayBrackets]
+        ) [EndOfVarDeclar]
+      ) [EndOfVarDeclarations]
+    ) [VarDecls]
+  ) [VarDeclaration]
+  MethodDecls(
+    NoMethodDeclList(
+    ) [NoMethodDeclList]
+    VoidMethodDecl(
+      VoidMethod(
+       main
+      ) [VoidMethod]
+      NoMethodFormParams(
+      ) [NoMethodFormParams]
+      MethodVarDecls(
+        MethodVarDecls(
+          EndOfMethodVarDecl(
+          ) [EndOfMethodVarDecl]
+          VarDecls(
+            Type(
+             int
+            ) [Type]
+            EndOfVarDeclarations(
+              EndOfVarDeclar(
+               bodovi
+                NoBrackets(
+                ) [NoBrackets]
+              ) [EndOfVarDeclar]
+            ) [EndOfVarDeclarations]
+          ) [VarDecls]
+        ) [MethodVarDecls]
+        VarDecls(
+          Type(
+           bool
+          ) [Type]
+          EndOfVarDeclarations(
+            EndOfVarDeclar(
+             bt
+              NoBrackets(
+              ) [NoBrackets]
+            ) [EndOfVarDeclar]
+          ) [EndOfVarDeclarations]
+        ) [VarDecls]
+      ) [MethodVarDecls]
+      MethodStmt(
+        MethodStmt(
+          MethodStmt(
+            MethodStmt(
+              MethodStmt(
+                MethodStmt(
+                  MethodStmt(
+                    MethodStmt(
+                      MethodStmt(
+                        MethodStmt(
+                          MethodStmt(
+                            MethodStmt(
+                              MethodStmt(
+                                MethodStmt(
+                                  MethodStmt(
+                                    MethodStmt(
+                                      MethodStmt(
+                                        MethodStmt(
+                                          MethodStmt(
+                                            MethodStmt(
+                                              MethodStmt(
+                                                MethodStmt(
+                                                  MethodStmt(
+                                                    MethodStmt(
+                                                      MethodStmt(
+                                                        MethodStmt(
+                                                          MethodStmt(
+                                                            MethodStmt(
+                                                              NoMethodStmt(
+                                                              ) [NoMethodStmt]
+                                                              DesignStmt(
+                                                                DesignAssign(
+                                                                  SingleDesignIdent(
+                                                                   bodovi
+                                                                  ) [SingleDesignIdent]
+                                                                  Assignop(
+                                                                  ) [Assignop]
+                                                                  SingleExpr(
+                                                                    SingleTerm(
+                                                                      FactNum(
+                                                                       0
+                                                                      ) [FactNum]
+                                                                    ) [SingleTerm]
+                                                                  ) [SingleExpr]
+                                                                ) [DesignAssign]
+                                                              ) [DesignStmt]
+                                                            ) [MethodStmt]
+                                                            DesignStmt(
+                                                              DesignInc(
+                                                                SingleDesignIdent(
+                                                                 bodovi
+                                                                ) [SingleDesignIdent]
+                                                              ) [DesignInc]
+                                                            ) [DesignStmt]
+                                                          ) [MethodStmt]
+                                                          DesignStmt(
+                                                            DesignAssign(
+                                                              SingleDesignIdent(
+                                                               bodovi
+                                                              ) [SingleDesignIdent]
+                                                              Assignop(
+                                                              ) [Assignop]
+                                                              MultipleExpr(
+                                                                SingleExpr(
+                                                                  SingleTerm(
+                                                                    FactVar(
+                                                                      SingleDesignIdent(
+                                                                       bodovi
+                                                                      ) [SingleDesignIdent]
+                                                                    ) [FactVar]
+                                                                  ) [SingleTerm]
+                                                                ) [SingleExpr]
+                                                                Plus(
+                                                                ) [Plus]
+                                                                SingleTerm(
+                                                                  FactVar(
+                                                                    SingleDesignIdent(
+                                                                     jedan
+                                                                    ) [SingleDesignIdent]
+                                                                  ) [FactVar]
+                                                                ) [SingleTerm]
+                                                              ) [MultipleExpr]
+                                                            ) [DesignAssign]
+                                                          ) [DesignStmt]
+                                                        ) [MethodStmt]
+                                                        DesignStmt(
+                                                          DesignAssign(
+                                                            SingleDesignIdent(
+                                                             bodovi
+                                                            ) [SingleDesignIdent]
+                                                            Assignop(
+                                                            ) [Assignop]
+                                                            SingleExpr(
+                                                              MultipleTerms(
+                                                                SingleTerm(
+                                                                  FactVar(
+                                                                    SingleDesignIdent(
+                                                                     bodovi
+                                                                    ) [SingleDesignIdent]
+                                                                  ) [FactVar]
+                                                                ) [SingleTerm]
+                                                                Asterisk(
+                                                                ) [Asterisk]
+                                                                FactVar(
+                                                                  SingleDesignIdent(
+                                                                   pet
+                                                                  ) [SingleDesignIdent]
+                                                                ) [FactVar]
+                                                              ) [MultipleTerms]
+                                                            ) [SingleExpr]
+                                                          ) [DesignAssign]
+                                                        ) [DesignStmt]
+                                                      ) [MethodStmt]
+                                                      DesignStmt(
+                                                        DesignDec(
+                                                          SingleDesignIdent(
+                                                           bodovi
+                                                          ) [SingleDesignIdent]
+                                                        ) [DesignDec]
+                                                      ) [DesignStmt]
+                                                    ) [MethodStmt]
+                                                    PrintStmt(
+                                                      PrintExpr(
+                                                        SingleExpr(
+                                                          SingleTerm(
+                                                            FactVar(
+                                                              SingleDesignIdent(
+                                                               bodovi
+                                                              ) [SingleDesignIdent]
+                                                            ) [FactVar]
+                                                          ) [SingleTerm]
+                                                        ) [SingleExpr]
+                                                      ) [PrintExpr]
+                                                      NoStmtCnst(
+                                                      ) [NoStmtCnst]
+                                                    ) [PrintStmt]
+                                                  ) [MethodStmt]
+                                                  DesignStmt(
+                                                    DesignAssign(
+                                                      SingleDesignIdent(
+                                                       niz
+                                                      ) [SingleDesignIdent]
+                                                      Assignop(
+                                                      ) [Assignop]
+                                                      SingleExpr(
+                                                        SingleTerm(
+                                                          FactConstrArray(
+                                                            Type(
+                                                             int
+                                                            ) [Type]
+                                                            SingleExpr(
+                                                              SingleTerm(
+                                                                FactNum(
+                                                                 3
+                                                                ) [FactNum]
+                                                              ) [SingleTerm]
+                                                            ) [SingleExpr]
+                                                          ) [FactConstrArray]
+                                                        ) [SingleTerm]
+                                                      ) [SingleExpr]
+                                                    ) [DesignAssign]
+                                                  ) [DesignStmt]
+                                                ) [MethodStmt]
+                                                DesignStmt(
+                                                  DesignAssign(
+                                                    MultipleDesignExpr(
+                                                      SingleDesignIdent(
+                                                       niz
+                                                      ) [SingleDesignIdent]
+                                                      SingleExpr(
+                                                        SingleTerm(
+                                                          FactVar(
+                                                            SingleDesignIdent(
+                                                             nula
+                                                            ) [SingleDesignIdent]
+                                                          ) [FactVar]
+                                                        ) [SingleTerm]
+                                                      ) [SingleExpr]
+                                                    ) [MultipleDesignExpr]
+                                                    Assignop(
+                                                    ) [Assignop]
+                                                    SingleExpr(
+                                                      SingleTerm(
+                                                        FactVar(
+                                                          SingleDesignIdent(
+                                                           jedan
+                                                          ) [SingleDesignIdent]
+                                                        ) [FactVar]
+                                                      ) [SingleTerm]
+                                                    ) [SingleExpr]
+                                                  ) [DesignAssign]
+                                                ) [DesignStmt]
+                                              ) [MethodStmt]
+                                              DesignStmt(
+                                                DesignAssign(
+                                                  MultipleDesignExpr(
+                                                    SingleDesignIdent(
+                                                     niz
+                                                    ) [SingleDesignIdent]
+                                                    SingleExpr(
+                                                      SingleTerm(
+                                                        FactNum(
+                                                         1
+                                                        ) [FactNum]
+                                                      ) [SingleTerm]
+                                                    ) [SingleExpr]
+                                                  ) [MultipleDesignExpr]
+                                                  Assignop(
+                                                  ) [Assignop]
+                                                  SingleExpr(
+                                                    SingleTerm(
+                                                      FactNum(
+                                                       2
+                                                      ) [FactNum]
+                                                    ) [SingleTerm]
+                                                  ) [SingleExpr]
+                                                ) [DesignAssign]
+                                              ) [DesignStmt]
+                                            ) [MethodStmt]
+                                            DesignStmt(
+                                              DesignAssign(
+                                                MultipleDesignExpr(
+                                                  SingleDesignIdent(
+                                                   niz
+                                                  ) [SingleDesignIdent]
+                                                  SingleExpr(
+                                                    SingleTerm(
+                                                      FactVar(
+                                                        MultipleDesignExpr(
+                                                          SingleDesignIdent(
+                                                           niz
+                                                          ) [SingleDesignIdent]
+                                                          SingleExpr(
+                                                            SingleTerm(
+                                                              FactVar(
+                                                                SingleDesignIdent(
+                                                                 jedan
+                                                                ) [SingleDesignIdent]
+                                                              ) [FactVar]
+                                                            ) [SingleTerm]
+                                                          ) [SingleExpr]
+                                                        ) [MultipleDesignExpr]
+                                                      ) [FactVar]
+                                                    ) [SingleTerm]
+                                                  ) [SingleExpr]
+                                                ) [MultipleDesignExpr]
+                                                Assignop(
+                                                ) [Assignop]
+                                                SingleExpr(
+                                                  MultipleTerms(
+                                                    SingleTerm(
+                                                      FactVar(
+                                                        MultipleDesignExpr(
+                                                          SingleDesignIdent(
+                                                           niz
+                                                          ) [SingleDesignIdent]
+                                                          SingleExpr(
+                                                            SingleTerm(
+                                                              FactVar(
+                                                                MultipleDesignExpr(
+                                                                  SingleDesignIdent(
+                                                                   niz
+                                                                  ) [SingleDesignIdent]
+                                                                  SingleExpr(
+                                                                    SingleTerm(
+                                                                      FactNum(
+                                                                       0
+                                                                      ) [FactNum]
+                                                                    ) [SingleTerm]
+                                                                  ) [SingleExpr]
+                                                                ) [MultipleDesignExpr]
+                                                              ) [FactVar]
+                                                            ) [SingleTerm]
+                                                          ) [SingleExpr]
+                                                        ) [MultipleDesignExpr]
+                                                      ) [FactVar]
+                                                    ) [SingleTerm]
+                                                    Asterisk(
+                                                    ) [Asterisk]
+                                                    FactNum(
+                                                     3
+                                                    ) [FactNum]
+                                                  ) [MultipleTerms]
+                                                ) [SingleExpr]
+                                              ) [DesignAssign]
+                                            ) [DesignStmt]
+                                          ) [MethodStmt]
+                                          DesignStmt(
+                                            DesignAssign(
+                                              SingleDesignIdent(
+                                               bodovi
+                                              ) [SingleDesignIdent]
+                                              Assignop(
+                                              ) [Assignop]
+                                              SingleExpr(
+                                                MultipleTerms(
+                                                  SingleTerm(
+                                                    FactVar(
+                                                      MultipleDesignExpr(
+                                                        SingleDesignIdent(
+                                                         niz
+                                                        ) [SingleDesignIdent]
+                                                        SingleExpr(
+                                                          SingleTerm(
+                                                            FactNum(
+                                                             2
+                                                            ) [FactNum]
+                                                          ) [SingleTerm]
+                                                        ) [SingleExpr]
+                                                      ) [MultipleDesignExpr]
+                                                    ) [FactVar]
+                                                  ) [SingleTerm]
+                                                  Slash(
+                                                  ) [Slash]
+                                                  FactVar(
+                                                    MultipleDesignExpr(
+                                                      SingleDesignIdent(
+                                                       niz
+                                                      ) [SingleDesignIdent]
+                                                      SingleExpr(
+                                                        SingleTerm(
+                                                          FactNum(
+                                                           0
+                                                          ) [FactNum]
+                                                        ) [SingleTerm]
+                                                      ) [SingleExpr]
+                                                    ) [MultipleDesignExpr]
+                                                  ) [FactVar]
+                                                ) [MultipleTerms]
+                                              ) [SingleExpr]
+                                            ) [DesignAssign]
+                                          ) [DesignStmt]
+                                        ) [MethodStmt]
+                                        PrintStmt(
+                                          PrintExpr(
+                                            SingleExpr(
+                                              SingleTerm(
+                                                FactVar(
+                                                  SingleDesignIdent(
+                                                   bodovi
+                                                  ) [SingleDesignIdent]
+                                                ) [FactVar]
+                                              ) [SingleTerm]
+                                            ) [SingleExpr]
+                                          ) [PrintExpr]
+                                          NoStmtCnst(
+                                          ) [NoStmtCnst]
+                                        ) [PrintStmt]
+                                      ) [MethodStmt]
+                                      DesignStmt(
+                                        DesignError(
+                                        ) [DesignError]
+                                      ) [DesignStmt]
+                                    ) [MethodStmt]
+                                    PrintStmt(
+                                      PrintExpr(
+                                        SingleExpr(
+                                          SingleTerm(
+                                            FactVar(
+                                              SingleDesignIdent(
+                                               a
+                                              ) [SingleDesignIdent]
+                                            ) [FactVar]
+                                          ) [SingleTerm]
+                                        ) [SingleExpr]
+                                      ) [PrintExpr]
+                                      NoStmtCnst(
+                                      ) [NoStmtCnst]
+                                    ) [PrintStmt]
+                                  ) [MethodStmt]
+                                  DesignStmt(
+                                    DesignError(
+                                    ) [DesignError]
+                                  ) [DesignStmt]
+                                ) [MethodStmt]
+                                PrintStmt(
+                                  PrintExpr(
+                                    SingleExpr(
+                                      SingleTerm(
+                                        FactVar(
+                                          SingleDesignIdent(
+                                           a
+                                          ) [SingleDesignIdent]
+                                        ) [FactVar]
+                                      ) [SingleTerm]
+                                    ) [SingleExpr]
+                                  ) [PrintExpr]
+                                  NoStmtCnst(
+                                  ) [NoStmtCnst]
+                                ) [PrintStmt]
+                              ) [MethodStmt]
+                              DesignStmt(
+                                DesignError(
+                                ) [DesignError]
+                              ) [DesignStmt]
+                            ) [MethodStmt]
+                            PrintStmt(
+                              PrintExpr(
+                                SingleExpr(
+                                  SingleTerm(
+                                    FactVar(
+                                      MultipleDesignExpr(
+                                        SingleDesignIdent(
+                                         niz2
+                                        ) [SingleDesignIdent]
+                                        SingleExpr(
+                                          SingleTerm(
+                                            FactNum(
+                                             0
+                                            ) [FactNum]
+                                          ) [SingleTerm]
+                                        ) [SingleExpr]
+                                      ) [MultipleDesignExpr]
+                                    ) [FactVar]
+                                  ) [SingleTerm]
+                                ) [SingleExpr]
+                              ) [PrintExpr]
+                              NoStmtCnst(
+                              ) [NoStmtCnst]
+                            ) [PrintStmt]
+                          ) [MethodStmt]
+                          PrintStmt(
+                            PrintExpr(
+                              SingleExpr(
+                                SingleTerm(
+                                  FactVar(
+                                    MultipleDesignExpr(
+                                      SingleDesignIdent(
+                                       niz2
+                                      ) [SingleDesignIdent]
+                                      SingleExpr(
+                                        SingleTerm(
+                                          FactNum(
+                                           1
+                                          ) [FactNum]
+                                        ) [SingleTerm]
+                                      ) [SingleExpr]
+                                    ) [MultipleDesignExpr]
+                                  ) [FactVar]
+                                ) [SingleTerm]
+                              ) [SingleExpr]
+                            ) [PrintExpr]
+                            NoStmtCnst(
+                            ) [NoStmtCnst]
+                          ) [PrintStmt]
+                        ) [MethodStmt]
+                        DesignStmt(
+                          DesignAssign(
+                            SingleDesignIdent(
+                             nizch
+                            ) [SingleDesignIdent]
+                            Assignop(
+                            ) [Assignop]
+                            SingleExpr(
+                              SingleTerm(
+                                FactConstrMatrix(
+                                  Type(
+                                   char
+                                  ) [Type]
+                                  SingleExpr(
+                                    SingleTerm(
+                                      FactNum(
+                                       3
+                                      ) [FactNum]
+                                    ) [SingleTerm]
+                                  ) [SingleExpr]
+                                  SingleExpr(
+                                    SingleTerm(
+                                      FactNum(
+                                       2
+                                      ) [FactNum]
+                                    ) [SingleTerm]
+                                  ) [SingleExpr]
+                                ) [FactConstrMatrix]
+                              ) [SingleTerm]
+                            ) [SingleExpr]
+                          ) [DesignAssign]
+                        ) [DesignStmt]
+                      ) [MethodStmt]
+                      DesignStmt(
+                        DesignAssign(
+                          MultipleDesignExpr(
+                            SingleDesignIdent(
+                             nizch
+                            ) [SingleDesignIdent]
+                            SingleExpr(
+                              SingleTerm(
+                                FactNum(
+                                 0
+                                ) [FactNum]
+                              ) [SingleTerm]
+                            ) [SingleExpr]
+                          ) [MultipleDesignExpr]
+                          Assignop(
+                          ) [Assignop]
+                          SingleExpr(
+                            SingleTerm(
+                              FactChar(
+                               a
+                              ) [FactChar]
+                            ) [SingleTerm]
+                          ) [SingleExpr]
+                        ) [DesignAssign]
+                      ) [DesignStmt]
+                    ) [MethodStmt]
+                    DesignStmt(
+                      DesignAssign(
+                        MultipleDesignExpr(
+                          SingleDesignIdent(
+                           nizch
+                          ) [SingleDesignIdent]
+                          SingleExpr(
+                            SingleTerm(
+                              FactVar(
+                                SingleDesignIdent(
+                                 jedan
+                                ) [SingleDesignIdent]
+                              ) [FactVar]
+                            ) [SingleTerm]
+                          ) [SingleExpr]
+                        ) [MultipleDesignExpr]
+                        Assignop(
+                        ) [Assignop]
+                        SingleExpr(
+                          SingleTerm(
+                            FactChar(
+                             b
+                            ) [FactChar]
+                          ) [SingleTerm]
+                        ) [SingleExpr]
+                      ) [DesignAssign]
+                    ) [DesignStmt]
+                  ) [MethodStmt]
+                  DesignStmt(
+                    DesignAssign(
+                      MultipleDesignExpr(
+                        SingleDesignIdent(
+                         nizch
+                        ) [SingleDesignIdent]
+                        MultipleExpr(
+                          SingleExpr(
+                            SingleTerm(
+                              FactVar(
+                                SingleDesignIdent(
+                                 pet
+                                ) [SingleDesignIdent]
+                              ) [FactVar]
+                            ) [SingleTerm]
+                          ) [SingleExpr]
+                          Minus(
+                          ) [Minus]
+                          SingleTerm(
+                            FactNum(
+                             3
+                            ) [FactNum]
+                          ) [SingleTerm]
+                        ) [MultipleExpr]
+                      ) [MultipleDesignExpr]
+                      Assignop(
+                      ) [Assignop]
+                      SingleExpr(
+                        SingleTerm(
+                          FactChar(
+                           c
+                          ) [FactChar]
+                        ) [SingleTerm]
+                      ) [SingleExpr]
+                    ) [DesignAssign]
+                  ) [DesignStmt]
+                ) [MethodStmt]
+                PrintStmt(
+                  PrintExpr(
+                    SingleExpr(
+                      SingleTerm(
+                        FactVar(
+                          MultipleDesignExpr(
+                            SingleDesignIdent(
+                             nizch
+                            ) [SingleDesignIdent]
+                            SingleExpr(
+                              SingleTerm(
+                                FactNum(
+                                 1
+                                ) [FactNum]
+                              ) [SingleTerm]
+                            ) [SingleExpr]
+                          ) [MultipleDesignExpr]
+                        ) [FactVar]
+                      ) [SingleTerm]
+                    ) [SingleExpr]
+                  ) [PrintExpr]
+                  NoStmtCnst(
+                  ) [NoStmtCnst]
+                ) [PrintStmt]
+              ) [MethodStmt]
+              PrintStmt(
+                PrintExpr(
+                  SingleExpr(
+                    SingleTerm(
+                      FactVar(
+                        MultipleDesignExpr(
+                          SingleDesignIdent(
+                           nizch
+                          ) [SingleDesignIdent]
+                          SingleExpr(
+                            MultipleTerms(
+                              SingleTerm(
+                                FactVar(
+                                  SingleDesignIdent(
+                                   jedan
+                                  ) [SingleDesignIdent]
+                                ) [FactVar]
+                              ) [SingleTerm]
+                              Asterisk(
+                              ) [Asterisk]
+                              FactNum(
+                               2
+                              ) [FactNum]
+                            ) [MultipleTerms]
+                          ) [SingleExpr]
+                        ) [MultipleDesignExpr]
+                      ) [FactVar]
+                    ) [SingleTerm]
+                  ) [SingleExpr]
+                ) [PrintExpr]
+                NoStmtCnst(
+                ) [NoStmtCnst]
+              ) [PrintStmt]
+            ) [MethodStmt]
+            ReadStmt(
+              SingleDesignIdent(
+               bodovi
+              ) [SingleDesignIdent]
+            ) [ReadStmt]
+          ) [MethodStmt]
+          DesignStmt(
+            DesignAssign(
+              SingleDesignIdent(
+               bodovi
+              ) [SingleDesignIdent]
+              Assignop(
+              ) [Assignop]
+              MultipleExpr(
+                MultipleExpr(
+                  NegativeExpr(
+                    SingleTerm(
+                      FactVar(
+                        SingleDesignIdent(
+                         bodovi
+                        ) [SingleDesignIdent]
+                      ) [FactVar]
+                    ) [SingleTerm]
+                  ) [NegativeExpr]
+                  Plus(
+                  ) [Plus]
+                  MultipleTerms(
+                    SingleTerm(
+                      FactExpr(
+                        MultipleExpr(
+                          SingleExpr(
+                            MultipleTerms(
+                              MultipleTerms(
+                                SingleTerm(
+                                  FactVar(
+                                    SingleDesignIdent(
+                                     pet
+                                    ) [SingleDesignIdent]
+                                  ) [FactVar]
+                                ) [SingleTerm]
+                                Asterisk(
+                                ) [Asterisk]
+                                FactVar(
+                                  SingleDesignIdent(
+                                   a
+                                  ) [SingleDesignIdent]
+                                ) [FactVar]
+                              ) [MultipleTerms]
+                              Slash(
+                              ) [Slash]
+                              FactNum(
+                               2
+                              ) [FactNum]
+                            ) [MultipleTerms]
+                          ) [SingleExpr]
+                          Minus(
+                          ) [Minus]
+                          SingleTerm(
+                            FactVar(
+                              SingleDesignIdent(
+                               jedan
+                              ) [SingleDesignIdent]
+                            ) [FactVar]
+                          ) [SingleTerm]
+                        ) [MultipleExpr]
+                      ) [FactExpr]
+                    ) [SingleTerm]
+                    Asterisk(
+                    ) [Asterisk]
+                    FactVar(
+                      SingleDesignIdent(
+                       bodovi
+                      ) [SingleDesignIdent]
+                    ) [FactVar]
+                  ) [MultipleTerms]
+                ) [MultipleExpr]
+                Minus(
+                ) [Minus]
+                SingleTerm(
+                  FactExpr(
+                    MultipleExpr(
+                      MultipleExpr(
+                        SingleExpr(
+                          MultipleTerms(
+                            SingleTerm(
+                              FactNum(
+                               3
+                              ) [FactNum]
+                            ) [SingleTerm]
+                            Percent(
+                            ) [Percent]
+                            FactNum(
+                             2
+                            ) [FactNum]
+                          ) [MultipleTerms]
+                        ) [SingleExpr]
+                        Plus(
+                        ) [Plus]
+                        MultipleTerms(
+                          SingleTerm(
+                            FactNum(
+                             3
+                            ) [FactNum]
+                          ) [SingleTerm]
+                          Asterisk(
+                          ) [Asterisk]
+                          FactNum(
+                           2
+                          ) [FactNum]
+                        ) [MultipleTerms]
+                      ) [MultipleExpr]
+                      Minus(
+                      ) [Minus]
+                      SingleTerm(
+                        FactNum(
+                         3
+                        ) [FactNum]
+                      ) [SingleTerm]
+                    ) [MultipleExpr]
+                  ) [FactExpr]
+                ) [SingleTerm]
+              ) [MultipleExpr]
+            ) [DesignAssign]
+          ) [DesignStmt]
+        ) [MethodStmt]
+        PrintStmt(
+          PrintExpr(
+            SingleExpr(
+              SingleTerm(
+                FactVar(
+                  SingleDesignIdent(
+                   bodovi
+                  ) [SingleDesignIdent]
+                ) [FactVar]
+              ) [SingleTerm]
+            ) [SingleExpr]
+          ) [PrintExpr]
+          NoStmtCnst(
+          ) [NoStmtCnst]
+        ) [PrintStmt]
+      ) [MethodStmt]
+    ) [VoidMethodDecl]
+  ) [MethodDecls]
+) [Program]
+INFO  18:57:02,369 - ===================================
+INFO  18:57:02,372 - Naisla na intr const
+INFO  18:57:02,372 - Naisla na intr const
+INFO  18:57:02,373 - Naisla na intr const
+INFO  18:57:02,373 - Print na liniji 22

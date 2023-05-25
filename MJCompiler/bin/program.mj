@@ -19,8 +19,7 @@ program p
 	
 	void main() int x, xa[][]; {
 		
-		
-		len = sum + a;	
 		return;	
+		if (arr1 == arr1) len++;
 	}
 }
