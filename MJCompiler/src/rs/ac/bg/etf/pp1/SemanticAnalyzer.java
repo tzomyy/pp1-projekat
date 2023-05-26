@@ -1,5 +1,9 @@
 package rs.ac.bg.etf.pp1;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
 import org.apache.log4j.Logger;
 
 import rs.ac.bg.etf.pp1.ast.*;
@@ -15,6 +19,8 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	boolean matrixType = false;
 	boolean hasReturn = false;
 	int depthWhile = 0;
+	int methFormParams = 0;
+	int methActParams = 0;
 
 	Obj currMethod = null;
 	Struct currType = null;
@@ -311,8 +317,39 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			report_error("Metoda " + this.currMethod.getName() + " nema povratnu vrednost u telu svoje funkcije",
 					methDecl);
 		}
+		
+		currMethod.setLevel(methFormParams);
+		Tab.chainLocalSymbols(currMethod);
+		
+		Tab.closeScope();
+		this.methFormParams = 0;
 		this.currMethod = null;
 		this.hasReturn = false;
+	}
+	
+	// brojanje parametara funkcije
+	
+	public void visit(SingleFormParam params) {
+		
+		if (Tab.find(params.getFormName()) != Tab.noObj) {
+			if (Tab.currentScope.findSymbol(params.getFormName()) != null) {
+				report_error("Parametar s imenom "+ params.getFormName() + " je vec naveden!", params);
+				return;
+			}			
+		}
+		
+		if (this.arrayType) {
+			Struct arrayType = new Struct(Struct.Array, currType);
+			Tab.insert(Obj.Var, params.getFormName() , arrayType);
+		} else if (this.matrixType) {
+			Struct arrayType = new Struct(Struct.Array, currType);
+			Struct matrixType = new Struct(Struct.Array, arrayType);
+			Tab.insert(Obj.Var, params.getFormName() , matrixType);
+		} else {
+			Tab.insert(Obj.Var, params.getFormName(), this.currType);
+		}
+		
+		this.methFormParams++;
 	}
 
 	public void visit(WhileStart whileStart) {
@@ -406,6 +443,26 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		factor.struct = factor.getDesignator().obj.getType();
 	}
 
+	public void visit(FactFunc factor) {
+		factor.struct = factor.getDesignator().obj.getType();
+		
+		Collection<Obj> funcParam = factor.getDesignator().obj.getLocalSymbols();
+		if (funcParam.size() != this.actParams.size()) {
+			report_error("Broj argumenata funkcije bi trebalo da bude " + funcParam.size(), factor);
+		}
+		int i = 0;
+		for (Obj obj: funcParam) {
+			if (!obj.getType().compatibleWith(this.actParams.get(i))) {
+				this.actParams = new ArrayList<>();
+				report_error("Tipovi na " + (i+1) + ". mestu u pozivu funkcije " 
+				+ factor.getDesignator().obj.getName() +" nisu kompatablni", factor);
+				return;
+			}
+			i++;
+		}
+		this.actParams = new ArrayList<>();
+	}
+	
 	public void visit(FactConstrMatrix factor) {
 		Struct arrayType = new Struct(Struct.Array, factor.getType().struct);
 		Struct matrix = new Struct(Struct.Array, arrayType);
@@ -419,6 +476,40 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	
 	public void visit(FactExpr factor) {
 		factor.struct = factor.getExpr().struct;
+	}
+	
+	// designator statement
+	
+	public void visit(DesignFunction function) {
+		Collection<Obj> funcParam = function.getDesignator().obj.getLocalSymbols();
+				
+		
+		if (funcParam.size() != this.actParams.size()) {
+			report_error("Broj argumenata funkcije bi trebalo da bude " + funcParam.size(), function);
+		}
+		int i = 0;
+		for (Obj obj: funcParam) {
+			if (!obj.getType().compatibleWith(this.actParams.get(i))) {
+				this.actParams = new ArrayList<>();
+				report_error("Tipovi na " + (i+1) + ". mestu u pozivu funkcije " 
+				+ function.getDesignator().obj.getName() +" nisu kompatablni", function);
+				return;
+			}
+			i++;
+		}
+		this.actParams = new ArrayList<>();
+	}
+	
+	//actparams
+	
+	List<Struct> actParams = new ArrayList<>();
+	
+	public void visit(SingleActParam params) {		
+		actParams.add(params.getExpr().struct);
+	}
+	
+	public void visit(ActParams params) {		
+		actParams.add(params.getExpr().struct);
 	}
 
 	// cond

@@ -81,7 +81,7 @@ nonterminal ConstructorFormPars;
 nonterminal ConstructorVarDecl;
 nonterminal ConstructorStatement;
 
-nonterminal MethodDecl;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj MethodDecl;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct TypeMethod;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct VoidMethod;
 nonterminal MethodFormPars;

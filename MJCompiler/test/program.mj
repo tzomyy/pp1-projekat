@@ -13,13 +13,23 @@ program p
 	
 		int arr1[];
 	
-	int len, arr2[][], sum;
+	int len, arr2[][];
 
 {
+	int sum(int z, int d)
+	{
+		return z + d;
+	}
+	
+	int la(int m, int xx){
+		return m + xx;
+	}
 	
 	void main() int x, xa[][]; {
-		
-		return;	
-		if (flag1) len++;
+	
+	x = sum(1, 1);	
+	x = la(1,1);
+	
+	
 	}
 }

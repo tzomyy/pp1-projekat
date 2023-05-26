@@ -1,0 +1,327 @@
+INFO  17:45:50,033 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  17:45:50,098 - #35 program
+INFO  17:45:50,098 - #47 p
+INFO  17:45:50,099 - #40 const
+INFO  17:45:50,100 - #47 int
+INFO  17:45:50,100 - #47 pi
+INFO  17:45:50,101 - #18 =
+INFO  17:45:50,101 - #45 3
+INFO  17:45:50,102 - #5 ,
+INFO  17:45:50,103 - #47 e
+INFO  17:45:50,103 - #18 =
+INFO  17:45:50,103 - #45 2
+INFO  17:45:50,103 - #6 ;
+INFO  17:45:50,103 - #40 const
+INFO  17:45:50,104 - #47 bool
+INFO  17:45:50,104 - #47 flag1
+INFO  17:45:50,105 - #18 =
+INFO  17:45:50,105 - #46 true
+INFO  17:45:50,105 - #6 ;
+INFO  17:45:50,105 - #40 const
+INFO  17:45:50,105 - #47 bool
+INFO  17:45:50,105 - #47 flag2
+INFO  17:45:50,105 - #18 =
+INFO  17:45:50,111 - #46 false
+INFO  17:45:50,111 - #6 ;
+INFO  17:45:50,111 - #40 const
+INFO  17:45:50,111 - #47 int
+INFO  17:45:50,111 - #47 n_1
+INFO  17:45:50,112 - #18 =
+INFO  17:45:50,112 - #45 1
+INFO  17:45:50,112 - #5 ,
+INFO  17:45:50,112 - #47 n_2
+INFO  17:45:50,112 - #18 =
+INFO  17:45:50,112 - #45 2
+INFO  17:45:50,112 - #5 ,
+INFO  17:45:50,112 - #47 n_3
+INFO  17:45:50,112 - #18 =
+INFO  17:45:50,112 - #45 3
+INFO  17:45:50,113 - #6 ;
+INFO  17:45:50,113 - #40 const
+INFO  17:45:50,113 - #47 char
+INFO  17:45:50,113 - #47 a
+INFO  17:45:50,113 - #18 =
+INFO  17:45:50,113 - #44 a
+INFO  17:45:50,113 - #6 ;
+INFO  17:45:50,114 - #47 int
+INFO  17:45:50,114 - #47 arr1
+INFO  17:45:50,114 - #20 [
+INFO  17:45:50,114 - #36 ]
+INFO  17:45:50,114 - #6 ;
+INFO  17:45:50,115 - #47 int
+INFO  17:45:50,115 - #47 len
+INFO  17:45:50,115 - #5 ,
+INFO  17:45:50,116 - #47 arr2
+INFO  17:45:50,116 - #20 [
+INFO  17:45:50,116 - #36 ]
+INFO  17:45:50,116 - #20 [
+INFO  17:45:50,116 - #36 ]
+INFO  17:45:50,116 - #6 ;
+INFO  17:45:50,117 - #12 {
+INFO  17:45:50,117 - #47 int
+INFO  17:45:50,118 - #47 sum
+INFO  17:45:50,118 - #17 (
+INFO  17:45:50,119 - #47 int
+INFO  17:45:50,119 - #47 z
+INFO  17:45:50,119 - #5 ,
+INFO  17:45:50,119 - #47 int
+INFO  17:45:50,119 - #47 d
+INFO  17:45:50,119 - #4 )
+INFO  17:45:50,120 - #12 {
+INFO  17:45:50,121 - #37 return
+INFO  17:45:50,121 - #47 z
+INFO  17:45:50,121 - #3 +
+INFO  17:45:50,121 - #47 d
+INFO  17:45:50,122 - #6 ;
+INFO  17:45:50,123 - #32 }
+INFO  17:45:50,123 - #15 void
+INFO  17:45:50,123 - #47 main
+INFO  17:45:50,123 - #17 (
+INFO  17:45:50,123 - #4 )
+INFO  17:45:50,124 - #47 int
+INFO  17:45:50,124 - #47 x
+INFO  17:45:50,124 - #5 ,
+INFO  17:45:50,124 - #47 xa
+INFO  17:45:50,124 - #20 [
+INFO  17:45:50,124 - #36 ]
+INFO  17:45:50,124 - #20 [
+INFO  17:45:50,124 - #36 ]
+INFO  17:45:50,124 - #6 ;
+INFO  17:45:50,125 - #12 {
+INFO  17:45:50,125 - #32 }
+INFO  17:45:50,125 - #32 }
+INFO  17:45:50,131 - Program(
+  ProgName(
+   p
+  ) [ProgName]
+  VarDeclaration(
+    VarDeclaration(
+      ConstDeclaration(
+        ConstDeclaration(
+          ConstDeclaration(
+            ConstDeclaration(
+              ConstDeclaration(
+                NoDeclaration(
+                ) [NoDeclaration]
+                ConstDecl(
+                  Type(
+                   int
+                  ) [Type]
+                  IntegerConstDecl(
+                   pi
+                   3
+                  ) [IntegerConstDecl]
+                  MultipleConstDecls(
+                    EndOfDeclaration(
+                    ) [EndOfDeclaration]
+                    IntegerConstDecl(
+                     e
+                     2
+                    ) [IntegerConstDecl]
+                  ) [MultipleConstDecls]
+                ) [ConstDecl]
+              ) [ConstDeclaration]
+              ConstDecl(
+                Type(
+                 bool
+                ) [Type]
+                BoolConstDecl(
+                 flag1
+                 true
+                ) [BoolConstDecl]
+                EndOfDeclaration(
+                ) [EndOfDeclaration]
+              ) [ConstDecl]
+            ) [ConstDeclaration]
+            ConstDecl(
+              Type(
+               bool
+              ) [Type]
+              BoolConstDecl(
+               flag2
+               false
+              ) [BoolConstDecl]
+              EndOfDeclaration(
+              ) [EndOfDeclaration]
+            ) [ConstDecl]
+          ) [ConstDeclaration]
+          ConstDecl(
+            Type(
+             int
+            ) [Type]
+            IntegerConstDecl(
+             n_1
+             1
+            ) [IntegerConstDecl]
+            MultipleConstDecls(
+              MultipleConstDecls(
+                EndOfDeclaration(
+                ) [EndOfDeclaration]
+                IntegerConstDecl(
+                 n_2
+                 2
+                ) [IntegerConstDecl]
+              ) [MultipleConstDecls]
+              IntegerConstDecl(
+               n_3
+               3
+              ) [IntegerConstDecl]
+            ) [MultipleConstDecls]
+          ) [ConstDecl]
+        ) [ConstDeclaration]
+        ConstDecl(
+          Type(
+           char
+          ) [Type]
+          CharConstDecl(
+           a
+           a
+          ) [CharConstDecl]
+          EndOfDeclaration(
+          ) [EndOfDeclaration]
+        ) [ConstDecl]
+      ) [ConstDeclaration]
+      VarDecls(
+        Type(
+         int
+        ) [Type]
+        EndOfVarDeclarations(
+          EndOfVarDeclar(
+           arr1
+            ArrayBrackets(
+            ) [ArrayBrackets]
+          ) [EndOfVarDeclar]
+        ) [EndOfVarDeclarations]
+      ) [VarDecls]
+    ) [VarDeclaration]
+    VarDecls(
+      Type(
+       int
+      ) [Type]
+      MultipleVarDecl(
+        MoreVarDecls(
+         len
+          NoBrackets(
+          ) [NoBrackets]
+        ) [MoreVarDecls]
+        EndOfVarDeclarations(
+          EndOfVarDeclar(
+           arr2
+            MatrixBrackets(
+            ) [MatrixBrackets]
+          ) [EndOfVarDeclar]
+        ) [EndOfVarDeclarations]
+      ) [MultipleVarDecl]
+    ) [VarDecls]
+  ) [VarDeclaration]
+  MethodDecls(
+    MethodDecls(
+      NoMethodDeclList(
+      ) [NoMethodDeclList]
+      TypeMethodDecl(
+        TypeMethod(
+          Type(
+           int
+          ) [Type]
+         sum
+        ) [TypeMethod]
+        MethodFormParams(
+          FormPars(
+            MultipleFormPars(
+              EndOfFormPar(
+                SingleFormParam(
+                  Type(
+                   int
+                  ) [Type]
+                 z
+                  NoBrackets(
+                  ) [NoBrackets]
+                ) [SingleFormParam]
+              ) [EndOfFormPar]
+              SingleFormParam(
+                Type(
+                 int
+                ) [Type]
+               d
+                NoBrackets(
+                ) [NoBrackets]
+              ) [SingleFormParam]
+            ) [MultipleFormPars]
+          ) [FormPars]
+        ) [MethodFormParams]
+        EndOfMethodVarDecl(
+        ) [EndOfMethodVarDecl]
+        MethodStmt(
+          NoMethodStmt(
+          ) [NoMethodStmt]
+          ReturnExpr(
+            MultipleExpr(
+              SingleExpr(
+                SingleTerm(
+                  FactVar(
+                    SingleDesignIdent(
+                     z
+                    ) [SingleDesignIdent]
+                  ) [FactVar]
+                ) [SingleTerm]
+              ) [SingleExpr]
+              Plus(
+              ) [Plus]
+              SingleTerm(
+                FactVar(
+                  SingleDesignIdent(
+                   d
+                  ) [SingleDesignIdent]
+                ) [FactVar]
+              ) [SingleTerm]
+            ) [MultipleExpr]
+          ) [ReturnExpr]
+        ) [MethodStmt]
+      ) [TypeMethodDecl]
+    ) [MethodDecls]
+    VoidMethodDecl(
+      VoidMethod(
+       main
+      ) [VoidMethod]
+      NoMethodFormParams(
+      ) [NoMethodFormParams]
+      MethodVarDecls(
+        EndOfMethodVarDecl(
+        ) [EndOfMethodVarDecl]
+        VarDecls(
+          Type(
+           int
+          ) [Type]
+          MultipleVarDecl(
+            MoreVarDecls(
+             x
+              NoBrackets(
+              ) [NoBrackets]
+            ) [MoreVarDecls]
+            EndOfVarDeclarations(
+              EndOfVarDeclar(
+               xa
+                MatrixBrackets(
+                ) [MatrixBrackets]
+              ) [EndOfVarDeclar]
+            ) [EndOfVarDeclarations]
+          ) [MultipleVarDecl]
+        ) [VarDecls]
+      ) [MethodVarDecls]
+      NoMethodStmt(
+      ) [NoMethodStmt]
+    ) [VoidMethodDecl]
+  ) [MethodDecls]
+) [Program]
+INFO  17:45:50,132 - ===================================
+INFO  17:45:50,135 - Naisla na intr const
+INFO  17:45:50,135 - Naisla na intr const
+INFO  17:45:50,135 - Naisla na bool const
+INFO  17:45:50,135 - Naisla na bool const
+INFO  17:45:50,135 - Naisla na intr const
+INFO  17:45:50,136 - Naisla na intr const
+INFO  17:45:50,136 - Naisla na intr const
+INFO  17:45:50,137 - Naisla na char const
+INFO  17:45:50,138 - 2 sum
+INFO  17:45:50,138 - 0 main
+INFO  17:45:50,138 - Definisana je main funkcija!
