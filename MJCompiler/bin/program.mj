@@ -16,19 +16,18 @@ program p
 	int len, arr2[][];
 
 {
-	int sum(int z, int d)
+	void sum(int z, int d)
 	{
-		return z + d;
+		return;
 	}
 	
 	int la(int m, int xx){
-		return m + xx;
+		return flag1;
 	}
 	
 	void main() int x, xa[][]; {
 	
-	x = sum(1, 1);	
-	x = la(1,1);
+	x = xa[0];
 	
 	
 	}

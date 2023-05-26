@@ -1,114 +1,116 @@
-INFO  21:45:52,773 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
-INFO  21:45:52,864 - #35 program
-INFO  21:45:52,865 - #47 p
-INFO  21:45:52,865 - #40 const
-INFO  21:45:52,867 - #47 int
-INFO  21:45:52,867 - #47 pi
-INFO  21:45:52,868 - #18 =
-INFO  21:45:52,868 - #45 3
-INFO  21:45:52,868 - #5 ,
-INFO  21:45:52,870 - #47 e
-INFO  21:45:52,870 - #18 =
-INFO  21:45:52,870 - #45 2
-INFO  21:45:52,870 - #6 ;
-INFO  21:45:52,871 - #40 const
-INFO  21:45:52,872 - #47 bool
-INFO  21:45:52,872 - #47 flag1
-INFO  21:45:52,872 - #18 =
-INFO  21:45:52,873 - #46 true
-INFO  21:45:52,873 - #6 ;
-INFO  21:45:52,873 - #40 const
-INFO  21:45:52,873 - #47 bool
-INFO  21:45:52,873 - #47 flag2
-INFO  21:45:52,874 - #18 =
-INFO  21:45:52,874 - #46 false
-INFO  21:45:52,874 - #6 ;
-INFO  21:45:52,875 - #40 const
-INFO  21:45:52,875 - #47 int
-INFO  21:45:52,875 - #47 n_1
-INFO  21:45:52,875 - #18 =
-INFO  21:45:52,875 - #45 1
-INFO  21:45:52,875 - #5 ,
-INFO  21:45:52,876 - #47 n_2
-INFO  21:45:52,876 - #18 =
-INFO  21:45:52,876 - #45 2
-INFO  21:45:52,876 - #5 ,
-INFO  21:45:52,876 - #47 n_3
-INFO  21:45:52,876 - #18 =
-INFO  21:45:52,876 - #45 3
-INFO  21:45:52,876 - #6 ;
-INFO  21:45:52,876 - #40 const
-INFO  21:45:52,877 - #47 char
-INFO  21:45:52,877 - #47 a
-INFO  21:45:52,877 - #18 =
-INFO  21:45:52,877 - #44 a
-INFO  21:45:52,877 - #6 ;
-INFO  21:45:52,878 - #47 int
-INFO  21:45:52,878 - #47 arr1
-INFO  21:45:52,878 - #20 [
-INFO  21:45:52,878 - #36 ]
-INFO  21:45:52,878 - #6 ;
-INFO  21:45:52,880 - #47 int
-INFO  21:45:52,881 - #47 len
-INFO  21:45:52,881 - #5 ,
-INFO  21:45:52,881 - #47 arr2
-INFO  21:45:52,882 - #20 [
-INFO  21:45:52,882 - #36 ]
-INFO  21:45:52,882 - #20 [
-INFO  21:45:52,882 - #36 ]
-INFO  21:45:52,882 - #6 ;
-INFO  21:45:52,883 - #12 {
-INFO  21:45:52,883 - #15 void
-INFO  21:45:52,884 - #47 sum
-INFO  21:45:52,884 - #17 (
-INFO  21:45:52,885 - #47 int
-INFO  21:45:52,886 - #47 z
-INFO  21:45:52,886 - #5 ,
-INFO  21:45:52,887 - #47 int
-INFO  21:45:52,887 - #47 d
-INFO  21:45:52,888 - #4 )
-INFO  21:45:52,889 - #12 {
-INFO  21:45:52,890 - #37 return
-INFO  21:45:52,891 - #6 ;
-INFO  21:45:52,892 - #32 }
-INFO  21:45:52,893 - #47 int
-INFO  21:45:52,893 - #47 la
-INFO  21:45:52,893 - #17 (
-INFO  21:45:52,894 - #47 int
-INFO  21:45:52,894 - #47 m
-INFO  21:45:52,894 - #5 ,
-INFO  21:45:52,895 - #47 int
-INFO  21:45:52,895 - #47 xx
-INFO  21:45:52,895 - #4 )
-INFO  21:45:52,895 - #12 {
-INFO  21:45:52,895 - #37 return
-INFO  21:45:52,895 - #47 flag1
-INFO  21:45:52,895 - #6 ;
-INFO  21:45:52,896 - #32 }
-INFO  21:45:52,896 - #15 void
-INFO  21:45:52,896 - #47 main
-INFO  21:45:52,896 - #17 (
-INFO  21:45:52,896 - #4 )
-INFO  21:45:52,896 - #47 int
-INFO  21:45:52,898 - #47 x
-INFO  21:45:52,898 - #5 ,
-INFO  21:45:52,898 - #47 xa
-INFO  21:45:52,899 - #20 [
-INFO  21:45:52,899 - #36 ]
-INFO  21:45:52,899 - #20 [
-INFO  21:45:52,899 - #36 ]
-INFO  21:45:52,899 - #6 ;
-INFO  21:45:52,899 - #12 {
-INFO  21:45:52,901 - #47 x
-INFO  21:45:52,902 - #18 =
-INFO  21:45:52,902 - #47 xa
-INFO  21:45:52,903 - #20 [
-INFO  21:45:52,903 - #45 0
-INFO  21:45:52,903 - #36 ]
-INFO  21:45:52,903 - #6 ;
-INFO  21:45:52,903 - #32 }
-INFO  21:45:52,903 - #32 }
-INFO  21:45:52,912 - Program(
+INFO  21:45:32,084 - Compiling source file: C:\Users\Laptop\git\pp1-projekat\MJCompiler\test\program.mj
+INFO  21:45:32,153 - #35 program
+INFO  21:45:32,153 - #47 p
+INFO  21:45:32,153 - #40 const
+INFO  21:45:32,155 - #47 int
+INFO  21:45:32,155 - #47 pi
+INFO  21:45:32,155 - #18 =
+INFO  21:45:32,155 - #45 3
+INFO  21:45:32,156 - #5 ,
+INFO  21:45:32,156 - #47 e
+INFO  21:45:32,157 - #18 =
+INFO  21:45:32,157 - #45 2
+INFO  21:45:32,157 - #6 ;
+INFO  21:45:32,157 - #40 const
+INFO  21:45:32,158 - #47 bool
+INFO  21:45:32,158 - #47 flag1
+INFO  21:45:32,158 - #18 =
+INFO  21:45:32,158 - #46 true
+INFO  21:45:32,158 - #6 ;
+INFO  21:45:32,158 - #40 const
+INFO  21:45:32,159 - #47 bool
+INFO  21:45:32,159 - #47 flag2
+INFO  21:45:32,159 - #18 =
+INFO  21:45:32,165 - #46 false
+INFO  21:45:32,165 - #6 ;
+INFO  21:45:32,165 - #40 const
+INFO  21:45:32,165 - #47 int
+INFO  21:45:32,165 - #47 n_1
+INFO  21:45:32,165 - #18 =
+INFO  21:45:32,165 - #45 1
+INFO  21:45:32,165 - #5 ,
+INFO  21:45:32,166 - #47 n_2
+INFO  21:45:32,166 - #18 =
+INFO  21:45:32,166 - #45 2
+INFO  21:45:32,167 - #5 ,
+INFO  21:45:32,167 - #47 n_3
+INFO  21:45:32,167 - #18 =
+INFO  21:45:32,167 - #45 3
+INFO  21:45:32,167 - #6 ;
+INFO  21:45:32,168 - #40 const
+INFO  21:45:32,168 - #47 char
+INFO  21:45:32,168 - #47 a
+INFO  21:45:32,168 - #18 =
+INFO  21:45:32,168 - #44 a
+INFO  21:45:32,168 - #6 ;
+INFO  21:45:32,169 - #47 int
+INFO  21:45:32,169 - #47 arr1
+INFO  21:45:32,169 - #20 [
+INFO  21:45:32,169 - #36 ]
+INFO  21:45:32,169 - #6 ;
+INFO  21:45:32,170 - #47 int
+INFO  21:45:32,171 - #47 len
+INFO  21:45:32,171 - #5 ,
+INFO  21:45:32,171 - #47 arr2
+INFO  21:45:32,171 - #20 [
+INFO  21:45:32,171 - #36 ]
+INFO  21:45:32,172 - #20 [
+INFO  21:45:32,172 - #36 ]
+INFO  21:45:32,172 - #6 ;
+INFO  21:45:32,172 - #12 {
+INFO  21:45:32,173 - #15 void
+INFO  21:45:32,173 - #47 sum
+INFO  21:45:32,173 - #17 (
+INFO  21:45:32,174 - #47 int
+INFO  21:45:32,174 - #47 z
+INFO  21:45:32,174 - #5 ,
+INFO  21:45:32,175 - #47 int
+INFO  21:45:32,175 - #47 d
+INFO  21:45:32,175 - #4 )
+INFO  21:45:32,176 - #12 {
+INFO  21:45:32,177 - #37 return
+INFO  21:45:32,177 - #6 ;
+INFO  21:45:32,177 - #32 }
+INFO  21:45:32,178 - #47 int
+INFO  21:45:32,178 - #47 la
+INFO  21:45:32,178 - #17 (
+INFO  21:45:32,179 - #47 int
+INFO  21:45:32,179 - #47 m
+INFO  21:45:32,179 - #5 ,
+INFO  21:45:32,179 - #47 int
+INFO  21:45:32,179 - #47 xx
+INFO  21:45:32,179 - #4 )
+INFO  21:45:32,179 - #12 {
+INFO  21:45:32,179 - #37 return
+INFO  21:45:32,179 - #47 m
+INFO  21:45:32,179 - #3 +
+INFO  21:45:32,180 - #47 xx
+INFO  21:45:32,180 - #6 ;
+INFO  21:45:32,181 - #32 }
+INFO  21:45:32,181 - #15 void
+INFO  21:45:32,181 - #47 main
+INFO  21:45:32,181 - #17 (
+INFO  21:45:32,181 - #4 )
+INFO  21:45:32,181 - #47 int
+INFO  21:45:32,182 - #47 x
+INFO  21:45:32,182 - #5 ,
+INFO  21:45:32,182 - #47 xa
+INFO  21:45:32,182 - #20 [
+INFO  21:45:32,182 - #36 ]
+INFO  21:45:32,182 - #20 [
+INFO  21:45:32,182 - #36 ]
+INFO  21:45:32,182 - #6 ;
+INFO  21:45:32,183 - #12 {
+INFO  21:45:32,183 - #47 x
+INFO  21:45:32,183 - #18 =
+INFO  21:45:32,183 - #47 xa
+INFO  21:45:32,184 - #20 [
+INFO  21:45:32,184 - #45 0
+INFO  21:45:32,184 - #36 ]
+INFO  21:45:32,184 - #6 ;
+INFO  21:45:32,184 - #32 }
+INFO  21:45:32,184 - #32 }
+INFO  21:45:32,191 - Program(
   ProgName(
    p
   ) [ProgName]
@@ -312,15 +314,26 @@ INFO  21:45:52,912 - Program(
           NoMethodStmt(
           ) [NoMethodStmt]
           ReturnExpr(
-            SingleExpr(
+            MultipleExpr(
+              SingleExpr(
+                SingleTerm(
+                  FactVar(
+                    SingleDesignIdent(
+                     m
+                    ) [SingleDesignIdent]
+                  ) [FactVar]
+                ) [SingleTerm]
+              ) [SingleExpr]
+              Plus(
+              ) [Plus]
               SingleTerm(
                 FactVar(
                   SingleDesignIdent(
-                   flag1
+                   xx
                   ) [SingleDesignIdent]
                 ) [FactVar]
               ) [SingleTerm]
-            ) [SingleExpr]
+            ) [MultipleExpr]
           ) [ReturnExpr]
         ) [MethodStmt]
       ) [TypeMethodDecl]
@@ -388,14 +401,13 @@ INFO  21:45:52,912 - Program(
     ) [VoidMethodDecl]
   ) [MethodDecls]
 ) [Program]
-INFO  21:45:52,912 - ===================================
-INFO  21:45:52,915 - Naisla na intr const
-INFO  21:45:52,915 - Naisla na intr const
-INFO  21:45:52,915 - Naisla na bool const
-INFO  21:45:52,915 - Naisla na bool const
-INFO  21:45:52,915 - Naisla na intr const
-INFO  21:45:52,915 - Naisla na intr const
-INFO  21:45:52,915 - Naisla na intr const
-INFO  21:45:52,915 - Naisla na char const
-ERROR 21:45:52,916 - Povratni izraz se ne poklapa sa tipom funkcije! na liniji 25
-INFO  21:45:52,917 - Definisana je main funkcija!
+INFO  21:45:32,191 - ===================================
+INFO  21:45:32,194 - Naisla na intr const
+INFO  21:45:32,194 - Naisla na intr const
+INFO  21:45:32,194 - Naisla na bool const
+INFO  21:45:32,194 - Naisla na bool const
+INFO  21:45:32,194 - Naisla na intr const
+INFO  21:45:32,194 - Naisla na intr const
+INFO  21:45:32,194 - Naisla na intr const
+INFO  21:45:32,194 - Naisla na char const
+INFO  21:45:32,196 - Definisana je main funkcija!

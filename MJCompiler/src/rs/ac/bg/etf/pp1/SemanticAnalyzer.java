@@ -303,10 +303,20 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 
 		Tab.openScope();
 	}
+	
+	public void visit(ReturnNoExpr retExpr) {
+		if (this.currMethod.getType() != Tab.noType) {
+			report_error("Funkcija ima povratni tip!" , retExpr);
+		}
+	}
 
 	public void visit(ReturnExpr retExpr) {
 		if (this.currMethod == null) {
 			report_error("Return naredba se nalazi van funkcije!", retExpr);
+		}
+		
+		if (this.currMethod.getType() != retExpr.getExpr().struct) {
+			report_error("Povratni izraz se ne poklapa sa tipom funkcije!" , retExpr);
 		}
 
 		this.hasReturn = true;
@@ -351,6 +361,8 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		
 		this.methFormParams++;
 	}
+	
+	// statement
 
 	public void visit(WhileStart whileStart) {
 		this.depthWhile++;
@@ -359,6 +371,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	public void visit(WhileEnd whileEnd) {
 		this.depthWhile--;
 	}
+		
 
 	public void visit(BreakStmt breakStmt) {
 		if (this.depthWhile == 0) {
@@ -371,6 +384,20 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			report_error("Continue se nalazi van while petlje! ", breakStmt);
 		}
 	}
+	
+	public void visit(ReadStmt readStmt) {
+		if (readStmt.getDesignator().obj.getKind() != Obj.Elem &&
+				readStmt.getDesignator().obj.getKind() != Obj.Var) {
+			report_error("U read statement-u designator mora biti promenljiva, element niza ili matrice!", readStmt);
+		}
+		if (readStmt.getDesignator().obj.getType() != Tab.intType 
+				|| readStmt.getDesignator().obj.getType() != Tab.charType
+				|| readStmt.getDesignator().obj.getType() != boolType) {
+			report_error("U read statement-u designator mora biti tipa int, char ili bool!", readStmt);
+		}
+	}
+
+	// expr
 
 	public void visit(PrintExpr printExpr) {
 
@@ -381,8 +408,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		}
 	}
 
-	// expr
-
+	
 	public void visit(SingleExpr expr) {
 		expr.struct = expr.getTerm().struct;
 	}
@@ -571,7 +597,8 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		if (designator.getExpr().struct != Tab.intType) {
 			report_error("Greska: Izraz bi trebalo da bude tipa int! ", designator);
 		}
-		designator.obj = new Obj(Obj.Elem, designNode.getName(), designator.getExpr().struct);
+		//ovo ne valja
+		designator.obj = new Obj(Obj.Elem, designNode.getName(), Tab.intType );
 	}
 
 	// operatori
