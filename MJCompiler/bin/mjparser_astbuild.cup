@@ -116,6 +116,7 @@ nonterminal ActPars ActPars;
 nonterminal Condition Condition;
 nonterminal CondTerm CondTerm;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct CondFact;
+nonterminal MoreCondFacts MoreCondFacts;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator;
 
@@ -408,10 +409,13 @@ CondTerm ::= (CondTerms) CondFact:C1 AND CondFact:C2 {: RESULT=new CondTerms(C1,
 			(SingleCondTerm) CondFact:C1 {: RESULT=new SingleCondTerm(C1); RESULT.setLine(C1left); :}
 			;
 				
-CondFact ::= (CondFacts) CondFact:C1 Relop:R2 Expr:E3 {: RESULT=new CondFacts(C1, R2, E3); RESULT.setLine(C1left); :}
-		|
-		(SingleCondFact) Expr:E1 {: RESULT=new SingleCondFact(E1); RESULT.setLine(E1left); :}
+CondFact ::= (CondFact) Expr:E1 MoreCondFacts:M2 {: RESULT=new CondFact(E1, M2); RESULT.setLine(E1left); :}
 		;
+		
+MoreCondFacts ::= (MoreConds) Relop:R1 Expr:E2 {: RESULT=new MoreConds(R1, E2); RESULT.setLine(R1left); :}
+				|
+				(EndOfCond) {: RESULT=new EndOfCond(); :} /* epsilon*/
+				;
 					
 Designator ::= (MultipleDesignIdent) Designator:D1 DOT IDENT:var {: RESULT=new MultipleDesignIdent(D1, var); RESULT.setLine(D1left); :}
 			|

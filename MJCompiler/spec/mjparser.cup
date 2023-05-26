@@ -115,6 +115,7 @@ nonterminal ActPars;
 nonterminal Condition;
 nonterminal CondTerm;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct CondFact;
+nonterminal MoreCondFacts;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator;
 
@@ -407,10 +408,13 @@ CondTerm ::= (CondTerms) CondFact AND CondFact
 			(SingleCondTerm) CondFact
 			;
 				
-CondFact ::= (CondFacts) CondFact Relop Expr
-		|
-		(SingleCondFact) Expr
+CondFact ::= (CondFact) Expr MoreCondFacts
 		;
+		
+MoreCondFacts ::= (MoreConds) Relop Expr
+				|
+				(EndOfCond) /* epsilon*/
+				;
 					
 Designator ::= (MultipleDesignIdent) Designator DOT IDENT:var
 			|

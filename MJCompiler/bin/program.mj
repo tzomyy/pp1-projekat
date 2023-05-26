@@ -20,6 +20,6 @@ program p
 	void main() int x, xa[][]; {
 		
 		return;	
-		if (arr1 == arr1) len++;
+		if (flag1) len++;
 	}
 }
