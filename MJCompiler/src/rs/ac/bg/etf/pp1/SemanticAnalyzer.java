@@ -2,6 +2,8 @@ package rs.ac.bg.etf.pp1;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -25,9 +27,27 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	Obj currMethod = null;
 	Struct currType = null;
 	Struct boolType = new Struct(Struct.Bool);
+	
+	HashMap<String, List<Obj>> methFuncParam = new HashMap<>();
 
 	public SemanticAnalyzer() {
 		Tab.currentScope.addToLocals(new Obj(Obj.Type, "bool", boolType));
+		
+		formParams = new ArrayList<>();
+		formParams.add(new Obj(Obj.Var, "", Tab.charType));
+		methFuncParam.put("ord", formParams);
+		
+		formParams = new ArrayList<>();
+		formParams.add(new Obj(Obj.Var, "", Tab.intType));
+		methFuncParam.put("chr", formParams);
+		
+		Struct arrayType = new Struct(Struct.Array);
+		arrayType.setElementType(Tab.noType);
+		formParams = new ArrayList<>();
+		formParams.add(new Obj(Obj.Var, "", Tab.intType));
+		methFuncParam.put("len", formParams);
+		
+		formParams = new ArrayList<>();
 	}
 
 	public void report_error(String message, SyntaxNode info) {
@@ -212,6 +232,8 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		if (this.arrayType == true) {
 			this.arrayType = false;
 		}
+		
+		report_info("Deklarisana promenljiva " + varDecl.getVarName(), varDecl);
 	}
 
 	public void visit(MoreVarDecls varDecl) {
@@ -264,6 +286,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		if (this.arrayType == true) {
 			this.arrayType = false;
 		}
+		report_info("Deklarisana promenljiva " + varDecl.getVarName(), varDecl);
 	}
 
 	public void visit(TypeMethod methDecl) {
@@ -328,10 +351,13 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 					methDecl);
 		}
 		
+		
 		currMethod.setLevel(methFormParams);
+		methFuncParam.put(currMethod.getName(), formParams);
 		Tab.chainLocalSymbols(currMethod);
 		
 		Tab.closeScope();
+		this.formParams = new ArrayList<>();
 		this.methFormParams = 0;
 		this.currMethod = null;
 		this.hasReturn = false;
@@ -351,6 +377,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		if (this.arrayType) {
 			Struct arrayType = new Struct(Struct.Array, currType);
 			Tab.insert(Obj.Var, params.getFormName() , arrayType);
+			
 		} else if (this.matrixType) {
 			Struct arrayType = new Struct(Struct.Array, currType);
 			Struct matrixType = new Struct(Struct.Array, arrayType);
@@ -360,6 +387,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		}
 		
 		this.methFormParams++;
+		this.formParams.add(Tab.find(params.getFormName()));
 	}
 	
 	// statement
@@ -390,35 +418,75 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 				readStmt.getDesignator().obj.getKind() != Obj.Var) {
 			report_error("U read statement-u designator mora biti promenljiva, element niza ili matrice!", readStmt);
 		}
-		if (readStmt.getDesignator().obj.getType() != Tab.intType 
-				|| readStmt.getDesignator().obj.getType() != Tab.charType
-				|| readStmt.getDesignator().obj.getType() != boolType) {
+		if (readStmt.getDesignator().obj.getType().getKind() != Tab.intType.getKind() 
+				&& readStmt.getDesignator().obj.getType().getKind() != Tab.charType.getKind()
+				&& readStmt.getDesignator().obj.getType().getKind() != boolType.getKind()) {
 			report_error("U read statement-u designator mora biti tipa int, char ili bool!", readStmt);
+		}
+	}
+	
+	public void visit(DesignInc designator) {
+		
+		if (designator.getDesignator().obj.getKind() != Obj.Elem &&
+				designator.getDesignator().obj.getKind() != Obj.Var) {
+			report_error("U inkrement statement-u designator mora biti promenljiva, element niza ili matrice!", designator);
+		}
+		
+		if (designator.getDesignator().obj.getType().getKind() != Tab.intType.getKind()) {
+			report_error("U inkrement statement-u designator mora biti tipa int, char ili bool!", designator);
+		}
+		
+		
+	}
+	
+	public void visit(DesignDec designator) {
+		
+		if (designator.getDesignator().obj.getKind() != Obj.Elem &&
+				designator.getDesignator().obj.getKind() != Obj.Var) {
+			report_error("U dekrement statement-u designator mora biti promenljiva, element niza ili matrice!", designator);
+		}
+		
+		if (designator.getDesignator().obj.getType().getKind() != Tab.intType.getKind()) {
+			report_error("U dekrement statement-u designator mora biti tipa int, char ili bool!", designator);
+		}
+	}
+	
+	public void visit(DesignAssign designator) {
+		if (designator.getDesignator().obj.getKind() != Obj.Elem &&
+				designator.getDesignator().obj.getKind() != Obj.Var) {
+			report_error("U dekrement statement-u designator mora biti promenljiva, element niza ili matrice!", designator);
+		}
+		if (!designator.getDesignator().obj.getType().compatibleWith(designator.getExpr().struct)) {
+			report_error("Tip neterminala Expr" 
+					+" mora biti kompatibilan sa tipom neterminala "
+					+ designator.getDesignator().obj.getName(), designator);
 		}
 	}
 
 	// expr
 
 	public void visit(PrintExpr printExpr) {
-
+		
 		if (currType != Tab.intType && currType != Tab.charType && currType != boolType) {
-			report_error("Povratna vrednost izraza u print naredbi nije odgovarajuceg tipa!", printExpr);
-		} else {
-			report_info("Print", printExpr);
+			report_error("Povratna vrednost izraza u print naredbi nije odgovarajuceg tipa! " , printExpr);
 		}
+//		} else {
+//			report_info("Print", printExpr);
+//		}
 	}
-
+	
 	
 	public void visit(SingleExpr expr) {
-		expr.struct = expr.getTerm().struct;
+		currType = expr.struct = expr.getTerm().struct;
+		
 	}
 
 	public void visit(NegativeExpr expr) {
 		if (expr.getTerm().struct != Tab.intType) {
-			expr.struct = Tab.noType;
+			currType = expr.struct = Tab.noType;
 			report_error("Negativni izraz treba da bude tipa int", expr);
 		} else {
-			expr.struct = expr.getTerm().struct;
+			currType = expr.struct = expr.getTerm().struct;
 		}
 
 	}
@@ -470,11 +538,20 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	}
 
 	public void visit(FactFunc factor) {
+		
+		if (factor.getDesignator().obj.getKind() != Obj.Meth) {
+			report_error("Promeljiva " + factor.getDesignator().obj.getName() + " nije funkcija", factor);
+			this.actParams = new ArrayList<>();
+			return;
+		} 
+		
 		factor.struct = factor.getDesignator().obj.getType();
 		
-		Collection<Obj> funcParam = factor.getDesignator().obj.getLocalSymbols();
+		//report_info(factor.getDesignator().obj.getName(), factor);
+		List<Obj> funcParam = this.methFuncParam.get(factor.getDesignator().obj.getName());
 		if (funcParam.size() != this.actParams.size()) {
-			report_error("Broj argumenata funkcije bi trebalo da bude " + funcParam.size(), factor);
+			report_error("Broj argumenata funkcije bi trebalo da bude " + funcParam.size() + this.actParams.size(), factor);
+			return;
 		}
 		int i = 0;
 		for (Obj obj: funcParam) {
@@ -507,11 +584,17 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	// designator statement
 	
 	public void visit(DesignFunction function) {
-		Collection<Obj> funcParam = function.getDesignator().obj.getLocalSymbols();
+		
+		if (function.getDesignator().obj.getType().getKind() != Obj.Meth) {
+			report_error("Promeljiva " + function.getDesignator().obj.getName() + " nije funkcija", function);
+			return;
+		}
+		
+		Collection<Obj> funcParam = methFuncParam.get(function.getDesignator().obj.getName());
 				
 		
 		if (funcParam.size() != this.actParams.size()) {
-			report_error("Broj argumenata funkcije bi trebalo da bude " + funcParam.size(), function);
+			report_error("Broj argumenata funkcije " + "bi trebalo da bude " + funcParam.size(), function);
 		}
 		int i = 0;
 		for (Obj obj: funcParam) {
@@ -529,6 +612,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	//actparams
 	
 	List<Struct> actParams = new ArrayList<>();
+	List<Obj> formParams = new ArrayList<>();
 	
 	public void visit(SingleActParam params) {		
 		actParams.add(params.getExpr().struct);
@@ -586,21 +670,60 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		}
 		designator.obj = designNode;
 	}
-
+	
 	public void visit(MultipleDesignExpr designator) {
+		Obj designNode = designator.getMatrixDesignator().obj;
+		
+		if (designNode == Tab.noObj) {
+			report_error("Varijabla " + designator.getMatrixDesignator().obj.getName() + " nije deklarisana! ", null);
+		}
+		designator.obj = designNode;
+	}
+	
+	public void visit(DesignatorName designator) {
+		Obj designNode = Tab.find(designator.getName());
 
-		Obj designNode = designator.getDesignator().obj;
+		if (designNode == Tab.noObj) {
+			report_error("Varijabla " + designator.getName() + " nije deklarisana! ", null);
+		}
+		designator.obj = designNode;
+	}
+
+	public void visit(ArrayDesignat designator) {
+
+		Obj designNode = designator.getDesignatorName().obj;
 
 		if (designNode.getType().getKind() != Struct.Array) {
-			report_error("Promenljiva " + designator.getDesignator().obj.getName() + " nije niz!", designator);
+			report_error("Promenljiva " + designator.getDesignatorName().obj.getName() + " nije niz!", designator);
 		}
 		if (designator.getExpr().struct != Tab.intType) {
 			report_error("Greska: Izraz bi trebalo da bude tipa int! ", designator);
 		}
-		//ovo ne valja
-		designator.obj = new Obj(Obj.Elem, designNode.getName(), Tab.intType );
+		
+		designator.obj = new Obj(Obj.Elem, designNode.getName(), designNode.getType().getElemType() );
 	}
+	
+	public void visit(MatrixDesignat designator) {
+		
+		Obj designNode = designator.getDesignatorName().obj;
 
+		if (designNode.getType().getKind() != Struct.Array) {
+			report_error("Promenljiva " + designator.getDesignatorName().obj.getName() + " nije matrica!", designator);
+		}
+		if (designNode.getType().getElemType().getKind() != Struct.Array) {
+			report_error("Promenljiva " + designator.getDesignatorName().obj.getName() + " nije matrica!", designator);
+		}
+		if (designator.getExpr().struct != Tab.intType) {
+			report_error("Greska: Izraz bi trebalo da bude tipa int! ", designator);
+		}
+		
+		designator.obj = new Obj(Obj.Elem, designNode.getName(), designNode.getType().getElemType().getElemType() );
+	}
+	
+	public void visit(DesignError designator) {
+		report_error("Greska kod designatorError-a ", designator);
+	}
+	
 	// operatori
 
 	enum Operator {

@@ -7,7 +7,7 @@ const int jedan = 1;
 int i;
 bool ibool;
 
-int niz2;
+int niz2[];
 
 int niz[];
 int a, curr;
@@ -89,15 +89,11 @@ int a, curr;
 			i++;
 		}
 		
-		niz.foreach(curr => print(curr););
-		print(eol);
-		
-		niz2 = 0;
-		niz.foreach(curr => {
-			niz2 = niz2 + curr * curr;
-		});
-		print(niz2);
-	
+		niz2 = niz.map(curr => curr * 3);
+		i = 0;
+		while (i < 3){
+			print(niz2[i]);
+		}
 	}
 }
 

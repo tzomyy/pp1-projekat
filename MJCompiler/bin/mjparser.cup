@@ -118,6 +118,10 @@ nonterminal rs.etf.pp1.symboltable.concepts.Struct CondFact;
 nonterminal MoreCondFacts;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj DesignatorName;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj MatrixDesignator;
+nonterminal MatrixOptional;
+nonterminal ArrayOptional;
 
 nonterminal Label;
 nonterminal Assignop;
@@ -305,7 +309,7 @@ Statement ::= (DesignStmt) DesignatorStatement
 			|
 			(PrintStmt) PRINT LPAREN PrintExpr StmtConst RPAREN SEMICOLON
 			|
-			(MapStmt) Designator Assignop Designator DOT MAP LPAREN IDENT ASSIGN Expr RPAREN SEMICOLON MapEnd
+			(MapStmt) Designator Assignop Designator:arr DOT MAP LPAREN IDENT ASSIGN Expr RPAREN SEMICOLON MapEnd
 			|
 			(ListStmts) LCURLY StatementList RCURLY
 			;
@@ -418,9 +422,17 @@ MoreCondFacts ::= (MoreConds) Relop Expr
 					
 Designator ::= (MultipleDesignIdent) Designator DOT IDENT:var
 			|
-			(MultipleDesignExpr) Designator LSQUARE Expr:expr RSQUARE
+			(MultipleDesignExpr) MatrixDesignator 
 			|
 			(SingleDesignIdent) IDENT:var;
+			
+MatrixDesignator ::= (MatrixDesignat) DesignatorName:nameMatrix LSQUARE Expr:expr1 RSQUARE LSQUARE Expr:expr2 RSQUARE 
+					|
+					(ArrayDesignat) DesignatorName:nameArray LSQUARE Expr:expr3 RSQUARE
+					;
+					
+DesignatorName ::= (DesignatorName) IDENT:name;
+	
 
 Type ::= (Type) IDENT:typeName;	
 

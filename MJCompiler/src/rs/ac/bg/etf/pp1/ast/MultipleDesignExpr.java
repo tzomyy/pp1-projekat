@@ -1,36 +1,25 @@
 // generated with ast extension for cup
 // version 0.8
-// 26/4/2023 16:51:44
+// 20/5/2023 22:42:58
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class MultipleDesignExpr extends Designator {
 
-    private Designator Designator;
-    private Expr Expr;
+    private MatrixDesignator MatrixDesignator;
 
-    public MultipleDesignExpr (Designator Designator, Expr Expr) {
-        this.Designator=Designator;
-        if(Designator!=null) Designator.setParent(this);
-        this.Expr=Expr;
-        if(Expr!=null) Expr.setParent(this);
+    public MultipleDesignExpr (MatrixDesignator MatrixDesignator) {
+        this.MatrixDesignator=MatrixDesignator;
+        if(MatrixDesignator!=null) MatrixDesignator.setParent(this);
     }
 
-    public Designator getDesignator() {
-        return Designator;
+    public MatrixDesignator getMatrixDesignator() {
+        return MatrixDesignator;
     }
 
-    public void setDesignator(Designator Designator) {
-        this.Designator=Designator;
-    }
-
-    public Expr getExpr() {
-        return Expr;
-    }
-
-    public void setExpr(Expr Expr) {
-        this.Expr=Expr;
+    public void setMatrixDesignator(MatrixDesignator MatrixDesignator) {
+        this.MatrixDesignator=MatrixDesignator;
     }
 
     public void accept(Visitor visitor) {
@@ -38,19 +27,16 @@ public class MultipleDesignExpr extends Designator {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(Designator!=null) Designator.accept(visitor);
-        if(Expr!=null) Expr.accept(visitor);
+        if(MatrixDesignator!=null) MatrixDesignator.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(Designator!=null) Designator.traverseTopDown(visitor);
-        if(Expr!=null) Expr.traverseTopDown(visitor);
+        if(MatrixDesignator!=null) MatrixDesignator.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(Designator!=null) Designator.traverseBottomUp(visitor);
-        if(Expr!=null) Expr.traverseBottomUp(visitor);
+        if(MatrixDesignator!=null) MatrixDesignator.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -59,14 +45,8 @@ public class MultipleDesignExpr extends Designator {
         buffer.append(tab);
         buffer.append("MultipleDesignExpr(\n");
 
-        if(Designator!=null)
-            buffer.append(Designator.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
-        buffer.append("\n");
-
-        if(Expr!=null)
-            buffer.append(Expr.toString("  "+tab));
+        if(MatrixDesignator!=null)
+            buffer.append(MatrixDesignator.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

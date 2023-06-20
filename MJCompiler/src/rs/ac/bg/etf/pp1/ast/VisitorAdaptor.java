@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 26/4/2023 16:51:44
+// 20/5/2023 22:42:58
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -10,11 +10,13 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(MoreVarDecl MoreVarDecl) { }
     public void visit(Mulop Mulop) { }
     public void visit(MethodDecl MethodDecl) { }
+    public void visit(ArrayOptional ArrayOptional) { }
     public void visit(DesignOptional DesignOptional) { }
     public void visit(Relop Relop) { }
     public void visit(MultipleMethodDecl MultipleMethodDecl) { }
     public void visit(ConstructorFormPars ConstructorFormPars) { }
     public void visit(MethodStatement MethodStatement) { }
+    public void visit(MatrixDesignator MatrixDesignator) { }
     public void visit(StatementList StatementList) { }
     public void visit(ClassVarDecl ClassVarDecl) { }
     public void visit(Addop Addop) { }
@@ -48,6 +50,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(VarDeclarations VarDeclarations) { }
     public void visit(Declaration Declaration) { }
     public void visit(SingleConstDecl SingleConstDecl) { }
+    public void visit(MatrixOptional MatrixOptional) { }
     public void visit(SingleFormPar SingleFormPar) { }
     public void visit(Percent Percent) { visit(); }
     public void visit(Slash Slash) { visit(); }
@@ -63,6 +66,9 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Assignop Assignop) { visit(); }
     public void visit(Label Label) { visit(); }
     public void visit(Type Type) { visit(); }
+    public void visit(DesignatorName DesignatorName) { visit(); }
+    public void visit(ArrayDesignat ArrayDesignat) { visit(); }
+    public void visit(MatrixDesignat MatrixDesignat) { visit(); }
     public void visit(SingleDesignIdent SingleDesignIdent) { visit(); }
     public void visit(MultipleDesignExpr MultipleDesignExpr) { visit(); }
     public void visit(MultipleDesignIdent MultipleDesignIdent) { visit(); }

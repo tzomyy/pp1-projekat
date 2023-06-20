@@ -119,6 +119,10 @@ nonterminal rs.etf.pp1.symboltable.concepts.Struct CondFact;
 nonterminal MoreCondFacts MoreCondFacts;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj DesignatorName;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj MatrixDesignator;
+nonterminal MatrixOptional MatrixOptional;
+nonterminal ArrayOptional ArrayOptional;
 
 nonterminal Label Label;
 nonterminal Assignop Assignop;
@@ -306,7 +310,7 @@ Statement ::= (DesignStmt) DesignatorStatement:D1 {: RESULT=new DesignStmt(D1); 
 			|
 			(PrintStmt) PRINT LPAREN PrintExpr:P1 StmtConst:S2 RPAREN SEMICOLON {: RESULT=new PrintStmt(P1, S2); RESULT.setLine(P1left); :}
 			|
-			(MapStmt) Designator:D1 Assignop:A2 Designator:D3 DOT MAP LPAREN IDENT:I4 ASSIGN Expr:E5 RPAREN SEMICOLON MapEnd:M6 {: RESULT=new MapStmt(D1, A2, D3, I4, E5, M6); RESULT.setLine(D1left); :}
+			(MapStmt) Designator:D1 Assignop:A2 Designator:arr DOT MAP LPAREN IDENT:I3 ASSIGN Expr:E4 RPAREN SEMICOLON MapEnd:M5 {: RESULT=new MapStmt(D1, A2, arr, I3, E4, M5); RESULT.setLine(D1left); :}
 			|
 			(ListStmts) LCURLY StatementList:S1 RCURLY {: RESULT=new ListStmts(S1); RESULT.setLine(S1left); :}
 			;
@@ -419,9 +423,17 @@ MoreCondFacts ::= (MoreConds) Relop:R1 Expr:E2 {: RESULT=new MoreConds(R1, E2); 
 					
 Designator ::= (MultipleDesignIdent) Designator:D1 DOT IDENT:var {: RESULT=new MultipleDesignIdent(D1, var); RESULT.setLine(D1left); :}
 			|
-			(MultipleDesignExpr) Designator:D1 LSQUARE Expr:expr RSQUARE {: RESULT=new MultipleDesignExpr(D1, expr); RESULT.setLine(D1left); :}
+			(MultipleDesignExpr) MatrixDesignator:M1 {: RESULT=new MultipleDesignExpr(M1); RESULT.setLine(M1left); :} 
 			|
 			(SingleDesignIdent) IDENT:var {: RESULT=new SingleDesignIdent(var); RESULT.setLine(varleft); :};
+			
+MatrixDesignator ::= (MatrixDesignat) DesignatorName:nameMatrix LSQUARE Expr:expr1 RSQUARE LSQUARE Expr:expr2 RSQUARE {: RESULT=new MatrixDesignat(nameMatrix, expr1, expr2); RESULT.setLine(nameMatrixleft); :} 
+					|
+					(ArrayDesignat) DesignatorName:nameArray LSQUARE Expr:expr3 RSQUARE {: RESULT=new ArrayDesignat(nameArray, expr3); RESULT.setLine(nameArrayleft); :}
+					;
+					
+DesignatorName ::= (DesignatorName) IDENT:name {: RESULT=new DesignatorName(name); RESULT.setLine(nameleft); :};
+	
 
 Type ::= (Type) IDENT:typeName {: RESULT=new Type(typeName); RESULT.setLine(typeNameleft); :};	
 
