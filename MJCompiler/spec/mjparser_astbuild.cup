@@ -310,7 +310,7 @@ Statement ::= (DesignStmt) DesignatorStatement:D1 {: RESULT=new DesignStmt(D1); 
 			|
 			(PrintStmt) PRINT LPAREN PrintExpr:P1 StmtConst:S2 RPAREN SEMICOLON {: RESULT=new PrintStmt(P1, S2); RESULT.setLine(P1left); :}
 			|
-			(MapStmt) Designator:D1 Assignop:A2 Designator:arr DOT MAP LPAREN IDENT:I3 ASSIGN Expr:E4 RPAREN SEMICOLON MapEnd:M5 {: RESULT=new MapStmt(D1, A2, arr, I3, E4, M5); RESULT.setLine(D1left); :}
+			(MapStmt) Designator:D1 Assignop:A2 Designator:arr DOT MAP LPAREN IDENT:ident ASSIGN Expr:E3 RPAREN SEMICOLON MapEnd:M4 {: RESULT=new MapStmt(D1, A2, arr, ident, E3, M4); RESULT.setLine(D1left); :}
 			|
 			(ListStmts) LCURLY StatementList:S1 RCURLY {: RESULT=new ListStmts(S1); RESULT.setLine(S1left); :}
 			;

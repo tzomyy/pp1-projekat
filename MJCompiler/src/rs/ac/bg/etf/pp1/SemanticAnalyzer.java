@@ -120,7 +120,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 						+ " nije kompatibilan sa vrednoscu konstante!", boolConstDecl);
 				return;
 			} else {
-				report_info("Naisla na bool const", null);
+				report_info("Definisana bool konstanta " + boolConstDecl.getConstName(), null);
 				int boolValue;
 				if (boolConstDecl.getBooleanConst() == true) {
 					boolValue = 1;
@@ -146,7 +146,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 						+ " nije kompatibilan sa vrednoscu konstante!", integerConstDecl);
 				return;
 			} else {
-				report_info("Naisla na intr const", null);
+				report_info("Definisana int kontanta " + integerConstDecl.getConstName(), null);
 
 				Obj intNode = Tab.insert(Obj.Con, integerConstDecl.getConstName(), Tab.intType);
 				intNode.setAdr(integerConstDecl.getNumberConst());
@@ -167,7 +167,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 						+ " nije kompatibilan sa vrednoscu konstante!", charConstDecl);
 				return;
 			} else {
-				report_info("Naisla na char const", null);
+				report_info("Definisana char konstanta " + charConstDecl.getConstName() , null);
 
 				Obj intNode = Tab.insert(Obj.Con, charConstDecl.getConstName(), Tab.charType);
 				intNode.setAdr(charConstDecl.getCharConst());
@@ -307,6 +307,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		}
 
 		methDecl.struct = currType;
+		report_info("Definisana funkcija " + methDecl.getMethodName(), methDecl);
 		Tab.openScope();
 	}
 
@@ -323,7 +324,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		} else {
 			currMethod = Tab.insert(Obj.Meth, methDecl.getMethodName(), currType);
 		}
-
+		report_info("Definisana funkcija " + methDecl.getMethodName(), methDecl);
 		Tab.openScope();
 	}
 	
@@ -423,6 +424,40 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 				&& readStmt.getDesignator().obj.getType().getKind() != boolType.getKind()) {
 			report_error("U read statement-u designator mora biti tipa int, char ili bool!", readStmt);
 		}
+	}
+	
+	public void visit(MapStmt mapStmt) {
+		Obj node = Tab.find(mapStmt.getDesignator1().obj.getName());
+		
+		if (node == Tab.noObj) {
+			report_error("Ne postoji promenljiva sa imenom " + node.getName(), mapStmt);
+			return;
+		}
+		
+		if (node.getType().getKind() != Struct.Array) {
+			report_error("Promenljiva u map izrazu mora biti niz! ", mapStmt);
+			return;
+		}
+		
+		if (node.getType().getElemType() != Tab.intType && 
+				node.getType().getElemType() != Tab.charType &&
+				node.getType().getElemType() != boolType) {
+			report_error("Elementi niza treba da budu int, char ili bool tipa!", mapStmt);
+			return;
+		}
+		
+		Obj identNode = Tab.find(mapStmt.getIdent());
+		
+		if (identNode == Tab.noObj) {
+			report_error("Ne postoji promenljiva sa imenom " + identNode.getName(), mapStmt);
+			return;
+		}
+		
+		if (identNode.getType() != node.getType().getElemType()) {
+			report_error("Tipovi u map izrazu nisu kompatibilni ", mapStmt);
+			return;
+		}
+		
 	}
 	
 	public void visit(DesignInc designator) {

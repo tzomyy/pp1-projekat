@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 20/5/2023 22:42:57
+// 21/5/2023 13:24:49
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -10,18 +10,18 @@ public class MapStmt extends Statement {
     private Designator Designator;
     private Assignop Assignop;
     private Designator Designator1;
-    private String I3;
+    private String ident;
     private Expr Expr;
     private MapEnd MapEnd;
 
-    public MapStmt (Designator Designator, Assignop Assignop, Designator Designator1, String I3, Expr Expr, MapEnd MapEnd) {
+    public MapStmt (Designator Designator, Assignop Assignop, Designator Designator1, String ident, Expr Expr, MapEnd MapEnd) {
         this.Designator=Designator;
         if(Designator!=null) Designator.setParent(this);
         this.Assignop=Assignop;
         if(Assignop!=null) Assignop.setParent(this);
         this.Designator1=Designator1;
         if(Designator1!=null) Designator1.setParent(this);
-        this.I3=I3;
+        this.ident=ident;
         this.Expr=Expr;
         if(Expr!=null) Expr.setParent(this);
         this.MapEnd=MapEnd;
@@ -52,12 +52,12 @@ public class MapStmt extends Statement {
         this.Designator1=Designator1;
     }
 
-    public String getI3() {
-        return I3;
+    public String getIdent() {
+        return ident;
     }
 
-    public void setI3(String I3) {
-        this.I3=I3;
+    public void setIdent(String ident) {
+        this.ident=ident;
     }
 
     public Expr getExpr() {
@@ -129,7 +129,7 @@ public class MapStmt extends Statement {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        buffer.append(" "+tab+I3);
+        buffer.append(" "+tab+ident);
         buffer.append("\n");
 
         if(Expr!=null)

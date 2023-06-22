@@ -309,7 +309,7 @@ Statement ::= (DesignStmt) DesignatorStatement
 			|
 			(PrintStmt) PRINT LPAREN PrintExpr StmtConst RPAREN SEMICOLON
 			|
-			(MapStmt) Designator Assignop Designator:arr DOT MAP LPAREN IDENT ASSIGN Expr RPAREN SEMICOLON MapEnd
+			(MapStmt) Designator Assignop Designator:arr DOT MAP LPAREN IDENT:ident ASSIGN Expr RPAREN SEMICOLON MapEnd
 			|
 			(ListStmts) LCURLY StatementList RCURLY
 			;
