@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 21/5/2023 13:24:49
+// 23/5/2023 18:21:34
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -9,7 +9,7 @@ public class TypeMethod implements SyntaxNode {
 
     private SyntaxNode parent;
     private int line;
-    public rs.etf.pp1.symboltable.concepts.Struct struct = null;
+    public rs.etf.pp1.symboltable.concepts.Obj obj = null;
 
     private Type Type;
     private String methodName;

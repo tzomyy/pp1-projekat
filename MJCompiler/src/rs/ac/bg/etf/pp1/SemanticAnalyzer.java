@@ -23,6 +23,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	int depthWhile = 0;
 	int methFormParams = 0;
 	int methActParams = 0;
+	int nvars = 0;
 
 	Obj currMethod = null;
 	Struct currType = null;
@@ -288,6 +289,10 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		}
 		report_info("Deklarisana promenljiva " + varDecl.getVarName(), varDecl);
 	}
+	
+	public void visit(VarDecl varDecl) {
+		nvars++;
+	}
 
 	public void visit(TypeMethod methDecl) {
 		// proveriti da li se nalazi u tabeli simbola i da li se nalazi u tom opsegu
@@ -305,14 +310,15 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		} else {
 			currMethod = Tab.insert(Obj.Meth, methDecl.getMethodName(), currType);
 		}
-
-		methDecl.struct = currType;
+		
+		
+		methDecl.getType().struct = currType;
 		report_info("Definisana funkcija " + methDecl.getMethodName(), methDecl);
 		Tab.openScope();
 	}
 
 	public void visit(VoidMethod methDecl) {
-		methDecl.struct = currType = Tab.noType;
+		currType = Tab.noType;
 		if (Tab.find(methDecl.getMethodName()) != Tab.noObj) {
 			if (Tab.currentScope.findSymbol(methDecl.getMethodName()) != null) {
 				report_error("Greska: Simbol " + methDecl.getMethodName() + " je vec definisan u tabeli simbola",
@@ -324,6 +330,8 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		} else {
 			currMethod = Tab.insert(Obj.Meth, methDecl.getMethodName(), currType);
 		}
+
+		//methDecl.getType().struct = currType;
 		report_info("Definisana funkcija " + methDecl.getMethodName(), methDecl);
 		Tab.openScope();
 	}

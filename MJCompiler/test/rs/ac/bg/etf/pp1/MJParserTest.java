@@ -3,6 +3,7 @@ package rs.ac.bg.etf.pp1;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
@@ -14,6 +15,7 @@ import org.apache.log4j.xml.DOMConfigurator;
 
 import rs.ac.bg.etf.pp1.ast.Program;
 import rs.ac.bg.etf.pp1.util.Log4JUtils;
+import rs.etf.pp1.mj.runtime.Code;
 import rs.etf.pp1.symboltable.Tab;
 
 public class MJParserTest {
@@ -29,7 +31,7 @@ public class MJParserTest {
 		
 		Reader br = null;
 		try {
-			File sourceCode = new File("test/test302.mj");
+			File sourceCode = new File("test/program.mj");
 			log.info("Compiling source file: " + sourceCode.getAbsolutePath());
 			
 			br = new BufferedReader(new FileReader(sourceCode));
@@ -49,6 +51,20 @@ public class MJParserTest {
 			prog.traverseBottomUp(v); 
 			Tab.dump();
 	      
+			if(v.passed()){
+				File objFile = new File("test/program.obj");
+				if(objFile.exists()) objFile.delete();
+				
+				CodeGenerator codeGenerator = new CodeGenerator();
+				prog.traverseBottomUp(codeGenerator);
+				Code.dataSize = v.nvars; // ovo nije tacno
+				
+				Code.mainPc = codeGenerator.getMainPc();
+				Code.write(new FileOutputStream(objFile));
+				log.info("Parsiranje uspesno zavrseno!");
+			}else{
+				log.error("Parsiranje NIJE uspesno zavrseno!");
+			}
 //			log.info(" Print count calls = " + v.printCallCount);
 //
 //			log.info(" Deklarisanih promenljivih ima = " + v.varDeclCount);
