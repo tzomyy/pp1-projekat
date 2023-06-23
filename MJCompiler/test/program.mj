@@ -1,11 +1,16 @@
 program p
 	
+int x;
 
 {
 	
+	int k () int c; {
+		c = 3;
+		return 7+c;
+	}
+	
 	void main()  {
-	
-		print(2);	
-	
+		x = k();
+		print(x);
 	}
 }

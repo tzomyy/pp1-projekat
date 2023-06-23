@@ -290,7 +290,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		report_info("Deklarisana promenljiva " + varDecl.getVarName(), varDecl);
 	}
 	
-	public void visit(VarDecl varDecl) {
+	public void visit(VarDecls varDecl) {
 		nvars++;
 	}
 
