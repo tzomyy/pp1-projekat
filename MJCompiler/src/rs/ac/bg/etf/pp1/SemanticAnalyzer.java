@@ -29,6 +29,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	Struct currType = null;
 	Struct boolType = new Struct(Struct.Bool);
 	
+	
 	HashMap<String, List<Obj>> methFuncParam = new HashMap<>();
 
 	public SemanticAnalyzer() {

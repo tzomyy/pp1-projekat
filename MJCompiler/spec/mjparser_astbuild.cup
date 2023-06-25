@@ -105,7 +105,7 @@ nonterminal Statement Statement;
 nonterminal MapEnd MapEnd;
 nonterminal WhileStart WhileStart;
 nonterminal WhileEnd WhileEnd;
-nonterminal PrintExpr PrintExpr;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct PrintExpr;
 nonterminal StmtConst StmtConst;
 nonterminal IfStatement IfStatement;
 nonterminal ElseStatement ElseStatement;
@@ -341,7 +341,7 @@ StatementList ::= (MoreStatements) StatementList:S1 Statement:S2 {: RESULT=new M
 				(EndOfStatements) {: RESULT=new EndOfStatements(); :} /* epsilon */
 				;
 			
-StmtConst ::= (StmtCnst) COMMA NUMBER:N1 {: RESULT=new StmtCnst(N1); RESULT.setLine(N1left); :}
+StmtConst ::= (StmtCnst) COMMA NUMBER:num {: RESULT=new StmtCnst(num); RESULT.setLine(numleft); :}
 			|
 			(NoStmtCnst) {: RESULT=new NoStmtCnst(); :} /* epsilon */
 			;

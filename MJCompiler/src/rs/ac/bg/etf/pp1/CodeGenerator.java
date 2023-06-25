@@ -16,17 +16,29 @@ public class CodeGenerator extends VisitorAdaptor {
 	private int mainPc;
 	private boolean flagReturn = true;
 	
+	Struct boolType = new Struct(Struct.Bool);
+	
 	public int getMainPc(){
 		return mainPc;
 	}
 	
 	public void visit(PrintStmt printStmt){
-		if(printStmt.getPrintExpr().getExpr().struct == Tab.intType){
-			Code.loadConst(5);
-			Code.put(Code.print);
-		}else{
-			Code.loadConst(1);
+		if(printStmt.getPrintExpr().getExpr().struct == Tab.charType){
 			Code.put(Code.bprint);
+		}else{
+			Code.put(Code.print);
+		}
+	}
+	
+	public void visit(StmtCnst stmtConst) {
+		Code.loadConst(stmtConst.getNum());
+	}
+	
+	public void visit(NoStmtCnst stmtConst) {
+		if(((PrintStmt) stmtConst.getParent()).getPrintExpr().struct == Tab.charType ){			
+			Code.loadConst(1);
+		}else{
+			Code.loadConst(5);
 		}
 	}
 	
@@ -133,8 +145,39 @@ public class CodeGenerator extends VisitorAdaptor {
 		Code.put(Code.return_);
 	}
 	
-	public void visit(Addop AddExpt) {
-		Code.put(Code.add);
+	public void visit(MultipleExpr AddExpt) {
+		if (AddExpt.getAddop() instanceof Plus) {
+			Code.put(Code.add);
+		} else if (AddExpt.getAddop() instanceof Minus) {
+			Code.put(Code.sub);
+		}
+		
 	}
+	
+	public void visit(ReadStmt readStmt) {		
+		if (readStmt.getDesignator().obj.getType() == Tab.intType 
+				|| readStmt.getDesignator().obj.getType() == boolType ) {
+			Code.put(Code.read);
+		} else {
+			Code.put(Code.bread);
+		}
+		
+		Code.store(readStmt.getDesignator().obj);
+	}
+	
+	public void visit(FactChar factChar) {
+		Code.loadConst(((int) factChar.getC1()));
+	}
+	
+	
+	public void visit(FactBoolean factBoolean) {
+		if (factBoolean.getB1() == true) {
+			Code.loadConst(1);
+		} else {
+			Code.loadConst(0);
+		}
+	}
+	
+	
 
 }

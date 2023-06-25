@@ -1,24 +1,24 @@
 // generated with ast extension for cup
 // version 0.8
-// 24/5/2023 1:45:28
+// 25/5/2023 19:27:33
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class StmtCnst extends StmtConst {
 
-    private Integer N1;
+    private Integer num;
 
-    public StmtCnst (Integer N1) {
-        this.N1=N1;
+    public StmtCnst (Integer num) {
+        this.num=num;
     }
 
-    public Integer getN1() {
-        return N1;
+    public Integer getNum() {
+        return num;
     }
 
-    public void setN1(Integer N1) {
-        this.N1=N1;
+    public void setNum(Integer num) {
+        this.num=num;
     }
 
     public void accept(Visitor visitor) {
@@ -41,7 +41,7 @@ public class StmtCnst extends StmtConst {
         buffer.append(tab);
         buffer.append("StmtCnst(\n");
 
-        buffer.append(" "+tab+N1);
+        buffer.append(" "+tab+num);
         buffer.append("\n");
 
         buffer.append(tab);

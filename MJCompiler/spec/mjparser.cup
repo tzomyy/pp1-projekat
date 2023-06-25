@@ -104,7 +104,7 @@ nonterminal Statement;
 nonterminal MapEnd;
 nonterminal WhileStart;
 nonterminal WhileEnd;
-nonterminal PrintExpr;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct PrintExpr;
 nonterminal StmtConst;
 nonterminal IfStatement;
 nonterminal ElseStatement;
@@ -340,7 +340,7 @@ StatementList ::= (MoreStatements) StatementList Statement
 				(EndOfStatements) /* epsilon */
 				;
 			
-StmtConst ::= (StmtCnst) COMMA NUMBER
+StmtConst ::= (StmtCnst) COMMA NUMBER:num
 			|
 			(NoStmtCnst) /* epsilon */
 			;

@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 24/5/2023 1:45:28
+// 25/5/2023 19:27:33
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -9,6 +9,8 @@ public class PrintExpr implements SyntaxNode {
 
     private SyntaxNode parent;
     private int line;
+    public rs.etf.pp1.symboltable.concepts.Struct struct = null;
+
     private Expr Expr;
 
     public PrintExpr (Expr Expr) {
