@@ -14,7 +14,7 @@ import rs.etf.pp1.symboltable.*;
 public class CodeGenerator extends VisitorAdaptor {
 	Logger log = Logger.getLogger(getClass());
 	private int mainPc;
-	private boolean flagReturn = true;
+	private boolean flagReturn = false;
 	
 	Struct boolType = new Struct(Struct.Bool);
 	
@@ -51,9 +51,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	public void visit(TypeMethod methodTypeName){
 		
-		if("main".equalsIgnoreCase(methodTypeName.getMethodName())){
-			mainPc = Code.pc;
-		}
+		
 		methodTypeName.obj = Tab.find(methodTypeName.getMethodName());
 		methodTypeName.obj.setAdr(Code.pc);
 		// Collect arguments and local variables
@@ -95,10 +93,20 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(MethodDecls methodDecl){
-		if (!flagReturn) {
+		
+		if ( methodDecl.getMethodDecl().obj.getType() != Tab.noType && !flagReturn) {
+			Code.put(Code.trap);
+			Code.put(1);
+			return;
+		} 
+		
+		if (flagReturn) {
 			flagReturn = false;
 			return;
 		}
+		
+		
+		
 		Code.put(Code.exit);
 		Code.put(Code.return_);
 	}
@@ -135,6 +143,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(ReturnExpr returnExpr){
+		flagReturn = true;
 		Code.put(Code.exit);
 		Code.put(Code.return_);
 	}
@@ -176,6 +185,66 @@ public class CodeGenerator extends VisitorAdaptor {
 		} else {
 			Code.loadConst(0);
 		}
+	}
+	
+	
+	public void visit(FactConstrArray factArray) {
+		Code.put(Code.newarray);
+		if (factArray.struct.getElemType() == Tab.charType) {
+			Code.put(0);
+		} else {
+			Code.put(1);
+		}
+	}
+	
+	Obj rows = new Obj(Obj.Var, "rows", Tab.intType);
+	Obj columns = new Obj(Obj.Var, "columns", Tab.intType );
+	
+	public void visit(FactConstrMatrix factMatrix) {
+		Code.put(Code.pop);
+		Code.store(columns);
+		Code.put(Code.pop);
+		Code.store(rows);
+		log.info(rows.getAdr());
+		
+		Code.put2(rows.getAdr());
+		
+		Code.put(Code.newarray);
+		Code.put(1);
+		Code.put(Code.newarray);
+		if (factMatrix.getType().struct == Tab.charType) {
+			Code.put(0);
+		} else {
+			Code.put(1);
+		}
+	}
+	
+	public void visit(NegativeExpr expr) {
+		Code.put(Code.neg);
+	}
+	
+	public void visit(MultipleTerms term) {
+		if (term.getMulop() instanceof Asterisk) {
+			Code.put(Code.mul);
+		} else if (term.getMulop() instanceof Slash) {
+			Code.put(Code.div);
+		} else if (term.getMulop() instanceof Percent) {
+			Code.put(Code.rem);
+		}
+	}
+	
+	public void visit(DesignatorName array) {
+		Code.load(array.obj);
+		//Code.load(array.getExpr())
+		//array.obj = array.getDesignatorName().obj;
+	}
+	
+	public void visit(FactVar factVar) {
+		Code.load(factVar.getDesignator().obj);
+	}
+	
+	public void visit(DummyMatrix dummyMatrix) {
+		Code.put(Code.aload);
 	}
 	
 	

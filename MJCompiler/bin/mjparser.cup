@@ -129,6 +129,7 @@ nonterminal rs.etf.pp1.symboltable.concepts.Obj DesignatorName;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj MatrixDesignator;
 nonterminal MatrixOptional;
 nonterminal ArrayOptional;
+nonterminal DummyMatrix;
 
 nonterminal Label;
 nonterminal Assignop;
@@ -372,7 +373,7 @@ Factor ::= (FactVar) Designator
 		|
 		(FactBoolean) BOOL
 		|
-		(FactConstrMatrix) NEW Type:arrayType LSQUARE Expr RSQUARE LSQUARE Expr RSQUARE
+		(FactConstrMatrix) NEW Type:matrixType LSQUARE Expr RSQUARE LSQUARE Expr RSQUARE 
 		|
 		(FactConstrArray) NEW Type:arrayType LSQUARE Expr RSQUARE
 		|
@@ -380,6 +381,8 @@ Factor ::= (FactVar) Designator
 		|
 		(FactExpr) LPAREN Expr RPAREN
 		;
+		
+DummyMatrix ::= (DummyMatrix) ;
 		
 FactParam ::= (FactFuncParams) ActPars
 				|
@@ -433,13 +436,12 @@ Designator ::= (MultipleDesignIdent) Designator DOT IDENT:var
 			|
 			(SingleDesignIdent) IDENT:var;
 			
-MatrixDesignator ::= (MatrixDesignat) DesignatorName:nameMatrix LSQUARE Expr:expr1 RSQUARE LSQUARE Expr:expr2 RSQUARE 
+MatrixDesignator ::= (MatrixDesignat) DesignatorName:nameMatrix LSQUARE Expr:expr1 RSQUARE DummyMatrix LSQUARE Expr:expr2 RSQUARE 
 					|
 					(ArrayDesignat) DesignatorName:nameArray LSQUARE Expr:expr3 RSQUARE
 					;
 					
 DesignatorName ::= (DesignatorName) IDENT:name;
-	
 
 Type ::= (Type) IDENT:typeName;	
 

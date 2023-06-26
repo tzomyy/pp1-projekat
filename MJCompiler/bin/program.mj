@@ -1,16 +1,19 @@
 program p
 	
-bool x;
-
+int x;
+char nizch[][];
 {
 	
-	int k () int c; {
-		c = 3;
-		return 7-c;
+	int k (int x) int c; {
+		c = 3;	
+		return c;	
 	}
 	
 	void main()  {
-		x = true;	
-		print(x);
+		
+		nizch = new char[1][2];
+		nizch[0][1] = 'a';
+			
+		print(nizch[0][1]);
 	}
 }

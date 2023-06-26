@@ -5,9 +5,27 @@
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class ErrorEndOfVarDecl extends EndOfVarDecl {
+public class DummyMatrix implements SyntaxNode {
 
-    public ErrorEndOfVarDecl () {
+    private SyntaxNode parent;
+    private int line;
+    public DummyMatrix () {
+    }
+
+    public SyntaxNode getParent() {
+        return parent;
+    }
+
+    public void setParent(SyntaxNode parent) {
+        this.parent=parent;
+    }
+
+    public int getLine() {
+        return line;
+    }
+
+    public void setLine(int line) {
+        this.line=line;
     }
 
     public void accept(Visitor visitor) {
@@ -28,10 +46,10 @@ public class ErrorEndOfVarDecl extends EndOfVarDecl {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("ErrorEndOfVarDecl(\n");
+        buffer.append("DummyMatrix(\n");
 
         buffer.append(tab);
-        buffer.append(") [ErrorEndOfVarDecl]");
+        buffer.append(") [DummyMatrix]");
         return buffer.toString();
     }
 }

@@ -130,6 +130,7 @@ nonterminal rs.etf.pp1.symboltable.concepts.Obj DesignatorName;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj MatrixDesignator;
 nonterminal MatrixOptional MatrixOptional;
 nonterminal ArrayOptional ArrayOptional;
+nonterminal DummyMatrix DummyMatrix;
 
 nonterminal Label Label;
 nonterminal Assignop Assignop;
@@ -373,7 +374,7 @@ Factor ::= (FactVar) Designator:D1 {: RESULT=new FactVar(D1); RESULT.setLine(D1l
 		|
 		(FactBoolean) BOOL:B1 {: RESULT=new FactBoolean(B1); RESULT.setLine(B1left); :}
 		|
-		(FactConstrMatrix) NEW Type:arrayType LSQUARE Expr:E1 RSQUARE LSQUARE Expr:E2 RSQUARE {: RESULT=new FactConstrMatrix(arrayType, E1, E2); RESULT.setLine(arrayTypeleft); :}
+		(FactConstrMatrix) NEW Type:matrixType LSQUARE Expr:E1 RSQUARE LSQUARE Expr:E2 RSQUARE {: RESULT=new FactConstrMatrix(matrixType, E1, E2); RESULT.setLine(matrixTypeleft); :}
 		|
 		(FactConstrArray) NEW Type:arrayType LSQUARE Expr:E1 RSQUARE {: RESULT=new FactConstrArray(arrayType, E1); RESULT.setLine(arrayTypeleft); :}
 		|
@@ -381,6 +382,8 @@ Factor ::= (FactVar) Designator:D1 {: RESULT=new FactVar(D1); RESULT.setLine(D1l
 		|
 		(FactExpr) LPAREN Expr:E1 RPAREN {: RESULT=new FactExpr(E1); RESULT.setLine(E1left); :}
 		;
+		
+DummyMatrix ::= (DummyMatrix) {: RESULT=new DummyMatrix(); :} ;
 		
 FactParam ::= (FactFuncParams) ActPars:A1 {: RESULT=new FactFuncParams(A1); RESULT.setLine(A1left); :}
 				|
@@ -434,7 +437,7 @@ Designator ::= (MultipleDesignIdent) Designator:D1 DOT IDENT:var {: RESULT=new M
 			|
 			(SingleDesignIdent) IDENT:var {: RESULT=new SingleDesignIdent(var); RESULT.setLine(varleft); :};
 			
-MatrixDesignator ::= (MatrixDesignat) DesignatorName:nameMatrix LSQUARE Expr:expr1 RSQUARE LSQUARE Expr:expr2 RSQUARE {: RESULT=new MatrixDesignat(nameMatrix, expr1, expr2); RESULT.setLine(nameMatrixleft); :} 
+MatrixDesignator ::= (MatrixDesignat) DesignatorName:nameMatrix LSQUARE Expr:expr1 RSQUARE DummyMatrix:D1 LSQUARE Expr:expr2 RSQUARE {: RESULT=new MatrixDesignat(nameMatrix, expr1, D1, expr2); RESULT.setLine(nameMatrixleft); :} 
 					|
 					(ArrayDesignat) DesignatorName:nameArray LSQUARE Expr:expr3 RSQUARE {: RESULT=new ArrayDesignat(nameArray, expr3); RESULT.setLine(nameArrayleft); :}
 					;

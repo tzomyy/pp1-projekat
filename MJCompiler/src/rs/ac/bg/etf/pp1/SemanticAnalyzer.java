@@ -361,6 +361,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 					methDecl);
 		}
 		
+		methDecl.getMethodDecl().obj = new Obj(Obj.Meth, currMethod.getName(), currMethod.getType());
 		
 		currMethod.setLevel(methFormParams);
 		methFuncParam.put(currMethod.getName(), formParams);

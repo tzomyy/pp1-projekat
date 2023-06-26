@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 25/5/2023 19:27:33
+// 25/5/2023 23:50:18
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -9,13 +9,16 @@ public class MatrixDesignat extends MatrixDesignator {
 
     private DesignatorName DesignatorName;
     private Expr Expr;
+    private DummyMatrix DummyMatrix;
     private Expr Expr1;
 
-    public MatrixDesignat (DesignatorName DesignatorName, Expr Expr, Expr Expr1) {
+    public MatrixDesignat (DesignatorName DesignatorName, Expr Expr, DummyMatrix DummyMatrix, Expr Expr1) {
         this.DesignatorName=DesignatorName;
         if(DesignatorName!=null) DesignatorName.setParent(this);
         this.Expr=Expr;
         if(Expr!=null) Expr.setParent(this);
+        this.DummyMatrix=DummyMatrix;
+        if(DummyMatrix!=null) DummyMatrix.setParent(this);
         this.Expr1=Expr1;
         if(Expr1!=null) Expr1.setParent(this);
     }
@@ -36,6 +39,14 @@ public class MatrixDesignat extends MatrixDesignator {
         this.Expr=Expr;
     }
 
+    public DummyMatrix getDummyMatrix() {
+        return DummyMatrix;
+    }
+
+    public void setDummyMatrix(DummyMatrix DummyMatrix) {
+        this.DummyMatrix=DummyMatrix;
+    }
+
     public Expr getExpr1() {
         return Expr1;
     }
@@ -51,6 +62,7 @@ public class MatrixDesignat extends MatrixDesignator {
     public void childrenAccept(Visitor visitor) {
         if(DesignatorName!=null) DesignatorName.accept(visitor);
         if(Expr!=null) Expr.accept(visitor);
+        if(DummyMatrix!=null) DummyMatrix.accept(visitor);
         if(Expr1!=null) Expr1.accept(visitor);
     }
 
@@ -58,12 +70,14 @@ public class MatrixDesignat extends MatrixDesignator {
         accept(visitor);
         if(DesignatorName!=null) DesignatorName.traverseTopDown(visitor);
         if(Expr!=null) Expr.traverseTopDown(visitor);
+        if(DummyMatrix!=null) DummyMatrix.traverseTopDown(visitor);
         if(Expr1!=null) Expr1.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(DesignatorName!=null) DesignatorName.traverseBottomUp(visitor);
         if(Expr!=null) Expr.traverseBottomUp(visitor);
+        if(DummyMatrix!=null) DummyMatrix.traverseBottomUp(visitor);
         if(Expr1!=null) Expr1.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -81,6 +95,12 @@ public class MatrixDesignat extends MatrixDesignator {
 
         if(Expr!=null)
             buffer.append(Expr.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        if(DummyMatrix!=null)
+            buffer.append(DummyMatrix.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");
