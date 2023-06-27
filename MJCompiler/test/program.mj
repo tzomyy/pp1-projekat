@@ -1,7 +1,9 @@
 program p
 	
 int x;
-char nizch[][];
+int nizch[][];
+char a;
+int niz[];
 {
 	
 	int k (int x) int c; {
@@ -11,9 +13,18 @@ char nizch[][];
 	
 	void main()  {
 		
-		nizch = new char[1][2];
-		nizch[0][1] = 'a';
-			
-		print(nizch[0][1]);
+		
+		nizch = new int[3][2];
+		
+		nizch[1][0] = 3;
+		a = 'b';
+		//x = 1;
+		
+		niz = new int[3];
+		niz[2] = 3;
+		print(niz[2]);
+		print(nizch[1][0]);
+		
+		//print(nizch[0][1]);
 	}
 }

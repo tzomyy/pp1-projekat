@@ -123,14 +123,25 @@ nonterminal ActPars ActPars;
 nonterminal Condition Condition;
 nonterminal CondTerm CondTerm;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct CondFact;
-nonterminal MoreCondFacts MoreCondFacts;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct MoreCondFacts;
+nonterminal OrDummy OrDummy;
+nonterminal BeforeIFConditionDummy BeforeIFConditionDummy;
+nonterminal AfterIFConditionDummy AfterIFConditionDummy;
+nonterminal DummyAfterElse DummyAfterElse;
+nonterminal DummyBeforeIf DummyBeforeIf;
+nonterminal AssignDummy AssignDummy;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj DesignatorArr2;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj DesignatorName;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj MatrixDesignator;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj MapIdent;
+nonterminal DummyMap DummyMap;
 nonterminal MatrixOptional MatrixOptional;
 nonterminal ArrayOptional ArrayOptional;
 nonterminal DummyMatrix DummyMatrix;
+nonterminal DummyMatrix2 DummyMatrix2;
+nonterminal DummyNewMatrix DummyNewMatrix;
 
 nonterminal Label Label;
 nonterminal Assignop Assignop;
@@ -318,10 +329,16 @@ Statement ::= (DesignStmt) DesignatorStatement:D1 {: RESULT=new DesignStmt(D1); 
 			|
 			(PrintStmt) PRINT LPAREN PrintExpr:P1 StmtConst:S2 RPAREN SEMICOLON {: RESULT=new PrintStmt(P1, S2); RESULT.setLine(P1left); :}
 			|
-			(MapStmt) Designator:D1 Assignop:A2 Designator:arr DOT MAP LPAREN IDENT:ident ASSIGN Expr:E3 RPAREN SEMICOLON MapEnd:M4 {: RESULT=new MapStmt(D1, A2, arr, ident, E3, M4); RESULT.setLine(D1left); :}
+			(MapStmt) Designator:D1 Assignop:A2 DesignatorArr2:D3 LPAREN MapIdent:M4 ASSIGN Expr:E5 DummyMap:D6 RPAREN SEMICOLON MapEnd:M7 {: RESULT=new MapStmt(D1, A2, D3, M4, E5, D6, M7); RESULT.setLine(D1left); :}
 			|
 			(ListStmts) LCURLY StatementList:S1 RCURLY {: RESULT=new ListStmts(S1); RESULT.setLine(S1left); :}
 			;
+			
+DummyMap ::= (DummyMap) {: RESULT=new DummyMap(); :} ;
+		
+MapIdent ::= (MapIdent) IDENT:I1 {: RESULT=new MapIdent(I1); RESULT.setLine(I1left); :};
+			
+DesignatorArr2 ::= (DesignatorArr2) Designator:arr DOT MAP {: RESULT=new DesignatorArr2(arr); RESULT.setLine(arrleft); :};
 			
 PrintExpr ::= (PrintExpr) Expr:E1 {: RESULT=new PrintExpr(E1); RESULT.setLine(E1left); :} ;
 
@@ -330,12 +347,17 @@ MapEnd ::= (MapEnd) {: RESULT=new MapEnd(); :} /* epislon */;
 WhileStart ::= (WhileStart) WHILE {: RESULT=new WhileStart(); :};
 
 WhileEnd ::= (WhileEnd) {: RESULT=new WhileEnd(); :} /* epsilon */;
+
+DummyBeforeIf ::= (DummyBeforeIf) {: RESULT=new DummyBeforeIf(); :};
 			
-IfStatement ::= (IfState) IF LPAREN Condition:C1 RPAREN {: RESULT=new IfState(C1); RESULT.setLine(C1left); :}
+IfStatement ::= (IfState) DummyBeforeIf:D1 IF BeforeIFConditionDummy:B2 LPAREN Condition:C3 RPAREN AfterIFConditionDummy:A4 {: RESULT=new IfState(D1, B2, C3, A4); RESULT.setLine(D1left); :}
 			|
 			(ErrorStmt) error RPAREN:l
 			{: parser.report_error("Izvrsen oporavak kod if konstrukcije do ; u liniji " + lleft, null); :} {: RESULT=new ErrorStmt(); :}
 			;
+			
+BeforeIFConditionDummy ::= (BeforeIFConditionDummy) {: RESULT=new BeforeIFConditionDummy(); :};
+AfterIFConditionDummy ::= (AfterIFConditionDummy) {: RESULT=new AfterIFConditionDummy(); :};
 			
 StatementList ::= (MoreStatements) StatementList:S1 Statement:S2 {: RESULT=new MoreStatements(S1, S2); RESULT.setLine(S1left); :}
 				|
@@ -347,10 +369,12 @@ StmtConst ::= (StmtCnst) COMMA NUMBER:num {: RESULT=new StmtCnst(num); RESULT.se
 			(NoStmtCnst) {: RESULT=new NoStmtCnst(); :} /* epsilon */
 			;
 			
-ElseStatement ::= (ElseStmt) ELSE Statement:S1 {: RESULT=new ElseStmt(S1); RESULT.setLine(S1left); :}
+ElseStatement ::= (ElseStmt) ELSE DummyAfterElse:D1 Statement:S2 {: RESULT=new ElseStmt(D1, S2); RESULT.setLine(D1left); :}
 				|
 				(NoElseStmt) {: RESULT=new NoElseStmt(); :} /* epsilon */
 				;
+
+DummyAfterElse ::= (DummyAfterElse) {: RESULT=new DummyAfterElse(); :};
 
 Expr ::= (NegativeExpr) MINUS Term:t {: RESULT=new NegativeExpr(t); RESULT.setLine(tleft); :}
 		|
@@ -374,7 +398,7 @@ Factor ::= (FactVar) Designator:D1 {: RESULT=new FactVar(D1); RESULT.setLine(D1l
 		|
 		(FactBoolean) BOOL:B1 {: RESULT=new FactBoolean(B1); RESULT.setLine(B1left); :}
 		|
-		(FactConstrMatrix) NEW Type:matrixType LSQUARE Expr:E1 RSQUARE LSQUARE Expr:E2 RSQUARE {: RESULT=new FactConstrMatrix(matrixType, E1, E2); RESULT.setLine(matrixTypeleft); :}
+		(FactConstrMatrix) NEW Type:matrixType LSQUARE Expr:E1 RSQUARE DummyNewMatrix:D2 LSQUARE Expr:E3 RSQUARE {: RESULT=new FactConstrMatrix(matrixType, E1, D2, E3); RESULT.setLine(matrixTypeleft); :} 
 		|
 		(FactConstrArray) NEW Type:arrayType LSQUARE Expr:E1 RSQUARE {: RESULT=new FactConstrArray(arrayType, E1); RESULT.setLine(arrayTypeleft); :}
 		|
@@ -383,6 +407,8 @@ Factor ::= (FactVar) Designator:D1 {: RESULT=new FactVar(D1); RESULT.setLine(D1l
 		(FactExpr) LPAREN Expr:E1 RPAREN {: RESULT=new FactExpr(E1); RESULT.setLine(E1left); :}
 		;
 		
+DummyNewMatrix ::= (DummyNewMatrix) {: RESULT=new DummyNewMatrix(); :} ;
+		
 DummyMatrix ::= (DummyMatrix) {: RESULT=new DummyMatrix(); :} ;
 		
 FactParam ::= (FactFuncParams) ActPars:A1 {: RESULT=new FactFuncParams(A1); RESULT.setLine(A1left); :}
@@ -390,7 +416,7 @@ FactParam ::= (FactFuncParams) ActPars:A1 {: RESULT=new FactFuncParams(A1); RESU
 				(NoFactFuncParams) {: RESULT=new NoFactFuncParams(); :} /* epsilon */
 				;
 		
-DesignatorStatement ::= (DesignAssign) Designator:D1 Assignop:A2 Expr:E3 SEMICOLON {: RESULT=new DesignAssign(D1, A2, E3); RESULT.setLine(D1left); :}
+DesignatorStatement ::= (DesignAssign) Designator:D1 Assignop:A2 Expr:E3 AssignDummy:A4 SEMICOLON {: RESULT=new DesignAssign(D1, A2, E3, A4); RESULT.setLine(D1left); :}
 					|
 					(DesignFunction) Designator:D1 LPAREN FactParam:F2 RPAREN SEMICOLON {: RESULT=new DesignFunction(D1, F2); RESULT.setLine(D1left); :}
 					|
@@ -402,6 +428,7 @@ DesignatorStatement ::= (DesignAssign) Designator:D1 Assignop:A2 Expr:E3 SEMICOL
 					{: parser.report_error("Izvrsen oporavak kod dodeljivanja vrednosti do ; u liniji " + lleft, null); :} {: RESULT=new DesignError(); :}
 					;
 					
+AssignDummy ::= (AssignDummy) {: RESULT=new AssignDummy(); :};		
 			
 DesignOptional ::= (HasDesignator) Designator:D1 {: RESULT=new HasDesignator(D1); RESULT.setLine(D1left); :}
 				|
@@ -413,10 +440,12 @@ ActPars ::= (ActParams) ActPars:A1 COMMA Expr:E2 {: RESULT=new ActParams(A1, E2)
 		(SingleActParam) Expr:E1 {: RESULT=new SingleActParam(E1); RESULT.setLine(E1left); :}
 		; 
 		
-Condition ::= (Conditions) CondTerm:C1 OR CondTerm:C2 {: RESULT=new Conditions(C1, C2); RESULT.setLine(C1left); :}
+Condition ::= (Conditions) CondTerm:C1 OrDummy:O2 OR CondTerm:C3 {: RESULT=new Conditions(C1, O2, C3); RESULT.setLine(C1left); :}
 			|
 			(SingleCondition) CondTerm:C1 {: RESULT=new SingleCondition(C1); RESULT.setLine(C1left); :}
 			;
+			
+OrDummy ::= (OrDummy) {: RESULT=new OrDummy(); :};
 				
 CondTerm ::= (CondTerms) CondFact:C1 AND CondFact:C2 {: RESULT=new CondTerms(C1, C2); RESULT.setLine(C1left); :}
 			|
@@ -426,7 +455,7 @@ CondTerm ::= (CondTerms) CondFact:C1 AND CondFact:C2 {: RESULT=new CondTerms(C1,
 CondFact ::= (CondFact) Expr:E1 MoreCondFacts:M2 {: RESULT=new CondFact(E1, M2); RESULT.setLine(E1left); :}
 		;
 		
-MoreCondFacts ::= (MoreConds) Relop:R1 Expr:E2 {: RESULT=new MoreConds(R1, E2); RESULT.setLine(R1left); :}
+MoreCondFacts ::= (MoreConds) Relop:rel Expr:E1 {: RESULT=new MoreConds(rel, E1); RESULT.setLine(relleft); :}
 				|
 				(EndOfCond) {: RESULT=new EndOfCond(); :} /* epsilon*/
 				;
@@ -437,13 +466,14 @@ Designator ::= (MultipleDesignIdent) Designator:D1 DOT IDENT:var {: RESULT=new M
 			|
 			(SingleDesignIdent) IDENT:var {: RESULT=new SingleDesignIdent(var); RESULT.setLine(varleft); :};
 			
-MatrixDesignator ::= (MatrixDesignat) DesignatorName:nameMatrix LSQUARE Expr:expr1 RSQUARE DummyMatrix:D1 LSQUARE Expr:expr2 RSQUARE {: RESULT=new MatrixDesignat(nameMatrix, expr1, D1, expr2); RESULT.setLine(nameMatrixleft); :} 
+MatrixDesignator ::= (MatrixDesignat) DesignatorName:nameMatrix LSQUARE Expr:expr1 RSQUARE DummyMatrix:D1 LSQUARE Expr:expr2 DummyMatrix2:D2 RSQUARE {: RESULT=new MatrixDesignat(nameMatrix, expr1, D1, expr2, D2); RESULT.setLine(nameMatrixleft); :} 
 					|
 					(ArrayDesignat) DesignatorName:nameArray LSQUARE Expr:expr3 RSQUARE {: RESULT=new ArrayDesignat(nameArray, expr3); RESULT.setLine(nameArrayleft); :}
 					;
-					
+
+DummyMatrix2 ::= (DummyMatrix2) {: RESULT=new DummyMatrix2(); :};
+				
 DesignatorName ::= (DesignatorName) IDENT:name {: RESULT=new DesignatorName(name); RESULT.setLine(nameleft); :};
-	
 
 Type ::= (Type) IDENT:typeName {: RESULT=new Type(typeName); RESULT.setLine(typeNameleft); :};	
 

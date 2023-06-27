@@ -235,7 +235,9 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			this.arrayType = false;
 		}
 		
+		if (currMethod == null || currMethod.getName() == "main") this.nvars++;
 		report_info("Deklarisana promenljiva " + varDecl.getVarName(), varDecl);
+		
 	}
 
 	public void visit(MoreVarDecls varDecl) {
@@ -289,11 +291,11 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			this.arrayType = false;
 		}
 		report_info("Deklarisana promenljiva " + varDecl.getVarName(), varDecl);
+		
+		if (currMethod == null || currMethod.getName() == "main") this.nvars++;
 	}
 	
-	public void visit(VarDecls varDecl) {
-		nvars++;
-	}
+	
 
 	public void visit(TypeMethod methDecl) {
 		// proveriti da li se nalazi u tabeli simbola i da li se nalazi u tom opsegu
@@ -437,7 +439,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	}
 	
 	public void visit(MapStmt mapStmt) {
-		Obj node = Tab.find(mapStmt.getDesignator1().obj.getName());
+		Obj node = Tab.find(mapStmt.getDesignatorArr2().getDesignator().obj.getName());
 		
 		if (node == Tab.noObj) {
 			report_error("Ne postoji promenljiva sa imenom " + node.getName(), mapStmt);
@@ -456,7 +458,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			return;
 		}
 		
-		Obj identNode = Tab.find(mapStmt.getIdent());
+		Obj identNode = Tab.find(mapStmt.getMapIdent().getI1());
 		
 		if (identNode == Tab.noObj) {
 			report_error("Ne postoji promenljiva sa imenom " + identNode.getName(), mapStmt);
@@ -468,6 +470,27 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			return;
 		}
 		
+		Obj node2 = Tab.find(mapStmt.getDesignator().obj.getName());
+		
+		if (node2 == Tab.noObj) {
+			report_error("Ne postoji promenljiva sa imenom " + node.getName(), mapStmt);
+			return;
+		}
+		
+		if (node2.getType().getKind() != Struct.Array) {
+			report_error("Promenljiva u map izrazu mora biti niz! ", mapStmt);
+			return;
+		}
+		
+		if (!node.getType().getElemType().compatibleWith(node2.getType().getElemType())) {
+			report_error("Elementi nizova nisu kompatibilni!", mapStmt);
+			return;
+		}
+		
+	}
+	
+	public void visit(MapIdent map) {
+		map.obj = Tab.find(map.getI1());
 	}
 	
 	public void visit(DesignInc designator) {
@@ -499,7 +522,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	public void visit(DesignAssign designator) {
 		if (designator.getDesignator().obj.getKind() != Obj.Elem &&
 				designator.getDesignator().obj.getKind() != Obj.Var) {
-			report_error("U dekrement statement-u designator mora biti promenljiva, element niza ili matrice!", designator);
+			report_error("U assign statement-u designator mora biti promenljiva, element niza ili matrice!", designator);
 		}
 		if (!designator.getDesignator().obj.getType().compatibleWith(designator.getExpr().struct)) {
 			report_error("Tip neterminala Expr" 

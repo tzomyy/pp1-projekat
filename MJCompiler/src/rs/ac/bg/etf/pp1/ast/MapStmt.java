@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 25/5/2023 23:50:18
+// 27/5/2023 16:47:13
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -9,21 +9,25 @@ public class MapStmt extends Statement {
 
     private Designator Designator;
     private Assignop Assignop;
-    private Designator Designator1;
-    private String ident;
+    private DesignatorArr2 DesignatorArr2;
+    private MapIdent MapIdent;
     private Expr Expr;
+    private DummyMap DummyMap;
     private MapEnd MapEnd;
 
-    public MapStmt (Designator Designator, Assignop Assignop, Designator Designator1, String ident, Expr Expr, MapEnd MapEnd) {
+    public MapStmt (Designator Designator, Assignop Assignop, DesignatorArr2 DesignatorArr2, MapIdent MapIdent, Expr Expr, DummyMap DummyMap, MapEnd MapEnd) {
         this.Designator=Designator;
         if(Designator!=null) Designator.setParent(this);
         this.Assignop=Assignop;
         if(Assignop!=null) Assignop.setParent(this);
-        this.Designator1=Designator1;
-        if(Designator1!=null) Designator1.setParent(this);
-        this.ident=ident;
+        this.DesignatorArr2=DesignatorArr2;
+        if(DesignatorArr2!=null) DesignatorArr2.setParent(this);
+        this.MapIdent=MapIdent;
+        if(MapIdent!=null) MapIdent.setParent(this);
         this.Expr=Expr;
         if(Expr!=null) Expr.setParent(this);
+        this.DummyMap=DummyMap;
+        if(DummyMap!=null) DummyMap.setParent(this);
         this.MapEnd=MapEnd;
         if(MapEnd!=null) MapEnd.setParent(this);
     }
@@ -44,20 +48,20 @@ public class MapStmt extends Statement {
         this.Assignop=Assignop;
     }
 
-    public Designator getDesignator1() {
-        return Designator1;
+    public DesignatorArr2 getDesignatorArr2() {
+        return DesignatorArr2;
     }
 
-    public void setDesignator1(Designator Designator1) {
-        this.Designator1=Designator1;
+    public void setDesignatorArr2(DesignatorArr2 DesignatorArr2) {
+        this.DesignatorArr2=DesignatorArr2;
     }
 
-    public String getIdent() {
-        return ident;
+    public MapIdent getMapIdent() {
+        return MapIdent;
     }
 
-    public void setIdent(String ident) {
-        this.ident=ident;
+    public void setMapIdent(MapIdent MapIdent) {
+        this.MapIdent=MapIdent;
     }
 
     public Expr getExpr() {
@@ -66,6 +70,14 @@ public class MapStmt extends Statement {
 
     public void setExpr(Expr Expr) {
         this.Expr=Expr;
+    }
+
+    public DummyMap getDummyMap() {
+        return DummyMap;
+    }
+
+    public void setDummyMap(DummyMap DummyMap) {
+        this.DummyMap=DummyMap;
     }
 
     public MapEnd getMapEnd() {
@@ -83,8 +95,10 @@ public class MapStmt extends Statement {
     public void childrenAccept(Visitor visitor) {
         if(Designator!=null) Designator.accept(visitor);
         if(Assignop!=null) Assignop.accept(visitor);
-        if(Designator1!=null) Designator1.accept(visitor);
+        if(DesignatorArr2!=null) DesignatorArr2.accept(visitor);
+        if(MapIdent!=null) MapIdent.accept(visitor);
         if(Expr!=null) Expr.accept(visitor);
+        if(DummyMap!=null) DummyMap.accept(visitor);
         if(MapEnd!=null) MapEnd.accept(visitor);
     }
 
@@ -92,16 +106,20 @@ public class MapStmt extends Statement {
         accept(visitor);
         if(Designator!=null) Designator.traverseTopDown(visitor);
         if(Assignop!=null) Assignop.traverseTopDown(visitor);
-        if(Designator1!=null) Designator1.traverseTopDown(visitor);
+        if(DesignatorArr2!=null) DesignatorArr2.traverseTopDown(visitor);
+        if(MapIdent!=null) MapIdent.traverseTopDown(visitor);
         if(Expr!=null) Expr.traverseTopDown(visitor);
+        if(DummyMap!=null) DummyMap.traverseTopDown(visitor);
         if(MapEnd!=null) MapEnd.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(Designator!=null) Designator.traverseBottomUp(visitor);
         if(Assignop!=null) Assignop.traverseBottomUp(visitor);
-        if(Designator1!=null) Designator1.traverseBottomUp(visitor);
+        if(DesignatorArr2!=null) DesignatorArr2.traverseBottomUp(visitor);
+        if(MapIdent!=null) MapIdent.traverseBottomUp(visitor);
         if(Expr!=null) Expr.traverseBottomUp(visitor);
+        if(DummyMap!=null) DummyMap.traverseBottomUp(visitor);
         if(MapEnd!=null) MapEnd.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -123,17 +141,26 @@ public class MapStmt extends Statement {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(Designator1!=null)
-            buffer.append(Designator1.toString("  "+tab));
+        if(DesignatorArr2!=null)
+            buffer.append(DesignatorArr2.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        buffer.append(" "+tab+ident);
+        if(MapIdent!=null)
+            buffer.append(MapIdent.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
         buffer.append("\n");
 
         if(Expr!=null)
             buffer.append(Expr.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        if(DummyMap!=null)
+            buffer.append(DummyMap.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

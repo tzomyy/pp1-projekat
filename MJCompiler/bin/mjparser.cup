@@ -122,14 +122,25 @@ nonterminal ActPars;
 nonterminal Condition;
 nonterminal CondTerm;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct CondFact;
-nonterminal MoreCondFacts;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct MoreCondFacts;
+nonterminal OrDummy;
+nonterminal BeforeIFConditionDummy;
+nonterminal AfterIFConditionDummy;
+nonterminal DummyAfterElse;
+nonterminal DummyBeforeIf;
+nonterminal AssignDummy;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj DesignatorArr2;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj DesignatorName;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj MatrixDesignator;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj MapIdent;
+nonterminal DummyMap;
 nonterminal MatrixOptional;
 nonterminal ArrayOptional;
 nonterminal DummyMatrix;
+nonterminal DummyMatrix2;
+nonterminal DummyNewMatrix;
 
 nonterminal Label;
 nonterminal Assignop;
@@ -317,10 +328,16 @@ Statement ::= (DesignStmt) DesignatorStatement
 			|
 			(PrintStmt) PRINT LPAREN PrintExpr StmtConst RPAREN SEMICOLON
 			|
-			(MapStmt) Designator Assignop Designator:arr DOT MAP LPAREN IDENT:ident ASSIGN Expr RPAREN SEMICOLON MapEnd
+			(MapStmt) Designator Assignop DesignatorArr2 LPAREN MapIdent ASSIGN Expr DummyMap RPAREN SEMICOLON MapEnd
 			|
 			(ListStmts) LCURLY StatementList RCURLY
 			;
+			
+DummyMap ::= (DummyMap) ;
+		
+MapIdent ::= (MapIdent) IDENT;
+			
+DesignatorArr2 ::= (DesignatorArr2) Designator:arr DOT MAP;
 			
 PrintExpr ::= (PrintExpr) Expr ;
 
@@ -329,12 +346,17 @@ MapEnd ::= (MapEnd) /* epislon */;
 WhileStart ::= (WhileStart) WHILE;
 
 WhileEnd ::= (WhileEnd) /* epsilon */;
+
+DummyBeforeIf ::= (DummyBeforeIf);
 			
-IfStatement ::= (IfState) IF LPAREN Condition RPAREN
+IfStatement ::= (IfState) DummyBeforeIf IF BeforeIFConditionDummy LPAREN Condition RPAREN AfterIFConditionDummy
 			|
 			(ErrorStmt) error RPAREN:l
 			{: parser.report_error("Izvrsen oporavak kod if konstrukcije do ; u liniji " + lleft, null); :}
 			;
+			
+BeforeIFConditionDummy ::= (BeforeIFConditionDummy);
+AfterIFConditionDummy ::= (AfterIFConditionDummy);
 			
 StatementList ::= (MoreStatements) StatementList Statement
 				|
@@ -346,10 +368,12 @@ StmtConst ::= (StmtCnst) COMMA NUMBER:num
 			(NoStmtCnst) /* epsilon */
 			;
 			
-ElseStatement ::= (ElseStmt) ELSE Statement
+ElseStatement ::= (ElseStmt) ELSE DummyAfterElse Statement
 				|
 				(NoElseStmt) /* epsilon */
 				;
+
+DummyAfterElse ::= (DummyAfterElse);
 
 Expr ::= (NegativeExpr) MINUS Term:t
 		|
@@ -373,7 +397,7 @@ Factor ::= (FactVar) Designator
 		|
 		(FactBoolean) BOOL
 		|
-		(FactConstrMatrix) NEW Type:matrixType LSQUARE Expr RSQUARE LSQUARE Expr RSQUARE 
+		(FactConstrMatrix) NEW Type:matrixType LSQUARE Expr RSQUARE DummyNewMatrix LSQUARE Expr RSQUARE 
 		|
 		(FactConstrArray) NEW Type:arrayType LSQUARE Expr RSQUARE
 		|
@@ -382,6 +406,8 @@ Factor ::= (FactVar) Designator
 		(FactExpr) LPAREN Expr RPAREN
 		;
 		
+DummyNewMatrix ::= (DummyNewMatrix) ;
+		
 DummyMatrix ::= (DummyMatrix) ;
 		
 FactParam ::= (FactFuncParams) ActPars
@@ -389,7 +415,7 @@ FactParam ::= (FactFuncParams) ActPars
 				(NoFactFuncParams) /* epsilon */
 				;
 		
-DesignatorStatement ::= (DesignAssign) Designator Assignop Expr SEMICOLON
+DesignatorStatement ::= (DesignAssign) Designator Assignop Expr AssignDummy SEMICOLON
 					|
 					(DesignFunction) Designator LPAREN FactParam RPAREN SEMICOLON
 					|
@@ -401,6 +427,7 @@ DesignatorStatement ::= (DesignAssign) Designator Assignop Expr SEMICOLON
 					{: parser.report_error("Izvrsen oporavak kod dodeljivanja vrednosti do ; u liniji " + lleft, null); :}
 					;
 					
+AssignDummy ::= (AssignDummy);		
 			
 DesignOptional ::= (HasDesignator) Designator
 				|
@@ -412,10 +439,12 @@ ActPars ::= (ActParams) ActPars COMMA Expr
 		(SingleActParam) Expr
 		; 
 		
-Condition ::= (Conditions) CondTerm OR CondTerm
+Condition ::= (Conditions) CondTerm OrDummy OR CondTerm
 			|
 			(SingleCondition) CondTerm
 			;
+			
+OrDummy ::= (OrDummy);
 				
 CondTerm ::= (CondTerms) CondFact AND CondFact
 			|
@@ -425,7 +454,7 @@ CondTerm ::= (CondTerms) CondFact AND CondFact
 CondFact ::= (CondFact) Expr MoreCondFacts
 		;
 		
-MoreCondFacts ::= (MoreConds) Relop Expr
+MoreCondFacts ::= (MoreConds) Relop:rel Expr
 				|
 				(EndOfCond) /* epsilon*/
 				;
@@ -436,11 +465,13 @@ Designator ::= (MultipleDesignIdent) Designator DOT IDENT:var
 			|
 			(SingleDesignIdent) IDENT:var;
 			
-MatrixDesignator ::= (MatrixDesignat) DesignatorName:nameMatrix LSQUARE Expr:expr1 RSQUARE DummyMatrix LSQUARE Expr:expr2 RSQUARE 
+MatrixDesignator ::= (MatrixDesignat) DesignatorName:nameMatrix LSQUARE Expr:expr1 RSQUARE DummyMatrix LSQUARE Expr:expr2 DummyMatrix2 RSQUARE 
 					|
 					(ArrayDesignat) DesignatorName:nameArray LSQUARE Expr:expr3 RSQUARE
 					;
-					
+
+DummyMatrix2 ::= (DummyMatrix2);
+				
 DesignatorName ::= (DesignatorName) IDENT:name;
 
 Type ::= (Type) IDENT:typeName;	
