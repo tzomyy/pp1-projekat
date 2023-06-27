@@ -55,6 +55,7 @@ int a, curr;
 		niz[0] = 1 * a;
 		niz[1] = 2 * a;
 		niz[2] = sum(niz[1], niz[0]) * a + 1;
+		
 		if(verify() || niz[2] == 4) print(ord('A')); 
 		else print(ord('a'));
 		

@@ -314,7 +314,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			currMethod = Tab.insert(Obj.Meth, methDecl.getMethodName(), currType);
 		}
 		
-		
+		methDecl.obj = currMethod;
 		methDecl.getType().struct = currType;
 		report_info("Definisana funkcija " + methDecl.getMethodName(), methDecl);
 		Tab.openScope();
@@ -334,7 +334,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			currMethod = Tab.insert(Obj.Meth, methDecl.getMethodName(), currType);
 		}
 
-		//methDecl.getType().struct = currType;
+		methDecl.obj = currMethod;
 		report_info("Definisana funkcija " + methDecl.getMethodName(), methDecl);
 		Tab.openScope();
 	}

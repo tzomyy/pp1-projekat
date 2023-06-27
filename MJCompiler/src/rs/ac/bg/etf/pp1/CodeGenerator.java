@@ -56,9 +56,10 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	public void visit(TypeMethod methodTypeName){
 		
-		
-		methodTypeName.obj = Tab.find(methodTypeName.getMethodName());
+		//methodTypeName.obj = Tab.find(methodTypeName.getMethodName());
 		methodTypeName.obj.setAdr(Code.pc);
+		log.info(Code.pc);
+
 		// Collect arguments and local variables
 		SyntaxNode methodNode = methodTypeName.getParent();
 	
@@ -80,9 +81,10 @@ public class CodeGenerator extends VisitorAdaptor {
 		if("main".equalsIgnoreCase(methodTypeName.getMethodName())){
 			mainPc = Code.pc;
 		}
-		methodTypeName.obj = Tab.find(methodTypeName.getMethodName());
-		
+		//methodTypeName.obj = Tab.find(methodTypeName.getMethodName());
+		log.info(Code.pc);
 		methodTypeName.obj.setAdr(Code.pc);
+		
 		// Collect arguments and local variables
 		SyntaxNode methodNode = methodTypeName.getParent();
 	
@@ -148,7 +150,10 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	public void visit(FactFunc funcCall){
 		Obj functionObj = funcCall.getDesignator().obj;
+		//log.info(functionObj.getAdr());
 		int offset = functionObj.getAdr() - Code.pc;
+		
+		if (functionObj.getName().equals("chr") || functionObj.getName().equals("ord")) return;
 		Code.put(Code.call);
 		Code.put2(offset);
 	}
@@ -214,7 +219,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(ArrayDesignat arr) {
-		if (arr.getParent().getParent() instanceof DesignAssign) {
+		if (arr.getParent().getParent() instanceof DesignAssign || arr.getParent().getParent() instanceof ReadStmt) {
 			return;
 		}
 		if (arr.getDesignatorName().obj.getType().getElemType() == Tab.charType) {
@@ -233,8 +238,12 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	public void visit(DummyMatrix2 dummy) {
 		if (dummy.getParent().getParent().getParent() instanceof DesignAssign) return;
-		Code.put(Code.aload);
-		// dodati proveru za char tj baload
+		MatrixDesignat parent = (MatrixDesignat) dummy.getParent();
+		if (parent.getDesignatorName().obj.getType().getElemType() == Tab.charType) {
+			Code.put(Code.baload);
+		} else {
+			Code.put(Code.aload);
+		}
 	}
 	
 	Obj designator = null;
